@@ -58,26 +58,26 @@ const Speakers = () => {
   ];
 
   return (
-    <section id="speakers" className="py-24 bg-gray-50">
+    <section id="speakers" className="py-32 bg-gradient-to-br from-gray-100 to-gray-200">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Featured Speakers</h2>
-          <p className="text-lg text-gray-600">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Featured Speakers</h2>
+          <p className="text-xl text-gray-600">
             Learn from the brightest minds and influential leaders in the Bitcoin space
           </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {speakers.map((speaker, index) => (
-            <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow overflow-hidden">
-              <CardContent className="p-6">
+            <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow overflow-hidden rounded-xl bg-white">
+              <CardContent className="p-8">
                 <div className="flex flex-col items-center">
-                  <Avatar className="h-24 w-24 mb-4">
-                    <AvatarFallback className="bg-bitcoin text-white text-xl">
+                  <Avatar className="h-28 w-28 mb-6">
+                    <AvatarFallback className="bg-gradient-to-br from-bitcoin to-bitcoin-light text-white text-2xl">
                       {speaker.name.split(' ').map(n => n[0]).join('')}
                     </AvatarFallback>
                   </Avatar>
-                  <h3 className="text-xl font-bold mb-1">{speaker.name}</h3>
+                  <h3 className="text-2xl font-bold mb-1">{speaker.name}</h3>
                   <p className="text-bitcoin font-medium mb-1">{speaker.role}</p>
                   <p className="text-gray-500 mb-4">{speaker.company}</p>
                   <p className="text-gray-600 text-center">{speaker.bio}</p>
