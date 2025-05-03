@@ -58,35 +58,35 @@ const Speakers = () => {
   ];
 
   return (
-    <section id="speakers" className="py-32 bg-gradient-to-b from-gray-900 to-black">
+    <section id="speakers" className="py-32 bg-gradient-to-b from-gray-100 to-white">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-20">
           <div className="inline-block mb-4 px-4 py-1 bg-bitcoin/10 backdrop-blur-sm rounded-full border border-bitcoin/20">
             <span className="text-sm uppercase tracking-wider font-medium text-bitcoin">Speakers</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Featured Speakers</h2>
-          <p className="text-xl text-gray-300">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800">Featured Speakers</h2>
+          <p className="text-xl text-gray-600">
             Learn from the brightest minds and influential leaders in the Bitcoin space
           </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {speakers.map((speaker, index) => (
-            <Card key={index} className="border-0 shadow-xl hover:shadow-2xl transition-all duration-300 hover:translate-y-[-5px] overflow-hidden rounded-2xl bg-gradient-to-br from-gray-800 to-gray-900 text-white">
+            <Card key={index} className="border border-gray-200 shadow-md hover:shadow-xl transition-all duration-300 hover:translate-y-[-5px] overflow-hidden rounded-2xl bg-white">
               <CardContent className="p-8">
                 <div className="flex flex-col items-center">
                   <div className="mb-6 relative">
-                    <div className="absolute inset-0 rounded-full bg-gradient-to-br from-bitcoin to-bitcoin-light blur-lg opacity-30"></div>
+                    <div className="absolute inset-0 rounded-full bg-gradient-to-br from-bitcoin to-bitcoin-light blur-lg opacity-20"></div>
                     <Avatar className="h-28 w-28 ring-2 ring-bitcoin/50">
                       <AvatarFallback className="bg-gradient-to-br from-bitcoin to-bitcoin-light text-white text-2xl">
                         {speaker.name.split(' ').map(n => n[0]).join('')}
                       </AvatarFallback>
                     </Avatar>
                   </div>
-                  <h3 className="text-2xl font-bold mb-1">{speaker.name}</h3>
+                  <h3 className="text-2xl font-bold mb-1 text-gray-800">{speaker.name}</h3>
                   <p className="text-bitcoin font-medium mb-1">{speaker.role}</p>
-                  <p className="text-gray-400 mb-4">{speaker.company}</p>
-                  <p className="text-gray-300 text-center">{speaker.bio}</p>
+                  <p className="text-gray-500 mb-4">{speaker.company}</p>
+                  <p className="text-gray-600 text-center">{speaker.bio}</p>
                   <div className="mt-6 w-full">
                     <button className="w-full py-2 rounded-full border border-bitcoin/30 text-bitcoin hover:bg-bitcoin/10 transition-colors text-sm">
                       View Profile

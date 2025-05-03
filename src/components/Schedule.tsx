@@ -186,21 +186,30 @@ const Schedule = () => {
   };
 
   return (
-    <section id="schedule" className="py-24 bg-white">
+    <section id="schedule" className="py-32 bg-white border-t border-gray-100">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Event Schedule</h2>
-          <p className="text-lg text-gray-600">
+          <div className="inline-block mb-4 px-4 py-1 bg-bitcoin/10 backdrop-blur-sm rounded-full border border-bitcoin/20">
+            <span className="text-sm uppercase tracking-wider font-medium text-bitcoin">Schedule</span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800">Event Schedule</h2>
+          <p className="text-xl text-gray-600">
             Three days of inspiring talks, workshops, and networking opportunities
           </p>
         </div>
         
         <div className="max-w-4xl mx-auto">
           <Tabs defaultValue="day1" value={activeDay} onValueChange={setActiveDay} className="w-full">
-            <TabsList className="grid w-full grid-cols-3 mb-8">
-              <TabsTrigger value="day1">Day 1 - May 15</TabsTrigger>
-              <TabsTrigger value="day2">Day 2 - May 16</TabsTrigger>
-              <TabsTrigger value="day3">Day 3 - May 17</TabsTrigger>
+            <TabsList className="grid w-full grid-cols-3 mb-8 bg-gray-100 p-1 rounded-lg">
+              <TabsTrigger value="day1" className="data-[state=active]:bg-white data-[state=active]:text-gray-800 data-[state=active]:shadow-md rounded-md">
+                Day 1 - May 15
+              </TabsTrigger>
+              <TabsTrigger value="day2" className="data-[state=active]:bg-white data-[state=active]:text-gray-800 data-[state=active]:shadow-md rounded-md">
+                Day 2 - May 16
+              </TabsTrigger>
+              <TabsTrigger value="day3" className="data-[state=active]:bg-white data-[state=active]:text-gray-800 data-[state=active]:shadow-md rounded-md">
+                Day 3 - May 17
+              </TabsTrigger>
             </TabsList>
             
             {Object.keys(schedules).map((day) => (
@@ -208,7 +217,7 @@ const Schedule = () => {
                 {schedules[day].map((session, index) => (
                   <div 
                     key={index} 
-                    className={`p-4 bg-white rounded-md shadow-sm hover:shadow-md transition-shadow ${getSessionClassName(session.type)}`}
+                    className={`p-4 bg-white rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-shadow ${getSessionClassName(session.type)}`}
                   >
                     <div className="flex flex-col md:flex-row md:items-center justify-between">
                       <div className="mb-2 md:mb-0">
@@ -216,12 +225,12 @@ const Schedule = () => {
                           <Clock className="h-4 w-4" />
                           <span>{session.time}</span>
                         </div>
-                        <h3 className="font-semibold text-lg">{session.title}</h3>
+                        <h3 className="font-semibold text-lg text-gray-800">{session.title}</h3>
                         {session.speaker && (
                           <p className="text-bitcoin">{session.speaker}</p>
                         )}
                       </div>
-                      <div className="bg-gray-100 px-3 py-1 rounded text-sm">
+                      <div className="bg-gray-100 px-3 py-1 rounded text-sm text-gray-600">
                         {session.location}
                       </div>
                     </div>

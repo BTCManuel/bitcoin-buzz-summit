@@ -28,18 +28,18 @@ const Navbar = () => {
   return (
     <nav className={`fixed top-0 z-50 w-full transition-all duration-300 ${
       isScrolled 
-        ? 'bg-black/80 backdrop-blur-md shadow-lg' 
+        ? 'bg-white/80 backdrop-blur-md shadow-sm' 
         : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-6 py-5 flex justify-between items-center">
         <Link to="/" className="flex items-center space-x-3 group">
           <div className={`h-10 w-10 rounded-full flex items-center justify-center transition-all duration-300 ${
-            isScrolled ? 'bg-bitcoin' : 'bg-white/10'
+            isScrolled ? 'bg-bitcoin' : 'bg-bitcoin/20'
           }`}>
             <Bitcoin className="h-6 w-6 text-white" />
           </div>
           <div>
-            <span className="font-bold text-lg text-white block leading-tight">Bitcoin Buzz</span>
+            <span className={`font-bold text-lg block leading-tight ${isScrolled ? 'text-gray-800' : 'text-gray-800'}`}>Bitcoin Buzz</span>
             <span className="text-xs text-bitcoin">Summit 2025</span>
           </div>
         </Link>
@@ -50,17 +50,17 @@ const Navbar = () => {
               variant="ghost" 
               size="sm" 
               onClick={toggleMenu} 
-              className="text-white p-2 rounded-full hover:bg-white/10"
+              className={`p-2 rounded-full ${isScrolled ? 'text-gray-800 hover:bg-gray-100' : 'text-gray-800 hover:bg-white/20'}`}
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
             {isOpen && (
-              <div className="fixed inset-0 top-20 bg-black/95 z-40 animate-fade-in">
+              <div className="fixed inset-0 top-20 bg-white/95 z-40 animate-fade-in">
                 <div className="container mx-auto px-4 py-12 flex flex-col space-y-8">
-                  <Link to="/#about" onClick={toggleMenu} className="text-xl font-medium px-4 py-3 text-white hover:text-bitcoin transition-colors">About</Link>
-                  <Link to="/#speakers" onClick={toggleMenu} className="text-xl font-medium px-4 py-3 text-white hover:text-bitcoin transition-colors">Speakers</Link>
-                  <Link to="/#schedule" onClick={toggleMenu} className="text-xl font-medium px-4 py-3 text-white hover:text-bitcoin transition-colors">Schedule</Link>
-                  <Link to="/#venue" onClick={toggleMenu} className="text-xl font-medium px-4 py-3 text-white hover:text-bitcoin transition-colors">Venue</Link>
+                  <Link to="/#about" onClick={toggleMenu} className="text-xl font-medium px-4 py-3 text-gray-800 hover:text-bitcoin transition-colors">About</Link>
+                  <Link to="/#speakers" onClick={toggleMenu} className="text-xl font-medium px-4 py-3 text-gray-800 hover:text-bitcoin transition-colors">Speakers</Link>
+                  <Link to="/#schedule" onClick={toggleMenu} className="text-xl font-medium px-4 py-3 text-gray-800 hover:text-bitcoin transition-colors">Schedule</Link>
+                  <Link to="/#venue" onClick={toggleMenu} className="text-xl font-medium px-4 py-3 text-gray-800 hover:text-bitcoin transition-colors">Venue</Link>
                   <Button className="bg-bitcoin hover:bg-bitcoin-dark text-white rounded-full py-6 mx-4 shadow-lg shadow-bitcoin/20">
                     Register Now
                   </Button>
@@ -71,19 +71,19 @@ const Navbar = () => {
         ) : (
           <div className="flex items-center space-x-10">
             <div className="flex items-center space-x-8">
-              <Link to="/#about" className="text-sm font-medium text-white hover:text-bitcoin transition-colors relative group">
+              <Link to="/#about" className="text-sm font-medium text-gray-800 hover:text-bitcoin transition-colors relative group">
                 About
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-bitcoin group-hover:w-full transition-all duration-300"></span>
               </Link>
-              <Link to="/#speakers" className="text-sm font-medium text-white hover:text-bitcoin transition-colors relative group">
+              <Link to="/#speakers" className="text-sm font-medium text-gray-800 hover:text-bitcoin transition-colors relative group">
                 Speakers
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-bitcoin group-hover:w-full transition-all duration-300"></span>
               </Link>
-              <Link to="/#schedule" className="text-sm font-medium text-white hover:text-bitcoin transition-colors relative group">
+              <Link to="/#schedule" className="text-sm font-medium text-gray-800 hover:text-bitcoin transition-colors relative group">
                 Schedule
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-bitcoin group-hover:w-full transition-all duration-300"></span>
               </Link>
-              <Link to="/#venue" className="text-sm font-medium text-white hover:text-bitcoin transition-colors relative group">
+              <Link to="/#venue" className="text-sm font-medium text-gray-800 hover:text-bitcoin transition-colors relative group">
                 Venue
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-bitcoin group-hover:w-full transition-all duration-300"></span>
               </Link>

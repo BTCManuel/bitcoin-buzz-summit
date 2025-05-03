@@ -96,14 +96,6 @@
     font-family: 'Inter', sans-serif;
   }
 
-  .hero-gradient {
-    background: linear-gradient(to right, #000000, #1a1a1a);
-  }
-
-  .bitcoin-gradient {
-    background: linear-gradient(135deg, #f7931a, #faa942);
-  }
-  
   section {
     scroll-margin-top: 80px;
   }
@@ -114,12 +106,12 @@
 
   /* Modern glass morphism */
   .glass-panel {
-    @apply bg-white/10 backdrop-blur-md border border-white/20 rounded-xl;
+    @apply bg-white/90 backdrop-blur-md border border-gray-100 rounded-xl shadow-sm;
   }
   
   /* Modern shadows */
   .shadow-modern {
-    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.1);
   }
   
   /* Animation classes */
