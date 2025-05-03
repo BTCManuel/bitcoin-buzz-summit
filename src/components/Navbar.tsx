@@ -26,26 +26,42 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`fixed top-0 z-50 w-full transition-all duration-300 ${isScrolled ? 'bg-white/90 backdrop-blur-md shadow-sm' : 'bg-transparent'}`}>
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <Link to="/" className="flex items-center space-x-2">
-          <Bitcoin className={`h-8 w-8 ${isScrolled ? 'text-bitcoin' : 'text-white'}`} />
-          <span className={`font-bold text-xl ${isScrolled ? 'text-black' : 'text-white'}`}>Bitcoin Buzz Summit</span>
+    <nav className={`fixed top-0 z-50 w-full transition-all duration-300 ${
+      isScrolled 
+        ? 'bg-black/80 backdrop-blur-md shadow-lg' 
+        : 'bg-transparent'
+    }`}>
+      <div className="container mx-auto px-6 py-5 flex justify-between items-center">
+        <Link to="/" className="flex items-center space-x-3 group">
+          <div className={`h-10 w-10 rounded-full flex items-center justify-center transition-all duration-300 ${
+            isScrolled ? 'bg-bitcoin' : 'bg-white/10'
+          }`}>
+            <Bitcoin className="h-6 w-6 text-white" />
+          </div>
+          <div>
+            <span className="font-bold text-lg text-white block leading-tight">Bitcoin Buzz</span>
+            <span className="text-xs text-bitcoin">Summit 2025</span>
+          </div>
         </Link>
 
         {isMobile ? (
           <>
-            <Button variant="ghost" size="sm" onClick={toggleMenu} className={isScrolled ? "text-black" : "text-white"}>
+            <Button 
+              variant="ghost" 
+              size="sm" 
+              onClick={toggleMenu} 
+              className="text-white p-2 rounded-full hover:bg-white/10"
+            >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
             {isOpen && (
-              <div className="fixed inset-0 top-16 bg-white z-40 animate-fade-in">
-                <div className="container mx-auto px-4 py-6 flex flex-col space-y-6">
-                  <Link to="/#about" onClick={toggleMenu} className="text-lg font-medium px-4 py-2">About</Link>
-                  <Link to="/#speakers" onClick={toggleMenu} className="text-lg font-medium px-4 py-2">Speakers</Link>
-                  <Link to="/#schedule" onClick={toggleMenu} className="text-lg font-medium px-4 py-2">Schedule</Link>
-                  <Link to="/#venue" onClick={toggleMenu} className="text-lg font-medium px-4 py-2">Venue</Link>
-                  <Button className="bg-bitcoin hover:bg-bitcoin-dark text-white rounded-full">
+              <div className="fixed inset-0 top-20 bg-black/95 z-40 animate-fade-in">
+                <div className="container mx-auto px-4 py-12 flex flex-col space-y-8">
+                  <Link to="/#about" onClick={toggleMenu} className="text-xl font-medium px-4 py-3 text-white hover:text-bitcoin transition-colors">About</Link>
+                  <Link to="/#speakers" onClick={toggleMenu} className="text-xl font-medium px-4 py-3 text-white hover:text-bitcoin transition-colors">Speakers</Link>
+                  <Link to="/#schedule" onClick={toggleMenu} className="text-xl font-medium px-4 py-3 text-white hover:text-bitcoin transition-colors">Schedule</Link>
+                  <Link to="/#venue" onClick={toggleMenu} className="text-xl font-medium px-4 py-3 text-white hover:text-bitcoin transition-colors">Venue</Link>
+                  <Button className="bg-bitcoin hover:bg-bitcoin-dark text-white rounded-full py-6 mx-4 shadow-lg shadow-bitcoin/20">
                     Register Now
                   </Button>
                 </div>
@@ -53,12 +69,26 @@ const Navbar = () => {
             )}
           </>
         ) : (
-          <div className="flex items-center space-x-8">
-            <Link to="/#about" className={`text-sm font-medium hover:text-bitcoin transition-colors ${isScrolled ? 'text-gray-800' : 'text-white'}`}>About</Link>
-            <Link to="/#speakers" className={`text-sm font-medium hover:text-bitcoin transition-colors ${isScrolled ? 'text-gray-800' : 'text-white'}`}>Speakers</Link>
-            <Link to="/#schedule" className={`text-sm font-medium hover:text-bitcoin transition-colors ${isScrolled ? 'text-gray-800' : 'text-white'}`}>Schedule</Link>
-            <Link to="/#venue" className={`text-sm font-medium hover:text-bitcoin transition-colors ${isScrolled ? 'text-gray-800' : 'text-white'}`}>Venue</Link>
-            <Button className="bg-bitcoin hover:bg-bitcoin-dark text-white rounded-full">
+          <div className="flex items-center space-x-10">
+            <div className="flex items-center space-x-8">
+              <Link to="/#about" className="text-sm font-medium text-white hover:text-bitcoin transition-colors relative group">
+                About
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-bitcoin group-hover:w-full transition-all duration-300"></span>
+              </Link>
+              <Link to="/#speakers" className="text-sm font-medium text-white hover:text-bitcoin transition-colors relative group">
+                Speakers
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-bitcoin group-hover:w-full transition-all duration-300"></span>
+              </Link>
+              <Link to="/#schedule" className="text-sm font-medium text-white hover:text-bitcoin transition-colors relative group">
+                Schedule
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-bitcoin group-hover:w-full transition-all duration-300"></span>
+              </Link>
+              <Link to="/#venue" className="text-sm font-medium text-white hover:text-bitcoin transition-colors relative group">
+                Venue
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-bitcoin group-hover:w-full transition-all duration-300"></span>
+              </Link>
+            </div>
+            <Button className="bg-bitcoin hover:bg-bitcoin-dark text-white rounded-full shadow-lg shadow-bitcoin/20 transition-all duration-300 hover:scale-105">
               Register Now
             </Button>
           </div>

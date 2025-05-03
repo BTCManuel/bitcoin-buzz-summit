@@ -35,7 +35,7 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -111,10 +111,51 @@
   h1, h2, h3, h4, h5, h6 {
     @apply tracking-tight;
   }
+
+  /* Modern glass morphism */
+  .glass-panel {
+    @apply bg-white/10 backdrop-blur-md border border-white/20 rounded-xl;
+  }
+  
+  /* Modern shadows */
+  .shadow-modern {
+    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Animation classes */
+  .hover-float {
+    @apply transition-transform duration-300 ease-out;
+  }
+  
+  .hover-float:hover {
+    transform: translateY(-8px);
+  }
 }
 
 @layer utilities {
   .text-gradient {
     @apply bg-gradient-to-r from-bitcoin to-bitcoin-light bg-clip-text text-transparent;
   }
+  
+  .bg-gradient-modern {
+    @apply bg-gradient-to-br from-bitcoin/80 via-bitcoin/50 to-bitcoin/20;
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out forwards;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
