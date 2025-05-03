@@ -8,30 +8,38 @@ const About = () => {
     {
       icon: <Bitcoin className="h-12 w-12 text-bitcoin mb-4" />,
       title: "Bitcoin Ecosystem",
-      description: "Deep dive into the latest developments in Bitcoin technology, regulation, and adoption."
+      description: "Deep dive into the latest developments in Bitcoin technology, regulation, and adoption.",
+      bgColor: "bg-[#FEF7CD]",
+      borderColor: "border-[#FDE1D3]"
     },
     {
       icon: <Users className="h-12 w-12 text-bitcoin mb-4" />,
       title: "Networking",
-      description: "Connect with industry leaders, investors, and fellow Bitcoin enthusiasts."
+      description: "Connect with industry leaders, investors, and fellow Bitcoin enthusiasts.",
+      bgColor: "bg-[#D3E4FD]",
+      borderColor: "border-[#F2FCE2]"
     },
     {
       icon: <Globe className="h-12 w-12 text-bitcoin mb-4" />,
       title: "Global Perspective",
-      description: "Gain insights from international speakers on Bitcoin's global impact."
+      description: "Gain insights from international speakers on Bitcoin's global impact.",
+      bgColor: "bg-[#F2FCE2]",
+      borderColor: "border-[#D3E4FD]"
     },
     {
       icon: <Target className="h-12 w-12 text-bitcoin mb-4" />,
       title: "Focused Content",
-      description: "Curated presentations and workshops on Bitcoin-specific topics."
+      description: "Curated presentations and workshops on Bitcoin-specific topics.",
+      bgColor: "bg-[#FDE1D3]",
+      borderColor: "border-[#FEF7CD]"
     }
   ];
 
   return (
-    <section id="about" className="py-32 bg-gradient-to-b from-white to-gray-100">
+    <section id="about" className="py-32 bg-gradient-to-b from-white to-[#F2FCE2]/50">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-20">
-          <div className="inline-block mb-4 px-4 py-1 bg-bitcoin/10 backdrop-blur-sm rounded-full border border-bitcoin/20">
+          <div className="inline-block mb-4 px-4 py-1 bg-[#FEF7CD] backdrop-blur-sm rounded-full border border-bitcoin/20">
             <span className="text-sm uppercase tracking-wider font-medium text-bitcoin">About</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-8 text-gray-800">About the Conference</h2>
@@ -43,9 +51,9 @@ const About = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (
-            <Card key={index} className="border border-gray-200 shadow-md hover:shadow-xl transition-all duration-300 hover:translate-y-[-5px] bg-white text-gray-800 rounded-2xl overflow-hidden">
+            <Card key={index} className={`border ${feature.borderColor} shadow-md hover:shadow-xl transition-all duration-300 hover:translate-y-[-5px] ${feature.bgColor}/30 text-gray-800 rounded-2xl overflow-hidden`}>
               <CardContent className="p-8 text-center">
-                <div className="mx-auto flex justify-center bg-bitcoin/10 w-20 h-20 rounded-full items-center mb-6">
+                <div className="mx-auto flex justify-center bg-white/60 w-20 h-20 rounded-full items-center mb-6 shadow-inner border border-white/80">
                   {feature.icon}
                 </div>
                 <h3 className="text-2xl font-bold mb-3 text-gray-800">{feature.title}</h3>

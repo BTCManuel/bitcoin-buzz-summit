@@ -5,10 +5,10 @@ import { MapPin, Hotel, Clock, Info } from 'lucide-react';
 
 const Venue = () => {
   return (
-    <section id="venue" className="py-32 bg-gradient-to-b from-white to-gray-100">
+    <section id="venue" className="py-32 bg-gradient-to-b from-white to-[#D3E4FD]/30">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <div className="inline-block mb-4 px-4 py-1 bg-bitcoin/10 backdrop-blur-sm rounded-full border border-bitcoin/20">
+          <div className="inline-block mb-4 px-4 py-1 bg-[#FDE1D3] backdrop-blur-sm rounded-full border border-bitcoin/20">
             <span className="text-sm uppercase tracking-wider font-medium text-bitcoin">Location</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800">Venue Information</h2>
@@ -19,10 +19,10 @@ const Venue = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div>
-            <Card className="h-full border border-gray-200 shadow-md rounded-2xl overflow-hidden bg-white">
+            <Card className="h-full border border-[#F2FCE2] shadow-md rounded-2xl overflow-hidden bg-white">
               <CardContent className="p-0 h-full">
-                <div className="aspect-video w-full bg-gray-100 relative overflow-hidden rounded-t-2xl">
-                  <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-200">
+                <div className="aspect-video w-full bg-[#FEF7CD]/30 relative overflow-hidden rounded-t-2xl">
+                  <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-[#D3E4FD]/20 to-[#F2FCE2]/20">
                     <MapPin className="h-16 w-16 text-bitcoin" />
                   </div>
                 </div>
@@ -39,7 +39,7 @@ const Venue = () => {
           <div className="space-y-8 text-gray-800">
             <div>
               <h3 className="flex items-center text-2xl font-bold mb-4">
-                <div className="mr-4 h-10 w-10 rounded-full bg-bitcoin/20 flex items-center justify-center">
+                <div className="mr-4 h-10 w-10 rounded-full bg-[#FDE1D3]/40 flex items-center justify-center">
                   <MapPin className="h-5 w-5 text-bitcoin" />
                 </div>
                 Location
@@ -54,7 +54,7 @@ const Venue = () => {
             
             <div>
               <h3 className="flex items-center text-2xl font-bold mb-4">
-                <div className="mr-4 h-10 w-10 rounded-full bg-bitcoin/20 flex items-center justify-center">
+                <div className="mr-4 h-10 w-10 rounded-full bg-[#F2FCE2]/60 flex items-center justify-center">
                   <Hotel className="h-5 w-5 text-bitcoin" />
                 </div>
                 Accommodations
@@ -82,7 +82,7 @@ const Venue = () => {
             
             <div>
               <h3 className="flex items-center text-2xl font-bold mb-4">
-                <div className="mr-4 h-10 w-10 rounded-full bg-bitcoin/20 flex items-center justify-center">
+                <div className="mr-4 h-10 w-10 rounded-full bg-[#D3E4FD]/50 flex items-center justify-center">
                   <Info className="h-5 w-5 text-bitcoin" />
                 </div>
                 Additional Information

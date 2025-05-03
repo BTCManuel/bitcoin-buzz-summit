@@ -34,9 +34,9 @@ const Navbar = () => {
       <div className="container mx-auto px-6 py-5 flex justify-between items-center">
         <Link to="/" className="flex items-center space-x-3 group">
           <div className={`h-10 w-10 rounded-full flex items-center justify-center transition-all duration-300 ${
-            isScrolled ? 'bg-bitcoin' : 'bg-bitcoin/20'
+            isScrolled ? 'bg-bitcoin' : 'bg-[#FEF7CD]'
           }`}>
-            <Bitcoin className="h-6 w-6 text-white" />
+            <Bitcoin className={`h-6 w-6 ${isScrolled ? 'text-white' : 'text-bitcoin'}`} />
           </div>
           <div>
             <span className={`font-bold text-lg block leading-tight ${isScrolled ? 'text-gray-800' : 'text-gray-800'}`}>Bitcoin Buzz</span>
@@ -50,7 +50,7 @@ const Navbar = () => {
               variant="ghost" 
               size="sm" 
               onClick={toggleMenu} 
-              className={`p-2 rounded-full ${isScrolled ? 'text-gray-800 hover:bg-gray-100' : 'text-gray-800 hover:bg-white/20'}`}
+              className={`p-2 rounded-full ${isScrolled ? 'text-gray-800 hover:bg-[#D3E4FD]/30' : 'text-gray-800 hover:bg-white/20'}`}
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>

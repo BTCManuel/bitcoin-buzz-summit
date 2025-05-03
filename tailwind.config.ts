@@ -67,6 +67,12 @@ export default {
 					DEFAULT: '#f7931a',
 					light: '#faa942',
 					dark: '#e07908'
+				},
+				pastel: {
+					green: '#F2FCE2',
+					blue: '#D3E4FD',
+					peach: '#FDE1D3',
+					yellow: '#FEF7CD'
 				}
 			},
 			borderRadius: {

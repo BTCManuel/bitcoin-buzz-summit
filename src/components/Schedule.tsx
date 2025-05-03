@@ -173,23 +173,23 @@ const Schedule = () => {
   const getSessionClassName = (type: string) => {
     switch(type) {
       case 'keynote':
-        return 'border-l-4 border-bitcoin';
+        return 'border-l-4 border-bitcoin bg-[#FEF7CD]/30';
       case 'panel':
-        return 'border-l-4 border-blue-500';
+        return 'border-l-4 border-[#D3E4FD] bg-[#D3E4FD]/20';
       case 'workshop':
-        return 'border-l-4 border-green-500';
+        return 'border-l-4 border-[#F2FCE2] bg-[#F2FCE2]/30';
       case 'networking':
-        return 'border-l-4 border-gray-400';
+        return 'border-l-4 border-[#FDE1D3] bg-[#FDE1D3]/20';
       default:
         return '';
     }
   };
 
   return (
-    <section id="schedule" className="py-32 bg-white border-t border-gray-100">
+    <section id="schedule" className="py-32 bg-white border-t border-gray-50">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <div className="inline-block mb-4 px-4 py-1 bg-bitcoin/10 backdrop-blur-sm rounded-full border border-bitcoin/20">
+          <div className="inline-block mb-4 px-4 py-1 bg-[#F2FCE2] backdrop-blur-sm rounded-full border border-bitcoin/20">
             <span className="text-sm uppercase tracking-wider font-medium text-bitcoin">Schedule</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800">Event Schedule</h2>
@@ -200,7 +200,7 @@ const Schedule = () => {
         
         <div className="max-w-4xl mx-auto">
           <Tabs defaultValue="day1" value={activeDay} onValueChange={setActiveDay} className="w-full">
-            <TabsList className="grid w-full grid-cols-3 mb-8 bg-gray-100 p-1 rounded-lg">
+            <TabsList className="grid w-full grid-cols-3 mb-8 bg-[#D3E4FD]/20 p-1 rounded-lg">
               <TabsTrigger value="day1" className="data-[state=active]:bg-white data-[state=active]:text-gray-800 data-[state=active]:shadow-md rounded-md">
                 Day 1 - May 15
               </TabsTrigger>
@@ -217,7 +217,7 @@ const Schedule = () => {
                 {schedules[day].map((session, index) => (
                   <div 
                     key={index} 
-                    className={`p-4 bg-white rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-shadow ${getSessionClassName(session.type)}`}
+                    className={`p-4 bg-white rounded-lg border border-gray-50 shadow-sm hover:shadow-md transition-shadow ${getSessionClassName(session.type)}`}
                   >
                     <div className="flex flex-col md:flex-row md:items-center justify-between">
                       <div className="mb-2 md:mb-0">
@@ -230,7 +230,7 @@ const Schedule = () => {
                           <p className="text-bitcoin">{session.speaker}</p>
                         )}
                       </div>
-                      <div className="bg-gray-100 px-3 py-1 rounded text-sm text-gray-600">
+                      <div className="bg-[#F2FCE2]/30 px-3 py-1 rounded text-sm text-gray-600">
                         {session.location}
                       </div>
                     </div>

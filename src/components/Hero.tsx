@@ -5,14 +5,14 @@ import { Calendar } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <div className="min-h-[90vh] flex items-center relative overflow-hidden bg-gradient-to-br from-gray-50 via-gray-100 to-white">
+    <div className="min-h-[90vh] flex items-center relative overflow-hidden bg-gradient-to-br from-[#F2FCE2] via-[#D3E4FD] to-white">
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-[url('public/lovable-uploads/2e1fd836-1d6d-4649-acee-c2ec7d832dac.png')] opacity-5 bg-cover bg-center mix-blend-overlay"></div>
-        <div className="absolute inset-0 bg-gradient-to-br from-bitcoin/5 to-transparent opacity-50"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#FEF7CD]/20 to-transparent opacity-50"></div>
       </div>
       <div className="container mx-auto px-4 py-24 md:py-32 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
-          <div className="inline-block mb-3 px-4 py-1 bg-bitcoin/10 backdrop-blur-sm rounded-full border border-bitcoin/20">
+          <div className="inline-block mb-3 px-4 py-1 bg-[#FDE1D3] backdrop-blur-sm rounded-full border border-bitcoin/20">
             <span className="text-sm md:text-base font-medium text-bitcoin">May 15-17, 2025 • New York City</span>
           </div>
           <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight text-gray-800">
@@ -26,7 +26,7 @@ const Hero = () => {
             <Button className="bg-bitcoin hover:bg-bitcoin-dark text-white text-lg py-7 px-10 rounded-full shadow-lg shadow-bitcoin/20 transition-all duration-300 hover:scale-105">
               Register Now
             </Button>
-            <Button variant="outline" className="border-gray-300 text-gray-700 hover:bg-gray-50 text-lg py-7 px-10 rounded-full backdrop-blur-sm transition-all duration-300 hover:scale-105">
+            <Button variant="outline" className="border-[#D3E4FD] bg-white/70 text-gray-700 hover:bg-[#D3E4FD]/30 text-lg py-7 px-10 rounded-full backdrop-blur-sm transition-all duration-300 hover:scale-105">
               View Schedule
             </Button>
           </div>
