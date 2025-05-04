@@ -15,51 +15,51 @@ interface Speaker {
 const Speakers = () => {
   const speakers: Speaker[] = [
     {
-      name: "Sarah Johnson",
-      role: "CEO",
-      company: "BitLabs",
+      name: "Andreas Stegmüller",
+      role: "Bitcoin-Experte",
+      company: "VR-Bank Bayern Mitte eG",
       image: "",
-      bio: "Pioneering researcher in Bitcoin scalability solutions and ecosystem development.",
+      bio: "Als Experte der VR-Bank Bayern Mitte informiert er über die Chancen und Risiken von Kryptowährungen.",
       bgColor: "bg-[#F2FCE2]/50"
     },
     {
-      name: "Michael Chen",
-      role: "Lead Developer",
-      company: "Lightning Network",
+      name: "Prof. Dr. Philipp Sandner",
+      role: "Professor",
+      company: "Frankfurt School Blockchain Center",
       image: "",
-      bio: "Core contributor to Lightning Network protocol and Bitcoin scaling technologies.",
+      bio: "Leiter des Frankfurt School Blockchain Center und einer der führenden Experten für Blockchain und Kryptowährungen in Deutschland.",
       bgColor: "bg-[#D3E4FD]/50"
     },
     {
-      name: "Elena Rodriguez",
-      role: "Founder",
-      company: "Crypto Economics Institute",
+      name: "Carsten Hahn",
+      role: "Kundenberater",
+      company: "VR-Bank Bayern Mitte eG",
       image: "",
-      bio: "Expert in Bitcoin monetary policy and macroeconomic implications.",
+      bio: "Experte für digitale Anlageformen und Kryptowährungen im Bankwesen.",
       bgColor: "bg-[#FDE1D3]/50"
     },
     {
-      name: "David Kim",
-      role: "Director",
-      company: "Digital Asset Research",
+      name: "Georg Rutz",
+      role: "Leiter Digitalisierung",
+      company: "VR-Bank Bayern Mitte eG",
       image: "",
-      bio: "Specializes in Bitcoin security models and institutional adoption strategies.",
+      bio: "Verantwortlich für die digitale Transformation und innovative Finanzlösungen.",
       bgColor: "bg-[#FEF7CD]/50"
     },
     {
-      name: "Aisha Patel",
-      role: "Partner",
-      company: "Blockchain Ventures",
+      name: "Dr. Michael Geiger",
+      role: "CEO",
+      company: "Blockchain Research Institute",
       image: "",
-      bio: "Investor focused on Bitcoin and Lightning Network infrastructure projects.",
+      bio: "Forscht zu Anwendungsmöglichkeiten der Blockchain-Technologie in verschiedenen Branchen.",
       bgColor: "bg-[#F2FCE2]/50"
     },
     {
-      name: "Thomas Wright",
-      role: "Chief Security Officer",
-      company: "BitGuard",
+      name: "Laura Müller",
+      role: "Finanzexpertin",
+      company: "CryptoConsult GmbH",
       image: "",
-      bio: "Leading expert in Bitcoin wallet security and custody solutions.",
+      bio: "Spezialisiert auf die steuerlichen und rechtlichen Aspekte von Kryptowährungen.",
       bgColor: "bg-[#D3E4FD]/50"
     }
   ];
@@ -69,11 +69,11 @@ const Speakers = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-20">
           <div className="inline-block mb-4 px-4 py-1 bg-[#D3E4FD] backdrop-blur-sm rounded-full border border-bitcoin/20">
-            <span className="text-sm uppercase tracking-wider font-medium text-bitcoin">Speakers</span>
+            <span className="text-sm uppercase tracking-wider font-medium text-bitcoin">Referenten</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800">Featured Speakers</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800">Unsere Experten</h2>
           <p className="text-xl text-gray-600">
-            Learn from the brightest minds and influential leaders in the Bitcoin space
+            Lernen Sie von führenden Experten im Bereich Bitcoin, Blockchain und digitale Finanzen
           </p>
         </div>
         
@@ -96,7 +96,7 @@ const Speakers = () => {
                   <p className="text-gray-600 text-center">{speaker.bio}</p>
                   <div className="mt-6 w-full">
                     <button className="w-full py-2 rounded-full border border-bitcoin/30 text-bitcoin hover:bg-bitcoin/10 transition-colors text-sm">
-                      View Profile
+                      Profil Ansehen
                     </button>
                   </div>
                 </div>

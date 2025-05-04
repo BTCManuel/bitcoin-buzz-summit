@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { MapPin, Hotel, Clock, Info } from 'lucide-react';
+import { MapPin, Clock, Info, Calendar } from 'lucide-react';
 
 const Venue = () => {
   return (
@@ -9,11 +9,11 @@ const Venue = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <div className="inline-block mb-4 px-4 py-1 bg-[#FDE1D3] backdrop-blur-sm rounded-full border border-bitcoin/20">
-            <span className="text-sm uppercase tracking-wider font-medium text-bitcoin">Location</span>
+            <span className="text-sm uppercase tracking-wider font-medium text-bitcoin">Veranstaltungsort</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800">Venue Information</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800">Veranstaltungsinfos</h2>
           <p className="text-xl text-gray-600">
-            Join us at the prestigious Metro Conference Center in the heart of New York City
+            Besuchen Sie uns im historischen Alten Rathaus in Ingolstadt
           </p>
         </div>
         
@@ -27,9 +27,9 @@ const Venue = () => {
                   </div>
                 </div>
                 <div className="p-8 text-gray-800">
-                  <h3 className="text-2xl font-bold mb-4">Metro Conference Center</h3>
+                  <h3 className="text-2xl font-bold mb-4">Altes Rathaus Ingolstadt</h3>
                   <p className="text-gray-600">
-                    A state-of-the-art venue equipped with the latest technology and comfortable spaces for networking and learning.
+                    Ein historisches Gebäude im Herzen Ingolstadts, das ideale Bedingungen für Networking und Lernen bietet.
                   </p>
                 </div>
               </CardContent>
@@ -42,39 +42,39 @@ const Venue = () => {
                 <div className="mr-4 h-10 w-10 rounded-full bg-[#FDE1D3]/40 flex items-center justify-center">
                   <MapPin className="h-5 w-5 text-bitcoin" />
                 </div>
-                Location
+                Ort
               </h3>
               <p className="text-lg text-gray-600 ml-14">
-                Metro Conference Center<br />
-                123 Broadway<br />
-                New York, NY 10001<br />
-                United States
+                Altes Rathaus<br />
+                Rathausplatz 2<br />
+                85049 Ingolstadt<br />
+                Deutschland
               </p>
             </div>
             
             <div>
               <h3 className="flex items-center text-2xl font-bold mb-4">
                 <div className="mr-4 h-10 w-10 rounded-full bg-[#F2FCE2]/60 flex items-center justify-center">
-                  <Hotel className="h-5 w-5 text-bitcoin" />
+                  <Clock className="h-5 w-5 text-bitcoin" />
                 </div>
-                Accommodations
+                Zeit
               </h3>
               <div className="ml-14">
                 <p className="text-lg text-gray-600 mb-3">
-                  We've partnered with nearby hotels to offer special rates for conference attendees:
+                  Freitag, 13. Oktober 2023
                 </p>
                 <ul className="space-y-3">
                   <li className="flex items-center text-gray-600">
                     <span className="h-1.5 w-1.5 rounded-full bg-bitcoin mr-2"></span>
-                    Grand Hotel NYC (5 min walk) - 15% discount
+                    Einlass: 18:00 Uhr
                   </li>
                   <li className="flex items-center text-gray-600">
                     <span className="h-1.5 w-1.5 rounded-full bg-bitcoin mr-2"></span>
-                    Plaza Business Hotel (8 min walk) - 10% discount
+                    Beginn: 18:30 Uhr
                   </li>
                   <li className="flex items-center text-gray-600">
                     <span className="h-1.5 w-1.5 rounded-full bg-bitcoin mr-2"></span>
-                    Midtown Suites (10 min walk) - 20% discount
+                    Ende: ca. 21:00 Uhr
                   </li>
                 </ul>
               </div>
@@ -85,11 +85,11 @@ const Venue = () => {
                 <div className="mr-4 h-10 w-10 rounded-full bg-[#D3E4FD]/50 flex items-center justify-center">
                   <Info className="h-5 w-5 text-bitcoin" />
                 </div>
-                Additional Information
+                Zusätzliche Informationen
               </h3>
               <p className="text-lg text-gray-600 ml-14">
-                The venue is easily accessible by public transportation and is surrounded by restaurants, 
-                cafes, and attractions. Parking is available on-site for an additional fee.
+                Die Teilnahme am Bitcoin Forum ist kostenlos. Aus organisatorischen Gründen bitten wir um Anmeldung. 
+                Während der Veranstaltung werden Getränke und kleine Snacks angeboten.
               </p>
             </div>
           </div>

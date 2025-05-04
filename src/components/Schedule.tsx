@@ -1,245 +1,109 @@
 
-import React, { useState } from 'react';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Clock } from 'lucide-react';
-
-interface Session {
-  time: string;
-  title: string;
-  speaker: string;
-  location: string;
-  type: 'keynote' | 'panel' | 'workshop' | 'networking';
-}
+import React from 'react';
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { Card } from '@/components/ui/card';
+import { Clock, Calendar } from 'lucide-react';
 
 const Schedule = () => {
-  const [activeDay, setActiveDay] = useState('day1');
-  
-  const schedules: Record<string, Session[]> = {
-    day1: [
-      {
-        time: "09:00 - 10:00",
-        title: "Registration & Welcome Coffee",
-        speaker: "",
-        location: "Main Lobby",
-        type: "networking"
-      },
-      {
-        time: "10:00 - 11:00",
-        title: "Opening Keynote: The State of Bitcoin in 2025",
-        speaker: "Sarah Johnson",
-        location: "Main Hall",
-        type: "keynote"
-      },
-      {
-        time: "11:15 - 12:15",
-        title: "Panel: Institutional Adoption of Bitcoin",
-        speaker: "David Kim, Aisha Patel & Guests",
-        location: "Main Hall",
-        type: "panel"
-      },
-      {
-        time: "12:15 - 13:30",
-        title: "Lunch Break & Networking",
-        speaker: "",
-        location: "Dining Area",
-        type: "networking"
-      },
-      {
-        time: "13:30 - 14:30",
-        title: "Technical Workshop: Lightning Network Implementation",
-        speaker: "Michael Chen",
-        location: "Workshop Room A",
-        type: "workshop"
-      },
-      {
-        time: "14:45 - 15:45",
-        title: "Bitcoin Macro Economics & Future Outlook",
-        speaker: "Elena Rodriguez",
-        location: "Main Hall",
-        type: "keynote"
-      },
-      {
-        time: "16:00 - 17:30",
-        title: "Networking Reception",
-        speaker: "",
-        location: "Terrace Lounge",
-        type: "networking"
-      }
-    ],
-    day2: [
-      {
-        time: "09:00 - 10:00",
-        title: "Morning Coffee & Networking",
-        speaker: "",
-        location: "Main Lobby",
-        type: "networking"
-      },
-      {
-        time: "10:00 - 11:00",
-        title: "Keynote: Bitcoin Security Landscape",
-        speaker: "Thomas Wright",
-        location: "Main Hall",
-        type: "keynote"
-      },
-      {
-        time: "11:15 - 12:15",
-        title: "Workshop: Self-Custody Best Practices",
-        speaker: "Thomas Wright",
-        location: "Workshop Room B",
-        type: "workshop"
-      },
-      {
-        time: "12:15 - 13:30",
-        title: "Lunch Break & Networking",
-        speaker: "",
-        location: "Dining Area",
-        type: "networking"
-      },
-      {
-        time: "13:30 - 14:30",
-        title: "Panel: Bitcoin Mining & Energy Innovation",
-        speaker: "Industry Experts",
-        location: "Main Hall",
-        type: "panel"
-      },
-      {
-        time: "14:45 - 15:45",
-        title: "Bitcoin Development Roadmap",
-        speaker: "Michael Chen",
-        location: "Main Hall",
-        type: "keynote"
-      },
-      {
-        time: "16:00 - 17:30",
-        title: "Startup Showcase & Networking",
-        speaker: "",
-        location: "Exhibition Hall",
-        type: "networking"
-      }
-    ],
-    day3: [
-      {
-        time: "09:00 - 10:00",
-        title: "Morning Coffee & Networking",
-        speaker: "",
-        location: "Main Lobby",
-        type: "networking"
-      },
-      {
-        time: "10:00 - 11:00",
-        title: "Keynote: Bitcoin's Global Impact",
-        speaker: "Elena Rodriguez",
-        location: "Main Hall",
-        type: "keynote"
-      },
-      {
-        time: "11:15 - 12:15",
-        title: "Panel: Regulatory Landscape for Bitcoin",
-        speaker: "Legal & Policy Experts",
-        location: "Main Hall",
-        type: "panel"
-      },
-      {
-        time: "12:15 - 13:30",
-        title: "Lunch Break & Networking",
-        speaker: "",
-        location: "Dining Area",
-        type: "networking"
-      },
-      {
-        time: "13:30 - 14:30",
-        title: "Workshop: Building on Bitcoin",
-        speaker: "Developer Team",
-        location: "Workshop Room A",
-        type: "workshop"
-      },
-      {
-        time: "14:45 - 15:45",
-        title: "Closing Keynote: The Road Ahead",
-        speaker: "Sarah Johnson",
-        location: "Main Hall",
-        type: "keynote"
-      },
-      {
-        time: "16:00 - 18:00",
-        title: "Closing Reception",
-        speaker: "",
-        location: "Terrace Lounge",
-        type: "networking"
-      }
-    ]
-  };
-
-  const getSessionClassName = (type: string) => {
-    switch(type) {
-      case 'keynote':
-        return 'border-l-4 border-bitcoin bg-[#FEF7CD]/30';
-      case 'panel':
-        return 'border-l-4 border-[#D3E4FD] bg-[#D3E4FD]/20';
-      case 'workshop':
-        return 'border-l-4 border-[#F2FCE2] bg-[#F2FCE2]/30';
-      case 'networking':
-        return 'border-l-4 border-[#FDE1D3] bg-[#FDE1D3]/20';
-      default:
-        return '';
+  const scheduleItems = [
+    {
+      time: "18:00",
+      title: "Einlass & Empfang",
+      speaker: "",
+      description: "Registrierung und Begrüßungsgetränk"
+    },
+    {
+      time: "18:30",
+      title: "Begrüßung & Einführung",
+      speaker: "Andreas Stegmüller",
+      description: "Willkommen zum 3. Bitcoin Forum der VR-Bank Bayern Mitte"
+    },
+    {
+      time: "18:45",
+      title: "Hauptvortrag: Blockchain & Bitcoin",
+      speaker: "Prof. Dr. Philipp Sandner",
+      description: "Aktuelle Entwicklungen und Zukunftsperspektiven digitaler Währungen"
+    },
+    {
+      time: "19:30",
+      title: "Kryptowährungen in der Praxis",
+      speaker: "Carsten Hahn",
+      description: "Anlagestrategien und praktische Anwendungen für Investoren"
+    },
+    {
+      time: "20:15",
+      title: "Podiumsdiskussion",
+      speaker: "Alle Referenten",
+      description: "Fragen und Antworten rund um Bitcoin und Blockchain"
+    },
+    {
+      time: "21:00",
+      title: "Networking & Ausklang",
+      speaker: "",
+      description: "Austausch mit Experten und Teilnehmern bei Getränken und Snacks"
     }
-  };
+  ];
 
   return (
-    <section id="schedule" className="py-32 bg-white border-t border-gray-50">
+    <section id="schedule" className="py-32 bg-gradient-to-b from-[#D3E4FD]/30 to-white">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <div className="inline-block mb-4 px-4 py-1 bg-[#F2FCE2] backdrop-blur-sm rounded-full border border-bitcoin/20">
-            <span className="text-sm uppercase tracking-wider font-medium text-bitcoin">Schedule</span>
+            <span className="text-sm uppercase tracking-wider font-medium text-bitcoin">Agenda</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800">Event Schedule</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800">Programm</h2>
           <p className="text-xl text-gray-600">
-            Three days of inspiring talks, workshops, and networking opportunities
+            Ein Abend voller Fachwissen und Networking rund um Bitcoin und Blockchain
           </p>
         </div>
         
-        <div className="max-w-4xl mx-auto">
-          <Tabs defaultValue="day1" value={activeDay} onValueChange={setActiveDay} className="w-full">
-            <TabsList className="grid w-full grid-cols-3 mb-8 bg-[#D3E4FD]/20 p-1 rounded-lg">
-              <TabsTrigger value="day1" className="data-[state=active]:bg-white data-[state=active]:text-gray-800 data-[state=active]:shadow-md rounded-md">
-                Day 1 - May 15
-              </TabsTrigger>
-              <TabsTrigger value="day2" className="data-[state=active]:bg-white data-[state=active]:text-gray-800 data-[state=active]:shadow-md rounded-md">
-                Day 2 - May 16
-              </TabsTrigger>
-              <TabsTrigger value="day3" className="data-[state=active]:bg-white data-[state=active]:text-gray-800 data-[state=active]:shadow-md rounded-md">
-                Day 3 - May 17
-              </TabsTrigger>
-            </TabsList>
+        <Card className="border-0 shadow-lg rounded-2xl overflow-hidden bg-white/80 backdrop-blur-sm">
+          <div className="p-4 md:p-8">
+            <div className="flex items-center mb-6 space-x-4">
+              <div className="h-12 w-12 rounded-full bg-[#FDE1D3]/50 flex items-center justify-center">
+                <Calendar className="h-6 w-6 text-bitcoin" />
+              </div>
+              <div className="flex-1">
+                <h3 className="text-xl md:text-2xl font-bold text-gray-800">13. Oktober 2023</h3>
+                <p className="text-bitcoin">Altes Rathaus, Ingolstadt</p>
+              </div>
+            </div>
             
-            {Object.keys(schedules).map((day) => (
-              <TabsContent key={day} value={day} className="space-y-4">
-                {schedules[day].map((session, index) => (
-                  <div 
-                    key={index} 
-                    className={`p-4 bg-white rounded-lg border border-gray-50 shadow-sm hover:shadow-md transition-shadow ${getSessionClassName(session.type)}`}
-                  >
-                    <div className="flex flex-col md:flex-row md:items-center justify-between">
-                      <div className="mb-2 md:mb-0">
-                        <div className="flex items-center gap-2 text-gray-500 mb-1">
-                          <Clock className="h-4 w-4" />
-                          <span>{session.time}</span>
+            <div className="overflow-x-auto">
+              <Table>
+                <TableHeader>
+                  <TableRow className="bg-[#F2FCE2]/30 hover:bg-[#F2FCE2]/50">
+                    <TableHead className="w-24 text-bitcoin">Zeit</TableHead>
+                    <TableHead className="text-bitcoin">Agenda</TableHead>
+                    <TableHead className="text-bitcoin">Referent</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  {scheduleItems.map((item, index) => (
+                    <TableRow 
+                      key={index}
+                      className={index % 2 === 0 ? "bg-white hover:bg-[#D3E4FD]/10" : "bg-[#D3E4FD]/10 hover:bg-[#D3E4FD]/20"}
+                    >
+                      <TableCell className="font-medium">
+                        <div className="flex items-center">
+                          <Clock className="h-4 w-4 mr-2 text-bitcoin" />
+                          {item.time}
                         </div>
-                        <h3 className="font-semibold text-lg text-gray-800">{session.title}</h3>
-                        {session.speaker && (
-                          <p className="text-bitcoin">{session.speaker}</p>
-                        )}
-                      </div>
-                      <div className="bg-[#F2FCE2]/30 px-3 py-1 rounded text-sm text-gray-600">
-                        {session.location}
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </TabsContent>
-            ))}
-          </Tabs>
-        </div>
+                      </TableCell>
+                      <TableCell>
+                        <div>
+                          <p className="font-semibold text-gray-800">{item.title}</p>
+                          <p className="text-sm text-gray-600">{item.description}</p>
+                        </div>
+                      </TableCell>
+                      <TableCell>{item.speaker}</TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </div>
+          </div>
+        </Card>
       </div>
     </section>
   );

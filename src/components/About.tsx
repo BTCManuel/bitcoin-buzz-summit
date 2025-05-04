@@ -7,29 +7,29 @@ const About = () => {
   const features = [
     {
       icon: <Bitcoin className="h-12 w-12 text-bitcoin mb-4" />,
-      title: "Bitcoin Ecosystem",
-      description: "Deep dive into the latest developments in Bitcoin technology, regulation, and adoption.",
+      title: "Bitcoin & Blockchain",
+      description: "Einführung in die Welt der Kryptowährungen und die zugrundeliegende Blockchain-Technologie.",
       bgColor: "bg-[#FEF7CD]",
       borderColor: "border-[#FDE1D3]"
     },
     {
       icon: <Users className="h-12 w-12 text-bitcoin mb-4" />,
       title: "Networking",
-      description: "Connect with industry leaders, investors, and fellow Bitcoin enthusiasts.",
+      description: "Treffen Sie Experten und Gleichgesinnte im Bereich Kryptowährungen und Blockchain.",
       bgColor: "bg-[#D3E4FD]",
       borderColor: "border-[#F2FCE2]"
     },
     {
       icon: <Globe className="h-12 w-12 text-bitcoin mb-4" />,
-      title: "Global Perspective",
-      description: "Gain insights from international speakers on Bitcoin's global impact.",
+      title: "Digitale Zukunft",
+      description: "Erfahren Sie mehr über die Auswirkungen der Digitalisierung auf die Finanzwelt.",
       bgColor: "bg-[#F2FCE2]",
       borderColor: "border-[#D3E4FD]"
     },
     {
       icon: <Target className="h-12 w-12 text-bitcoin mb-4" />,
-      title: "Focused Content",
-      description: "Curated presentations and workshops on Bitcoin-specific topics.",
+      title: "Bildung & Information",
+      description: "Fokussierte Präsentationen zu Bitcoin und Blockchain-spezifischen Themen.",
       bgColor: "bg-[#FDE1D3]",
       borderColor: "border-[#FEF7CD]"
     }
@@ -40,12 +40,13 @@ const About = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-20">
           <div className="inline-block mb-4 px-4 py-1 bg-[#FEF7CD] backdrop-blur-sm rounded-full border border-bitcoin/20">
-            <span className="text-sm uppercase tracking-wider font-medium text-bitcoin">About</span>
+            <span className="text-sm uppercase tracking-wider font-medium text-bitcoin">Über das Forum</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-gray-800">About the Conference</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-gray-800">Das 3. Bitcoin Forum</h2>
           <p className="text-xl text-gray-600">
-            Bitcoin Buzz Summit brings together the brightest minds in the Bitcoin ecosystem for three days of 
-            learning, networking, and collaboration. Join us to explore the future of Bitcoin and its impact on finance, technology, and society.
+            Zum dritten Mal lädt die VR-Bank Bayern Mitte zum Bitcoin Forum ein. In diesem Jahr erwartet Sie ein Expertenabend 
+            mit Fachvorträgen zu Blockchain, Bitcoin und anderen digitalen Anlageformen. Lernen Sie mehr über die Nutzungsmöglichkeiten, 
+            Chancen und Risiken von Kryptowährungen in einer zunehmend digitalisierten Finanzwelt.
           </p>
         </div>
         
