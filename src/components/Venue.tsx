@@ -1,7 +1,8 @@
 
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { MapPin, Clock, Info, Calendar } from 'lucide-react';
+import { MapPin, Clock, Info, Navigation } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const Venue = () => {
   return (
@@ -11,9 +12,9 @@ const Venue = () => {
           <div className="inline-block mb-4 px-4 py-1 bg-[#FDE1D3] backdrop-blur-sm rounded-full border border-bitcoin/20">
             <span className="text-sm uppercase tracking-wider font-medium text-bitcoin">Veranstaltungsort</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800">Veranstaltungsinfos</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800">Eventlocation</h2>
           <p className="text-xl text-gray-600">
-            Besuchen Sie uns im historischen Alten Rathaus in Ingolstadt
+            Treffen Sie uns im historischen Alten Rathaus im Herzen von Ingolstadt
           </p>
         </div>
         
@@ -22,15 +23,33 @@ const Venue = () => {
             <Card className="h-full border border-[#F2FCE2] shadow-md rounded-2xl overflow-hidden bg-white">
               <CardContent className="p-0 h-full">
                 <div className="aspect-video w-full bg-[#FEF7CD]/30 relative overflow-hidden rounded-t-2xl">
+                  <img 
+                    src="/lovable-uploads/2e1fd836-1d6d-4649-acee-c2ec7d832dac.png" 
+                    alt="Altes Rathaus Ingolstadt" 
+                    className="w-full h-full object-cover opacity-80"
+                  />
                   <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-[#D3E4FD]/20 to-[#F2FCE2]/20">
                     <MapPin className="h-16 w-16 text-bitcoin" />
                   </div>
                 </div>
                 <div className="p-8 text-gray-800">
-                  <h3 className="text-2xl font-bold mb-4">Altes Rathaus Ingolstadt</h3>
-                  <p className="text-gray-600">
-                    Ein historisches Gebäude im Herzen Ingolstadts, das ideale Bedingungen für Networking und Lernen bietet.
+                  <h3 className="text-2xl font-bold mb-4">Altes Rathaus</h3>
+                  <p className="text-gray-600 mb-6">
+                    Das Alte Rathaus liegt im Herzen der Ingolstädter Altstadt und bietet einen wunderbaren historischen Rahmen für das Bitcoin Forum. Der prächtige Festsaal im ersten Obergeschoss bietet ausreichend Platz für die Veranstaltung.
                   </p>
+                  <div className="mt-4">
+                    <Button className="bg-bitcoin hover:bg-bitcoin-dark text-white rounded-full shadow-md shadow-bitcoin/20 transition-all duration-300 hover:scale-105">
+                      <Navigation className="mr-2 h-5 w-5" />
+                      <a 
+                        href="https://maps.google.com/?q=Altes+Rathaus+Ingolstadt+Rathausplatz+2" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-white"
+                      >
+                        Anfahrt
+                      </a>
+                    </Button>
+                  </div>
                 </div>
               </CardContent>
             </Card>
@@ -42,7 +61,7 @@ const Venue = () => {
                 <div className="mr-4 h-10 w-10 rounded-full bg-[#FDE1D3]/40 flex items-center justify-center">
                   <MapPin className="h-5 w-5 text-bitcoin" />
                 </div>
-                Ort
+                Anschrift
               </h3>
               <p className="text-lg text-gray-600 ml-14">
                 Altes Rathaus<br />
@@ -85,12 +104,26 @@ const Venue = () => {
                 <div className="mr-4 h-10 w-10 rounded-full bg-[#D3E4FD]/50 flex items-center justify-center">
                   <Info className="h-5 w-5 text-bitcoin" />
                 </div>
-                Zusätzliche Informationen
+                Anfahrt & Parkplätze
               </h3>
-              <p className="text-lg text-gray-600 ml-14">
-                Die Teilnahme am Bitcoin Forum ist kostenlos. Aus organisatorischen Gründen bitten wir um Anmeldung. 
-                Während der Veranstaltung werden Getränke und kleine Snacks angeboten.
+              <p className="text-lg text-gray-600 ml-14 mb-4">
+                Das Alte Rathaus befindet sich in der Fußgängerzone der Ingolstädter Altstadt. In unmittelbarer Nähe 
+                befinden sich mehrere öffentliche Parkhäuser:
               </p>
+              <ul className="ml-14 space-y-2">
+                <li className="flex items-center text-gray-600">
+                  <span className="h-1.5 w-1.5 rounded-full bg-bitcoin mr-2"></span>
+                  Parkhaus Schloss (ca. 300m entfernt)
+                </li>
+                <li className="flex items-center text-gray-600">
+                  <span className="h-1.5 w-1.5 rounded-full bg-bitcoin mr-2"></span>
+                  Parkhaus Theater (ca. 350m entfernt)
+                </li>
+                <li className="flex items-center text-gray-600">
+                  <span className="h-1.5 w-1.5 rounded-full bg-bitcoin mr-2"></span>
+                  Tiefgarage Münster (ca. 400m entfernt)
+                </li>
+              </ul>
             </div>
           </div>
         </div>
