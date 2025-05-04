@@ -14,7 +14,7 @@ const Venue = () => {
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800">Eventlocation</h2>
           <p className="text-xl text-gray-600">
-            Treffen Sie uns im historischen Alten Rathaus im Herzen von Ingolstadt
+            Freuen Sie sich auf einen spannenden Abend im neuen Kongresszentrum der VR-Bank Bayern Mitte eG
           </p>
         </div>
         
@@ -25,7 +25,7 @@ const Venue = () => {
                 <div className="aspect-video w-full bg-[#FEF7CD]/30 relative overflow-hidden rounded-t-2xl">
                   <img 
                     src="/lovable-uploads/2e1fd836-1d6d-4649-acee-c2ec7d832dac.png" 
-                    alt="Altes Rathaus Ingolstadt" 
+                    alt="Kongresszentrum VR-Bank Bayern Mitte" 
                     className="w-full h-full object-cover opacity-80"
                   />
                   <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-[#D3E4FD]/20 to-[#F2FCE2]/20">
@@ -33,15 +33,15 @@ const Venue = () => {
                   </div>
                 </div>
                 <div className="p-8 text-gray-800">
-                  <h3 className="text-2xl font-bold mb-4">Altes Rathaus</h3>
+                  <h3 className="text-2xl font-bold mb-4">VR-Bank Bayern Mitte eG</h3>
                   <p className="text-gray-600 mb-6">
-                    Das Alte Rathaus liegt im Herzen der Ingolstädter Altstadt und bietet einen wunderbaren historischen Rahmen für das Bitcoin Forum. Der prächtige Festsaal im ersten Obergeschoss bietet ausreichend Platz für die Veranstaltung.
+                    Das neue Kongresszentrum der VR-Bank Bayern Mitte bietet die perfekte Lokation für unsere Veranstaltung. Die modern gestalteten Räumlichkeiten ermöglichen eine angenehme Atmosphäre für interessante Vorträge und Gespräche mit Experten und Gleichgesinnten.
                   </p>
                   <div className="mt-4">
                     <Button className="bg-bitcoin hover:bg-bitcoin-dark text-white rounded-full shadow-md shadow-bitcoin/20 transition-all duration-300 hover:scale-105">
                       <Navigation className="mr-2 h-5 w-5" />
                       <a 
-                        href="https://maps.google.com/?q=Altes+Rathaus+Ingolstadt+Rathausplatz+2" 
+                        href="https://maps.google.com/?q=Eriagstraße+2+85053+Ingolstadt" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="text-white"
@@ -64,9 +64,9 @@ const Venue = () => {
                 Anschrift
               </h3>
               <p className="text-lg text-gray-600 ml-14">
-                Altes Rathaus<br />
-                Rathausplatz 2<br />
-                85049 Ingolstadt<br />
+                VR-Bank Bayern Mitte eG<br />
+                Eriagstraße 2<br />
+                85053 Ingolstadt<br />
                 Deutschland
               </p>
             </div>
@@ -85,11 +85,11 @@ const Venue = () => {
                 <ul className="space-y-3">
                   <li className="flex items-center text-gray-600">
                     <span className="h-1.5 w-1.5 rounded-full bg-bitcoin mr-2"></span>
-                    Einlass: 18:00 Uhr
+                    Einlass: 17:30 Uhr
                   </li>
                   <li className="flex items-center text-gray-600">
                     <span className="h-1.5 w-1.5 rounded-full bg-bitcoin mr-2"></span>
-                    Beginn: 18:30 Uhr
+                    Beginn: 18:00 Uhr
                   </li>
                   <li className="flex items-center text-gray-600">
                     <span className="h-1.5 w-1.5 rounded-full bg-bitcoin mr-2"></span>
@@ -107,21 +107,20 @@ const Venue = () => {
                 Anfahrt & Parkplätze
               </h3>
               <p className="text-lg text-gray-600 ml-14 mb-4">
-                Das Alte Rathaus befindet sich in der Fußgängerzone der Ingolstädter Altstadt. In unmittelbarer Nähe 
-                befinden sich mehrere öffentliche Parkhäuser:
+                Die VR-Bank Bayern Mitte eG ist gut zu erreichen:
               </p>
               <ul className="ml-14 space-y-2">
                 <li className="flex items-center text-gray-600">
                   <span className="h-1.5 w-1.5 rounded-full bg-bitcoin mr-2"></span>
-                  Parkhaus Schloss (ca. 300m entfernt)
+                  Kostenfreie Parkplätze rund um die VR-Bank
                 </li>
                 <li className="flex items-center text-gray-600">
                   <span className="h-1.5 w-1.5 rounded-full bg-bitcoin mr-2"></span>
-                  Parkhaus Theater (ca. 350m entfernt)
+                  Busverbindung: Linien 10, 11, 15, 20, 21, 61
                 </li>
                 <li className="flex items-center text-gray-600">
                   <span className="h-1.5 w-1.5 rounded-full bg-bitcoin mr-2"></span>
-                  Tiefgarage Münster (ca. 400m entfernt)
+                  Haltestelle: Staustufe/Gerolfinger Straße
                 </li>
               </ul>
             </div>
