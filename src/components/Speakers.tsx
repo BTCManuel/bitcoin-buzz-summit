@@ -23,7 +23,7 @@ const Speakers = () => {
       bgColor: "bg-[#F2FCE2]/50"
     },
     {
-      name: "Prof. Dr. Max Mustermann",
+      name: "Prof. Max Mustermann",
       role: "Professor",
       company: "Frankfurt School Blockchain Center",
       image: "",
