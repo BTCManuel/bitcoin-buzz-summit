@@ -22,18 +22,19 @@ const Venue = () => {
           <div>
             <Card className="h-full border border-[#F2FCE2] shadow-md rounded-2xl overflow-hidden bg-white">
               <CardContent className="p-0 h-full">
-                <div className="aspect-video w-full overflow-hidden rounded-t-2xl">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2664.885898896282!2d11.408006415888854!3d48.75821087927616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479e5a5e5fc26f69%3A0x88ebccabef87403a!2sVR-Bank%20Bayern%20Mitte%20eG!5e0!3m2!1sde!2sde!4v1684242420000!5m2!1sde!2sde"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen=""
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    className="w-full h-full"
-                  ></iframe>
-                </div>
+              <div className="aspect-video w-full overflow-hidden rounded-t-2xl">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2664.427745410266!2d11.440214615888955!3d48.7735757792768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479effb5c80ee12d%3A0x4f181eb97d43015!2sVolksbank%20Raiffeisenbank%20Bayern%20Mitte%20eG%20-%20Filiale%20Friedrich-Ebert-Stra%C3%9Fe!5e0!3m2!1sde!2sde!4v1715245840000!5m2!1sde!2sde"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="w-full h-full"
+                ></iframe>
+              </div>
+
                 <div className="p-8 text-gray-800">
                   <h3 className="text-2xl font-bold mb-4">VR-Bank Bayern Mitte eG</h3>
                   <p className="text-gray-600 mb-6">
