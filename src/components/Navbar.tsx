@@ -89,7 +89,7 @@ const Navbar = () => {
               </a>
             </div>
             <a
-              href="hallo"
+              href="https://vr-bayernmitte.genolive.de/index.php?page=event-code&code=bitcoin25"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-bitcoin hover:bg-bitcoin-dark text-white rounded-full shadow-lg shadow-bitcoin/20 transition-all duration-300 hover:scale-105 px-6 py-3 text-center font-medium"
