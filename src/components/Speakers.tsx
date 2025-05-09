@@ -15,11 +15,11 @@ interface Speaker {
 const Speakers = () => {
   const speakers: Speaker[] = [
     {
-      name: "Andreas Stegmüller",
+      name: "Alex von Frankenberg",
       role: "Bitcoin-Experte",
       company: "VR-Bank Bayern Mitte eG",
       image: "",
-      bio: "Als Experte der VR-Bank Bayern Mitte informiert er über die Chancen und Risiken von Kryptowährungen.",
+      bio: "leitete von 2005 bis 2025 den High-Tech Gründerfonds (HTGF), Europas aktivsten Frühphaseninvestor mit fast 800 Seed Investments und 2 Mrd. Euro in fünf Fonds. Zuvor war er u.a. bei Siemens, einem IT-Startup und in der Beratung tätig. Seit 2016 beschäftigt er sich intensiv mit Bitcoin als möglichem Wertspeicherstandard.",
       bgColor: "bg-[#F2FCE2]/50"
     },
     {
