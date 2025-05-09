@@ -43,14 +43,15 @@ const Venue = () => {
                   <div className="mt-4">
                     <Button className="bg-bitcoin hover:bg-bitcoin-dark text-white rounded-full shadow-md shadow-bitcoin/20 transition-all duration-300 hover:scale-105">
                       <Navigation className="mr-2 h-5 w-5" />
-                      <a 
-                        href="https://maps.google.com/?q=Eriagstraße+2+85053+Ingolstadt" 
-                        target="_blank" 
+                      <a
+                        href="https://www.google.com/maps/place/Volksbank+Raiffeisenbank+Bayern+Mitte+eG+-+Filiale+Friedrich-Ebert-Stra%C3%9Fe/@48.7735758,11.4424034,16z"
+                        target="_blank"
                         rel="noopener noreferrer"
                         className="text-white"
                       >
                         Anfahrt
                       </a>
+
                     </Button>
                   </div>
                 </div>
