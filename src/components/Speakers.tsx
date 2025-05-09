@@ -17,48 +17,48 @@ const Speakers = () => {
   const speakers: Speaker[] = [
   {
     name: "Alex von Frankenberg",
-    role: "Bitcoin-Experte",
-    company: "VR-Bank Bayern Mitte eG",
+    role: "CEO",
+    company: "High-Tech Gründerfonds (HTGF)",
     image: "/images/speakers/frankenberg.jpg",
     bio: "leitete von 2005 bis 2025 den High-Tech Gründerfonds (HTGF), Europas aktivsten Frühphaseninvestor mit fast 800 Seed Investments und 2 Mrd. Euro in fünf Fonds. Zuvor war er u.a. bei Siemens, einem IT-Startup und in der Beratung tätig. Seit 2016 beschäftigt er sich intensiv mit Bitcoin als möglichem Wertspeicherstandard.",
     bgColor: "bg-[#F2FCE2]/50"
   },
   {
     name: "Chris Seedor",
-    role: "Professor",
-    company: "Frankfurt School Blockchain Center",
+    role: "Gründer & Entwickler",
+    company: "SEEDOR",
     image: "/images/speakers/Chris_Seedor.jpg",
     bio: "begann seine Karriere als Materialwissenschaftler und Fertigungsberater in Deutschland und China, bevor er seine größte Leidenschaft entdeckte: Bitcoin. Als Mitgründer und Geschäftsführer von seedor.io, bitsurance.io und satskeeper.com ist er eine zentrale Figur in der deutschen Bitcoin-Szene, insbesondere in den Bereichen Verwahrung, Versicherung und Vererbung von Bitcoin.",
     bgColor: "bg-[#D3E4FD]/50"
   },
   {
     name: "der Helper",
-    role: "Kundenberater",
-    company: "VR-Bank Bayern Mitte eG",
+    role: "Content Creator",
+    company: "",
     image: "/images/speakers/der_Helper.jpg",
     bio: "ist bekannt durch seine Infografiken und Erklärvideos, in denen er mit leicht verständlicher Sprache die Genialität von Bitcoin erklärt. Durch seine lockere Art und einfache Sprache gilt er für viele als erste Anlaufstelle, wenn es darum geht, einen Blick in den Bitcoin Kaninchenbau zu werfen.",
     bgColor: "bg-[#FDE1D3]/50"
   },
   {
     name: "Lea Kelwin",
-    role: "Leiter Digitalisierung",
-    company: "VR-Bank Bayern Mitte eG",
+    role: "Content-Creatorin",
+    company: "",
     image: "/images/speakers/Lea_Kelwin.jpg",
     bio: "arbeitet als Hebamme und engagiert sich leidenschaftlich für Frauengesundheit, Selbstbestimmung und soziale Gerechtigkeit. Energie ist dabei der Grundbaustein – ohne sie gibt es weder Neuanfänge noch körperliche oder geistige Fruchtbarkeit. Bitcoin wird durch Energie gestützt und kann als Werkzeug genutzt werden, um den Weg zu mehr Selbstbestimmung und nachhaltiger Gesundheit zu begleiten. Letztlich liegt es bei dir selbst, innovative Technologie für deine ganz eigenen Lösungswege einzusetzen. Lea ist Mitgründerin der Non-Profit-Initiative Bitcoin Block.",
     bgColor: "bg-[#FEF7CD]/50"
   },
   {
     name: "Patrick Linus",
-    role: "CEO",
-    company: "Blockchain Research Institute",
+    role: "Lehrer",
+    company: "The Progressive Bitcoiner Podcast",
     image: "/images/speakers/Patrick_Linus.jpg",
     bio: "ist Lehrer, Lehrplanautor und Berater im Bildungsbereich, Podcaster und Familienvater. Seit 2017 setzt er sich leidenschaftlich dafür ein, die Souveränität der kommenden Generation im digitalen Zeitalter zu stärken. Er unterstützt Pädagogen und Schulen bei der konzeptionellen Umsetzung seines maßgeschneiderten Medienbildungskonzepts – ein modular flexibler, Open-Source-Lehrplan, der frei verfügbar ist. Überzeugt davon, dass grundlegendes Wissen über Medien und Kommunikation essenziell ist, sieht er hierin die Basis für die erfolgreiche Vermittlung innovativer Technologien wie Bitcoin und KI. Zudem ist Patrick Gründer der Non-Profit-Initiative Bitcoin Block und engagiert sich aktiv dafür, die kulturelle und gesellschaftliche Bedeutung von Bitcoin in der Öffentlichkeit sichtbar zu machen.",
     bgColor: "bg-[#F2FCE2]/50"
   },
   {
     name: "Daniel Winklhammer",
-    role: "Finanzexpertin",
-    company: "CryptoConsult GmbH",
+    role: "CEO & Mitgründer",
+    company: "21bitcoin (FIOR Digital GmbH)",
     image: "/images/speakers/Daniel_Winklhammer.jpg",
     bio: "ist ein echter Bitcoin-Enthusiast, der bereits während seiner Schulzeit mit der Kryptowährung in Berührung kam. Als CEO von 21bitcoin bringt er seine visionäre Führungsstärke und seine langjährige Erfahrung in der Finanz- und IT-Beratung ein. Mit Leidenschaft und Expertise treibt er die Mission voran, Bitcoin einer breiteren Zielgruppe zugänglich zu machen.",
     bgColor: "bg-[#D3E4FD]/50"
