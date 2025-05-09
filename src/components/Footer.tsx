@@ -30,15 +30,16 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="font-bold text-lg mb-4">Quick Links</h3>
+            <h3 className="font-bold text-lg mb-4">Schnellzugriff</h3>
             <ul className="space-y-2">
-              <li><Link to="/#about" className="text-gray-600 hover:text-bitcoin transition-colors">About</Link></li>
-              <li><Link to="/#speakers" className="text-gray-600 hover:text-bitcoin transition-colors">Speakers</Link></li>
-              <li><Link to="/#schedule" className="text-gray-600 hover:text-bitcoin transition-colors">Schedule</Link></li>
-              <li><Link to="/#venue" className="text-gray-600 hover:text-bitcoin transition-colors">Venue</Link></li>
-              <li><Link to="/#register" className="text-gray-600 hover:text-bitcoin transition-colors">Register</Link></li>
+              <li><button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="text-gray-600 hover:text-bitcoin transition-colors">Über das Forum</button></li>
+              <li><button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="text-gray-600 hover:text-bitcoin transition-colors">Referenten</button></li>
+              <li><button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="text-gray-600 hover:text-bitcoin transition-colors">Agenda</button></li>
+              <li><button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="text-gray-600 hover:text-bitcoin transition-colors">Veranstaltungsort</button></li>
+              <li><a href="https://vr-bayernmitte.genolive.de/index.php?page=event-code&code=bitcoin25" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-bitcoin transition-colors">Anmeldung</a></li>
             </ul>
           </div>
+
           
           <div>
             <h3 className="font-bold text-lg mb-4">Contact Us</h3>
