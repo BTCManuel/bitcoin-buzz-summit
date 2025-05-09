@@ -84,11 +84,15 @@ const Speakers = () => {
                 <div className="flex flex-col items-center">
                   <div className="mb-6 relative">
                     <div className="absolute inset-0 rounded-full bg-gradient-to-br from-bitcoin to-bitcoin-light blur-lg opacity-20"></div>
-                    <Avatar className="h-28 w-28 ring-2 ring-white">
-                      <AvatarFallback className="bg-gradient-to-br from-white to-gray-100 text-bitcoin text-2xl border-4 border-white">
-                        {speaker.name.split(' ').map(n => n[0]).join('')}
-                      </AvatarFallback>
-                    </Avatar>
+<Avatar className="h-28 w-28 ring-2 ring-white">
+  {speaker.image && (
+    <AvatarImage src={speaker.image} alt={speaker.name} />
+  )}
+  <AvatarFallback className="bg-gradient-to-br from-white to-gray-100 text-bitcoin text-2xl border-4 border-white">
+    {speaker.name.split(' ').map(n => n[0]).join('')}
+  </AvatarFallback>
+</Avatar>
+
                   </div>
                   <h3 className="text-2xl font-bold mb-1 text-gray-800">{speaker.name}</h3>
                   <p className="text-bitcoin font-medium mb-1">{speaker.role}</p>
