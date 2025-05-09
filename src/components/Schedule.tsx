@@ -20,13 +20,13 @@ const Schedule = () => {
     },
     {
       time: "18:45",
-      title: "Hauptvortrag: Blockchain & Bitcoin",
-      speaker: "Prof. Dr. Philipp Sandner",
-      description: "Aktuelle Entwicklungen und Zukunftsperspektiven digitaler Währungen"
+      title: "Hauptvortrag: Quo Vadis Bitcoin",
+      speaker: "Prof. Max Muster",
+      description: "Aktuelle Entwicklungen und Zukunftsperspektiven von Bitcoin"
     },
     {
       time: "19:30",
-      title: "Kryptowährungen in der Praxis",
+      title: "Bitcoin in der Praxis",
       speaker: "Carsten Hahn",
       description: "Anlagestrategien und praktische Anwendungen für Investoren"
     },
@@ -34,7 +34,7 @@ const Schedule = () => {
       time: "20:15",
       title: "Podiumsdiskussion",
       speaker: "Alle Referenten",
-      description: "Fragen und Antworten rund um Bitcoin und Blockchain"
+      description: "Fragen und Antworten rund um Bitcoin"
     },
     {
       time: "21:00",
