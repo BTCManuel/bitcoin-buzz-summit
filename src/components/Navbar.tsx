@@ -57,7 +57,7 @@ const Navbar = () => {
             {isOpen && (
               <div className="fixed inset-0 top-20 bg-white/95 z-40 animate-fade-in">
                 <div className="container mx-auto px-4 py-12 flex flex-col space-y-8">
-                  <Link to="/#about" onClick={toggleMenu} className="text-xl font-medium px-4 py-3 text-gray-800 hover:text-bitcoin transition-colors">About</Link>
+                  <Link to="/#about" onClick={toggleMenu} className="text-xl font-medium px-4 py-3 text-gray-800 hover:text-bitcoin transition-colors">Über das Forum</Link>
                   <Link to="/#speakers" onClick={toggleMenu} className="text-xl font-medium px-4 py-3 text-gray-800 hover:text-bitcoin transition-colors">Speakers</Link>
                   <Link to="/#schedule" onClick={toggleMenu} className="text-xl font-medium px-4 py-3 text-gray-800 hover:text-bitcoin transition-colors">Schedule</Link>
                   <Link to="/#venue" onClick={toggleMenu} className="text-xl font-medium px-4 py-3 text-gray-800 hover:text-bitcoin transition-colors">Venue</Link>
@@ -71,22 +71,22 @@ const Navbar = () => {
         ) : (
           <div className="flex items-center space-x-10">
             <div className="flex items-center space-x-8">
-              <Link to="/#about" className="text-sm font-medium text-gray-800 hover:text-bitcoin transition-colors relative group">
+              <a href="/#about" className="text-sm font-medium text-gray-800 hover:text-bitcoin transition-colors relative group">
                 About
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-bitcoin group-hover:w-full transition-all duration-300"></span>
-              </Link>
+              </a>
               <a href="#speakers" className="text-sm font-medium text-gray-800 hover:text-bitcoin transition-colors relative group">
                 Speakers
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-bitcoin group-hover:w-full transition-all duration-300"></span>
               </a>
-              <Link to="/#schedule" className="text-sm font-medium text-gray-800 hover:text-bitcoin transition-colors relative group">
+              <a href="#schedule" className="text-sm font-medium text-gray-800 hover:text-bitcoin transition-colors relative group">
                 Schedule
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-bitcoin group-hover:w-full transition-all duration-300"></span>
-              </Link>
-              <Link to="/#venue" className="text-sm font-medium text-gray-800 hover:text-bitcoin transition-colors relative group">
+              </a>
+              <a href="/#venue" className="text-sm font-medium text-gray-800 hover:text-bitcoin transition-colors relative group">
                 Venue
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-bitcoin group-hover:w-full transition-all duration-300"></span>
-              </Link>
+              </a>
             </div>
             <Button className="bg-bitcoin hover:bg-bitcoin-dark text-white rounded-full shadow-lg shadow-bitcoin/20 transition-all duration-300 hover:scale-105">
               Register Now
