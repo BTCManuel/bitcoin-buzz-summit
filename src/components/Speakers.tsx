@@ -23,11 +23,11 @@ const Speakers = () => {
       bgColor: "bg-[#F2FCE2]/50"
     },
     {
-      name: "Prof. Max Mustermann",
+      name: "Chris Seedor",
       role: "Professor",
       company: "Frankfurt School Blockchain Center",
       image: "",
-      bio: "Leiter des Frankfurt School Blockchain Center und einer der führenden Experten für Blockchain und Kryptowährungen in Deutschland.",
+      bio: "begann seine Karriere als Materialwissenschaftler und Fertigungsberater in Deutschland und China, bevor er seine größte Leidenschaft entdeckte: Bitcoin. Als Mitgründer und Geschäftsführer von seedor.io, bitsurance.io und satskeeper.com ist er eine zentrale Figur in der deutschen Bitcoin-Szene, insbesondere in den Bereichen Verwahrung, Versicherung und Vererbung von Bitcoin.",
       bgColor: "bg-[#D3E4FD]/50"
     },
     {
