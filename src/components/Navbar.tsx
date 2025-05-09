@@ -88,9 +88,15 @@ const Navbar = () => {
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-bitcoin group-hover:w-full transition-all duration-300"></span>
               </a>
             </div>
-            <Button className="bg-bitcoin hover:bg-bitcoin-dark text-white rounded-full shadow-lg shadow-bitcoin/20 transition-all duration-300 hover:scale-105">
+            <a
+              href="https://bitcoinforum.de/tickets"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-bitcoin hover:bg-bitcoin-dark text-white rounded-full shadow-lg shadow-bitcoin/20 transition-all duration-300 hover:scale-105 px-6 py-3 text-center font-medium"
+            >
               Sichere dein Ticket
-            </Button>
+            </a>
+
           </div>
         )}
       </div>
