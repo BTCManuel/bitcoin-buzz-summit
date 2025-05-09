@@ -109,10 +109,9 @@ const Speakers = () => {
                     >
                       {speaker.bio}
                     </div>
-
                     <button
                       onClick={() => setExpandedIndex(isExpanded ? null : index)}
-                      className="mt-2 text-bitcoin text-sm underline hover:text-bitcoin-dark transition-colors"
+                      className="mt-6 w-full py-2 rounded-full border border-bitcoin/30 text-bitcoin hover:bg-bitcoin/10 transition-colors text-sm"
                     >
                       {isExpanded ? 'Weniger anzeigen' : 'Mehr anzeigen'}
                     </button>
