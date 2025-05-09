@@ -14,8 +14,7 @@ const Footer = () => {
               <span className="font-bold text-xl">3.Bitcoin Forum Oktober 2025</span>
             </Link>
             <p className="text-gray-600 mb-6 max-w-md">
-              The premier conference for Bitcoin innovators, investors, and enthusiasts. 
-              Join us May 15-17, 2025 in New York City.
+              Das führende Forum für Bitcoin-Interessierte, Investoren und Visionäre. Besuchen Sie uns am 13. Oktober 2025 in Ingolstadt.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="p-2 bg-gray-200 rounded-full hover:bg-bitcoin hover:text-white transition-colors">

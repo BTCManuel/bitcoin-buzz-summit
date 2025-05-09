@@ -22,12 +22,21 @@ const Hero = () => {
             Die spannende Welt der Kryptowährungen und Blockchain-Technologie
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Button className="bg-bitcoin hover:bg-bitcoin-dark text-white text-lg py-7 px-10 rounded-full shadow-lg shadow-bitcoin/20 transition-all duration-300 hover:scale-105">
+            <a
+              href="https://vr-bayernmitte.genolive.de/index.php?page=event-code&code=bitcoin25"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-bitcoin hover:bg-bitcoin-dark text-white text-lg py-7 px-10 rounded-full shadow-lg shadow-bitcoin/20 transition-all duration-300 hover:scale-105 text-center font-medium"
+            >
               Jetzt Anmelden
-            </Button>
-            <Button variant="outline" className="border-[#D3E4FD] bg-white/70 text-gray-700 hover:bg-[#D3E4FD]/30 text-lg py-7 px-10 rounded-full backdrop-blur-sm transition-all duration-300 hover:scale-105">
+            </a>
+            <a
+              href="#schedule"
+              className="border-[#D3E4FD] bg-white/70 text-gray-700 hover:bg-[#D3E4FD]/30 text-lg py-7 px-10 rounded-full backdrop-blur-sm transition-all duration-300 hover:scale-105 text-center font-medium"
+            >
               Programm Ansehen
-            </Button>
+            </a>
+
           </div>
         </div>
       </div>
