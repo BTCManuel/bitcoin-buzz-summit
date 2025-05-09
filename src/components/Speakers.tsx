@@ -18,7 +18,7 @@ const Speakers = () => {
       name: "Alex von Frankenberg",
       role: "Bitcoin-Experte",
       company: "VR-Bank Bayern Mitte eG",
-      image: "<img src="/images/speakers/BitcoinForum_Frankenberg Alex_Speaker_583x500_2025-02.jpg" alt="Alex von Frankenberg" />",
+      image: "/images/speakers/BitcoinForum_Frankenberg Alex_Speaker_583x500_2025-02.jpg",
       bio: "leitete von 2005 bis 2025 den High-Tech Gründerfonds (HTGF), Europas aktivsten Frühphaseninvestor mit fast 800 Seed Investments und 2 Mrd. Euro in fünf Fonds. Zuvor war er u.a. bei Siemens, einem IT-Startup und in der Beratung tätig. Seit 2016 beschäftigt er sich intensiv mit Bitcoin als möglichem Wertspeicherstandard.",
       bgColor: "bg-[#F2FCE2]/50"
     },
