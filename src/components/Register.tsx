@@ -15,40 +15,41 @@ interface TicketTier {
 const Register = () => {
   const ticketTiers: TicketTier[] = [
     {
-      name: "Standard Pass",
-      price: "$499",
+      name: "Standard-Ticket",
+      price: "499€",
       features: [
-        "Full conference access",
-        "Access to all keynotes & panels",
-        "Coffee breaks & lunches",
-        "Networking reception",
+        "Voller Zugang zur Konferenz",
+        "Zugang zu allen Vorträgen & Diskussionsrunden",
+        "Kaffeepausen & Mittagessen",
+        "Networking-Empfang",
       ],
-      buttonText: "Register Now",
+      buttonText: "Jetzt registrieren",
       highlighted: false
     },
     {
-      name: "VIP Pass",
-      price: "$999",
+      name: "VIP-Ticket",
+      price: "999€",
       features: [
-        "All Standard Pass benefits",
-        "VIP seating at keynotes",
+        "Alle Vorteile des Standard-Tickets",
+        "VIP-Sitzplätze bei Vorträgen",
         "Exclusive speaker dinner",
-        "1-year Bitcoin magazine subscription",
-        "Priority workshop registration"
+        "Exklusives Abendessen mit den Sprechern",
+        "1 Jahr Bitcoin-Magazin (Abo)",
+        "Bevorzugte Workshop-Anmeldung"
       ],
-      buttonText: "Register as VIP",
+      buttonText: "Als VIP registrieren",
       highlighted: true
     },
     {
-      name: "Workshop Pass",
-      price: "$199",
+      name: "Workshop-Ticket",
+      price: "199€",
       features: [
-        "Access to all workshops only",
-        "Coffee breaks & lunch on workshop day",
-        "Workshop materials",
-        "Certificate of participation"
+        "Nur Zugang zu allen Workshops",
+        "Kaffeepausen & Mittagessen am Workshoptag",
+        "Workshop-Unterlagen",
+        "Teilnahmezertifikat"
       ],
-      buttonText: "Register for Workshops",
+      buttonText: "Für Workshops registrieren",
       highlighted: false
     }
   ];
@@ -63,9 +64,9 @@ const Register = () => {
           <div className="inline-block mb-4 px-4 py-1 bg-bitcoin/10 backdrop-blur-sm rounded-full border border-bitcoin/20">
             <span className="text-sm uppercase tracking-wider font-medium text-bitcoin">Tickets</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Register Now</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Jetzt Registrieren</h2>
           <p className="text-xl text-gray-300">
-            Secure your spot at Bitcoin Buzz Summit 2025 and be part of the conversation shaping the future of Bitcoin
+            Sichern Sie sich Ihren Platz beim 3. Bitcoin Forum 2025 und werden Sie Teil der Diskussion über die Zukunft von Bitcoin.
           </p>
         </div>
         
