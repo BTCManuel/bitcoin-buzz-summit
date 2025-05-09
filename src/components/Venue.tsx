@@ -39,7 +39,7 @@ const Venue = () => {
                 <div className="p-8 text-gray-800">
                   <h3 className="text-2xl font-bold mb-4">VR-Bank Bayern Mitte eG</h3>
                   <p className="text-gray-600 mb-6">
-                    Das neue Kongresszentrum der VR-Bank Bayern Mitte bietet die perfekte Lokation für unsere Veranstaltung. Die modern gestalteten Räumlichkeiten ermöglichen eine angenehme Atmosphäre für interessante Vorträge und Gespräche mit Experten und Gleichgesinnten.
+                    Die Saturn Arena bildet das Zentrum des 3. BitcoinForum. Auf der Main-Stage werden alle Haupt-Vorträge stattfinden. Im "Umlauf" stellen sich Ihnen unsere Partner an ihren Messe-Ständen vor. Auch unsere Bitcoin-Kunstausstellung können Sie hier erleben.
                   </p>
                   <div className="mt-4">
                     <Button className="bg-bitcoin hover:bg-bitcoin-dark text-white rounded-full shadow-md shadow-bitcoin/20 transition-all duration-300 hover:scale-105">
