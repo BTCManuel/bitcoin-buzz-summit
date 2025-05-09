@@ -44,7 +44,7 @@ const Footer = () => {
           <div>
             <h3 className="font-bold text-lg mb-4">Contact Us</h3>
             <ul className="space-y-2">
-              <li className="text-gray-600">Nena Celeste UG (haftungsbeschränkt)/li>
+              <li className="text-gray-600">Nena Celeste UG (haftungsbeschränkt)</li>
               <li className="text-gray-600">Josef-Kogler-Str. 8</li>
               <li className="text-gray-600"> 82031 Gruenwald</li>
               <li className="text-gray-600">website_anfrage@nena-celeste.de</li>
