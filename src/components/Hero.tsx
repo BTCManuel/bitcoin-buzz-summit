@@ -12,7 +12,7 @@ const Hero = () => {
       <div className="container mx-auto px-4 py-24 md:py-32 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
           <div className="inline-block mb-3 px-4 py-1 bg-[#FDE1D3] backdrop-blur-sm rounded-full border border-bitcoin/20">
-            <span className="text-sm md:text-base font-medium text-bitcoin">Oktober 13, 2023 • Ingolstadt</span>
+            <span className="text-sm md:text-base font-medium text-bitcoin">Oktober 13, 2025 • Ingolstadt</span>
           </div>
           <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight text-gray-800">
             <span className="block mb-2">3. Bitcoin Forum</span> 
