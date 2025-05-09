@@ -30,13 +30,13 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="font-bold text-lg mb-4">Schnellzugriff</h3>
-            <ul className="space-y-2">
-              <li><button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="text-gray-600 hover:text-bitcoin transition-colors">Über das Forum</button></li>
-              <li><button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="text-gray-600 hover:text-bitcoin transition-colors">Referenten</button></li>
-              <li><button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="text-gray-600 hover:text-bitcoin transition-colors">Agenda</button></li>
-              <li><button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="text-gray-600 hover:text-bitcoin transition-colors">Veranstaltungsort</button></li>
-              <li><a href="https://vr-bayernmitte.genolive.de/index.php?page=event-code&code=bitcoin25" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-bitcoin transition-colors">Anmeldung</a></li>
+            <h3><strong>Schnellzugriff</strong></h3>
+            <ul>
+              <li><a href="#about">Über uns</a></li>
+              <li><a href="#speakers">Referenten</a></li>
+              <li><a href="#schedule">Zeitplan</a></li>
+              <li><a href="#venue">Veranstaltungsort</a></li>
+              <li><a href="https://www.google.com" target="_blank" rel="noopener noreferrer">Anmeldung</a></li>
             </ul>
           </div>
 
