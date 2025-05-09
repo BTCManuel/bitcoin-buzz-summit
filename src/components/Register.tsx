@@ -14,13 +14,13 @@ interface TicketTier {
 const Register = () => {
   const ticketTiers: TicketTier[] = [
     {
-      name: "Standard-Ticket",
-      price: "499€",
+      name: "Forum-Ticket",
+      price: "21€ pro Tag",
       features: [
         "Voller Zugang zur Konferenz",
         "Zugang zu allen Vorträgen & Diskussionsrunden",
-        "Kaffeepausen & Mittagessen",
-        "Networking-Empfang",
+
+        "Networking",
       ],
       buttonText: "Jetzt registrieren",
       highlighted: false,
@@ -28,28 +28,30 @@ const Register = () => {
     },
     {
       name: "VIP-Ticket",
-      price: "999€",
+      price: "2.100€",
       features: [
-        "Alle Vorteile des Standard-Tickets",
-        "VIP-Sitzplätze bei Vorträgen",
+        "Zugang zu allen Vorträgen",
+        "Exklusiven VIP-Loungezugang",
         "Exklusives Abendessen mit den Sprechern",
-        "1 Jahr Bitcoin-Magazin (Abo)",
+        "VIP-Sitzplätze bei Vorträgen",
         "Bevorzugte Workshop-Anmeldung"
+        "2 Übernachtungen im Hotel Enzo"
+        "Volle Verpfegung"
       ],
       buttonText: "Als VIP registrieren",
       highlighted: true,
       link: "https://vr-bayernmitte.genolive.de/index.php?page=event-code&code=bitcoin25"
     },
     {
-      name: "Workshop-Ticket",
-      price: "199€",
+      name: "Business-Ticket",
+      price: "121€",
       features: [
-        "Nur Zugang zu allen Workshops",
-        "Kaffeepausen & Mittagessen am Workshoptag",
-        "Workshop-Unterlagen",
-        "Teilnahmezertifikat"
+        "Business alle drei Tage Abendprogramm am Donnerstag",
+        "Abendprogramm am Donnerstag",
+        "Zugang zu allen Vorträgen",
+        
       ],
-      buttonText: "Für Workshops registrieren",
+      buttonText: "Für Business-Ticket registrieren",
       highlighted: false,
       link: "https://vr-bayernmitte.genolive.de/index.php?page=event-code&code=bitcoin25"
     }
