@@ -70,7 +70,7 @@ const Venue = () => {
               </h3>
               <p className="text-lg text-gray-600 ml-14">
                 VR-Bank Bayern Mitte eG<br />
-                Eriagstraße 2<br />
+                Südliche Ringstrasse 66<br />
                 85053 Ingolstadt<br />
                 Deutschland
               </p>
