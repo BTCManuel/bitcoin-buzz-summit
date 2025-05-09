@@ -78,7 +78,7 @@ const Navbar = () => {
               <a href="/#speakers" className="text-sm font-medium text-gray-800 hover:text-bitcoin transition-colors relative group">
                 Speakers
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-bitcoin group-hover:w-full transition-all duration-300"></span>
-              </Link>
+              </a>
               <Link to="/#schedule" className="text-sm font-medium text-gray-800 hover:text-bitcoin transition-colors relative group">
                 Schedule
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-bitcoin group-hover:w-full transition-all duration-300"></span>
