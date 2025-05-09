@@ -34,9 +34,9 @@ const Register = () => {
         "Exklusiven VIP-Loungezugang",
         "Exklusives Abendessen mit den Sprechern",
         "VIP-Sitzplätze bei Vorträgen",
-        "Bevorzugte Workshop-Anmeldung"
-        "2 Übernachtungen im Hotel Enzo"
-        "Volle Verpfegung"
+        "Bevorzugte Workshop-Anmeldung",
+        "2 Übernachtungen im Hotel Enzo",
+        "Volle Verpfegung",
       ],
       buttonText: "Als VIP registrieren",
       highlighted: true,
