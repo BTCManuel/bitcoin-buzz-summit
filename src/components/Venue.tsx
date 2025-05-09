@@ -14,7 +14,7 @@ const Venue = () => {
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800">Eventlocation</h2>
           <p className="text-xl text-gray-600">
-            Freuen Sie sich auf einen spannenden Abend im neuen Kongresszentrum der VR-Bank Bayern Mitte eG
+            Freuen Sie sich auf einen spannenden Abend im neuen Donautauer der VR-Bank Bayern Mitte eG
           </p>
         </div>
         
@@ -24,7 +24,8 @@ const Venue = () => {
               <CardContent className="p-0 h-full">
               <div className="aspect-video w-full overflow-hidden rounded-t-2xl">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2664.427745410266!2d11.440214615888955!3d48.7735757792768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479effb5c80ee12d%3A0x4f181eb97d43015!2sVolksbank%20Raiffeisenbank%20Bayern%20Mitte%20eG%20-%20Filiale%20Friedrich-Ebert-Stra%C3%9Fe!5e0!3m2!1sde!2sde!4v1715245840000!5m2!1sde!2sde"
+                 {/*  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2664.427745410266!2d11.440214615888955!3d48.7735757792768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479effb5c80ee12d%3A0x4f181eb97d43015!2sVolksbank%20Raiffeisenbank%20Bayern%20Mitte%20eG%20-%20Filiale%20Friedrich-Ebert-Stra%C3%9Fe!5e0!3m2!1sde!2sde!4v1715245840000!5m2!1sde!2sde" */} //
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3366.498719155752!2d11.436978276935818!3d48.759279607675495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479effa96a317b17%3A0x5fe963f539067d53!2sS%C3%BCdliche%20Ringstra%C3%9Fe%2066%2C%2085051%20Ingolstadt!5e1!3m2!1sde!2sde!4v1746795967223!5m2!1sde!2sde"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
