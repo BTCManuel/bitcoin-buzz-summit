@@ -1,6 +1,4 @@
-
 import React from 'react';
-import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Check, Star } from 'lucide-react';
 
@@ -10,6 +8,7 @@ interface TicketTier {
   features: string[];
   buttonText: string;
   highlighted: boolean;
+  link: string;
 }
 
 const Register = () => {
@@ -24,7 +23,8 @@ const Register = () => {
         "Networking-Empfang",
       ],
       buttonText: "Jetzt registrieren",
-      highlighted: false
+      highlighted: false,
+      link: "https://vr-bayernmitte.genolive.de/index.php?page=event-code&code=bitcoin25"
     },
     {
       name: "VIP-Ticket",
@@ -32,13 +32,13 @@ const Register = () => {
       features: [
         "Alle Vorteile des Standard-Tickets",
         "VIP-Sitzplätze bei Vorträgen",
-        "Exclusive speaker dinner",
         "Exklusives Abendessen mit den Sprechern",
         "1 Jahr Bitcoin-Magazin (Abo)",
         "Bevorzugte Workshop-Anmeldung"
       ],
       buttonText: "Als VIP registrieren",
-      highlighted: true
+      highlighted: true,
+      link: "https://vr-bayernmitte.genolive.de/index.php?page=event-code&code=bitcoin25"
     },
     {
       name: "Workshop-Ticket",
@@ -50,7 +50,8 @@ const Register = () => {
         "Teilnahmezertifikat"
       ],
       buttonText: "Für Workshops registrieren",
-      highlighted: false
+      highlighted: false,
+      link: "https://vr-bayernmitte.genolive.de/index.php?page=event-code&code=bitcoin25"
     }
   ];
 
@@ -69,7 +70,7 @@ const Register = () => {
             Sichern Sie sich Ihren Platz beim 3. Bitcoin Forum 2025 und werden Sie Teil der Diskussion über die Zukunft von Bitcoin.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {ticketTiers.map((tier, index) => (
             <Card 
@@ -101,15 +102,18 @@ const Register = () => {
                       </li>
                     ))}
                   </ul>
-                  <Button 
-                    className={`w-full rounded-full transition-all duration-300 ${
+                  <a
+                    href={tier.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`block text-center w-full rounded-full py-3 transition-all duration-300 font-medium ${
                       tier.highlighted 
                         ? 'bg-bitcoin hover:bg-bitcoin-dark text-white shadow-lg shadow-bitcoin/20' 
                         : 'bg-gray-700 hover:bg-gray-600 text-white'
                     }`}
                   >
                     {tier.buttonText}
-                  </Button>
+                  </a>
                 </div>
               </CardContent>
             </Card>
