@@ -15,7 +15,7 @@ const Schedule = () => {
     {
       time: "18:30",
       title: "Begrüßung & Einführung",
-      speaker: "Andreas Stegmüller",
+      speaker: "Andreas Streb",
       description: "Willkommen zum 3. Bitcoin Forum der VR-Bank Bayern Mitte"
     },
     {
