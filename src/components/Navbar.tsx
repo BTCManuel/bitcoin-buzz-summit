@@ -76,20 +76,20 @@ const Navbar = () => {
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-bitcoin group-hover:w-full transition-all duration-300"></span>
               </a>
               <a href="#speakers" className="text-sm font-medium text-gray-800 hover:text-bitcoin transition-colors relative group">
-                Speakers
+                Referenten
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-bitcoin group-hover:w-full transition-all duration-300"></span>
               </a>
               <a href="#schedule" className="text-sm font-medium text-gray-800 hover:text-bitcoin transition-colors relative group">
-                Schedule
+                Agenda
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-bitcoin group-hover:w-full transition-all duration-300"></span>
               </a>
               <a href="/#venue" className="text-sm font-medium text-gray-800 hover:text-bitcoin transition-colors relative group">
-                Venue
+                Veranstaltungort
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-bitcoin group-hover:w-full transition-all duration-300"></span>
               </a>
             </div>
             <Button className="bg-bitcoin hover:bg-bitcoin-dark text-white rounded-full shadow-lg shadow-bitcoin/20 transition-all duration-300 hover:scale-105">
-              Register Now
+              Sichere dein Ticket
             </Button>
           </div>
         )}
