@@ -116,11 +116,6 @@ const Speakers = () => {
                       {isExpanded ? 'Weniger anzeigen' : 'Mehr anzeigen'}
                     </button>
 
-                    <div className="mt-6 w-full">
-                      <button className="w-full py-2 rounded-full border border-bitcoin/30 text-bitcoin hover:bg-bitcoin/10 transition-colors text-sm">
-                        Profil Ansehen
-                      </button>
-                    </div>
                   </div>
                 </CardContent>
               </Card>
