@@ -1,10 +1,11 @@
-
 import React from 'react';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Card } from '@/components/ui/card';
 import { Clock, Calendar } from 'lucide-react';
 
 const Schedule = () => {
+  const showSchedule = false; // später auf true setzen, um den Zeitplan wieder zu aktivieren
+
   const scheduleItems = [
     {
       time: "18:00",
@@ -68,40 +69,46 @@ const Schedule = () => {
                 <p className="text-bitcoin">Altes Rathaus, Ingolstadt</p>
               </div>
             </div>
-            
-            <div className="overflow-x-auto">
-              <Table>
-                <TableHeader>
-                  <TableRow className="bg-[#F2FCE2]/30 hover:bg-[#F2FCE2]/50">
-                    <TableHead className="w-24 text-bitcoin">Zeit</TableHead>
-                    <TableHead className="text-bitcoin">Agenda</TableHead>
-                    <TableHead className="text-bitcoin">Referent</TableHead>
-                  </TableRow>
-                </TableHeader>
-                <TableBody>
-                  {scheduleItems.map((item, index) => (
-                    <TableRow 
-                      key={index}
-                      className={index % 2 === 0 ? "bg-white hover:bg-[#D3E4FD]/10" : "bg-[#D3E4FD]/10 hover:bg-[#D3E4FD]/20"}
-                    >
-                      <TableCell className="font-medium">
-                        <div className="flex items-center">
-                          <Clock className="h-4 w-4 mr-2 text-bitcoin" />
-                          {item.time}
-                        </div>
-                      </TableCell>
-                      <TableCell>
-                        <div>
-                          <p className="font-semibold text-gray-800">{item.title}</p>
-                          <p className="text-sm text-gray-600">{item.description}</p>
-                        </div>
-                      </TableCell>
-                      <TableCell>{item.speaker}</TableCell>
+
+            {!showSchedule ? (
+              <div className="text-center text-gray-600 text-lg py-12">
+                <p>Das Programm wird in Kürze veröffentlicht.</p>
+              </div>
+            ) : (
+              <div className="overflow-x-auto">
+                <Table>
+                  <TableHeader>
+                    <TableRow className="bg-[#F2FCE2]/30 hover:bg-[#F2FCE2]/50">
+                      <TableHead className="w-24 text-bitcoin">Zeit</TableHead>
+                      <TableHead className="text-bitcoin">Agenda</TableHead>
+                      <TableHead className="text-bitcoin">Referent</TableHead>
                     </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
-            </div>
+                  </TableHeader>
+                  <TableBody>
+                    {scheduleItems.map((item, index) => (
+                      <TableRow 
+                        key={index}
+                        className={index % 2 === 0 ? "bg-white hover:bg-[#D3E4FD]/10" : "bg-[#D3E4FD]/10 hover:bg-[#D3E4FD]/20"}
+                      >
+                        <TableCell className="font-medium">
+                          <div className="flex items-center">
+                            <Clock className="h-4 w-4 mr-2 text-bitcoin" />
+                            {item.time}
+                          </div>
+                        </TableCell>
+                        <TableCell>
+                          <div>
+                            <p className="font-semibold text-gray-800">{item.title}</p>
+                            <p className="text-sm text-gray-600">{item.description}</p>
+                          </div>
+                        </TableCell>
+                        <TableCell>{item.speaker}</TableCell>
+                      </TableRow>
+                    ))}
+                  </TableBody>
+                </Table>
+              </div>
+            )}
           </div>
         </Card>
       </div>
