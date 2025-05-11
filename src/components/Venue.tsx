@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { MapPin, Clock, Info, Navigation } from 'lucide-react';
@@ -24,12 +23,11 @@ const Venue = () => {
               <CardContent className="p-0 h-full">
               <div className="aspect-video w-full overflow-hidden rounded-t-2xl">
                 <iframe
-                 
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3366.498719155752!2d11.436978276935818!3d48.759279607675495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479effa96a317b17%3A0x5fe963f539067d53!2sS%C3%BCdliche%20Ringstra%C3%9Fe%2066%2C%2085051%20Ingolstadt!5e1!3m2!1sde!2sde!4v1746795967223!5m2!1sde!2sde"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
-                  allowFullScreen=""
+                  allowFullScreen={true}
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                   className="w-full h-full"
