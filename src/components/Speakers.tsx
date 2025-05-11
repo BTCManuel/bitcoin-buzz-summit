@@ -79,48 +79,32 @@ const Speakers = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {speakers.map((speaker, index) => {
-            const isExpanded = expandedIndex === index;
-
-            return (
-              <Card key={index} className={`border border-gray-100 shadow-md hover:shadow-xl transition-all duration-300 hover:translate-y-[-5px] overflow-hidden rounded-2xl ${speaker.bgColor}`}>
-                <CardContent className="p-8">
-                  <div className="flex flex-col items-center">
-                    <div className="mb-6 relative">
-                      <div className="absolute inset-0 rounded-full bg-gradient-to-br from-bitcoin to-bitcoin-light blur-lg opacity-20"></div>
-                      <Avatar className="h-28 w-28 ring-2 ring-white overflow-hidden">
-                        {speaker.image && (
-                          <AvatarImage src={speaker.image} alt={speaker.name} className="h-full w-full object-cover" />
-                        )}
-                        <AvatarFallback className="bg-gradient-to-br from-white to-gray-100 text-bitcoin text-2xl border-4 border-white">
-                          {speaker.name.split(' ').map(n => n[0]).join('')}
-                        </AvatarFallback>
-                      </Avatar>
-                    </div>
-                    <h3 className="text-2xl font-bold mb-1 text-gray-800">{speaker.name}</h3>
-                    <p className="text-bitcoin font-medium mb-1">{speaker.role}</p>
-                    <p className="text-gray-500 mb-4">{speaker.company}</p>
-
-                    <div
-                      className={`text-gray-600 text-center transition-all duration-500 ease-in-out ${
-                        isExpanded ? 'max-h-[500px]' : 'max-h-[4.5rem] line-clamp-2'
-                      } overflow-hidden`}
-                    >
-                      {speaker.bio}
-                    </div>
-                    <button
-                      onClick={() => setExpandedIndex(isExpanded ? null : index)}
-                      className="mt-6 w-full py-2 rounded-full border border-bitcoin/30 text-bitcoin hover:bg-bitcoin/10 transition-colors text-sm"
-                    >
-                      {isExpanded ? 'Weniger anzeigen' : 'Mehr anzeigen'}
-                    </button>
-
-                  </div>
-                </CardContent>
-              </Card>
-            );
-          })}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {speakers.map((speaker, index) => (
+            <Card 
+              key={index} 
+              className={`border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden rounded-2xl ${speaker.bgColor}`}
+            >
+              <CardContent className="p-4 flex flex-col items-center">
+                <div className="w-full aspect-square mb-4 relative">
+                  <Avatar className="h-full w-full rounded-xl overflow-hidden">
+                    {speaker.image && (
+                      <AvatarImage 
+                        src={speaker.image} 
+                        alt={speaker.name} 
+                        className="h-full w-full object-cover" 
+                      />
+                    )}
+                    <AvatarFallback className="h-full w-full text-2xl bg-gradient-to-br from-white to-gray-100 text-bitcoin border-4 border-white">
+                      {speaker.name.split(' ').map(n => n[0]).join('')}
+                    </AvatarFallback>
+                  </Avatar>
+                  <div className="absolute inset-0 bg-gradient-to-br from-bitcoin/20 to-bitcoin-light/10 opacity-20 rounded-xl"></div>
+                </div>
+                <h3 className="text-lg font-bold text-gray-800 text-center">{speaker.name}</h3>
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </div>
     </section>
