@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Bitcoin, Users, Globe, Target, BookOpen, Shield, Code, Tv, Zap, Lightning, CalendarDays, Clock } from 'lucide-react';
+import { Bitcoin, Users, Globe, Target, BookOpen, Shield, Code, Tv, Zap, Bolt, CalendarDays, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
@@ -72,7 +72,7 @@ const About = () => {
       borderColor: "border-[#D3E4FD]"
     },
     {
-      icon: <Lightning className="h-12 w-12 text-bitcoin mb-4" />,
+      icon: <Bolt className="h-12 w-12 text-bitcoin mb-4" />,
       title: "Lightning Network",
       description: "Erfahren Sie mehr über die Second-Layer-Lösung für schnelle Bitcoin-Transaktionen.",
       bgColor: "bg-[#FDE1D3]",
