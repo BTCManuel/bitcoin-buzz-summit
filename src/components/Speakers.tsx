@@ -141,7 +141,7 @@ const Speakers = () => {
       {/* Speaker Details Dialog */}
       <Dialog open={!!selectedSpeaker} onOpenChange={(open) => !open && setSelectedSpeaker(null)}>
         <DialogContent 
-            className="max-w-2xl bg-white border-none shadow-xl rounded-xl"
+          className="max-w-2xl bg-white border-none shadow-xl rounded-xl"
         >
           <DialogHeader>
             <DialogTitle className="text-2xl font-bold text-center">{selectedSpeaker?.name}</DialogTitle>
