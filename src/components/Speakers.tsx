@@ -103,46 +103,55 @@ const Speakers = () => {
             Lernen Sie von führenden Experten im Bereich Bitcoin und digitale Finanzen
           </p>
         </div>
-        
+
         <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 gap-3">
-          {speakers.map((speaker, index) => (
-            <Card 
-              key={index} 
-              onClick={() => setExpandedIndex(expandedIndex === index ? null : index)}
-              className={`cursor-pointer border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden rounded-xl ${speaker.bgColor}`}
-            >
-              <CardContent className="p-2 flex flex-col items-center">
-                <div className="w-full aspect-square mb-2 relative">
-                  <Avatar className="h-full w-full rounded-lg overflow-hidden">
-                    {speaker.image ? (
-                      <AvatarImage 
-                        src={speaker.image} 
-                        alt={speaker.name} 
-                        className="h-full w-full object-cover" 
-                      />
-                    ) : (
-                      <AvatarFallback className="h-full w-full text-lg bg-gradient-to-br from-white to-gray-100 text-bitcoin border-2 border-white">
-                        {speaker.name.split(' ').map(n => n[0]).join('')}
-                      </AvatarFallback>
-                    )}
-                  </Avatar>
-                </div>
-                <h3 className="text-sm font-medium text-gray-800 text-center truncate w-full">
-                  {speaker.name}
-                </h3>
-                {expandedIndex === index && (
-                  <p className="text-xs text-gray-700 mt-2 text-center whitespace-pre-line">
-                    {speaker.bio}
-                  </p>
-                )}
-              </CardContent>
-            </Card>
-          ))}
+          {speakers.map((speaker, index) => {
+            const isExpanded = expandedIndex === index;
+
+            return (
+              <Card
+                key={index}
+                onClick={() => setExpandedIndex(isExpanded ? null : index)}
+                className={`relative cursor-pointer transition-all duration-500 overflow-hidden rounded-xl border border-gray-100 shadow-sm hover:shadow-md 
+                  ${speaker.bgColor}
+                  ${isExpanded ? "col-span-full md:col-span-6 xl:col-span-4 p-6 z-10" : "p-2"}
+                `}
+              >
+                <CardContent className={`flex flex-col items-center transition-all duration-500 ${isExpanded ? "space-y-4" : ""}`}>
+                  <div className={`transition-all duration-500 ${isExpanded ? "w-32 h-32" : "w-full aspect-square"} mb-2 relative`}>
+                    <Avatar className="h-full w-full rounded-lg overflow-hidden">
+                      {speaker.image ? (
+                        <AvatarImage
+                          src={speaker.image}
+                          alt={speaker.name}
+                          className="h-full w-full object-cover"
+                        />
+                      ) : (
+                        <AvatarFallback className="h-full w-full text-lg bg-gradient-to-br from-white to-gray-100 text-bitcoin border-2 border-white">
+                          {speaker.name.split(' ').map(n => n[0]).join('')}
+                        </AvatarFallback>
+                      )}
+                    </Avatar>
+                  </div>
+
+                  <h3 className={`text-gray-800 font-semibold transition-all duration-500 text-center 
+                    ${isExpanded ? "text-xl" : "text-sm truncate w-full"}`}>
+                    {speaker.name}
+                  </h3>
+
+                  {isExpanded && (
+                    <p className="text-sm text-gray-700 text-center leading-relaxed">
+                      {speaker.bio}
+                    </p>
+                  )}
+                </CardContent>
+              </Card>
+            );
+          })}
         </div>
       </div>
     </section>
   );
-
 };
 
 export default Speakers;
