@@ -1,7 +1,8 @@
 
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Bitcoin, Users, Globe, Target, BookOpen } from 'lucide-react';
+import { Bitcoin, Users, Globe, Target, BookOpen, Shield, Code, Tv, Zap, Lightning, CalendarDays, Clock } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
 const About = () => {
@@ -41,6 +42,55 @@ const About = () => {
       description: "Fokussierte Präsentationen zu Bitcoin und Blockchain-spezifischen Themen.",
       bgColor: "bg-[#FDE1D3]",
       borderColor: "border-[#FEF7CD]"
+    },
+    {
+      icon: <Shield className="h-12 w-12 text-bitcoin mb-4" />,
+      title: "Sicherheit",
+      description: "Lernen Sie, wie Sie Ihre digitalen Vermögenswerte sicher aufbewahren können.",
+      bgColor: "bg-[#FEF7CD]",
+      borderColor: "border-[#FDE1D3]"
+    },
+    {
+      icon: <Code className="h-12 w-12 text-bitcoin mb-4" />,
+      title: "Technologie",
+      description: "Vertiefen Sie Ihr Verständnis der technischen Aspekte von Blockchain und Kryptowährungen.",
+      bgColor: "bg-[#E2F4FF]",
+      borderColor: "border-[#CCE8FF]"
+    },
+    {
+      icon: <Tv className="h-12 w-12 text-bitcoin mb-4" />,
+      title: "Medien & Berichterstattung",
+      description: "Einblicke in die mediale Darstellung und öffentliche Wahrnehmung von Bitcoin.",
+      bgColor: "bg-[#D3E4FD]",
+      borderColor: "border-[#F2FCE2]"
+    },
+    {
+      icon: <Zap className="h-12 w-12 text-bitcoin mb-4" />,
+      title: "Innovation",
+      description: "Entdecken Sie die neuesten Innovationen im Bereich der Blockchain-Technologie.",
+      bgColor: "bg-[#F2FCE2]",
+      borderColor: "border-[#D3E4FD]"
+    },
+    {
+      icon: <Lightning className="h-12 w-12 text-bitcoin mb-4" />,
+      title: "Lightning Network",
+      description: "Erfahren Sie mehr über die Second-Layer-Lösung für schnelle Bitcoin-Transaktionen.",
+      bgColor: "bg-[#FDE1D3]",
+      borderColor: "border-[#FEF7CD]"
+    },
+    {
+      icon: <CalendarDays className="h-12 w-12 text-bitcoin mb-4" />,
+      title: "Zukunftsperspektiven",
+      description: "Diskussionen über die zukünftige Entwicklung und das Potenzial von Kryptowährungen.",
+      bgColor: "bg-[#FEF7CD]",
+      borderColor: "border-[#FDE1D3]"
+    },
+    {
+      icon: <Clock className="h-12 w-12 text-bitcoin mb-4" />,
+      title: "Geschichte",
+      description: "Die Entstehungsgeschichte von Bitcoin und anderen Kryptowährungen.",
+      bgColor: "bg-[#E2F4FF]",
+      borderColor: "border-[#CCE8FF]"
     }
   ];
 
@@ -59,22 +109,34 @@ const About = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, index) => (
-            <Card key={index} className={`border ${feature.borderColor} shadow-md hover:shadow-xl transition-all duration-300 hover:translate-y-[-5px] ${feature.bgColor}/30 text-gray-800 rounded-2xl overflow-hidden`}>
-              <CardContent className="p-8 text-center">
+            <Card 
+              key={index} 
+              className={`border ${feature.borderColor} shadow-md hover:shadow-xl transition-all duration-300 hover:translate-y-[-5px] ${feature.bgColor}/30 text-gray-800 rounded-2xl overflow-hidden`}
+            >
+              <CardContent className="p-6 flex flex-col h-full">
                 <div className="mx-auto flex justify-center bg-white/60 w-20 h-20 rounded-full items-center mb-6 shadow-inner border border-white/80">
                   {feature.icon}
                 </div>
                 <h3 className="text-2xl font-bold mb-3 text-gray-800">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</p>
-                {feature.link && (
-                  <Link 
-                    to={feature.link} 
-                    className="mt-4 inline-block text-bitcoin hover:text-bitcoin-dark font-medium"
-                  >
-                    Mehr erfahren →
+                <p className="text-gray-600 mb-6 flex-grow">{feature.description}</p>
+                {feature.link ? (
+                  <Link to={feature.link} className="mt-auto">
+                    <Button 
+                      variant="outline" 
+                      className="w-full border-bitcoin text-bitcoin hover:bg-bitcoin hover:text-white transition-all duration-300"
+                    >
+                      Mehr erfahren
+                    </Button>
                   </Link>
+                ) : (
+                  <Button 
+                    variant="outline" 
+                    className="w-full border-bitcoin text-bitcoin hover:bg-bitcoin hover:text-white transition-all duration-300 mt-auto"
+                  >
+                    Mehr erfahren
+                  </Button>
                 )}
               </CardContent>
             </Card>
