@@ -1,6 +1,8 @@
+
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Check, Star } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface TicketTier {
   name: string;
@@ -9,6 +11,7 @@ interface TicketTier {
   buttonText: string;
   highlighted: boolean;
   link: string;
+  isWorkshop?: boolean;
 }
 
 const Register = () => {
@@ -19,7 +22,6 @@ const Register = () => {
       features: [
         "Voller Zugang zur Konferenz",
         "Zugang zu allen Vorträgen & Diskussionsrunden",
-
         "Networking",
       ],
       buttonText: "Jetzt registrieren",
@@ -43,17 +45,17 @@ const Register = () => {
       link: "https://vr-bayernmitte.genolive.de/index.php?page=event-code&code=bitcoin25"
     },
     {
-      name: "Business-Ticket",
+      name: "Workshop: Family Office",
       price: "121€",
       features: [
-        "Business alle drei Tage Abendprogramm am Donnerstag",
-        "Abendprogramm am Donnerstag",
+        "Fundierte Einblicke in Bitcoin als 'digitales Gold'",
+        "Strategien zur Beimischung von Bitcoin",
         "Zugang zu allen Vorträgen",
-        
       ],
-      buttonText: "Für Business-Ticket registrieren",
+      buttonText: "Workshop Details",
       highlighted: false,
-      link: "https://vr-bayernmitte.genolive.de/index.php?page=event-code&code=bitcoin25"
+      link: "/workshop",
+      isWorkshop: true
     }
   ];
 
@@ -104,18 +106,27 @@ const Register = () => {
                       </li>
                     ))}
                   </ul>
-                  <a
-                    href={tier.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`block text-center w-full rounded-full py-3 transition-all duration-300 font-medium ${
-                      tier.highlighted 
-                        ? 'bg-bitcoin hover:bg-bitcoin-dark text-white shadow-lg shadow-bitcoin/20' 
-                        : 'bg-gray-700 hover:bg-gray-600 text-white'
-                    }`}
-                  >
-                    {tier.buttonText}
-                  </a>
+                  {tier.isWorkshop ? (
+                    <Link
+                      to={tier.link}
+                      className={`block text-center w-full rounded-full py-3 transition-all duration-300 font-medium bg-gray-700 hover:bg-gray-600 text-white`}
+                    >
+                      {tier.buttonText}
+                    </Link>
+                  ) : (
+                    <a
+                      href={tier.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`block text-center w-full rounded-full py-3 transition-all duration-300 font-medium ${
+                        tier.highlighted 
+                          ? 'bg-bitcoin hover:bg-bitcoin-dark text-white shadow-lg shadow-bitcoin/20' 
+                          : 'bg-gray-700 hover:bg-gray-600 text-white'
+                      }`}
+                    >
+                      {tier.buttonText}
+                    </a>
+                  )}
                 </div>
               </CardContent>
             </Card>
