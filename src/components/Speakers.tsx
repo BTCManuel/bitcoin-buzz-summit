@@ -108,7 +108,8 @@ const Speakers = () => {
           {speakers.map((speaker, index) => (
             <Card 
               key={index} 
-              className={`border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden rounded-xl ${speaker.bgColor}`}
+              onClick={() => setExpandedIndex(expandedIndex === index ? null : index)}
+              className={`cursor-pointer border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden rounded-xl ${speaker.bgColor}`}
             >
               <CardContent className="p-2 flex flex-col items-center">
                 <div className="w-full aspect-square mb-2 relative">
@@ -129,6 +130,11 @@ const Speakers = () => {
                 <h3 className="text-sm font-medium text-gray-800 text-center truncate w-full">
                   {speaker.name}
                 </h3>
+                {expandedIndex === index && (
+                  <p className="text-xs text-gray-700 mt-2 text-center whitespace-pre-line">
+                    {speaker.bio}
+                  </p>
+                )}
               </CardContent>
             </Card>
           ))}
@@ -136,6 +142,7 @@ const Speakers = () => {
       </div>
     </section>
   );
+
 };
 
 export default Speakers;
