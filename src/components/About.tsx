@@ -1,7 +1,8 @@
 
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Bitcoin, Users, Globe, Target } from 'lucide-react';
+import { Bitcoin, Users, Globe, Target, BookOpen } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const About = () => {
   const features = [
@@ -11,6 +12,14 @@ const About = () => {
       description: "Einführung in die Welt der Kryptowährungen und die zugrundeliegende Blockchain-Technologie.",
       bgColor: "bg-[#FEF7CD]",
       borderColor: "border-[#FDE1D3]"
+    },
+    {
+      icon: <BookOpen className="h-12 w-12 text-bitcoin mb-4" />,
+      title: "Workshops",
+      description: "Praxisorientierte Workshops zu verschiedenen Bitcoin- und Blockchain-Themen.",
+      bgColor: "bg-[#E2F4FF]",
+      borderColor: "border-[#CCE8FF]",
+      link: "/workshop"
     },
     {
       icon: <Users className="h-12 w-12 text-bitcoin mb-4" />,
@@ -50,7 +59,7 @@ const About = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <Card key={index} className={`border ${feature.borderColor} shadow-md hover:shadow-xl transition-all duration-300 hover:translate-y-[-5px] ${feature.bgColor}/30 text-gray-800 rounded-2xl overflow-hidden`}>
               <CardContent className="p-8 text-center">
@@ -59,6 +68,14 @@ const About = () => {
                 </div>
                 <h3 className="text-2xl font-bold mb-3 text-gray-800">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
+                {feature.link && (
+                  <Link 
+                    to={feature.link} 
+                    className="mt-4 inline-block text-bitcoin hover:text-bitcoin-dark font-medium"
+                  >
+                    Mehr erfahren →
+                  </Link>
+                )}
               </CardContent>
             </Card>
           ))}
