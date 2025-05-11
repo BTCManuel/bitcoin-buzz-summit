@@ -2,6 +2,7 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 
 interface Speaker {
   name: string;
@@ -13,7 +14,7 @@ interface Speaker {
 }
 
 const Speakers = () => {
-  const [expandedIndex, setExpandedIndex] = React.useState<number | null>(null);
+  const [selectedSpeaker, setSelectedSpeaker] = React.useState<Speaker | null>(null);
 
   const speakersData: Speaker[] = [
     {
@@ -105,51 +106,85 @@ const Speakers = () => {
         </div>
 
         <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 gap-3">
-          {speakers.map((speaker, index) => {
-            const isExpanded = expandedIndex === index;
+          {speakers.map((speaker, index) => (
+            <Card
+              key={index}
+              onClick={() => setSelectedSpeaker(speaker)}
+              className={`relative cursor-pointer transition-all duration-300 overflow-hidden rounded-xl border border-gray-100 shadow-sm hover:shadow-md ${speaker.bgColor} p-2 hover:scale-105`}
+            >
+              <CardContent className="flex flex-col items-center p-1">
+                <div className="w-full aspect-square mb-2 relative">
+                  <Avatar className="h-full w-full rounded-lg overflow-hidden">
+                    {speaker.image ? (
+                      <AvatarImage
+                        src={speaker.image}
+                        alt={speaker.name}
+                        className="h-full w-full object-cover"
+                      />
+                    ) : (
+                      <AvatarFallback className="h-full w-full text-lg bg-gradient-to-br from-white to-gray-100 text-bitcoin border-2 border-white">
+                        {speaker.name.split(' ').map(n => n[0]).join('')}
+                      </AvatarFallback>
+                    )}
+                  </Avatar>
+                </div>
 
-            return (
-              <Card
-                key={index}
-                onClick={() => setExpandedIndex(isExpanded ? null : index)}
-                className={`relative cursor-pointer transition-all duration-500 overflow-hidden rounded-xl border border-gray-100 shadow-sm hover:shadow-md 
-                  ${speaker.bgColor}
-                  ${isExpanded ? "col-span-full md:col-span-6 xl:col-span-4 p-6 z-10" : "p-2"}
-                `}
-              >
-                <CardContent className={`flex flex-col items-center transition-all duration-500 ${isExpanded ? "space-y-4" : ""}`}>
-                  <div className={`transition-all duration-500 ${isExpanded ? "w-32 h-32" : "w-full aspect-square"} mb-2 relative`}>
-                    <Avatar className="h-full w-full rounded-lg overflow-hidden">
-                      {speaker.image ? (
-                        <AvatarImage
-                          src={speaker.image}
-                          alt={speaker.name}
-                          className="h-full w-full object-cover"
-                        />
-                      ) : (
-                        <AvatarFallback className="h-full w-full text-lg bg-gradient-to-br from-white to-gray-100 text-bitcoin border-2 border-white">
-                          {speaker.name.split(' ').map(n => n[0]).join('')}
-                        </AvatarFallback>
-                      )}
-                    </Avatar>
-                  </div>
-
-                  <h3 className={`text-gray-800 font-semibold transition-all duration-500 text-center 
-                    ${isExpanded ? "text-xl" : "text-sm truncate w-full"}`}>
-                    {speaker.name}
-                  </h3>
-
-                  {isExpanded && (
-                    <p className="text-sm text-gray-700 text-center leading-relaxed">
-                      {speaker.bio}
-                    </p>
-                  )}
-                </CardContent>
-              </Card>
-            );
-          })}
+                <h3 className="text-gray-800 font-semibold text-sm truncate w-full text-center">
+                  {speaker.name}
+                </h3>
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </div>
+
+      {/* Speaker Details Dialog */}
+      <Dialog open={!!selectedSpeaker} onOpenChange={(open) => !open && setSelectedSpeaker(null)}>
+        <DialogContent 
+          className={`max-w-2xl ${selectedSpeaker?.bgColor} border-none shadow-xl`}
+        >
+          <DialogHeader>
+            <DialogTitle className="text-2xl font-bold text-center">{selectedSpeaker?.name}</DialogTitle>
+          </DialogHeader>
+          
+          <div className="flex flex-col md:flex-row gap-6 p-2 items-center">
+            <div className="flex-shrink-0 w-32 h-32 md:w-48 md:h-48">
+              <Avatar className="h-full w-full rounded-xl overflow-hidden shadow-md border-2 border-white">
+                {selectedSpeaker?.image ? (
+                  <AvatarImage
+                    src={selectedSpeaker.image}
+                    alt={selectedSpeaker.name}
+                    className="h-full w-full object-cover"
+                  />
+                ) : (
+                  <AvatarFallback className="h-full w-full text-3xl bg-gradient-to-br from-white to-gray-100 text-bitcoin border-2 border-white">
+                    {selectedSpeaker?.name.split(' ').map(n => n[0]).join('')}
+                  </AvatarFallback>
+                )}
+              </Avatar>
+            </div>
+            
+            <div className="flex-1 space-y-3">
+              <div className="flex flex-wrap gap-2 items-center">
+                {selectedSpeaker?.role && (
+                  <span className="bg-white/70 px-3 py-1 rounded-full text-sm font-medium text-gray-700">
+                    {selectedSpeaker.role}
+                  </span>
+                )}
+                {selectedSpeaker?.company && (
+                  <span className="bg-white/70 px-3 py-1 rounded-full text-sm font-medium text-gray-700">
+                    {selectedSpeaker.company}
+                  </span>
+                )}
+              </div>
+              
+              <p className="text-gray-700 leading-relaxed text-base md:text-lg">
+                {selectedSpeaker?.bio}
+              </p>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };
