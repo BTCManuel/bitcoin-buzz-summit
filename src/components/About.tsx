@@ -11,14 +11,14 @@ const About = () => {
       icon: <Bitcoin className="h-12 w-12 text-bitcoin mb-4" />,
       title: "Bitcoin & Blockchain",
       description: "Einführung in die Welt der Kryptowährungen und die zugrundeliegende Blockchain-Technologie.",
-      bgColor: "bg-[#FEF7CD]",
+      bgColor: "bg-transparent",
       borderColor: "border-[#FDE1D3]"
     },
     {
       icon: <BookOpen className="h-12 w-12 text-bitcoin mb-4" />,
       title: "Workshops",
       description: "Praxisorientierte Workshops zu verschiedenen Bitcoin- und Blockchain-Themen.",
-      bgColor: "bg-[#E2F4FF]",
+      bgColor: "bg-transparent",
       borderColor: "border-[#CCE8FF]",
       link: "/workshop"
     },
@@ -26,70 +26,70 @@ const About = () => {
       icon: <Users className="h-12 w-12 text-bitcoin mb-4" />,
       title: "Networking",
       description: "Treffen Sie Experten und Gleichgesinnte im Bereich Kryptowährungen und Blockchain.",
-      bgColor: "bg-[#D3E4FD]",
+      bgColor: "bg-transparent",
       borderColor: "border-[#F2FCE2]"
     },
     {
       icon: <Globe className="h-12 w-12 text-bitcoin mb-4" />,
       title: "Digitale Zukunft",
       description: "Erfahren Sie mehr über die Auswirkungen der Digitalisierung auf die Finanzwelt.",
-      bgColor: "bg-[#F2FCE2]",
+      bgColor: "bg-transparent",
       borderColor: "border-[#D3E4FD]"
     },
     {
       icon: <Target className="h-12 w-12 text-bitcoin mb-4" />,
       title: "Bildung & Information",
       description: "Fokussierte Präsentationen zu Bitcoin und Blockchain-spezifischen Themen.",
-      bgColor: "bg-[#FDE1D3]",
+      bgColor: "bg-transparent",
       borderColor: "border-[#FEF7CD]"
     },
     {
       icon: <Shield className="h-12 w-12 text-bitcoin mb-4" />,
       title: "Sicherheit",
       description: "Lernen Sie, wie Sie Ihre digitalen Vermögenswerte sicher aufbewahren können.",
-      bgColor: "bg-[#FEF7CD]",
+      bgColor: "bg-transparent",
       borderColor: "border-[#FDE1D3]"
     },
     {
       icon: <Code className="h-12 w-12 text-bitcoin mb-4" />,
       title: "Technologie",
       description: "Vertiefen Sie Ihr Verständnis der technischen Aspekte von Blockchain und Kryptowährungen.",
-      bgColor: "bg-[#E2F4FF]",
+      bgColor: "bg-transparent",
       borderColor: "border-[#CCE8FF]"
     },
     {
       icon: <Tv className="h-12 w-12 text-bitcoin mb-4" />,
       title: "Medien & Berichterstattung",
       description: "Einblicke in die mediale Darstellung und öffentliche Wahrnehmung von Bitcoin.",
-      bgColor: "bg-[#D3E4FD]",
+      bgColor: "bg-transparent",
       borderColor: "border-[#F2FCE2]"
     },
     {
       icon: <Zap className="h-12 w-12 text-bitcoin mb-4" />,
       title: "Innovation",
       description: "Entdecken Sie die neuesten Innovationen im Bereich der Blockchain-Technologie.",
-      bgColor: "bg-[#F2FCE2]",
+      bgColor: "bg-transparent",
       borderColor: "border-[#D3E4FD]"
     },
     {
       icon: <Bolt className="h-12 w-12 text-bitcoin mb-4" />,
       title: "Lightning Network",
       description: "Erfahren Sie mehr über die Second-Layer-Lösung für schnelle Bitcoin-Transaktionen.",
-      bgColor: "bg-[#FDE1D3]",
+      bgColor: "bg-transparent",
       borderColor: "border-[#FEF7CD]"
     },
     {
       icon: <CalendarDays className="h-12 w-12 text-bitcoin mb-4" />,
       title: "Zukunftsperspektiven",
       description: "Diskussionen über die zukünftige Entwicklung und das Potenzial von Kryptowährungen.",
-      bgColor: "bg-[#FEF7CD]",
+      bgColor: "bg-transparent",
       borderColor: "border-[#FDE1D3]"
     },
     {
       icon: <Clock className="h-12 w-12 text-bitcoin mb-4" />,
       title: "Geschichte",
       description: "Die Entstehungsgeschichte von Bitcoin und anderen Kryptowährungen.",
-      bgColor: "bg-[#E2F4FF]",
+      bgColor: "bg-transparent",
       borderColor: "border-[#CCE8FF]"
     }
   ];
