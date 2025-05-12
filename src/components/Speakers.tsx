@@ -323,6 +323,15 @@ const Speakers = () => {
       bio: "Nathaly ist eine leidenschaftliche Unternehmerin, Vollblut-Bitcoiner, und ehemalige Bänkerin. Als Gründerin der FinanceRevolution und Co-Moderatorin des NoMad Podcasts inspiriert sie Menschen weltweit. Zusammen mit ihrer Familie hat Nathaly das konventionelle System hinter sich gelassen und lebt heute als digitale Nomadin. Sie und ihre Familie nennen sich oft auch die „Bitcoin Nomad Family“. Mit umfassender Expertise in Treuhand, Human Resources und internationalem Steuerrecht berät Nathaly erfolgreich Unternehmen und Privatpersonen. Ihr Projekt FinanceRevolution, gegründet während der Corona-Krise, hat sich zu einem durchschlagenden Erfolg entwickelt. Mit ihrem Leitsatz „Geld arbeitet für dich, nicht du für Geld“ motiviert sie Menschen, finanzielle Freiheit zu erreichen. Neben ihrer Rolle als Vollblut-Unternehmerin ist Nathaly eine engagierte Mutter zweier Söhne (20 und 29).",
       bgColor: "bg-[#D3E4FD]/50",
       bgSolidColor: "bg-[#D3E4FD]"
+    },
+    {
+      name: "Nathaly Lenz",
+      role: "CEO & Mitgründer",
+      company: "21bitcoin (FIOR Digital GmbH)",
+      image: "/images/speakers/Nathaly_Lenz.png",
+      bio: "Nathaly ist eine leidenschaftliche Unternehmerin, Vollblut-Bitcoiner, und ehemalige Bänkerin. Als Gründerin der FinanceRevolution und Co-Moderatorin des NoMad Podcasts inspiriert sie Menschen weltweit. Zusammen mit ihrer Familie hat Nathaly das konventionelle System hinter sich gelassen und lebt heute als digitale Nomadin. Sie und ihre Familie nennen sich oft auch die „Bitcoin Nomad Family“. Mit umfassender Expertise in Treuhand, Human Resources und internationalem Steuerrecht berät Nathaly erfolgreich Unternehmen und Privatpersonen. Ihr Projekt FinanceRevolution, gegründet während der Corona-Krise, hat sich zu einem durchschlagenden Erfolg entwickelt. Mit ihrem Leitsatz „Geld arbeitet für dich, nicht du für Geld“ motiviert sie Menschen, finanzielle Freiheit zu erreichen. Neben ihrer Rolle als Vollblut-Unternehmerin ist Nathaly eine engagierte Mutter zweier Söhne (20 und 29).",
+      bgColor: "bg-[#D3E4FD]/50",
+      bgSolidColor: "bg-[#D3E4FD]"
     }
 
   ];
@@ -341,23 +350,7 @@ const Speakers = () => {
     "bg-[#FEF7CD]"
   ];
   
-  const generatePlaceholders = () => {
-    const placeholders = [];
-    for (let i = 1; i <= 29; i++) {
-      placeholders.push({
-        name: `Speaker ${i + 6}`,
-        role: "Bitcoin Expert",
-        company: "Bitcoin Community",
-        image: "",
-        bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        bgColor: placeholderBackgrounds[i % placeholderBackgrounds.length],
-        bgSolidColor:placeholderBackgroundsSolid
-      });
-    }
-    return placeholders;
-  };
 
-  const speakers = [...speakersData, ...generatePlaceholders()];
 
   return (
     <section id="speakers" className="py-20 bg-gradient-to-b from-[#F2FCE2]/50 to-white">
