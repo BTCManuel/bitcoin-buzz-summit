@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { MapPin, Clock, Info, Navigation, Car, Train, Building, ParkingSquare } from 'lucide-react';
@@ -39,7 +40,7 @@ const Venue = () => {
                 <Button className="bg-bitcoin hover:bg-bitcoin-dark text-white rounded-full shadow-md shadow-bitcoin/20 transition-all duration-300 hover:scale-105">
                   <Navigation className="mr-2 h-5 w-5" />
                   <a
-                    href="https://www.google.com/maps/place/Saturn+Arena+Ingolstadt/@48.7735758,11.4424034,16z"
+                    href="https://www.google.com/maps/place/SATURN-Arena/@48.7596955,11.4352675,17z/data=!3m2!4b1!5s0x479effabfb5a0767:0xb572f1ff18954c46!4m6!3m5!1s0x479effa97099d00f:0xe5328f76f9f08e31!8m2!3d48.7596955!4d11.4378424!16zL20vMGNsdngy?hl=de&entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoASAFQAw%3D%3D"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-white"
@@ -166,24 +167,64 @@ const Venue = () => {
               
               <div className="bg-gray-50 rounded-xl p-6 mt-2">
                 <h4 className="font-bold text-lg mb-4">Wir empfehlen:</h4>
-                <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  <li className="flex items-center text-gray-600">
-                    <span className="h-2 w-2 rounded-full bg-bitcoin mr-2"></span>
-                    Tiefgarage Theater West
-                  </li>
-                  <li className="flex items-center text-gray-600">
-                    <span className="h-2 w-2 rounded-full bg-bitcoin mr-2"></span>
-                    Tiefgarage Theater Ost
-                  </li>
-                  <li className="flex items-center text-gray-600">
-                    <span className="h-2 w-2 rounded-full bg-bitcoin mr-2"></span>
-                    Tiefgarage Schloss
-                  </li>
-                  <li className="flex items-center text-gray-600">
-                    <span className="h-2 w-2 rounded-full bg-bitcoin mr-2"></span>
-                    Congressgarage
-                  </li>
-                </ul>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <a 
+                    href="https://www.google.com/maps/place/Tiefgarage+Theater+West+(P1)/@48.7629325,11.4271101,17z/data=!3m1!4b1!4m6!3m5!1s0x479efe53ef3aea5d:0x712986f8919c6934!8m2!3d48.7629325!4d11.4271101!16s%2Fg%2F1ptwyhbh_?hl=de&entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoASAFQAw%3D%3D"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
+                    <Button 
+                      className="w-full justify-center bg-white border-bitcoin/20 text-gray-800 hover:bg-[#FDE1D3]/20 transition-all duration-300 hover:shadow-lg"
+                      variant="outline"
+                    >
+                      <MapPin className="mr-2 h-5 w-5 text-bitcoin" />
+                      Tiefgarage Theater West
+                    </Button>
+                  </a>
+                  <a 
+                    href="https://www.google.com/maps/place/Tiefgarage+Theater+Ost+(P1)/@48.7635948,11.4280039,17z/data=!3m1!4b1!4m6!3m5!1s0x479efe53a67b9057:0x209e4874e5a4126c!8m2!3d48.7635948!4d11.4305788!16s%2Fg%2F11gd687vpg?hl=de&entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoASAFQAw%3D%3D"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
+                    <Button 
+                      className="w-full justify-center bg-white border-bitcoin/20 text-gray-800 hover:bg-[#FDE1D3]/20 transition-all duration-300 hover:shadow-lg"
+                      variant="outline"
+                    >
+                      <MapPin className="mr-2 h-5 w-5 text-bitcoin" />
+                      Tiefgarage Theater Ost
+                    </Button>
+                  </a>
+                  <a 
+                    href="https://www.google.com/maps/place/Tiefgarage+Schloss+(P2)/@48.7662692,11.4282948,17z/data=!3m2!4b1!5s0x479efe52871a217f:0x510de26c9df871df!4m6!3m5!1s0x479efe5286ede069:0x6cf0250bd86302d1!8m2!3d48.7662692!4d11.4308697!16s%2Fg%2F11bxfmm09n?hl=de&entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoASAFQAw%3D%3D"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
+                    <Button 
+                      className="w-full justify-center bg-white border-bitcoin/20 text-gray-800 hover:bg-[#FDE1D3]/20 transition-all duration-300 hover:shadow-lg"
+                      variant="outline"
+                    >
+                      <MapPin className="mr-2 h-5 w-5 text-bitcoin" />
+                      Tiefgarage Schloss
+                    </Button>
+                  </a>
+                  <a 
+                    href="https://www.google.com/maps/place/Tiefgarage+Congress+(P11)/@48.7645682,11.4311158,17z/data=!3m1!4b1!4m6!3m5!1s0x479efe52cccfcaf9:0x6b0d06d54926882f!8m2!3d48.7645682!4d11.4336907!16s%2Fg%2F11gd684x23?hl=de&entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoASAFQAw%3D%3D"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
+                    <Button 
+                      className="w-full justify-center bg-white border-bitcoin/20 text-gray-800 hover:bg-[#FDE1D3]/20 transition-all duration-300 hover:shadow-lg"
+                      variant="outline"
+                    >
+                      <MapPin className="mr-2 h-5 w-5 text-bitcoin" />
+                      Congressgarage
+                    </Button>
+                  </a>
+                </div>
                 
                 <div className="mt-6 text-center">
                   <p className="inline-block px-4 py-2 bg-amber-50 text-amber-700 rounded-lg border border-amber-200">
