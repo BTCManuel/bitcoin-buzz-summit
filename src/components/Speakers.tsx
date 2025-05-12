@@ -202,7 +202,7 @@ const Speakers = () => {
       name: "Tobias Grünenfelder",
       role: "CEO & Mitgründer",
       company: "21bitcoin (FIOR Digital GmbH)",
-      image: "/images/speakers/Tobias_Gruenenfelder.jpg",
+      image: "/images/speakers/Tobias_Guenenfelder.jpg",
       bio: "ist Kunststofftechnologe und Techniker HF Maschinenbau mit Interesse für neue Technologien und einem Wunsch, sein Vermögen langfristig zu schützen. In seiner Freizeit ist er am liebsten in den Bergen beim Freeriden oder Mountainbiken. Daher kam ihm auch die Idee für Bitcoin Guide. Er ist kein Bergführer, aber dafür hat er sich 2022 zum Certified Bitcoin Professional zertifizieren lassen, damit er euch - genau wie ein Bergführer - sicher durch die vielseitige Welt von Bitcoin leiten kann. Seit Juni 2023 ist er Präsident des Vereins Bitcoin Block.",
       bgColor: "bg-[#F2FCE2]/50",
       bgSolidColor: "bg-[#F2FCE2]"
