@@ -9,14 +9,14 @@ const About = () => {
   const features = [
     {
       icon: <Bitcoin className="h-12 w-12 text-bitcoin mb-4" />,
-      title: "Bitcoin & Blockchain",
+      title: "Bitcoin Block",
       description: "",
       bgColor: "bg-transparent",
       borderColor: "border-[#FDE1D3]"
     },
     {
       icon: <BookOpen className="h-12 w-12 text-bitcoin mb-4" />,
-      title: "Workshops",
+      title: "Energy & Mining",
       description: "",
       bgColor: "bg-transparent",
       borderColor: "border-[#CCE8FF]",
@@ -24,70 +24,70 @@ const About = () => {
     },
     {
       icon: <Users className="h-12 w-12 text-bitcoin mb-4" />,
-      title: "Networking",
+      title: "BIP25 Members",
       description: "",
       bgColor: "bg-transparent",
       borderColor: "border-[#F2FCE2]"
     },
     {
       icon: <Globe className="h-12 w-12 text-bitcoin mb-4" />,
-      title: "Digitale Zukunft",
+      title: "Messepartner werden",
       description: "",
       bgColor: "bg-transparent",
       borderColor: "border-[#D3E4FD]"
     },
     {
       icon: <Target className="h-12 w-12 text-bitcoin mb-4" />,
-      title: "Bildung & Information",
+      title: "Workshop 1",
       description: "",
       bgColor: "bg-transparent",
       borderColor: "border-[#FEF7CD]"
     },
     {
       icon: <Shield className="h-12 w-12 text-bitcoin mb-4" />,
-      title: "Sicherheit",
+      title: "Workshop 2",
       description: "",
       bgColor: "bg-transparent",
       borderColor: "border-[#FDE1D3]"
     },
     {
       icon: <Code className="h-12 w-12 text-bitcoin mb-4" />,
-      title: "Technologie",
+      title: "Workshop 3",
       description: "",
       bgColor: "bg-transparent",
       borderColor: "border-[#CCE8FF]"
     },
     {
       icon: <Tv className="h-12 w-12 text-bitcoin mb-4" />,
-      title: "Medien & Berichterstattung",
+      title: "Workshop 4",
       description: "",
       bgColor: "bg-transparent",
       borderColor: "border-[#F2FCE2]"
     },
     {
       icon: <Zap className="h-12 w-12 text-bitcoin mb-4" />,
-      title: "Innovation",
+      title: "Workshop 5",
       description: "",
       bgColor: "bg-transparent",
       borderColor: "border-[#D3E4FD]"
     },
     {
       icon: <Bolt className="h-12 w-12 text-bitcoin mb-4" />,
-      title: "Lightning Network",
+      title: "Workshop 6",
       description: "",
       bgColor: "bg-transparent",
       borderColor: "border-[#FEF7CD]"
     },
     {
       icon: <CalendarDays className="h-12 w-12 text-bitcoin mb-4" />,
-      title: "Zukunftsperspektiven",
+      title: "Workshop 7",
       description: "",
       bgColor: "bg-transparent",
       borderColor: "border-[#FDE1D3]"
     },
     {
       icon: <Clock className="h-12 w-12 text-bitcoin mb-4" />,
-      title: "Geschichte",
+      title: "Workshop 8",
       description: "",
       bgColor: "bg-transparent",
       borderColor: "border-[#CCE8FF]"
