@@ -1,6 +1,7 @@
+
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { MapPin, Clock, Info, Navigation } from 'lucide-react';
+import { MapPin, Clock, Info, Navigation, Car, Train, Building, ParkingSquare } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Venue = () => {
@@ -13,44 +14,49 @@ const Venue = () => {
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800">Eventlocation</h2>
           <p className="text-xl text-gray-600">
-            Freuen Sie sich auf einen spannenden Abend im neuen Donautauer der VR-Bank Bayern Mitte eG
+            Freuen Sie sich auf einen spannenden Event in Ingolstadt mit mehreren Veranstaltungsorten
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        {/* Main event locations */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+          {/* Venue map image */}
           <div>
             <Card className="h-full border border-[#F2FCE2] shadow-md rounded-2xl overflow-hidden bg-white">
               <CardContent className="p-0 h-full">
-              <div className="aspect-video w-full overflow-hidden rounded-t-2xl">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3366.498719155752!2d11.436978276935818!3d48.759279607675495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479effa96a317b17%3A0x5fe963f539067d53!2sS%C3%BCdliche%20Ringstra%C3%9Fe%2066%2C%2085051%20Ingolstadt!5e1!3m2!1sde!2sde!4v1746795967223!5m2!1sde!2sde"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen={true}
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  className="w-full h-full"
-                ></iframe>
-              </div>
-
-                <div className="p-8 text-gray-800">
-                  <h3 className="text-2xl font-bold mb-4">VR-Bank Bayern Mitte eG</h3>
-                  <p className="text-gray-600 mb-6">
-                    Die Saturn Arena bildet das Zentrum des 3. BitcoinForum. Auf der Main-Stage werden alle Haupt-Vorträge stattfinden. Im "Umlauf" stellen sich Ihnen unsere Partner an ihren Messe-Ständen vor. Auch unsere Bitcoin-Kunstausstellung können Sie hier erleben.
-                  </p>
-                  <div className="mt-4">
+                <div className="aspect-video w-full overflow-hidden rounded-t-2xl relative">
+                  <img
+                    src="/lovable-uploads/90b76e15-7546-440d-9d3b-a7715150eeb7.png"
+                    alt="Event Locations Map"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                  <div className="absolute bottom-0 left-0 p-4 text-white">
+                    <h3 className="text-xl font-bold">Übersicht der Veranstaltungsorte</h3>
+                  </div>
+                </div>
+                <div className="p-8">
+                  <div className="flex items-center gap-4 mb-6">
                     <Button className="bg-bitcoin hover:bg-bitcoin-dark text-white rounded-full shadow-md shadow-bitcoin/20 transition-all duration-300 hover:scale-105">
                       <Navigation className="mr-2 h-5 w-5" />
                       <a
-                        href="https://www.google.com/maps/place/Volksbank+Raiffeisenbank+Bayern+Mitte+eG+-+Filiale+Friedrich-Ebert-Stra%C3%9Fe/@48.7735758,11.4424034,16z"
+                        href="https://www.google.com/maps/place/Saturn+Arena+Ingolstadt/@48.7735758,11.4424034,16z"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-white"
                       >
                         Anfahrt
                       </a>
-
+                    </Button>
+                    <Button variant="outline" className="rounded-full hover:bg-[#D3E4FD]/20">
+                      <MapPin className="mr-2 h-5 w-5 text-bitcoin" />
+                      <a
+                        href="https://www.google.com/maps/search/Parkplätze+Saturn+Arena+Ingolstadt"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Parkplätze
+                      </a>
                     </Button>
                   </div>
                 </div>
@@ -58,74 +64,132 @@ const Venue = () => {
             </Card>
           </div>
           
-          <div className="space-y-8 text-gray-800">
-            <div>
-              <h3 className="flex items-center text-2xl font-bold mb-4">
-                <div className="mr-4 h-10 w-10 rounded-full bg-[#FDE1D3]/40 flex items-center justify-center">
-                  <MapPin className="h-5 w-5 text-bitcoin" />
+          {/* Venue information */}
+          <div className="flex flex-col space-y-8">
+            <div className="bg-white rounded-2xl p-8 border border-[#F2FCE2] shadow-md h-full">
+              <div className="flex items-start gap-4 mb-6">
+                <div className="h-12 w-12 rounded-full bg-[#FDE1D3]/40 flex items-center justify-center flex-shrink-0 mt-1">
+                  <Building className="h-6 w-6 text-bitcoin" />
                 </div>
-                Anschrift
-              </h3>
-              <p className="text-lg text-gray-600 ml-14">
-                VR-Bank Bayern Mitte eG<br />
-                Südliche Ringstrasse 66<br />
-                85053 Ingolstadt<br />
-                Deutschland
-              </p>
-            </div>
-            
-            <div>
-              <h3 className="flex items-center text-2xl font-bold mb-4">
-                <div className="mr-4 h-10 w-10 rounded-full bg-[#F2FCE2]/60 flex items-center justify-center">
-                  <Clock className="h-5 w-5 text-bitcoin" />
+                <div>
+                  <h3 className="text-2xl font-bold mb-3 text-gray-800">Saturn Arena</h3>
+                  <p className="text-gray-600 mb-4">
+                    Die Saturn Arena bildet das Zentrum des 3. BitcoinForum. Auf der Main-Stage werden alle Haupt-Vorträge stattfinden. 
+                    Im "Umlauf" stellen sich Ihnen unsere Partner an ihren Messe-Ständen vor. Auch unsere Bitcoin-Kunstausstellung können Sie hier erleben.
+                  </p>
+                  <p className="text-gray-600 mb-4">
+                    Selbstverständlich ist auch für Ihre Bewirtung bestens gesorgt. Die ERCI Catering GmbH bietet Ihnen eine große Auswahl 
+                    an kalten und warmen Speisen sowie Getränke (alles gegen Selbstbezahlung).
+                  </p>
+                  <p className="text-gray-600">
+                    Bei gutem Wetter werden wir auch die Außenanlagen der Saturn Arena nutzen, um Ihnen ein großartiges Event-Erlebnis bieten zu können.
+                  </p>
                 </div>
-                Zeit
-              </h3>
-              <div className="ml-14">
-                <p className="text-lg text-gray-600 mb-3">
-                  Freitag, 13. Oktober 2023
-                </p>
-                <ul className="space-y-3">
-                  <li className="flex items-center text-gray-600">
-                    <span className="h-1.5 w-1.5 rounded-full bg-bitcoin mr-2"></span>
-                    Einlass: 17:30 Uhr
-                  </li>
-                  <li className="flex items-center text-gray-600">
-                    <span className="h-1.5 w-1.5 rounded-full bg-bitcoin mr-2"></span>
-                    Beginn: 18:00 Uhr
-                  </li>
-                  <li className="flex items-center text-gray-600">
-                    <span className="h-1.5 w-1.5 rounded-full bg-bitcoin mr-2"></span>
-                    Ende: ca. 21:00 Uhr
-                  </li>
-                </ul>
+              </div>
+              
+              <div className="flex items-start gap-4">
+                <div className="h-12 w-12 rounded-full bg-[#F2FCE2]/60 flex items-center justify-center flex-shrink-0 mt-1">
+                  <Building className="h-6 w-6 text-bitcoin" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold mb-3 text-gray-800">Exerzierhaus</h3>
+                  <p className="text-gray-600 mb-4">
+                    Das Exerzierhaus befindet sich in der unmittelbaren Nachbarschaft zur Saturn Arena. Nach nur wenigen Schritten treffen Sie dort 
+                    auf unsere "Energy & Mining"-Area. Neben vielen Partnern und Messe-Ausstellern werden dort auch auf unserer "Side-Event-Bühne" 
+                    Fachvorträge rund um das Thema stattfinden.
+                  </p>
+                  <p className="text-gray-600 mb-4">
+                    Unser Fachpersonal freut sich auf die kleinen Bitcoiner und No-Coiner und sorgt für eine professionelle Kinderbetreuung 
+                    mit einem bunten Unterhaltungs- und Rahmenprogramm.
+                  </p>
+                  <p className="text-gray-600">
+                    Auch für Ihre Bewirtung ist im Exerzierhaus bestens gesorgt.
+                  </p>
+                </div>
               </div>
             </div>
-            
+          </div>
+        </div>
+        
+        {/* Travel information */}
+        <div className="bg-white rounded-2xl p-8 border border-[#F2FCE2] shadow-md mb-12">
+          <div className="flex items-start gap-4 mb-8">
+            <div className="h-12 w-12 rounded-full bg-[#D3E4FD]/50 flex items-center justify-center flex-shrink-0">
+              <Navigation className="h-6 w-6 text-bitcoin" />
+            </div>
             <div>
-              <h3 className="flex items-center text-2xl font-bold mb-4">
-                <div className="mr-4 h-10 w-10 rounded-full bg-[#D3E4FD]/50 flex items-center justify-center">
-                  <Info className="h-5 w-5 text-bitcoin" />
-                </div>
-                Anfahrt & Parkplätze
-              </h3>
-              <p className="text-lg text-gray-600 ml-14 mb-4">
-                Die VR-Bank Bayern Mitte eG ist gut zu erreichen:
+              <h3 className="text-2xl font-bold mb-3 text-gray-800">Anfahrt</h3>
+              <p className="text-gray-600 mb-4">
+                Ingolstadt liegt genau zwischen Nürnberg und München unmittelbar an der Autobahn A9 und ist somit gut mit dem Auto zu erreichen. 
+                Auch die Bahn-Anbindung ist sehr gut. Der Hauptbahnhof Ingolstadt ist nur 2 Kilometer von der Saturn Arena entfernt. 
+                Die naheliegendsten Flughäfen befinden sich in München und Nürnberg.
               </p>
-              <ul className="ml-14 space-y-2">
-                <li className="flex items-center text-gray-600">
-                  <span className="h-1.5 w-1.5 rounded-full bg-bitcoin mr-2"></span>
-                  Kostenfreie Parkplätze rund um die VR-Bank
-                </li>
-                <li className="flex items-center text-gray-600">
-                  <span className="h-1.5 w-1.5 rounded-full bg-bitcoin mr-2"></span>
-                  Busverbindung: Linien 10, 11, 15, 20, 21, 61
-                </li>
-                <li className="flex items-center text-gray-600">
-                  <span className="h-1.5 w-1.5 rounded-full bg-bitcoin mr-2"></span>
-                  Haltestelle: Staustufe/Gerolfinger Straße
-                </li>
-              </ul>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                <div className="flex items-center gap-4">
+                  <div className="h-10 w-10 rounded-full bg-[#FDE1D3]/40 flex items-center justify-center flex-shrink-0">
+                    <Car className="h-5 w-5 text-bitcoin" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-lg mb-1">Mit dem Auto</h4>
+                    <p className="text-gray-600">Direkt an der Autobahn A9</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-center gap-4">
+                  <div className="h-10 w-10 rounded-full bg-[#F2FCE2]/60 flex items-center justify-center flex-shrink-0">
+                    <Train className="h-5 w-5 text-bitcoin" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-lg mb-1">Mit der Bahn</h4>
+                    <p className="text-gray-600">2km vom Hauptbahnhof Ingolstadt</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div className="flex items-start gap-4">
+            <div className="h-12 w-12 rounded-full bg-[#FDE1D3]/40 flex items-center justify-center flex-shrink-0">
+              <ParkingSquare className="h-6 w-6 text-bitcoin" />
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold mb-3 text-gray-800">Parkmöglichkeiten</h3>
+              <p className="text-gray-600 mb-4">
+                Direkt neben der Saturn Arena gibt es ein Parkhaus mit insgesamt 576 Stellplätzen. Das Parkhaus grenzt direkt an die Saturn Arena an 
+                und bietet den kürzest möglichen Weg zum Arena-Eingang.
+              </p>
+              <p className="text-gray-600 mb-6">
+                Zusätzlich stehen am und unter dem Stadttheater Ingolstadt sowie unter dem Congress Center weitere Parkflächen bzw. Tiefgaragen zur Verfügung.
+              </p>
+              
+              <div className="bg-gray-50 rounded-xl p-6 mt-2">
+                <h4 className="font-bold text-lg mb-4">Wir empfehlen:</h4>
+                <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  <li className="flex items-center text-gray-600">
+                    <span className="h-2 w-2 rounded-full bg-bitcoin mr-2"></span>
+                    Tiefgarage Theater West
+                  </li>
+                  <li className="flex items-center text-gray-600">
+                    <span className="h-2 w-2 rounded-full bg-bitcoin mr-2"></span>
+                    Tiefgarage Theater Ost
+                  </li>
+                  <li className="flex items-center text-gray-600">
+                    <span className="h-2 w-2 rounded-full bg-bitcoin mr-2"></span>
+                    Tiefgarage Schloss
+                  </li>
+                  <li className="flex items-center text-gray-600">
+                    <span className="h-2 w-2 rounded-full bg-bitcoin mr-2"></span>
+                    Congressgarage
+                  </li>
+                </ul>
+                
+                <div className="mt-6 text-center">
+                  <p className="inline-block px-4 py-2 bg-amber-50 text-amber-700 rounded-lg border border-amber-200">
+                    Bitte beachten Sie, dass alle Parkflächen kostenpflichtig sind.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
