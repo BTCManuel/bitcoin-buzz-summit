@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { MapPin, Clock, Info, Navigation, Car, Train, Building, ParkingSquare } from 'lucide-react';
@@ -19,16 +18,16 @@ const Venue = () => {
           </p>
         </div>
         
-        {/* Large full-width event locations map */}
+        {/* Large full-width event locations map - adjusted aspect ratio for better visibility */}
         <div className="mb-16">
           <Card className="border border-[#F2FCE2] shadow-md rounded-2xl overflow-hidden bg-white">
             <CardContent className="p-0">
               <div className="w-full overflow-hidden rounded-t-2xl relative">
-                <AspectRatio ratio={16/9} className="w-full">
+                <AspectRatio ratio={21/9} className="w-full">
                   <img
                     src="/lovable-uploads/90b76e15-7546-440d-9d3b-a7715150eeb7.png"
                     alt="Event Locations Map"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                   />
                 </AspectRatio>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
