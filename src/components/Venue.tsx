@@ -3,6 +3,7 @@ import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { MapPin, Clock, Info, Navigation, Car, Train, Building, ParkingSquare } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
 
 const Venue = () => {
   return (
@@ -18,94 +19,95 @@ const Venue = () => {
           </p>
         </div>
         
-        {/* Main event locations */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
-          {/* Venue map image */}
-          <div>
-            <Card className="h-full border border-[#F2FCE2] shadow-md rounded-2xl overflow-hidden bg-white">
-              <CardContent className="p-0 h-full">
-                <div className="aspect-video w-full overflow-hidden rounded-t-2xl relative">
+        {/* Large full-width event locations map */}
+        <div className="mb-16">
+          <Card className="border border-[#F2FCE2] shadow-md rounded-2xl overflow-hidden bg-white">
+            <CardContent className="p-0">
+              <div className="w-full overflow-hidden rounded-t-2xl relative">
+                <AspectRatio ratio={16/9} className="w-full">
                   <img
                     src="/lovable-uploads/90b76e15-7546-440d-9d3b-a7715150eeb7.png"
                     alt="Event Locations Map"
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
-                  <div className="absolute bottom-0 left-0 p-4 text-white">
-                    <h3 className="text-xl font-bold">Übersicht der Veranstaltungsorte</h3>
-                  </div>
-                </div>
-                <div className="p-8">
-                  <div className="flex items-center gap-4 mb-6">
-                    <Button className="bg-bitcoin hover:bg-bitcoin-dark text-white rounded-full shadow-md shadow-bitcoin/20 transition-all duration-300 hover:scale-105">
-                      <Navigation className="mr-2 h-5 w-5" />
-                      <a
-                        href="https://www.google.com/maps/place/Saturn+Arena+Ingolstadt/@48.7735758,11.4424034,16z"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-white"
-                      >
-                        Anfahrt
-                      </a>
-                    </Button>
-                    <Button variant="outline" className="rounded-full hover:bg-[#D3E4FD]/20">
-                      <MapPin className="mr-2 h-5 w-5 text-bitcoin" />
-                      <a
-                        href="https://www.google.com/maps/search/Parkplätze+Saturn+Arena+Ingolstadt"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Parkplätze
-                      </a>
-                    </Button>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-          
-          {/* Venue information */}
-          <div className="flex flex-col space-y-8">
-            <div className="bg-white rounded-2xl p-8 border border-[#F2FCE2] shadow-md h-full">
-              <div className="flex items-start gap-4 mb-6">
-                <div className="h-12 w-12 rounded-full bg-[#FDE1D3]/40 flex items-center justify-center flex-shrink-0 mt-1">
-                  <Building className="h-6 w-6 text-bitcoin" />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold mb-3 text-gray-800">Saturn Arena</h3>
-                  <p className="text-gray-600 mb-4">
-                    Die Saturn Arena bildet das Zentrum des 3. BitcoinForum. Auf der Main-Stage werden alle Haupt-Vorträge stattfinden. 
-                    Im "Umlauf" stellen sich Ihnen unsere Partner an ihren Messe-Ständen vor. Auch unsere Bitcoin-Kunstausstellung können Sie hier erleben.
-                  </p>
-                  <p className="text-gray-600 mb-4">
-                    Selbstverständlich ist auch für Ihre Bewirtung bestens gesorgt. Die ERCI Catering GmbH bietet Ihnen eine große Auswahl 
-                    an kalten und warmen Speisen sowie Getränke (alles gegen Selbstbezahlung).
-                  </p>
-                  <p className="text-gray-600">
-                    Bei gutem Wetter werden wir auch die Außenanlagen der Saturn Arena nutzen, um Ihnen ein großartiges Event-Erlebnis bieten zu können.
-                  </p>
+                </AspectRatio>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                <div className="absolute bottom-0 left-0 p-6 text-white">
+                  <h3 className="text-2xl font-bold">Übersicht der Veranstaltungsorte</h3>
                 </div>
               </div>
-              
-              <div className="flex items-start gap-4">
-                <div className="h-12 w-12 rounded-full bg-[#F2FCE2]/60 flex items-center justify-center flex-shrink-0 mt-1">
-                  <Building className="h-6 w-6 text-bitcoin" />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold mb-3 text-gray-800">Exerzierhaus</h3>
-                  <p className="text-gray-600 mb-4">
-                    Das Exerzierhaus befindet sich in der unmittelbaren Nachbarschaft zur Saturn Arena. Nach nur wenigen Schritten treffen Sie dort 
-                    auf unsere "Energy & Mining"-Area. Neben vielen Partnern und Messe-Ausstellern werden dort auch auf unserer "Side-Event-Bühne" 
-                    Fachvorträge rund um das Thema stattfinden.
-                  </p>
-                  <p className="text-gray-600 mb-4">
-                    Unser Fachpersonal freut sich auf die kleinen Bitcoiner und No-Coiner und sorgt für eine professionelle Kinderbetreuung 
-                    mit einem bunten Unterhaltungs- und Rahmenprogramm.
-                  </p>
-                  <p className="text-gray-600">
-                    Auch für Ihre Bewirtung ist im Exerzierhaus bestens gesorgt.
-                  </p>
-                </div>
+              <div className="p-8 flex flex-wrap gap-4 justify-center md:justify-start">
+                <Button className="bg-bitcoin hover:bg-bitcoin-dark text-white rounded-full shadow-md shadow-bitcoin/20 transition-all duration-300 hover:scale-105">
+                  <Navigation className="mr-2 h-5 w-5" />
+                  <a
+                    href="https://www.google.com/maps/place/Saturn+Arena+Ingolstadt/@48.7735758,11.4424034,16z"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white"
+                  >
+                    Anfahrt
+                  </a>
+                </Button>
+                <Button variant="outline" className="rounded-full hover:bg-[#D3E4FD]/20">
+                  <MapPin className="mr-2 h-5 w-5 text-bitcoin" />
+                  <a
+                    href="https://www.google.com/maps/search/Parkplätze+Saturn+Arena+Ingolstadt"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Parkplätze
+                  </a>
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+        
+        {/* Venue information */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+          {/* Saturn Arena info */}
+          <div className="bg-white rounded-2xl p-8 border border-[#F2FCE2] shadow-md h-full">
+            <div className="flex items-start gap-4 mb-6">
+              <div className="h-12 w-12 rounded-full bg-[#FDE1D3]/40 flex items-center justify-center flex-shrink-0 mt-1">
+                <Building className="h-6 w-6 text-bitcoin" />
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold mb-3 text-gray-800">Saturn Arena</h3>
+                <p className="text-gray-600 mb-4">
+                  Die Saturn Arena bildet das Zentrum des 3. BitcoinForum. Auf der Main-Stage werden alle Haupt-Vorträge stattfinden. 
+                  Im "Umlauf" stellen sich Ihnen unsere Partner an ihren Messe-Ständen vor. Auch unsere Bitcoin-Kunstausstellung können Sie hier erleben.
+                </p>
+                <p className="text-gray-600 mb-4">
+                  Selbstverständlich ist auch für Ihre Bewirtung bestens gesorgt. Die ERCI Catering GmbH bietet Ihnen eine große Auswahl 
+                  an kalten und warmen Speisen sowie Getränke (alles gegen Selbstbezahlung).
+                </p>
+                <p className="text-gray-600">
+                  Bei gutem Wetter werden wir auch die Außenanlagen der Saturn Arena nutzen, um Ihnen ein großartiges Event-Erlebnis bieten zu können.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          {/* Exerzierhaus info */}
+          <div className="bg-white rounded-2xl p-8 border border-[#F2FCE2] shadow-md h-full">
+            <div className="flex items-start gap-4">
+              <div className="h-12 w-12 rounded-full bg-[#F2FCE2]/60 flex items-center justify-center flex-shrink-0 mt-1">
+                <Building className="h-6 w-6 text-bitcoin" />
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold mb-3 text-gray-800">Exerzierhaus</h3>
+                <p className="text-gray-600 mb-4">
+                  Das Exerzierhaus befindet sich in der unmittelbaren Nachbarschaft zur Saturn Arena. Nach nur wenigen Schritten treffen Sie dort 
+                  auf unsere "Energy & Mining"-Area. Neben vielen Partnern und Messe-Ausstellern werden dort auch auf unserer "Side-Event-Bühne" 
+                  Fachvorträge rund um das Thema stattfinden.
+                </p>
+                <p className="text-gray-600 mb-4">
+                  Unser Fachpersonal freut sich auf die kleinen Bitcoiner und No-Coiner und sorgt für eine professionelle Kinderbetreuung 
+                  mit einem bunten Unterhaltungs- und Rahmenprogramm.
+                </p>
+                <p className="text-gray-600">
+                  Auch für Ihre Bewirtung ist im Exerzierhaus bestens gesorgt.
+                </p>
               </div>
             </div>
           </div>
