@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -545,7 +546,7 @@ const Workshop = () => {
                     <div 
                       className="prose prose-sm max-w-none"
                       dangerouslySetInnerHTML={{ __html: getSelectedWorkshop()?.fullDescription || "" }}
-                    ></div>
+                    />
                   </div>
                   
                   <div>
@@ -595,3 +596,15 @@ const Workshop = () => {
                   
                   <Button className="w-full bg-bitcoin hover:bg-bitcoin/80 text-white">
                     Platz reservieren
+                  </Button>
+                </div>
+              </div>
+            </>
+          )}
+        </DialogContent>
+      </Dialog>
+    </div>
+  );
+};
+
+export default Workshop;
