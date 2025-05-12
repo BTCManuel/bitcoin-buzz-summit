@@ -121,7 +121,7 @@ const Speakers = () => {
       name: "Kris Kläger",
       role: "CEO & Mitgründer",
       company: "21bitcoin (FIOR Digital GmbH)",
-      image: "/images/speakers/Kris_Kläger.jpg",
+      image: "/images/speakers/Kris_Klaeger.jpg",
       bio: "Als Familienunternehmer, der die vor über 70 Jahren gegründete Firmengruppe Kläger in der dritten Generation leiten darf, sieht er es als seine Hauptaufgabe an, Tradition sowie aufgebaute Werte kontinuierlich mit neuen innovativen Themen und Megatrends, wie der Bitcoin-Technologie, in Einklang zu bringen. Als Gründer und Initiator der terahash.energy GmbH geht für ihn ein großer Traum in Erfüllung. Seine tiefe Überzeugung ist es, mit diesem Unterfangen vielen Menschen in Deutschland und Europa Bitcoin näherzubringen.",
       bgColor: "bg-[#FEF7CD]/50",
       bgSolidColor: "bg-[#FEF7CD]"
@@ -193,7 +193,7 @@ const Speakers = () => {
       name: "Felix Käser",
       role: "CEO & Mitgründer",
       company: "21bitcoin (FIOR Digital GmbH)",
-      image: "/images/speakers/Felix_Käser.jpg",
+      image: "/images/speakers/Felix_Kaeser.jpg",
       bio: "aus München studiert Lehramt Gymnasium (Sport/Latein). In seiner Freizeit beschäftigt er sich mit Bitcoin/Österreichische Schule der Nationalökonomie/Libertarismus. 2024 erhielt er die Julius-Faucher-Medaille im libertären Jungautorenwettbewerb, ausgestellt von der Zeitschrift eigentümlich frei (Motto: 'Libertär ist das neue Sexy').",
       bgColor: "bg-[#FEF7CD]/50",
       bgSolidColor: "bg-[#FEF7CD]"
@@ -202,7 +202,7 @@ const Speakers = () => {
       name: "Tobias Grünenfelder",
       role: "CEO & Mitgründer",
       company: "21bitcoin (FIOR Digital GmbH)",
-      image: "/images/speakers/Tobias_Grünenfelder.jpg",
+      image: "/images/speakers/Tobias_Gruenenfelder.jpg",
       bio: "ist Kunststofftechnologe und Techniker HF Maschinenbau mit Interesse für neue Technologien und einem Wunsch, sein Vermögen langfristig zu schützen. In seiner Freizeit ist er am liebsten in den Bergen beim Freeriden oder Mountainbiken. Daher kam ihm auch die Idee für Bitcoin Guide. Er ist kein Bergführer, aber dafür hat er sich 2022 zum Certified Bitcoin Professional zertifizieren lassen, damit er euch - genau wie ein Bergführer - sicher durch die vielseitige Welt von Bitcoin leiten kann. Seit Juni 2023 ist er Präsident des Vereins Bitcoin Block.",
       bgColor: "bg-[#F2FCE2]/50",
       bgSolidColor: "bg-[#F2FCE2]"
@@ -274,7 +274,7 @@ const Speakers = () => {
       name: "Ronny Mütschele",
       role: "CEO & Mitgründer",
       company: "21bitcoin (FIOR Digital GmbH)",
-      image: "/images/speakers/Ronny_Mütschele.jpg",
+      image: "/images/speakers/Ronny_Muetschele.jpg",
       bio: "ist seit 2013 im Bitcoin-Bereich aktiv. Nach ersten Erfahrungen im Bitcoin Home Mining war er Mitgründer der HODLMAYR GmbH im Jahr 2019, die heute unter der Marke Copiaro u.a. einen Online-Fachhandel für Bitcoin-Produkte betreibt (www.copiaro.com). Außerdem erbringt Copiaro weltweite B2B Fulfillment-Dienstleistungen für namhafte Bitcoin-Unternehmen. Seit Januar 2022 ist er hauptberuflich Geschäftsführer und Mehrheitsgesellschafter der HODLMAYR GmbH und verantwortet sowohl die strategische als auch die operative Ausrichtung des Unternehmens.",
       bgColor: "bg-[#F2FCE2]/50",
       bgSolidColor: "bg-[#F2FCE2]"
@@ -310,7 +310,7 @@ const Speakers = () => {
       name: "Sibylle Eberle",
       role: "CEO & Mitgründer",
       company: "21bitcoin (FIOR Digital GmbH)",
-      image: "/images/speakers/Sibylle_Eberle.jpg",
+      image: "/images/speakers/Sibylle_Eberle.png",
       bio: "geboren 1984, ist Journalistin und TV-Moderatorin bei SRF Sport. Ihre journalistische Laufbahn begann sie nach ihrer Ausbildung am MAZ Luzern bei Radio FM1, gefolgt von Stationen bei Radio Energy Zürich und TVO. Seit 2018 steht sie für SRF vor der Kamera, unter anderem bei Grossanlässen im nationalen und internationalen Sport. Neben ihrer Tätigkeit beim Fernsehen arbeitet sie freiberuflich als Eventmoderatorin und DJ – zuletzt unter anderem an der Swiss Bitcoin Conference 2025 in Kreuzlingen.",
       bgColor: "bg-[#F2FCE2]/50",
       bgSolidColor: "bg-[#F2FCE2]"
@@ -319,7 +319,7 @@ const Speakers = () => {
       name: "Nathaly Lenz",
       role: "CEO & Mitgründer",
       company: "21bitcoin (FIOR Digital GmbH)",
-      image: "/images/speakers/Nathaly_Lenz.jpg",
+      image: "/images/speakers/Nathaly_Lenz.png",
       bio: "Nathaly ist eine leidenschaftliche Unternehmerin, Vollblut-Bitcoiner, und ehemalige Bänkerin. Als Gründerin der FinanceRevolution und Co-Moderatorin des NoMad Podcasts inspiriert sie Menschen weltweit. Zusammen mit ihrer Familie hat Nathaly das konventionelle System hinter sich gelassen und lebt heute als digitale Nomadin. Sie und ihre Familie nennen sich oft auch die „Bitcoin Nomad Family“. Mit umfassender Expertise in Treuhand, Human Resources und internationalem Steuerrecht berät Nathaly erfolgreich Unternehmen und Privatpersonen. Ihr Projekt FinanceRevolution, gegründet während der Corona-Krise, hat sich zu einem durchschlagenden Erfolg entwickelt. Mit ihrem Leitsatz „Geld arbeitet für dich, nicht du für Geld“ motiviert sie Menschen, finanzielle Freiheit zu erreichen. Neben ihrer Rolle als Vollblut-Unternehmerin ist Nathaly eine engagierte Mutter zweier Söhne (20 und 29).",
       bgColor: "bg-[#D3E4FD]/50",
       bgSolidColor: "bg-[#D3E4FD]"
