@@ -366,7 +366,7 @@ const Speakers = () => {
         </div>
 
         <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 gap-3">
-          {speakers.map((speaker, index) => (
+          {speakersData.map((speaker, index) => (
             <Card
               key={index}
               onClick={() => setSelectedSpeaker(speaker)}
