@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Check, Star } from 'lucide-react';
+import { Check, Star, TicketPercent } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 interface TicketTier {
@@ -70,9 +70,28 @@ const Register = () => {
             <span className="text-sm uppercase tracking-wider font-medium text-bitcoin">Tickets</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Jetzt Registrieren</h2>
-          <p className="text-xl text-gray-300">
-            Sichern Sie sich Ihren Platz beim 3. Bitcoin Forum 2025 und werden Sie Teil der Diskussion über die Zukunft von Bitcoin.
-          </p>
+          
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-8">
+            <p className="text-xl text-gray-300">
+              Sichern Sie sich Ihren Platz beim 3. Bitcoin Forum 2025 und werden Sie Teil der Diskussion über die Zukunft von Bitcoin.
+            </p>
+            
+            <a href="https://vr-bayernmitte.genolive.de/index.php?page=event-code&code=bitcoin25" 
+               className="flex-shrink-0 transform hover:scale-105 transition-transform duration-300"
+               aria-label="Frühbucher Rabatt 21%-50%">
+              <div className="relative group">
+                <img 
+                  src="/lovable-uploads/dcd31e67-f5a8-4f64-932c-282cbd946eb3.png" 
+                  alt="Frühbucher Rabatt 21%-50%" 
+                  className="w-32 h-32 object-contain animate-pulse" 
+                  style={{
+                    animation: "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite"
+                  }}
+                />
+                <div className="absolute inset-0 rounded-full bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+              </div>
+            </a>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
