@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 const About = () => {
   const features = [
     {
-      icon: <img src="/images/speakers/Evelyn_Brock.jpg" alt="Bitcoin" className="h-12 w-12 mb-4" loading="lazy" />,
+      icon: <img src="/images/speakers/Bitcoin_Block.png" alt="Bitcoin Block" className="h-12 w-12 mb-4" loading="lazy" />,
       title: "Bitcoin Block",
       description: "",
       bgColor: "bg-transparent",
