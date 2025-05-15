@@ -20,7 +20,7 @@ const Venue = () => {
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800">Eventlocation</h2>
           <p className="text-xl text-gray-600">
-            Freuen Sie sich auf einen spannenden Event in Ingolstadt mit mehreren Veranstaltungsorten
+            Freuen Sie sich auf ein informatives Forum in Ingolstadt rund um die Saturn Arena
           </p>
         </div>
         
