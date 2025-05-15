@@ -45,9 +45,10 @@ const Footer = () => {
           <div>
             <h3 className="font-bold text-lg mb-4">Contact Us</h3>
             <ul className="space-y-2">
+             <li className="text-gray-600">Diese Webseite wird von </li>
               <li className="text-gray-600">Nena Celeste UG (haftungsbeschränkt)</li>
-              <li className="text-gray-600">Josef-Kogler-Str. 8</li>
-              <li className="text-gray-600"> 82031 Gruenwald</li>
+              <li className="text-gray-600">für das 3. BitcoinForum bereitgestellt.</li>
+           
               <li className="text-gray-600"> <a href="mailto:website_anfrage@nena-celeste.de?Subject=Anfrage von Bitcoin Forum Website">Kontakt per e-mail </a> </li>
             </ul>
           </div>
