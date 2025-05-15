@@ -300,7 +300,7 @@ const Speakers = () => {
     {
       name: "Evelyn Brock ('Madame Bitcoin')",
       role: "CEO & Mitgründer",
-      company: "21bitcoin (FIOR Digital GmbH)",
+      company: "21bitcoin (112)",
       image: "/images/speakers/Evelyn_Brock.jpg",
       bio: "ist mit ihrer fast 30-jährigen Erfahrung als Startup Coach und Dozentin in der Lage, komplizierte Zusammenhänge einfach zu erklären. Sie hat 2019 begonnen, sich tiefer mit Bitcoin zu beschäftigen. Es ist ihr ein Anliegen, Frauen beim Einstieg in dieses komplexe Thema zu unterstützen. Daher gründete sie 2024 die Weiterbildungsplattform www.madame-bitcoin.de. Sie ist Mitglied bei Les Femmes Orange und wurde 2024 in den Vorstand des Bitcoin Bundesverbandes gewählt.",
       bgColor: "bg-[#FEF7CD]/50",
