@@ -1,0 +1,11 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Wenn die Datei oder der Ordner nicht existiert…
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+
+  # …leite alles auf index.html um
+  RewriteRule ^ index.html [L]
+</IfModule>
