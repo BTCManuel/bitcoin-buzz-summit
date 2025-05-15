@@ -21,7 +21,7 @@ const Workshop = () => {
     <Users className="h-10 w-10 text-bitcoin" />,
     <Shield className="h-10 w-10 text-bitcoin" />,
     <Code className="h-10 w-10 text-bitcoin" />,
-    <img src="/lovable-uploads/c104092d-6576-4a17-a43b-3d0844e39dcd.png" alt="Steuerliche Aspekte" className="h-10 w-10" />,
+    <img src="/images/workshop/steuer.svg" alt="Steuerliche Aspekte" className="h-10 w-10" />,
     <Tv className="h-10 w-10 text-bitcoin" />
   ];
 
