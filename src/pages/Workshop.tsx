@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { Check, ArrowRight, Bitcoin, BookOpen, Target, Users, Shield, Code, Tv, Zap, Clock, CalendarDays, MapPin, User } from 'lucide-react';
+import { Check, ArrowRight, Bitcoin, BookOpen, Target, Users, Shield, Code, Tv, Clock, CalendarDays, MapPin, User } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
@@ -21,7 +21,7 @@ const Workshop = () => {
     <Users className="h-10 w-10 text-bitcoin" />,
     <Shield className="h-10 w-10 text-bitcoin" />,
     <Code className="h-10 w-10 text-bitcoin" />,
-    <Zap className="h-10 w-10 text-bitcoin" />,
+    <img src="/lovable-uploads/1e6c8e12-5e14-4bbc-baff-6d0ef63c56ed.png" alt="Steuerliche Aspekte" className="h-10 w-10" />,
     <Tv className="h-10 w-10 text-bitcoin" />
   ];
 
