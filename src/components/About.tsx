@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Bitcoin, Users, Globe, Target, BookOpen, Shield, Code, Tv, Zap, Bolt, CalendarDays, Clock } from 'lucide-react';
+import { Bitcoin, Users, Globe, Target, BookOpen, Shield, Code, Tv, Zap, Bolt, CalendarDays, Clock, Ticket } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
@@ -141,6 +141,14 @@ const About = () => {
               </CardContent>
             </Card>
           ))}
+        </div>
+        
+        <div className="flex justify-center mt-16">
+          <Button 
+            className="bg-bitcoin hover:bg-bitcoin/80 text-white shadow-lg shadow-bitcoin/20 px-10 py-6 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105 flex items-center gap-2"
+          >
+            <Ticket className="h-5 w-5" /> Sichere dein Ticket
+          </Button>
         </div>
       </div>
     </section>

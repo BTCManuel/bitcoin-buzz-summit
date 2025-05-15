@@ -1,7 +1,9 @@
+
 import React from 'react';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Card } from '@/components/ui/card';
-import { Clock, Calendar } from 'lucide-react';
+import { Clock, Calendar, Ticket } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const Schedule = () => {
   const showSchedule = false; // später auf true setzen, um den Zeitplan wieder zu aktivieren
@@ -111,6 +113,14 @@ const Schedule = () => {
             )}
           </div>
         </Card>
+        
+        <div className="flex justify-center mt-16">
+          <Button 
+            className="bg-bitcoin hover:bg-bitcoin/80 text-white shadow-lg shadow-bitcoin/20 px-10 py-6 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105 flex items-center gap-2"
+          >
+            <Ticket className="h-5 w-5" /> Sichere dein Ticket
+          </Button>
+        </div>
       </div>
     </section>
   );
