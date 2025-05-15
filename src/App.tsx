@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Workshop from "./pages/Workshop";
-import ScrollToTop from "./components/ScrollToTop"; // ✅ Import hinzugefügt
+import ScrollToTop from "./pages/ScrollToTop"; // ✅ Import hinzugefügt
 
 const queryClient = new QueryClient();
 
