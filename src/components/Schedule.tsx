@@ -56,7 +56,7 @@ const Schedule = () => {
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800">Programm</h2>
           <p className="text-xl text-gray-600">
-            Ein Abend voller Fachwissen und Networking rund um Bitcoin und Blockchain
+            Eine ganze Woche Bitcoin in Ingolstadt. Drei Tage BitcoinForum. Duzende Experten, Workshops, Seminare und alles was das Herz begehrt - für jeden ist etwas dabei.
           </p>
         </div>
         
