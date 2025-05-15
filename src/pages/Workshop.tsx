@@ -27,7 +27,7 @@ const Workshop = () => {
 
   const workshops = [
     {
-      id: 1,
+      id: 4,
       title: "Bitcoin als Wertanlage",
       subtitle: "für Family Offices",
       description: "In diesem Workshop lernen Sie, wie Bitcoin als langfristige Wertanlage für Family Offices funktionieren kann.",
