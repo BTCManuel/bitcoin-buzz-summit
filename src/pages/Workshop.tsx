@@ -22,7 +22,7 @@ const Workshop = () => {
     <Shield className="h-10 w-10 text-bitcoin" />,
     <Code className="h-10 w-10 text-bitcoin" />,
     <img src="/images/workshop/steuer.svg" alt="Steuerliche Aspekte" className="h-10 w-10" />,
-    <Tv className="h-10 w-10 text-bitcoin" />
+    <img src="/images/workshop/steuer.svg" alt="Steuerliche Aspekte" className="h-10 w-10" />
   ];
 
   const workshops = [
