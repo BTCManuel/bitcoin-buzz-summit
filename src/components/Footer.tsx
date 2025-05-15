@@ -58,7 +58,7 @@ const Footer = () => {
             &copy; 2025 3.Bitcoin Forum. All rights reserved.
           </p>
           <div className="flex space-x-6 text-sm text-gray-500">
-            <a href="#" className="hover:text-bitcoin transition-colors">Cookie Richtlinie</a>
+            <a href="https://nena-celeste.com/impressum/" className="hover:text-bitcoin transition-colors">Cookie Richtlinie</a>
             <a href="#" className="hover:text-bitcoin transition-colors">Datenschutz</a>
             <a href="#" className="hover:text-bitcoin transition-colors">Impressum</a>
           </div>
