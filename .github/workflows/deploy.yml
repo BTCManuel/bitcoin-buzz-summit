@@ -28,6 +28,6 @@ jobs:
           port: 21
           timeout: 120
           local-dir: dist/
-          server-dir: newnew/     # <-- ins Webroot
+          server-dir: newne3w/     # <-- ins Webroot
           dangerous-clean-slate: false
-          log-level: verbose 
+          log-level: verbose
