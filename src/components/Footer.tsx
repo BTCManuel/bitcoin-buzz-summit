@@ -48,7 +48,7 @@ const Footer = () => {
               <li className="text-gray-600">Nena Celeste UG (haftungsbeschränkt)</li>
               <li className="text-gray-600">Josef-Kogler-Str. 8</li>
               <li className="text-gray-600"> 82031 Gruenwald</li>
-              <li className="text-gray-600">href="mailto:website_anfrage@nena-celeste.de?Subject=Anfrage von Ihrer Webseite">Kontakt per e-mail</li>
+              <li className="text-gray-600"> href="mailto:website_anfrage@nena-celeste.de?Subject=Anfrage von Bitcoin Forum Website">Kontakt per e-mail</li>
             </ul>
           </div>
         </div>
