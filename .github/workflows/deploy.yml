@@ -24,10 +24,9 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps
+          protocol: ftp
           port: 21
           timeout: 120
           local-dir: dist/
-          server-dir: newne3w/     # <-- ins Webroot
-          dangerous-clean-slate: false
+          server-dir: ./         # ← Webroot, nicht htdocs/
           log-level: verbose
