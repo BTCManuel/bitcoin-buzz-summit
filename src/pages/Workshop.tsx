@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { Check, ArrowRight, Bitcoin, BookOpen, Target, Users, Shield, Code, Tv, Clock, CalendarDays, MapPin, User } from 'lucide-react';
+import { Check, ArrowRight, Bitcoin, BookOpen, Target, Users, Shield, Code, Tv, Clock, CalendarDays, MapPin, User, Ticket } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
@@ -21,7 +21,7 @@ const Workshop = () => {
     <Users className="h-10 w-10 text-bitcoin" />,
     <Shield className="h-10 w-10 text-bitcoin" />,
     <Code className="h-10 w-10 text-bitcoin" />,
-    <img src="/images/workshop/steuer.svg" alt="Steuerliche Aspekte" className="h-10 w-10" />,
+    <img src="/lovable-uploads/1e6c8e12-5e14-4bbc-baff-6d0ef63c56ed.png" alt="Steuerliche Aspekte" className="h-10 w-10" />,
     <Tv className="h-10 w-10 text-bitcoin" />
   ];
 
@@ -367,6 +367,14 @@ const Workshop = () => {
                     </Card>
                   ))}
                 </div>
+                
+                <div className="flex justify-center mt-12">
+                  <Button 
+                    className="bg-bitcoin hover:bg-bitcoin/80 text-white shadow-lg shadow-bitcoin/20 px-10 py-6 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105 flex items-center gap-2"
+                  >
+                    <Ticket className="h-5 w-5" /> Sichere dein Ticket
+                  </Button>
+                </div>
               </TabsContent>
               <TabsContent value="beginner" className="mt-0">
                 <div className="space-y-8">
@@ -407,6 +415,14 @@ const Workshop = () => {
                     </div>
                   ))}
                 </div>
+                
+                <div className="flex justify-center mt-12">
+                  <Button 
+                    className="bg-bitcoin hover:bg-bitcoin/80 text-white shadow-lg shadow-bitcoin/20 px-10 py-6 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105 flex items-center gap-2"
+                  >
+                    <Ticket className="h-5 w-5" /> Sichere dein Ticket
+                  </Button>
+                </div>
               </TabsContent>
               <TabsContent value="advanced" className="mt-0">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -441,6 +457,14 @@ const Workshop = () => {
                       </div>
                     </div>
                   ))}
+                </div>
+                
+                <div className="flex justify-center mt-12">
+                  <Button 
+                    className="bg-bitcoin hover:bg-bitcoin/80 text-white shadow-lg shadow-bitcoin/20 px-10 py-6 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105 flex items-center gap-2"
+                  >
+                    <Ticket className="h-5 w-5" /> Sichere dein Ticket
+                  </Button>
                 </div>
               </TabsContent>
             </Tabs>
@@ -594,8 +618,8 @@ const Workshop = () => {
                     </div>
                   </div>
                   
-                  <Button className="w-full bg-bitcoin hover:bg-bitcoin/80 text-white">
-                    Platz reservieren
+                  <Button className="w-full bg-bitcoin hover:bg-bitcoin/80 text-white flex items-center justify-center gap-2">
+                    <Ticket className="h-4 w-4" /> Sichere dein Ticket
                   </Button>
                 </div>
               </div>
