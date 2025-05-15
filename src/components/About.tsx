@@ -56,7 +56,7 @@ const About = () => {
           <p className="text-xl text-gray-600">
             Zum dritten Mal lädt die VR-Bank Bayern Mitte in diesem Jahr zum Bitcoin Forum ein. Erfahren Sie mehr über die 
             Chancen und Risiken von Bitcoin direkt aus ersten Hand von Duzenden Experten. Neben reinen Vorträgen werden auch dieses Jahr viele Workshops und spezielle Seminare angeboten. 
-            Es für jeden etwas dabei - egal ob Neuling oder technikbegeisterter Bitcoin-Enthusiast. Jeder ist willkommen.
+            Es ist für jeden etwas dabei - egal ob Neuling oder technikbegeisterter Bitcoin-Enthusiast. Jeder ist willkommen.
           </p>
         </div>
         
