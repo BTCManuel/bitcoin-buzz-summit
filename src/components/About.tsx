@@ -10,14 +10,14 @@ const About = () => {
     {
       icon: <img src="/images/speakers/Bitcoin_Block.png" alt="Bitcoin Block" className="h-12 w-12 mb-4" loading="lazy" />,
       title: "Bitcoin Block",
-      description: "",
+      description: "Schon ab dem 4. Oktober beginnt die Bitcoin Woche in Ingolstadt. Im Westpark Shoppingcenter öffent der Bitcoin Block seine Tore. Informationen über Bitcoin für jeden.",
       bgColor: "bg-transparent",
       borderColor: "border-[#FDE1D3]"
     },
     {
       icon: <BookOpen className="h-12 w-12 text-bitcoin mb-4" />,
-      title: "Energy & Mining",
-      description: "",
+      title: "Energiewirtschaft & Mining",
+      description: "Bitcoin kann Stromnetze stabilisieren und wird überwiegend mit grüner Energie betrieben. Bitcoin Mining kann 'verschwendeten' grünen Strom (Solar/Wind/Bio) wirtschaftlicher machen.",
       bgColor: "bg-transparent",
       borderColor: "border-[#CCE8FF]",
       link: "/workshop"
