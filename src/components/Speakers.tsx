@@ -93,7 +93,7 @@ const Speakers = () => {
     {
       name: "Niko Jilch",
       role: "CEO & Mitgründer",
-      company: "21bitcoin (FIOR Digital GmbH)",
+      company: "",
       image: "/images/speakers/Niko_Jilch.jpg",
       bio: "ist Finanzjournalist mit Fokus auf die Digitalisierung von Geld und Wirtschaft. Mit 'Was Bitcoin bringt' betreibt er einen der populärsten Podcasts und YouTube-Kanäle zum Thema Bitcoin und Finanzwelt. Niko ist ein gefragter Speaker und Berater rund und ums Thema Bitcoin, Geldpolitik und Geldgeschichte.",
       bgColor: "bg-[#F2FCE2]/50",
