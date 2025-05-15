@@ -24,8 +24,8 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: dist/
-          server-dir: ./
           protocol: ftp
-          timeout: 200
-          passive: true
+          timeout: 120
+          local-dir: dist/
+          server-dir: ./     # <-- ins Webroot
+          dangerous-clean-slate: false
