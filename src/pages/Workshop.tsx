@@ -15,7 +15,7 @@ const Workshop = () => {
   const [selectedWorkshop, setSelectedWorkshop] = useState<number | null>(null);
 
   const workshopIcons = [
-    <Bitcoin className="h-10 w-10 text-bitcoin" />,
+    <img src="/images/workshop/steuer.svg" alt="Steuerliche Aspekte" className="h-10 w-10" />,
     <Target className="h-10 w-10 text-bitcoin" />,
     <BookOpen className="h-10 w-10 text-bitcoin" />,
     <Users className="h-10 w-10 text-bitcoin" />,
