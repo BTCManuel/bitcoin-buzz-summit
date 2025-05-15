@@ -74,7 +74,8 @@ const Schedule = () => {
 
             {!showSchedule ? (
               <div className="text-center text-gray-600 text-lg py-12">
-                <p>Das Programm wird in Kürze veröffentlicht.</p>
+                <p> Wir arbeiten an dem besten Programm aller Zeiten. Duzende von Experten werden Vorträge und Workshops, Seminare und Expertengespräche anbieten. 
+                  Es werden wertvolle Informationen für jedermann, ganz nach dem persönlichen Kenntnisstand und Interesse dabei sein. Das Programm werden wir im Sommer veröffentlichen.</p>
               </div>
             ) : (
               <div className="overflow-x-auto">
