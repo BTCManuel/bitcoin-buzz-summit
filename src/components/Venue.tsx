@@ -25,28 +25,28 @@ const Venue = () => {
         </div>
         
         {/* Collapsible section for maps and venue details */}
-        <div className="flex justify-end mb-4">
-          <CollapsibleTrigger asChild onClick={() => setIsOpen(!isOpen)}>
-            <Button 
-              variant="outline" 
-              className="rounded-full hover:bg-[#D3E4FD]/20 border-bitcoin/20"
-            >
-              {isOpen ? (
-                <>
-                  <span className="mr-2">Weniger anzeigen</span>
-                  <ChevronUp className="h-5 w-5 text-bitcoin" />
-                </>
-              ) : (
-                <>
-                  <span className="mr-2">Mehr anzeigen</span>
-                  <ChevronDown className="h-5 w-5 text-bitcoin" />
-                </>
-              )}
-            </Button>
-          </CollapsibleTrigger>
-        </div>
-        
         <Collapsible open={isOpen} onOpenChange={setIsOpen}>
+          <div className="flex justify-end mb-4">
+            <CollapsibleTrigger asChild>
+              <Button 
+                variant="outline" 
+                className="rounded-full hover:bg-[#D3E4FD]/20 border-bitcoin/20"
+              >
+                {isOpen ? (
+                  <>
+                    <span className="mr-2">Weniger anzeigen</span>
+                    <ChevronUp className="h-5 w-5 text-bitcoin" />
+                  </>
+                ) : (
+                  <>
+                    <span className="mr-2">Mehr anzeigen</span>
+                    <ChevronDown className="h-5 w-5 text-bitcoin" />
+                  </>
+                )}
+              </Button>
+            </CollapsibleTrigger>
+          </div>
+          
           <CollapsibleContent>
             {/* Large full-width event locations map - adjusted aspect ratio for better visibility */}
             <div className="mb-16">
@@ -92,6 +92,7 @@ const Venue = () => {
               </Card>
             </div>
             
+            {/* Rest of collapsible content */}
             {/* Venue information */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
               {/* Saturn Arena info */}
