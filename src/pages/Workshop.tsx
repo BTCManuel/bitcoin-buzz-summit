@@ -15,7 +15,7 @@ const Workshop = () => {
   const [selectedWorkshop, setSelectedWorkshop] = useState<number | null>(null);
 
   const workshopIcons = [
-    <img src="/images/workshop/bitcoin-chart-stock-market.svg" alt="Bitcoin Charts" className="h-10 w-10" />,
+    <img src="/images/workshop/bitcoin-card-credit-card.svg" alt="Bitcoin Charts" className="h-10 w-10" />,
     <img src="/images/workshop/bitcoin-chart-stock-market.svg" alt="Bitcoin Charts" className="h-10 w-10" />
     <Target className="h-10 w-10 text-bitcoin" />,
     <BookOpen className="h-10 w-10 text-bitcoin" />,
