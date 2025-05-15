@@ -67,8 +67,8 @@ const Schedule = () => {
                 <Calendar className="h-6 w-6 text-bitcoin" />
               </div>
               <div className="flex-1">
-                <h3 className="text-xl md:text-2xl font-bold text-gray-800">13. Oktober 2023</h3>
-                <p className="text-bitcoin">Altes Rathaus, Ingolstadt</p>
+                <h3 className="text-xl md:text-2xl font-bold text-gray-800">9. - 11. Oktober 2025</h3>
+                <p className="text-bitcoin">Saturn Arena, Ingolstadt</p>
               </div>
             </div>
 
