@@ -11,10 +11,10 @@ const Footer = () => {
           <div className="md:col-span-2">
             <Link to="/" className="flex items-center space-x-2 mb-4">
               <Bitcoin className="h-8 w-8 text-bitcoin" />
-              <span className="font-bold text-xl">3.Bitcoin Forum Oktober 2025</span>
+              <span className="font-bold text-xl">3.Bitcoin Forum 9.-11 Oktober 2025</span>
             </Link>
             <p className="text-gray-600 mb-6 max-w-md">
-              Das führende Forum für Bitcoin-Interessierte, Investoren und Visionäre. Besuchen Sie uns am 13. Oktober 2025 in Ingolstadt.
+              Das führende Forum für Anfänger und Bitcoin-Interessierte. Besuchen Sie uns im Oktober 2025 in Ingolstadt.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="p-2 bg-gray-200 rounded-full hover:bg-bitcoin hover:text-white transition-colors">
@@ -36,6 +36,7 @@ const Footer = () => {
               <li><a href="#speakers">Referenten</a></li>
               <li><a href="#schedule">Zeitplan</a></li>
               <li><a href="#venue">Veranstaltungsort</a></li>
+               <li><a href="#venue">Workshops</a></li>
               <li><a href="https://www.google.com" target="_blank" rel="noopener noreferrer">Anmeldung</a></li>
             </ul>
           </div>
@@ -57,9 +58,9 @@ const Footer = () => {
             &copy; 2025 3.Bitcoin Forum. All rights reserved.
           </p>
           <div className="flex space-x-6 text-sm text-gray-500">
-            <a href="#" className="hover:text-bitcoin transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-bitcoin transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-bitcoin transition-colors">Code of Conduct</a>
+            <a href="#" className="hover:text-bitcoin transition-colors">Cookie Richtlinie</a>
+            <a href="#" className="hover:text-bitcoin transition-colors">Datenschutz</a>
+            <a href="#" className="hover:text-bitcoin transition-colors">Impressum</a>
           </div>
         </div>
       </div>
