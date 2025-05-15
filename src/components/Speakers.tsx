@@ -442,7 +442,10 @@ const Speakers = () => {
                 {selectedSpeaker?.bio}
               </p>
             </div>
-            <a
+          </div>
+        </DialogContent>
+      </Dialog>
+                  <a
               href="https://vr-bayernmitte.genolive.de/index.php?page=event-code&code=bitcoin25"
               target="_blank"
               rel="noopener noreferrer"
@@ -450,9 +453,6 @@ const Speakers = () => {
               >
               Sichere dein Ticket
             </a>
-          </div>
-        </DialogContent>
-      </Dialog>
     </section>
   );
 };
