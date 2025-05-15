@@ -54,9 +54,9 @@ const About = () => {
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-8 text-gray-800">Das 3. Bitcoin Forum</h2>
           <p className="text-xl text-gray-600">
-            Zum dritten Mal lädt die VR-Bank Bayern Mitte zum Bitcoin Forum ein. In diesem Jahr erwartet Sie ein Expertenabend 
-            mit Fachvorträgen zu Blockchain, Bitcoin und anderen digitalen Anlageformen. Lernen Sie mehr über die Nutzungsmöglichkeiten, 
-            Chancen und Risiken von Kryptowährungen in einer zunehmend digitalisierten Finanzwelt.
+            Zum dritten Mal lädt die VR-Bank Bayern Mitte in diesem Jahr zum Bitcoin Forum ein. Erfahren Sie mehr über die 
+            Chancen und Risiken von Bitcoin direkt aus ersten Hand von Duzenden Experten. Neben reinen Vorträgen werden auch dieses Jahr viele Workshops und spezielle Seminare angeboten. 
+            Es für jeden etwas dabei - egal ob Neuling oder technikbegeisterter Bitcoin-Enthusiast. Jeder ist willkommen.
           </p>
         </div>
         
