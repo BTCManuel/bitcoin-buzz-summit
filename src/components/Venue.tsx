@@ -8,7 +8,7 @@ import { BITCOIN_COLOR } from '@/lib/utils';
 import TicketButton from './TicketButton';
 
 const Venue = () => {
-  const [isOpen, setIsOpen] = useState(true); // standardmäßig geöffnet
+  const [isOpen, setIsOpen] = useState(false); 
 
   return (
     <section id="venue" className="py-32 bg-gradient-to-b from-white to-[#D3E4FD]/30">
