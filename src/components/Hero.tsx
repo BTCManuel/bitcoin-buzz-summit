@@ -30,8 +30,9 @@ const Hero = () => {
                         redirectUrl: "https://vr-bayernmitte.genolive.de/index.php?page=event-code&code=bitcoin25"
                       })
                     }
-                    className="bg-bitcoin hover:bg-bitcoin-dark text-white text-lg py-7 px-10 rounded-full shadow-lg shadow-bitcoin/20 transition-all duration-300 hover:scale-105 text-center font-medium"                  >
-                    Jetzt Anmelden
+              className="bg-bitcoin hover:bg-bitcoin-dark text-white text-lg py-7 px-10 rounded-full shadow-lg shadow-bitcoin/20 transition-all duration-300 hover:scale-105 text-center font-medium"
+            >
+                  Jetzt Anmelden
                   </Button>
             <a
               href="#schedule"
