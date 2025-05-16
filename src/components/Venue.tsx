@@ -11,7 +11,7 @@ const Venue = () => {
   const [isOpen, setIsOpen] = useState(false); 
 
   return (
-    <section id="venue" className="py-32 bg-gradient-to-b from-white to-[#D3E4FD]/30">
+    <section id="venue" className="py-4 bg-gradient-to-b from-white to-[#D3E4FD]/30">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <div className="inline-block mb-4 px-4 py-1 bg-[#FDE1D3] backdrop-blur-sm rounded-full border border-bitcoin/20">
