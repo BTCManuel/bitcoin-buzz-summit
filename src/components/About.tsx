@@ -33,7 +33,7 @@ const About = () => {
       title: "Partner werden",
       description: "Wenn auch Sie sich bzw. Ihr Unternehmen beim 3. BitcoinForum präsentieren, können Sie hier die Ihr Sponsoring buchen.",
       bgColor: "bg-transparent",
-      borderColor: "border-[#D3E4FD]"
+      borderColor: "border-[#D3E4FD]",
       link: "https://www.vr-bayernmitte.de/privatkunden/sparen-geldanlage/bitcoin/3--bitcoinforum/messepartner-werden.html"
     },
     {
