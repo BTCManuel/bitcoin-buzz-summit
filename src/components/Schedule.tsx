@@ -78,7 +78,7 @@ const Schedule = () => {
                 <div className="w-full md:w-1/2">
                   <div className="aspect-video rounded-xl overflow-hidden shadow-lg">
                     <iframe
-                      src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID?autoplay=1&mute=1&loop=1&playlist=YOUTUBE_VIDEO_ID"
+                      src="https://www.youtube.com/embed/OJlUYckw2Ko?autoplay=1&mute=1&loop=1&playlist=OJlUYckw2Ko"
                       title="Bitcoin Forum Preview"
                       allow="autoplay; loop"
                       allowFullScreen
