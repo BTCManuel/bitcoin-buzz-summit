@@ -435,16 +435,20 @@ const Workshop = () => {
                 </div>
                 
                 <div className="flex justify-center mt-12">
-                <Button
-                  onClick={() =>
-                    openPopup({
-                      redirectUrl: "https://vr-bayernmitte.genolive.de/index.php?page=event-code&code=bitcoin25"
-                    })
-                  }
-                  className="w-full bg-bitcoin hover:bg-bitcoin/80 text-white flex items-center justify-center gap-2 mt-6"
-                >
-                  <Ticket className="h-4 w-4" /> Sichere dein Ticket
-                </Button>
+<Button
+  className="w-full bg-bitcoin hover:bg-bitcoin/80 text-white flex items-center justify-center gap-2 mt-6"
+  onClick={() => {
+    handleCloseDialog(); // schließt den Dialog
+    setTimeout(() => {
+      openPopup({
+        redirectUrl: "https://vr-bayernmitte.genolive.de/index.php?page=event-code&code=bitcoin25"
+      });
+    }, 250); // etwas Verzögerung, damit der Dialog sauber schließt
+  }}
+>
+  <Ticket className="h-4 w-4" /> Sichere dein Ticket
+</Button>
+
 
 
 
