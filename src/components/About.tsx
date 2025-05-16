@@ -60,7 +60,7 @@ const About = () => {
           </p>
         </div>
         
-        <div className="flex flex-wrap gap-4 justify-center md:justify-start">
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-1">
           {features.map((feature, index) => (
             <Card 
               key={index} 
