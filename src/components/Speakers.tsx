@@ -342,7 +342,15 @@ const Speakers = () => {
       bgColor: "bg-[#FEF7CD]/50",
       bgSolidColor: "bg-[#FEF7CD]"
     },
-
+{
+      name: "BANKER",
+      role: "FOTO NEEDED",
+      company: "FOTO NEEDED",
+      image: "/images/speakers/Bitcoin_Block.png",
+      bio: "begann seine Karriere als Materialwissenschaftler und Fertigungsberater in Deutschland und China, bevor er seine größte Leidenschaft entdeckte: Bitcoin. Als Mitgründer und Geschäftsführer von seedor.io, bitsurance.io und satskeeper.com ist er eine zentrale Figur in der deutschen Bitcoin-Szene, insbesondere in den Bereichen Verwahrung, Versicherung und Vererbung von Bitcoin.",
+      bgColor: "bg-[#D3E4FD]/50",
+      bgSolidColor:"bg-[#D3E4FD]"
+    },
   ];
 
   // Generate placeholder speakers to reach a total of 35
