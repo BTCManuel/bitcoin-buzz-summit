@@ -353,7 +353,7 @@ const Speakers = () => {
 
 
   return (
-    <section id="speakers" className="py-20 bg-gradient-to-b from-[#F2FCE2]/50 to-white">
+    <section id="speakers" className="py-4 bg-gradient-to-b from-[#F2FCE2]/50 to-white">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-12">
           <div className="inline-block mb-3 px-4 py-1 bg-[#D3E4FD] backdrop-blur-sm rounded-full border border-bitcoin/20">
