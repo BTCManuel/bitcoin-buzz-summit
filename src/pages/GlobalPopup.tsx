@@ -3,15 +3,18 @@ import { Button } from "@/components/ui/button";
 import { usePopup } from "@/pages/PopupContext";
 
 const GlobalPopup = () => {
-  const { open, data, closePopup } = usePopup(); // ✅ Hook wird innerhalb der Komponente aufgerufen
+  const { open, data, closePopup } = usePopup();
+
+  const defaultTitle = "Willst du fortfahren?";
+  const defaultMessage = "Du wirst gleich weitergeleitet. Bitte halte deine Daten bereit.";
 
   return (
     <Dialog open={open} onOpenChange={closePopup}>
       <DialogContent>
         <DialogHeader className="text-lg font-semibold">
-          {data?.title}
+          {data?.title || defaultTitle}
         </DialogHeader>
-        <div className="text-gray-700 py-2">{data?.message}</div>
+        <div className="text-gray-700 py-2">{data?.message || defaultMessage}</div>
         <DialogFooter>
           <Button
             className="w-full"
@@ -29,5 +32,6 @@ const GlobalPopup = () => {
     </Dialog>
   );
 };
+
 
 export default GlobalPopup;
