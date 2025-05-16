@@ -8,84 +8,193 @@ import { Button } from '@/components/ui/button';
 import { usePopup } from "@/pages/PopupContext";
 import { Ticket } from 'lucide-react';
 
-const membersData = [
+const members: Member[] = [
   {
-    name: 'Andreas Streb',
-    role: 'Vorstandsvorsitzender',
-    company: 'Volksbank Raiffeisenbank Bayern Mitte',
-    image: '/images/speakers/Andreas_Streb.jpg',
+    name: "Andreas Streb",
+    image: "/images/speakers/Andreas_Streb.jpg",
     bio: (
       <>
-        Ist Vorstandsvorsitzender der Volksbank Raiffeisenbank Bayern Mitte und maßgeblich für das Angebot von Dienstleistungen in Zusammenhang mit Bitcoin und Bitcoin-Lösungen in der Bank verantwortlich.
-      </>
-    ),
-    bgColor: "bg-[#FEF7CD]/50",
-    bgSolidColor: "bg-[#FEF7CD]"
-  },
-  {
-    name: 'Günter Staud',
-    role: 'Organisator',
-    company: '3. BitcoinForum',
-    image: '/images/speakers/frankenberg.jpg',
-    bio: (
-      <>
-        Verantwortet seit 2002 das Marketing der VR Bayern Mitte. Seit 2021 treibt er das Bitcoin-Projekt der Bank voran und hat das 1. und 2. BitcoinForum organisiert.
-      </>
-    ),
-    bgColor: "bg-[#D3E4FD]/50",
-    bgSolidColor: "bg-[#D3E4FD]"
-  },
-  {
-    name: 'Joe Martin',
-    role: 'Co-Founder',
-    company: 'Bitcoin Forum',
-    image: '/images/speakers/Joe_Martin.jpg',
-    bio: (
-      <>
-        Ist Technologie-Berater mit Fokus auf Bitcoin und KI, mehrfacher Buchautor und Hauptansprechpartner für alle Speaker beim 3. BitcoinForum.
+        Vorstandsvorsitzender der Volksbank Raiffeisenbank Bayern Mitte eG und verantwortlich für das Angebot von Bitcoin-Dienstleistungen.
       </>
     ),
     bgColor: "bg-[#FDE1D3]/50",
     bgSolidColor: "bg-[#FDE1D3]"
   },
   {
-    name: 'Rachel Geyer',
-    role: 'Vizepräsidentin',
-    company: '',
-    image: '/images/speakers/Rachel_Geyer.jpg',
+    name: "Günter Staud",
+    image: "/images/speakers/frankenberg.jpg",
     bio: (
       <>
-        Ist Vizepräsidentin und Unternehmenssprecherin.
+        Verantwortet seit 2002 das Marketing der VR Bayern Mitte. Organisator des 3. BitcoinForums. <br />
+        Mobil: +49 151 20329231 <br />
+        E-Mail: guenter.staud@vr-bayernmitte.de <br />
+        X: GuenterStaud <br />
+        LinkedIn: Günter Staud
+      </>
+    ),
+    bgColor: "bg-[#FEF7CD]/50",
+    bgSolidColor: "bg-[#FEF7CD]"
+  },
+  {
+    name: "Joe Martin",
+    image: "/images/speakers/Joe_Martin.jpg",
+    bio: (
+      <>
+        Technologieberater mit Fokus auf Bitcoin und KI. Autor des ersten Bitcoin Buches in deutscher Sprache. <br />
+        Kontakt: <a href="https://linktr.ee/JoeMartinBTC" className="text-bitcoin underline">https://linktr.ee/JoeMartinBTC</a>
       </>
     ),
     bgColor: "bg-[#F2FCE2]/50",
     bgSolidColor: "bg-[#F2FCE2]"
   },
   {
-    name: 'Konstantin Schmelz',
-    role: 'Event & Marketing',
-    company: '',
-    image: '/images/speakers/Jannis_Langer.jpg',
+    name: "Rachel Geyer",
+    image: "/images/speakers/Rachel_Geyer.jpg",
     bio: (
       <>
-        Kommt aus der Event- und Marketingbranche und unterstützt seine Kollegen.
+        Vizepräsidentin der terahash.energy GmbH und Vorstandsvorsitzende der European Bitcoin Energy Association. <br />
+        E-Mail: rachel@terahash.space
       </>
     ),
     bgColor: "bg-[#D3E4FD]/50",
     bgSolidColor: "bg-[#D3E4FD]"
   },
   {
-    name: 'Der Helper',
-    role: 'Infografiken & Videos',
-    company: '',
-    image: '/images/speakers/der_Helper.jpg',
+    name: "Konstantin Schmelz",
+    image: "/images/speakers/Jannis_Langer.jpg",
     bio: (
       <>
-        Ist bekannt durch seine Infografiken und Felsvideos.
+        Aus der Event- und Marketingbranche. Aktuell bei 21bitcoin tätig. <br />
+        E-Mail: konstantin.s@fior.digital
+      </>
+    ),
+    bgColor: "bg-[#FDE1D3]/50",
+    bgSolidColor: "bg-[#FDE1D3]"
+  },
+  {
+    name: "Der Helper",
+    image: "/images/speakers/der_Helper.jpg",
+    bio: (
+      <>
+        Bekannt durch Infografiken und Felsvideos über Bitcoin. <br />
+        X: <a href="https://x.com/derHelper" className="text-bitcoin underline">@derHelper</a> <br />
+        YouTube: <a href="https://www.youtube.com/@derHelper" className="text-bitcoin underline">@derHelper</a>
+      </>
+    ),
+    bgColor: "bg-[#F2FCE2]/50",
+    bgSolidColor: "bg-[#F2FCE2]"
+  },
+  {
+    name: "Dr. Alex von Frankenberg",
+    image: "/images/speakers/frankenberg.jpg",
+    bio: (
+      <>
+        Leitete von 2005 bis 2025 als Geschäftsführer den HTGF. Beschäftigt sich intensiv mit Bitcoin als Wertspeicher.
+      </>
+    ),
+    bgColor: "bg-[#D3E4FD]/50",
+    bgSolidColor: "bg-[#D3E4FD]"
+  },
+  {
+    name: "Lukas Waldner",
+    image: "/images/speakers/Lukas_Waldner.jpg",
+    bio: (
+      <>
+        COO & Co-Founder von 21energy. Veranstaltungsorganisator, Sportler und Alpinist.
+      </>
+    ),
+    bgColor: "bg-[#F2FCE2]/50",
+    bgSolidColor: "bg-[#F2FCE2]"
+  },
+  {
+    name: "Anna von Schilcher",
+    image: "/images/speakers/Anna_von_Schilcher.jpg",
+    bio: <>Infos folgen</>,
+    bgColor: "bg-[#FEF7CD]/50",
+    bgSolidColor: "bg-[#FEF7CD]"
+  },
+  {
+    name: "Patrick Linus",
+    image: "/images/speakers/Patrick_Linus.jpg",
+    bio: <>Infos folgen. Hauptansprechpartner für den Bitcoin Block beim 3. BitcoinForum.</>,
+    bgColor: "bg-[#D3E4FD]/50",
+    bgSolidColor: "bg-[#D3E4FD]"
+  },
+  {
+    name: "Lea Kelwin",
+    image: "/images/speakers/Lea_Kelwin.jpg",
+    bio: (
+      <>
+        Hebamme, Bitcoin-Bildung und Mitgründerin der Non-Profit-Initiative Bitcoin Block. <br />
+        Mail: lea@bitcoinblock.study <br />
+        Insta: @lea_kelwin
       </>
     ),
     bgColor: "bg-[#FEF7CD]/50",
     bgSolidColor: "bg-[#FEF7CD]"
+  },
+  {
+    name: "Chris Seedor",
+    image: "/images/speakers/Chris_Seedor.jpg",
+    bio: (
+      <>
+        Geschäftsführer von seedor.io, bitsurance.io und satskeeper.com. Ansprechpartner für das Programm beim 3. BitcoinForum.
+      </>
+    ),
+    bgColor: "bg-[#D3E4FD]/50",
+    bgSolidColor: "bg-[#D3E4FD]"
+  },
+  {
+    name: "Leonardo Conti",
+    image: "/images/speakers/Leonardo_Conti.jpg",
+    bio: (
+      <>
+        Ehemaliger Nationaltorhüter, Berater für Marketing & Strategie. <br />
+        E-Mail: LAC@to-the-hills.com <br />
+        X: <a href="https://x.com/LeonardoConti35" className="text-bitcoin underline">@LeonardoConti35</a> <br />
+        LinkedIn: <a href="https://de.linkedin.com/in/leonardo-conti-96154071" className="text-bitcoin underline">Profil</a>
+      </>
+    ),
+    bgColor: "bg-[#F2FCE2]/50",
+    bgSolidColor: "bg-[#F2FCE2]"
+  },
+  {
+    name: "Ronny Mütschele",
+    image: "/images/speakers/Ronny_Muetschele.jpg",
+    bio: (
+      <>
+        Seit 2013 im Bitcoin-Bereich. Geschäftsführer der HODLMAYR GmbH. Betreiber von <a href="https://www.copiaro.com" className="text-bitcoin underline" target="_blank">www.copiaro.com</a>
+      </>
+    ),
+    bgColor: "bg-[#FDE1D3]/50",
+    bgSolidColor: "bg-[#FDE1D3]"
+  },
+  {
+    name: "Abu Akkuc",
+    image: "/images/speakers/Abu_Akkuc.jpg",
+    bio: (
+      <>
+        Gründer von Bitart und 21Million Fashion. Ansprechpartner für die Kunstgalerie. <br />
+        E-Mail: bitart@outlook.de <br />
+        Telegram: "bitart21"
+      </>
+    ),
+    bgColor: "bg-[#FEF7CD]/50",
+    bgSolidColor: "bg-[#FEF7CD]"
+  },
+  {
+    name: "Sascha Minic",
+    image: "/images/speakers/Sascha_Minic.jpg",
+    bio: <>Infos folgen</>,
+    bgColor: "bg-[#F2FCE2]/50",
+    bgSolidColor: "bg-[#F2FCE2]"
+  },
+  {
+    name: "Marc Guilliard",
+    image: "/images/speakers/Marc_Guilliard.jpg",
+    bio: <>Infos folgen</>,
+    bgColor: "bg-[#D3E4FD]/50",
+    bgSolidColor: "bg-[#D3E4FD]"
   }
 ];
 
