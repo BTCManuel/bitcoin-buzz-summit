@@ -50,8 +50,7 @@ const Speakers = () => {
       role: "Co-Founder",
       company: "Bitcoin Forum",
       image: "/images/speakers/Joe_Martin.jpg",
-      bio: "ist als Journalist, Keynote-Speaker und Buchautor mit über 30 Jahren Berufserfahrung in der Welt der Technologie einer der wichtigsten Bitcoin-Erklärer Deutschlands. Er hat auch die Volksbank Raiffeisenbank Bayern Mitte bei der Einführung des Angebots von Bitcoin und Bitcoin-Lösungen begleitet und unterstützt. Joe Martin ist Co-Founder und Hauptansprechpartner für alle Speaker beim 3. BitcoinForum.",
-      link: "https://linktr.ee/JoeMartinBTC",
+      bio: "ist als Journalist, Keynote-Speaker und Buchautor mit über 30 Jahren Berufserfahrung in der Welt der Technologie einer der wichtigsten Bitcoin-Erklärer Deutschlands. Er hat auch die Volksbank Raiffeisenbank Bayern Mitte bei der Einführung des Angebots von Bitcoin und Bitcoin-Lösungen begleitet und unterstützt. Joe Martin ist Co-Founder und Hauptansprechpartner für alle Speaker beim 3. BitcoinForum.<a href='https://linktr.ee/JoeMartinBTC' target='_blank' rel='noopener noreferrer'>https://linktr.ee/JoeMartinBTC</a>",
       bgColor: "bg-[#FEF7CD]/50",
       bgSolidColor: "bg-[#FEF7CD]"
     },
