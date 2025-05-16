@@ -3,6 +3,10 @@ import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Button } from '@/components/ui/button';
+import { usePopup } from "@/pages/PopupContext";
+import {Ticket } from 'lucide-react';
+
 
 interface Speaker {
   name: string;
@@ -15,6 +19,7 @@ interface Speaker {
 }
 
 const Speakers = () => {
+  const { openPopup } = usePopup();
   const [selectedSpeaker, setSelectedSpeaker] = React.useState<Speaker | null>(null);
 
 const speakersData = [
@@ -752,6 +757,7 @@ const speakersData = [
 
 
   return (
+    
     <section id="speakers" className="py-4 bg-gradient-to-b from-[#F2FCE2]/50 to-white">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-12">
@@ -845,14 +851,16 @@ const speakersData = [
         </DialogContent>
       </Dialog>
       <div className="mt-12 flex justify-center">
-        <a
-          href="https://vr-bayernmitte.genolive.de/index.php?page=event-code&code=bitcoin25"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block bg-bitcoin hover:bg-bitcoin-dark text-white rounded-full shadow-lg shadow-bitcoin/20 transition-all duration-300 hover:scale-105 px-6 py-3 text-center font-medium"
-        >
-          Sichere dein Ticket
-        </a>
+             <Button
+              onClick={() =>
+                openPopup({
+                  redirectUrl: "https://vr-bayernmitte.genolive.de/index.php?page=event-code&code=bitcoin25"
+                })
+              }
+            className="bg-bitcoin hover:bg-bitcoin/80 text-white shadow-lg shadow-bitcoin/20 px-10 py-6 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105 flex items-center gap-2"
+          >
+            <Ticket className="h-5 w-5" /> Sichere dein Ticket
+            </Button>
       </div>
     </section>
   );
