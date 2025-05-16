@@ -33,7 +33,8 @@ const Venue = () => {
                     <img
                       src="/lovable-uploads/90b76e15-7546-440d-9d3b-a7715150eeb7.png"
                       alt="Event Locations Map"
-                      className="w-full h-full object-contain"
+                      //className="w-full h-full object-contain"
+                      className="w-full object-contain"
                     />
                   </AspectRatio>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
