@@ -1,24 +1,36 @@
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+// z. B. in src/components/shared/GlobalPopup.tsx
+
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter, DialogDescription } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { usePopup } from "@/pages/PopupContext";
 
 const GlobalPopup = () => {
-    const { open, content, closePopup } = usePopup();
+  const { open, data, closePopup } = usePopup();
+
+  const defaultTitle = "Willst du fortfahren?";
+  const defaultMessage = "Du wirst gleich weitergeleitet. Bitte halte deine Daten bereit.";
+
+  if (!open || !data) return null;
 
   return (
     <Dialog open={open} onOpenChange={closePopup}>
-      <DialogContent className="max-w-md text-gray-800 space-y-4">
+      <DialogContent>
         <DialogHeader>
-          <DialogTitle className="text-2xl font-bold">{content.title}</DialogTitle>
+          <DialogTitle>{data.title || defaultTitle}</DialogTitle>
+          <DialogDescription>{data.message || defaultMessage}</DialogDescription>
         </DialogHeader>
-        <p>{content.message}</p>
-        <div className="flex justify-end">
-          <a href={content.redirectUrl} target="_blank" rel="noopener noreferrer">
-            <Button className="bg-bitcoin hover:bg-bitcoin-dark text-white">
-              Weiter zur Buchung
-            </Button>
-          </a>
-        </div>
+
+        <DialogFooter>
+          <Button
+            className="w-full"
+            onClick={() => {
+              closePopup();
+              window.open(data.redirectUrl, "_blank");
+            }}
+          >
+            Jetzt weiter
+          </Button>
+        </DialogFooter>
       </DialogContent>
     </Dialog>
   );
