@@ -121,7 +121,7 @@ const Workshop = () => {
       imageUrl: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3"
     },
     {
-      id: 2,
+      id: 4,
       title: "Bitcoin Full Node",
       subtitle: "aufsetzen und betreiben",
       description: "Praktischer Workshop zum Aufsetzen und Betreiben einer eigenen Bitcoin Full Node.",
@@ -153,7 +153,7 @@ const Workshop = () => {
       imageUrl: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3"
     },
     {
-      id: 3,
+      id: 5,
       title: "Hardware-Wallet",
       subtitle: "bauen und verstehen",
       description: "Bauen Sie Ihre eigene Hardware-Wallet und verstehen Sie die Sicherheitskonzepte dahinter.",
@@ -184,7 +184,7 @@ const Workshop = () => {
       imageUrl: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3"
     },
     {
-      id: 4,
+      id: 6,
       title: "Lightning Network",
       subtitle: "im Detail verstehen",
       description: "Tauchen Sie tief in das Lightning Network ein und verstehen Sie die technischen Details.",
@@ -216,7 +216,7 @@ const Workshop = () => {
       imageUrl: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3"
     },
     {
-      id: 5,
+      id: 7,
       title: "Bitcoin für Unternehmen",
       subtitle: "Integration & Buchhaltung",
       description: "Wie Unternehmen Bitcoin in ihre Geschäftsprozesse integrieren können.",
@@ -248,7 +248,7 @@ const Workshop = () => {
       imageUrl: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3"
     },
     {
-      id: 6,
+      id: 8,
       title: "Bitcoin-Mining",
       subtitle: "verstehen & optimieren",
       description: "Technische Einblicke in Bitcoin-Mining und Optimierungsstrategien.",
@@ -280,7 +280,7 @@ const Workshop = () => {
       imageUrl: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3"
     },
     {
-      id: 7,
+      id: 9,
       title: "Steuerrechtliche Aspekte",
       subtitle: "von Bitcoin & Co.",
       description: "Aktuelle steuerrechtliche Betrachtungen zu Kryptowährungen in Deutschland.",
@@ -312,7 +312,7 @@ const Workshop = () => {
       imageUrl: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-4.0.3"
     },
     {
-      id: 8,
+      id: 10,
       title: "Bitcoin DeFi",
       subtitle: "und Smart Contracts",
       description: "Überblick über DeFi-Projekte und Smart Contracts im Bitcoin-Ökosystem.",
