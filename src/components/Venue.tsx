@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { MapPin, Clock, Info, Navigation, Car, Train, Building, ParkingSquare, ChevronDown, ChevronUp } from 'lucide-react';
@@ -9,7 +8,7 @@ import { BITCOIN_COLOR } from '@/lib/utils';
 import TicketButton from './TicketButton';
 
 const Venue = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true); // standardmäßig geöffnet
 
   return (
     <section id="venue" className="py-32 bg-gradient-to-b from-white to-[#D3E4FD]/30">
@@ -23,76 +22,76 @@ const Venue = () => {
             Freuen Sie sich auf ein informatives Forum rund um Bitcoin und die Finanzwelt in Ingolstadt rund um die Saturn Arena.
           </p>
         </div>
-        
-        {/* Collapsible section for maps and venue details */}
+
         <Collapsible open={isOpen} onOpenChange={setIsOpen}>
-          <div className="flex justify-end mb-4">
-            <CollapsibleTrigger asChild>
-              <Button 
-                variant="outline" 
-                className="rounded-full hover:bg-[#D3E4FD]/20 border-bitcoin/20"
-              >
-                {isOpen ? (
-                  <>
-                    <span className="mr-2">Weniger anzeigen</span>
-                    <ChevronUp className="h-5 w-5 text-bitcoin" />
-                  </>
-                ) : (
-                  <>
-                    <span className="mr-2">Mehr anzeigen</span>
-                    <ChevronDown className="h-5 w-5 text-bitcoin" />
-                  </>
-                )}
-              </Button>
-            </CollapsibleTrigger>
+          {/* Immer sichtbare Karte mit Buttons */}
+          <div className="mb-16">
+            <Card className="border border-[#F2FCE2] shadow-md rounded-2xl overflow-hidden bg-white">
+              <CardContent className="p-0">
+                <div className="w-full overflow-hidden rounded-t-2xl relative">
+                  <AspectRatio ratio={21/9} className="w-full">
+                    <img
+                      src="/lovable-uploads/90b76e15-7546-440d-9d3b-a7715150eeb7.png"
+                      alt="Event Locations Map"
+                      className="w-full h-full object-contain"
+                    />
+                  </AspectRatio>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                  <div className="absolute bottom-0 left-0 p-6 text-white">
+                    <h3 className="text-2xl font-bold">Übersicht der Veranstaltungsorte</h3>
+                  </div>
+                </div>
+
+                <div className="p-8 flex flex-wrap gap-4 justify-center md:justify-start">
+                  <Button className="bg-bitcoin hover:bg-bitcoin-dark text-white rounded-full shadow-md shadow-bitcoin/20 transition-all duration-300 hover:scale-105">
+                    <Navigation className="mr-2 h-5 w-5" />
+                    <a
+                      href="https://www.google.com/maps/place/SATURN-Arena/..."
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white"
+                    >
+                      Anfahrt
+                    </a>
+                  </Button>
+
+                  <Button variant="outline" className="rounded-full hover:bg-[#D3E4FD]/20">
+                    <MapPin className="mr-2 h-5 w-5 text-bitcoin" />
+                    <a
+                      href="https://www.google.com/maps/search/Parkplätze+Saturn+Arena+Ingolstadt"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Parkplätze
+                    </a>
+                  </Button>
+
+                  <CollapsibleTrigger asChild>
+                    <Button 
+                      variant="outline" 
+                      className="rounded-full hover:bg-[#D3E4FD]/20 border-bitcoin/20"
+                    >
+                      {isOpen ? (
+                        <>
+                          <span className="mr-2">Weniger anzeigen</span>
+                          <ChevronUp className="h-5 w-5 text-bitcoin" />
+                        </>
+                      ) : (
+                        <>
+                          <span className="mr-2">Mehr anzeigen</span>
+                          <ChevronDown className="h-5 w-5 text-bitcoin" />
+                        </>
+                      )}
+                    </Button>
+                  </CollapsibleTrigger>
+                </div>
+              </CardContent>
+            </Card>
           </div>
-          
+
+          {/* Ausklappbarer Inhalt */}
           <CollapsibleContent>
-            {/* Large full-width event locations map - adjusted aspect ratio for better visibility */}
-            <div className="mb-16">
-              <Card className="border border-[#F2FCE2] shadow-md rounded-2xl overflow-hidden bg-white">
-                <CardContent className="p-0">
-                  <div className="w-full overflow-hidden rounded-t-2xl relative">
-                    <AspectRatio ratio={21/9} className="w-full">
-                      <img
-                        src="/lovable-uploads/90b76e15-7546-440d-9d3b-a7715150eeb7.png"
-                        alt="Event Locations Map"
-                        className="w-full h-full object-contain"
-                      />
-                    </AspectRatio>
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
-                    <div className="absolute bottom-0 left-0 p-6 text-white">
-                      <h3 className="text-2xl font-bold">Übersicht der Veranstaltungsorte</h3>
-                    </div>
-                  </div>
-                  <div className="p-8 flex flex-wrap gap-4 justify-center md:justify-start">
-                    <Button className="bg-bitcoin hover:bg-bitcoin-dark text-white rounded-full shadow-md shadow-bitcoin/20 transition-all duration-300 hover:scale-105">
-                      <Navigation className="mr-2 h-5 w-5" />
-                      <a
-                        href="https://www.google.com/maps/place/SATURN-Arena/@48.7596955,11.4352675,17z/data=!3m2!4b1!5s0x479effabfb5a0767:0xb572f1ff18954c46!4m6!3m5!1s0x479effa97099d00f:0xe5328f76f9f08e31!8m2!3d48.7596955!4d11.4378424!16zL20vMGNsdngy?hl=de&entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoASAFQAw%3D%3D"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-white"
-                      >
-                        Anfahrt
-                      </a>
-                    </Button>
-                    <Button variant="outline" className="rounded-full hover:bg-[#D3E4FD]/20">
-                      <MapPin className="mr-2 h-5 w-5 text-bitcoin" />
-                      <a
-                        href="https://www.google.com/maps/search/Parkplätze+Saturn+Arena+Ingolstadt"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Parkplätze
-                      </a>
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-            
-            {/* Rest of collapsible content */}
+ {/* Rest of collapsible content */}
             {/* Venue information */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
               {/* Saturn Arena info */}
@@ -267,8 +266,8 @@ const Venue = () => {
             </div>
           </CollapsibleContent>
         </Collapsible>
-        
-        {/* Add ticket button at bottom */}
+
+        {/* Ticket Button */}
         <div className="flex justify-center mt-16">
           <TicketButton />
         </div>
