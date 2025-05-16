@@ -3,8 +3,10 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Bitcoin, Users, Globe, Target, BookOpen, Shield, Code, Tv, Zap, Bolt, CalendarDays, Clock, Ticket } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import { usePopup } from "@/pages/PopupContext";
 
 const About = () => {
+  const { openPopup } = usePopup();
   const features = [
     {
       icon: <img src="/images/speakers/Bitcoin_Block.png" alt="Bitcoin Block" className="h-12 w-12 mb-4" loading="lazy" />,
@@ -128,11 +130,16 @@ const About = () => {
         </div>
 
         <div className="flex justify-center mt-16">
-          <Button 
-            className="bg-bitcoin hover:bg-bitcoin/80 text-white shadow-lg shadow-bitcoin/20 px-10 py-6 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105 flex items-center gap-2"
-          >
-            <Ticket className="h-5 w-5" /> Sichere jetzt dein Ticket
-          </Button>
+            <Button
+              onClick={() =>
+                openPopup({
+                  redirectUrl: "https://vr-bayernmitte.genolive.de/index.php?page=event-code&code=bitcoin25"
+                })
+              }
+              className="bg-bitcoin hover:bg-bitcoin/80 text-white shadow-lg shadow-bitcoin/20 px-10 py-6 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105 flex items-center gap-2"
+            >
+              Jetzt anmelden
+            </Button>
         </div>
       </div>
     </section>
