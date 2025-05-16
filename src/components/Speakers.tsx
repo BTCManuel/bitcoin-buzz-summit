@@ -332,7 +332,16 @@ const Speakers = () => {
       bio: "arbeitet als Hebamme und engagiert sich leidenschaftlich für Frauengesundheit, Selbstbestimmung und soziale Gerechtigkeit. Energie ist dabei der Grundbaustein – ohne sie gibt es weder Neuanfänge noch körperliche oder geistige Fruchtbarkeit. Bitcoin wird durch Energie gestützt und kann als Werkzeug genutzt werden, um den Weg zu mehr Selbstbestimmung und nachhaltiger Gesundheit zu begleiten. Letztlich liegt es bei dir selbst, innovative Technologie für deine ganz eigenen Lösungswege einzusetzen. Lea ist Mitgründerin der Non-Profit-Initiative Bitcoin Block.",
       bgColor: "bg-[#FEF7CD]/50",
       bgSolidColor: "bg-[#FEF7CD]"
-    }
+    },
+    {
+      name: "Harald Rauter",
+      role: "",
+      company: "",
+      image: "/images/speakers/Harald_Rauter.jpg",
+      bio: "ist ein anerkannter Vordenker an der Schnittstelle von Bitcoin und Energiesystemen. Als Chief Growth Officer der 21energy GmbH und Vorstandsmitglied der European Bitcoin Energy Association (EBEA) gestaltet er aktiv die Diskussion darüber, wie Bitcoin-Mining sinnvoll in Energiemärkte und zur Stabilisierung der Stromnetze integriert werden kann. Er ist überzeugt, dass strategisch eingesetztes Bitcoin-Mining zum Katalysator für Europas Energiereichtum, -sicherheit und vor allem -unabhängigkeit werden kann – drei Grundpfeiler für gesellschaftlichen Wohlstand und geopolitische Resilienz im 21. Jahrhundert.",
+      bgColor: "bg-[#FEF7CD]/50",
+      bgSolidColor: "bg-[#FEF7CD]"
+    },
 
   ];
 
