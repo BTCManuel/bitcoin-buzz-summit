@@ -6,7 +6,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Workshop from "./pages/Workshop";
-import ScrollToTop from "./pages/ScrollToTop"; // ✅ Import hinzugefügt
+import ScrollToTop from "./pages/ScrollToTop";
+import GlobalPopup from "@/components/GlobalPopup";
 
 const queryClient = new QueryClient();
 
@@ -18,6 +19,7 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <ScrollToTop />
+          <GlobalPopup /> {/* 👈 Wichtig */}
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/workshop" element={<Workshop />} />

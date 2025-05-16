@@ -3,11 +3,13 @@ import { Link } from 'react-router-dom';
 import { Bitcoin, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useIsMobile } from '@/hooks/use-mobile';
+import { usePopup } from '@/context/PopupContext';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const isMobile = useIsMobile();
+  const { openPopup } = usePopup();
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
@@ -61,7 +63,12 @@ const Navbar = () => {
                   <Link to="/#schedule" onClick={toggleMenu} className="text-xl font-medium px-4 py-3 text-gray-800 hover:text-bitcoin transition-colors">Schedule</Link>
                   <Link to="/#venue" onClick={toggleMenu} className="text-xl font-medium px-4 py-3 text-gray-800 hover:text-bitcoin transition-colors">Venue</Link>
                   <Link to="/workshop" onClick={toggleMenu} className="text-xl font-medium px-4 py-3 text-gray-800 hover:text-bitcoin transition-colors">Workshops</Link>
-                  <Button className="bg-bitcoin hover:bg-bitcoin-dark text-white rounded-full py-6 mx-4 shadow-lg shadow-bitcoin/20">
+                  <Button onClick={() => openPopup({
+                    title: 'Ticket sichern',
+                    description: 'Du wirst gleich weitergeleitet zur Ticketbuchung. Bitte beachte, dass du deine Daten bereithältst.',
+                    actionLabel: 'Jetzt Ticket buchen',
+                    actionHref: 'https://vr-bayernmitte.genolive.de/index.php?page=event-code&code=bitcoin25'
+                  })} className="bg-bitcoin hover:bg-bitcoin-dark text-white rounded-full py-6 mx-4 shadow-lg shadow-bitcoin/20">
                     Register Now
                   </Button>
                 </div>
@@ -92,14 +99,17 @@ const Navbar = () => {
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-bitcoin group-hover:w-full transition-all duration-300"></span>
               </Link>
             </div>
-            <a
-              href="https://vr-bayernmitte.genolive.de/index.php?page=event-code&code=bitcoin25"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Button 
+              onClick={() => openPopup({
+                title: 'Ticket sichern',
+                description: 'Du wirst gleich weitergeleitet zur Ticketbuchung. Bitte beachte, dass du deine Daten bereithältst.',
+                actionLabel: 'Jetzt Ticket buchen',
+                actionHref: 'https://vr-bayernmitte.genolive.de/index.php?page=event-code&code=bitcoin25'
+              })}
               className="inline-block bg-bitcoin hover:bg-bitcoin-dark text-white rounded-full shadow-lg shadow-bitcoin/20 transition-all duration-300 hover:scale-105 px-6 py-3 text-center font-medium"
             >
               Sichere dein Ticket
-            </a>
+            </Button>
           </div>
         )}
       </div>
