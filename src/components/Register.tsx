@@ -70,7 +70,7 @@ const Register = () => {
   return (
     <section id="register" className="py-32 bg-gradient-to-b from-black to-gray-900 relative">
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-full bg-[url('public/lovable-uploads/2e1fd836-1d6d-4649-acee-c2ec7d832dac.png')] opacity-5 bg-cover bg-center"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[url('public/images/ticket/21% - 50%.png')] opacity-5 bg-cover bg-center"></div>
       </div>
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl mx-auto text-center mb-16 text-white">
