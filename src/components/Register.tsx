@@ -70,7 +70,7 @@ const Register = () => {
   return (
     <section id="register" className="py-32 bg-gradient-to-b from-black to-gray-900 relative">
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-full bg-[url('public/images/ticket/rabatt.png')] opacity-5 bg-cover bg-center"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[url('images/ticket/rabatt.png')] opacity-5 bg-cover bg-center"></div>
       </div>
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl mx-auto text-center mb-16 text-white">
@@ -89,7 +89,7 @@ const Register = () => {
                aria-label="Frühbucher Rabatt 21%-50%">
               <div className="relative group">
                 <img 
-                  src="/public/images/ticket/rabatt.png" 
+                  src="/images/ticket/rabatt.png" 
                   alt="Frühbucher Rabatt 21%-50%" 
                   className="w-48 h-48 md:w-64 md:h-64 object-contain animate-pulse rounded-full" 
                   style={{
