@@ -69,7 +69,7 @@ const Workshop = () => {
       date: "9. Oktober",
       time: "09:00 - 12:30",
       location: "Raum A1",
-      instructor: "Dr. Michael Weber",
+      instructors: ["Dr. Michael Weber"],
       difficulty: "Fortgeschritten",
       seats: 25,
       fullDescription: `
@@ -100,7 +100,7 @@ const Workshop = () => {
       date: "9. Oktober",
       time: "09:00 - 12:30",
       location: "Raum A1",
-      instructor: "Dr. Michael Weber",
+      instructors: ["Dr. Michael Weber"],
       difficulty: "Fortgeschritten",
       seats: 25,
       fullDescription: `
@@ -131,7 +131,7 @@ const Workshop = () => {
       date: "9. Oktober",
       time: "13:30 - 17:00",
       location: "Computerlabor B",
-      instructor: "Thomas Schmidt",
+      instructors: ["Thomas Schmidt"],
       difficulty: "Fortgeschritten",
       seats: 20,
       fullDescription: `
@@ -163,7 +163,7 @@ const Workshop = () => {
       date: "9. Oktober",
       time: "14:00 - 17:30",
       location: "Werkstatt C",
-      instructor: "Jana Müller",
+      instructors: ["Jana Müller"],
       difficulty: "Fortgeschritten",
       seats: 15,
       fullDescription: `
@@ -194,7 +194,7 @@ const Workshop = () => {
       date: "10. Oktober",
       time: "09:00 - 12:30",
       location: "Raum A2",
-      instructor: "Felix Schneider",
+      instructors: ["Felix Schneider"],
       difficulty: "Experte",
       seats: 25,
       fullDescription: `
@@ -226,7 +226,7 @@ const Workshop = () => {
       date: "10. Oktober",
       time: "13:30 - 17:00",
       location: "Konferenzraum D",
-      instructor: "Sarah Wagner",
+      instructors: ["Sarah Wagner"],
       difficulty: "Mittel",
       seats: 30,
       fullDescription: `
@@ -258,7 +258,7 @@ const Workshop = () => {
       date: "10. Oktober",
       time: "14:00 - 17:30",
       location: "Laborraum E",
-      instructor: "Markus Bauer",
+      instructors: ["Markus Bauer"],
       difficulty: "Experte",
       seats: 20,
       fullDescription: `
@@ -290,7 +290,7 @@ const Workshop = () => {
       date: "11. Oktober",
       time: "09:00 - 12:30",
       location: "Raum A3",
-      instructor: "Dr. Susanne Mayer",
+      instructors: ["Dr. Susanne Mayer"],
       difficulty: "Mittel",
       seats: 35,
       fullDescription: `
@@ -322,7 +322,7 @@ const Workshop = () => {
       date: "11. Oktober",
       time: "13:30 - 17:00",
       location: "Raum A4",
-      instructor: "Daniel Huber",
+      instructors: ["Daniel Huber"],
       difficulty: "Fortgeschritten",
       seats: 25,
       fullDescription: `
@@ -671,15 +671,20 @@ const Workshop = () => {
                         </div>
                       </div>
                       
-                      <div className="flex items-center gap-3">
-                        <User className="h-5 w-5 text-bitcoin flex-shrink-0" />
-                        <div>
-                          <p className="text-sm font-medium">Dozent</p>
-                          <p className="text-sm text-gray-600">{getSelectedWorkshop()?.instructor}</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+<div className="flex items-start gap-3">
+  <User className="h-5 w-5 text-bitcoin flex-shrink-0 mt-1" />
+  <div>
+    <p className="text-sm font-medium">
+      {getSelectedWorkshop()?.instructors?.length > 1 ? 'Dozenten' : 'Dozent'}
+    </p>
+    <ul className="text-sm text-gray-600 space-y-1 list-disc list-inside mt-1">
+      {getSelectedWorkshop()?.instructors?.map((name, index) => (
+        <li key={index}>{name}</li>
+      ))}
+    </ul>
+  </div>
+</div>
+
                   
                   <Button className="w-full bg-bitcoin hover:bg-bitcoin/80 text-white flex items-center justify-center gap-2">
                     <Ticket className="h-4 w-4" /> Sichere dein Ticket
