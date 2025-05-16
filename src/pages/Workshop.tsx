@@ -28,7 +28,7 @@ const Workshop = () => {
 
   const workshops = [
     {
-      id: 4,
+      id: 11,
       title: "Bitcoin als Wertanlage",
       subtitle: "für Family Offices",
       description: "In diesem Workshop lernen Sie, wie Bitcoin als langfristige Wertanlage für Family Offices funktionieren kann.",
@@ -59,7 +59,7 @@ const Workshop = () => {
       imageUrl: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3"
     },
      {
-      id: 4,
+      id: 12,
       title: "Bitcoin als Wertanlage",
       subtitle: "für Family Offices",
       description: "In diesem Workshop lernen Sie, wie Bitcoin als langfristige Wertanlage für Family Offices funktionieren kann.",
@@ -90,7 +90,7 @@ const Workshop = () => {
       imageUrl: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3"
     },
      {
-      id: 4,
+      id: 13,
       title: "Bitcoin als Wertanlage",
       subtitle: "für Family Offices",
       description: "In diesem Workshop lernen Sie, wie Bitcoin als langfristige Wertanlage für Family Offices funktionieren kann.",
