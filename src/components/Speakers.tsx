@@ -325,13 +325,13 @@ const Speakers = () => {
       bgSolidColor: "bg-[#D3E4FD]"
     },
     {
-      name: "Nathaly Lenz",
-      role: "",
+      name: "Lea Kelwin",
+      role: "Content Creatorin",
       company: "",
-      image: "/images/speakers/Nathaly_Lenz.png",
-      bio: "Nathaly ist eine leidenschaftliche Unternehmerin, Vollblut-Bitcoiner, und ehemalige Bänkerin. Als Gründerin der FinanceRevolution und Co-Moderatorin des NoMad Podcasts inspiriert sie Menschen weltweit. Zusammen mit ihrer Familie hat Nathaly das konventionelle System hinter sich gelassen und lebt heute als digitale Nomadin. Sie und ihre Familie nennen sich oft auch die „Bitcoin Nomad Family“. Mit umfassender Expertise in Treuhand, Human Resources und internationalem Steuerrecht berät Nathaly erfolgreich Unternehmen und Privatpersonen. Ihr Projekt FinanceRevolution, gegründet während der Corona-Krise, hat sich zu einem durchschlagenden Erfolg entwickelt. Mit ihrem Leitsatz „Geld arbeitet für dich, nicht du für Geld“ motiviert sie Menschen, finanzielle Freiheit zu erreichen. Neben ihrer Rolle als Vollblut-Unternehmerin ist Nathaly eine engagierte Mutter zweier Söhne (20 und 29).",
-      bgColor: "bg-[#D3E4FD]/50",
-      bgSolidColor: "bg-[#D3E4FD]"
+      image: "/images/speakers/Lea_Kelwin.jpg",
+      bio: "arbeitet als Hebamme und engagiert sich leidenschaftlich für Frauengesundheit, Selbstbestimmung und soziale Gerechtigkeit. Energie ist dabei der Grundbaustein – ohne sie gibt es weder Neuanfänge noch körperliche oder geistige Fruchtbarkeit. Bitcoin wird durch Energie gestützt und kann als Werkzeug genutzt werden, um den Weg zu mehr Selbstbestimmung und nachhaltiger Gesundheit zu begleiten. Letztlich liegt es bei dir selbst, innovative Technologie für deine ganz eigenen Lösungswege einzusetzen. Lea ist Mitgründerin der Non-Profit-Initiative Bitcoin Block.",
+      bgColor: "bg-[#FEF7CD]/50",
+      bgSolidColor: "bg-[#FEF7CD]"
     }
 
   ];
