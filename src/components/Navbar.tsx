@@ -65,16 +65,17 @@ const Navbar = () => {
                   <Link to="/workshop" onClick={toggleMenu} className="text-xl font-medium px-4 py-3 text-gray-800 hover:text-bitcoin transition-colors">Workshops</Link>
                   <Button
                     onClick={() =>
-                      openPopup(
-                        "Ticket sichern",
-                        "Du wirst gleich weitergeleitet zur Ticketbuchung. Bitte beachte, dass du deine Daten bereithältst.",
-                        "https://vr-bayernmitte.genolive.de/index.php?page=event-code&code=bitcoin25"
-                      )
+                      openPopup({
+                        title: "Ticket sichern",
+                        message: "Du wirst gleich weitergeleitet zur Ticketbuchung. Bitte beachte, dass du deine Daten bereithältst.",
+                        redirectUrl: "https://vr-bayernmitte.genolive.de/index.php?page=event-code&code=bitcoin25"
+                      })
                     }
                     className="bg-bitcoin hover:bg-bitcoin-dark text-white rounded-full py-6 mx-4 shadow-lg shadow-bitcoin/20"
                   >
                     Jetzt Ticket buchen
                   </Button>
+
 
                 </div>
               </div>
@@ -106,16 +107,17 @@ const Navbar = () => {
             </div>
             <Button
               onClick={() =>
-                openPopup(
-                  "Ticket sichern",
-                  "Du wirst gleich weitergeleitet zur Ticketbuchung. Bitte beachte, dass du deine Daten bereithältst.",
-                  "https://vr-bayernmitte.genolive.de/index.php?page=event-code&code=bitcoin25"
-                )
+                openPopup({
+                  title: "Ticket sichern",
+                  message: "Du wirst gleich weitergeleitet zur Ticketbuchung. Bitte beachte, dass du deine Daten bereithältst.",
+                  redirectUrl: "https://vr-bayernmitte.genolive.de/index.php?page=event-code&code=bitcoin25"
+                })
               }
               className="bg-bitcoin hover:bg-bitcoin-dark text-white rounded-full py-6 mx-4 shadow-lg shadow-bitcoin/20"
             >
               Jetzt Ticket buchen
             </Button>
+
 
           </div>
         )}
