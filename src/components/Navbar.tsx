@@ -66,8 +66,6 @@ const Navbar = () => {
                   <Button
                     onClick={() =>
                       openPopup({
-                        title: "Ticket sichern",
-                        message: "Du wirst gleich weitergeleitet zur Ticketbuchung. Bitte beachte, dass du deine Daten bereithältst.",
                         redirectUrl: "https://vr-bayernmitte.genolive.de/index.php?page=event-code&code=bitcoin25"
                       })
                     }
