@@ -91,7 +91,7 @@ const Register = () => {
                 <img 
                   src="/images/ticket/rabatt.png" 
                   alt="Frühbucher Rabatt 21%-50%" 
-                  className="w-48 h-48 md:w-64 md:h-64 object-contain animate-pulse rounded-full" 
+                  className="w-72 h-72 md:w-[300px] md:h-[300px] object-contain animate-pulse rounded-full"
                   style={{
                     animation: "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite"
                   }}
