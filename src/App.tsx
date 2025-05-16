@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -7,8 +8,10 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Workshop from "./pages/Workshop";
 import ScrollToTop from "./pages/ScrollToTop";
-import GlobalPopup from "@/components/GlobalPopup"; // 👈 falls du das hast
-import { PopupProvider } from "@/pages/PopupContext"; // 👈 DAS IST DER WICHTIGE TEIL
+import GlobalPopup from "@/components/GlobalPopup";
+import { PopupProvider } from "@/pages/PopupContext";
+import CookieBanner from "@/components/CookieBanner";
+import Datenschutz from "./pages/Datenschutz";
 
 const queryClient = new QueryClient();
 
@@ -17,15 +20,17 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <PopupProvider> {/* ✅ Hier einfügen */}
+      <PopupProvider>
         <BrowserRouter>
-          <GlobalPopup /> {/* 👈 falls du es global anzeigen willst */}
+          <GlobalPopup />
           <ScrollToTop />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/workshop" element={<Workshop />} />
+            <Route path="/datenschutz" element={<Datenschutz />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
+          <CookieBanner />
         </BrowserRouter>
       </PopupProvider>
     </TooltipProvider>
