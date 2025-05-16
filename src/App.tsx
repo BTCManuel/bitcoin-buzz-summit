@@ -12,6 +12,7 @@ import GlobalPopup from "@/components/GlobalPopup";
 import { PopupProvider } from "@/pages/PopupContext";
 import CookieBanner from "@/components/CookieBanner";
 import Datenschutz from "./pages/Datenschutz";
+import BIP25Members from "./pages/BIP25Members";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +29,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/workshop" element={<Workshop />} />
             <Route path="/datenschutz" element={<Datenschutz />} />
+            <Route path="/bip25-members" element={<BIP25Members />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           <CookieBanner />

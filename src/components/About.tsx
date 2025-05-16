@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Bitcoin, Users, Globe, Target, BookOpen, Shield, Code, Tv, Zap, Bolt, CalendarDays, Clock, Ticket } from 'lucide-react';
@@ -42,7 +43,9 @@ const About = () => {
       description: "Das ist das engagiertes Team hinter der Organisation und Umsetzung des 3. BitcoinForums. Sie gestalten ein einzigartiges Event, das Wissen, Austausch und Inspiration vereint.",
       bgColor: "bg-transparent",
       borderColor: "border-[#F2FCE2]",
+      link: "/bip25-members",
       buttonText: "Mehr über das Team",
+      external: false
     },
     {
       icon: <img src="/images/workshop/seo-illustrations-2.svg" alt="BitcoinForum Partner" className="h-12 w-12 mb-4" loading="lazy" />,
