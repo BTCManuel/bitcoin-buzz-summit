@@ -8,7 +8,17 @@ import { Button } from '@/components/ui/button';
 import { usePopup } from "@/pages/PopupContext";
 import { Ticket } from 'lucide-react';
 
+interface Member {
+  name: string;
+  role?: string;
+  company?: string;
+  image: string;
+  bio: React.ReactNode;
+  bgColor: string;
+  bgSolidColor: string;
+}
 const members: Member[] = [
+  
   {
     name: "Andreas Streb",
     image: "/images/speakers/Andreas_Streb.jpg",
@@ -218,7 +228,7 @@ const BIP25Members = () => {
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-            {membersData.map((member, index) => (
+            {members.map((member, index) => (
               <Card
                 key={index}
                 onClick={() => setSelectedMember(member)}
