@@ -14,7 +14,7 @@ const About = () => {
       borderColor: "border-[#FDE1D3]"
     },
     {
-      icon: <BookOpen className="h-12 w-12 text-bitcoin mb-4" />,
+      icon: <img src="/images/workshop/light-bulb-idea.svg" alt="BitcoinForum Bitcoin Mining" className="h-12 w-12 mb-4" loading="lazy" />,
       title: "Energiewirtschaft & Mining",
       description: "Bitcoin kann Stromnetze stabilisieren und wird überwiegend mit grüner Energie betrieben. Bitcoin Mining kann 'verschwendeten' grünen Strom (Solar/Wind/Bio) wirtschaftlicher machen.",
       bgColor: "bg-transparent",
@@ -22,7 +22,7 @@ const About = () => {
       link: "/workshop"
     },
     {
-      icon: <Users className="h-12 w-12 text-bitcoin mb-4" />,
+      icon: <img src="/images/workshop/bitcoin-help-support.svg" alt="BitcoinForum BIP25" className="h-12 w-12 mb-4" loading="lazy" />,
       title: "BIP25 Members",
       description: "Das ist das engagiertes Team hinter der Organisation und Umsetzung des 3. BitcoinForums. Sie gestalten ein einzigartiges Event, das Wissen, Austausch und Inspiration vereint.",
       bgColor: "bg-transparent",
