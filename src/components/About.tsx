@@ -32,7 +32,7 @@ const About = () => {
       description: "Les Femmes Orange hat das Ziel, eine lebendige und unterstützende Gemeinschaft für Frauen weltweit aufzubauen – egal ob Einsteigerin oder Fortgeschrittene.",
       bgColor: "bg-transparent",
       borderColor: "border-[#F2FCE2]",
-      buttonText: "Platz reservieren"
+      buttonText: "Platz reservieren",
     },
     {
       icon: <img src="/images/workshop/bitcoin-help-support.svg" alt="BitcoinForum BIP25" className="h-12 w-12 mb-4" loading="lazy" />,
