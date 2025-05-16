@@ -19,13 +19,13 @@ const Speakers = () => {
 
   const speakersData: Speaker[] = [
     {
-      name: "Alex von Frankenberg",
+       name: "Andreas Streb",
       role: "CEO",
-      company: "High-Tech Gründerfonds (HTGF)",
-      image: "/images/speakers/frankenberg.jpg",
-      bio: "leitete von 2005 bis 2025 den High-Tech Gründerfonds (HTGF), Europas aktivsten Frühphaseninvestor mit fast 800 Seed Investments und 2 Mrd. Euro in fünf Fonds. Zuvor war er u.a. bei Siemens, einem IT-Startup und in der Beratung tätig. Seit 2016 beschäftigt er sich intensiv mit Bitcoin als möglichem Wertspeicherstandard.",
-      bgColor: "bg-[#F2FCE2]/50",
-      bgSolidColor: "bg-[#F2FCE2]"
+      company: "VR Bayernmitte e.G.",
+      image: "/images/speakers/Andreas_Streb.jpg",
+      bio: "ist Vorstandsvorsitzender der Volksbank Raiffeisenbank Bayern Mitte eG und maßgeblich für das Angebot von Dienstleistungen in Zusammenhang mit Bitcoin und Bitcoin-Lösungen in der Bank verantwortlich.",
+      bgColor: "bg-[#FEF7CD]/50",
+      bgSolidColor: "bg-[#FEF7CD]"
     },
     {
       name: "Chris Seedor",
@@ -37,8 +37,8 @@ const Speakers = () => {
       bgSolidColor:"bg-[#D3E4FD]"
     },
     {
-      name: "der Helper",
-      role: "Content Creator",
+      name: "Marc Friedrich",
+      role: "NEUES FOTO",
       company: "",
       image: "/images/speakers/der_Helper.jpg",
       bio: "ist bekannt durch seine Infografiken und Erklärvideos, in denen er mit leicht verständlicher Sprache die Genialität von Bitcoin erklärt. Durch seine lockere Art und einfache Sprache gilt er für viele als erste Anlaufstelle, wenn es darum geht, einen Blick in den Bitcoin Kaninchenbau zu werfen.",
@@ -55,13 +55,13 @@ const Speakers = () => {
       bgSolidColor: "bg-[#FEF7CD]"
     },
     {
-      name: "Patrick Linus",
-      role: "Lehrer",
-      company: "The Progressive Bitcoiner Podcast",
-      image: "/images/speakers/Patrick_Linus.jpg",
-      bio: "ist Lehrer, Lehrplanautor und Berater im Bildungsbereich, Podcaster und Familienvater. Seit 2017 setzt er sich leidenschaftlich dafür ein, die Souveränität der kommenden Generation im digitalen Zeitalter zu stärken. Er unterstützt Pädagogen und Schulen bei der konzeptionellen Umsetzung seines maßgeschneiderten Medienbildungskonzepts – ein modular flexibler, Open-Source-Lehrplan, der frei verfügbar ist. Überzeugt davon, dass grundlegendes Wissen über Medien und Kommunikation essenziell ist, sieht er hierin die Basis für die erfolgreiche Vermittlung innovativer Technologien wie Bitcoin und KI. Zudem ist Patrick Gründer der Non-Profit-Initiative Bitcoin Block und engagiert sich aktiv dafür, die kulturelle und gesellschaftliche Bedeutung von Bitcoin in der Öffentlichkeit sichtbar zu machen.",
-      bgColor: "bg-[#F2FCE2]/50",
-      bgSolidColor: "bg-[#F2FCE2]"
+      name: "Florian Bruce",
+      role: "",
+      company: "",
+      image: "/images/speakers/Florian_Bruce.jpg",
+      bio: "berät mit seinem Unternehmen Schwarzberg BSC GmbH Family Offices und HNWIs bei der sicheren Eigenverwahrung von Bitcoin. Als Unternehmer, Bestseller-Autor und Host des Podcasts „Der Bitcoin Podcast“ zählt er zu den gefragtesten Experten im Bereich Bitcoin.",
+      bgColor: "bg-[#FEF7CD]/50",
+      bgSolidColor: "bg-[#FEF7CD]"
     },
     {
       name: "Daniel Winklhammer",
@@ -73,22 +73,22 @@ const Speakers = () => {
       bgSolidColor: "bg-[#D3E4FD]"
     },
     {
-      name: "Joe Martin",
-      role: "Co-Founder_test_test.83..",
-      company: "Bitcoin Forum_test",
-      image: "/images/speakers/Joe_Martin.jpg",
-      bio: "ist als Journalist, Keynote-Speaker und Buchautor mit über 30 Jahren Berufserfahrung in der Welt der Technologie einer der wichtigsten Bitcoin-Erklärer Deutschlands. Er hat auch die Volksbank Raiffeisenbank Bayern Mitte bei der Einführung des Angebots von Bitcoin und Bitcoin-Lösungen begleitet und unterstützt. Joe Martin ist Co-Founder und Hauptansprechpartner für alle Speaker beim 3. BitcoinForum. Kontaktdaten: https://linktr.ee/JoeMartinBTC",
-      bgColor: "bg-[#FDE1D3]/50",
-      bgSolidColor: "bg-[#FDE1D3]"
+      name: "Alex von Frankenberg",
+      role: "CEO",
+      company: "High-Tech Gründerfonds (HTGF)",
+      image: "/images/speakers/frankenberg.jpg",
+      bio: "leitete von 2005 bis 2025 den High-Tech Gründerfonds (HTGF), Europas aktivsten Frühphaseninvestor mit fast 800 Seed Investments und 2 Mrd. Euro in fünf Fonds. Zuvor war er u.a. bei Siemens, einem IT-Startup und in der Beratung tätig. Seit 2016 beschäftigt er sich intensiv mit Bitcoin als möglichem Wertspeicherstandard.",
+      bgColor: "bg-[#F2FCE2]/50",
+      bgSolidColor: "bg-[#F2FCE2]"
     },
     {
-      name: "Andreas Streb",
-      role: "",
+       name: "der Helper",
+      role: "Content Creator",
       company: "",
-      image: "/images/speakers/Andreas_Streb.jpg",
-      bio: "ist Vorstandsvorsitzender der Volksbank Raiffeisenbank Bayern Mitte eG und maßgeblich für das Angebot von Dienstleistungen in Zusammenhang mit Bitcoin und Bitcoin-Lösungen in der Bank verantwortlich.",
-      bgColor: "bg-[#FEF7CD]/50",
-      bgSolidColor: "bg-[#FEF7CD]"
+      image: "/images/speakers/der_Helper.jpg",
+      bio: "ist bekannt durch seine Infografiken und Erklärvideos, in denen er mit leicht verständlicher Sprache die Genialität von Bitcoin erklärt. Durch seine lockere Art und einfache Sprache gilt er für viele als erste Anlaufstelle, wenn es darum geht, einen Blick in den Bitcoin Kaninchenbau zu werfen.",
+      bgColor: "bg-[#FDE1D3]/50",
+      bgSolidColor: "bg-[#FDE1D3]"
     },
     {
       name: "Niko Jilch",
@@ -226,11 +226,11 @@ const Speakers = () => {
       bgSolidColor: "bg-[#FDE1D3]"
     },
     {
-      name: "Harald Rauter",
-      role: "",
+      name: "Lea Kelwin",
+      role: "Content Creatorin",
       company: "",
-      image: "/images/speakers/Harald_Rauter.jpg",
-      bio: "ist ein anerkannter Vordenker an der Schnittstelle von Bitcoin und Energiesystemen. Als Chief Growth Officer der 21energy GmbH und Vorstandsmitglied der European Bitcoin Energy Association (EBEA) gestaltet er aktiv die Diskussion darüber, wie Bitcoin-Mining sinnvoll in Energiemärkte und zur Stabilisierung der Stromnetze integriert werden kann. Er ist überzeugt, dass strategisch eingesetztes Bitcoin-Mining zum Katalysator für Europas Energiereichtum, -sicherheit und vor allem -unabhängigkeit werden kann – drei Grundpfeiler für gesellschaftlichen Wohlstand und geopolitische Resilienz im 21. Jahrhundert.",
+      image: "/images/speakers/Lea_Kelwin.jpg",
+      bio: "arbeitet als Hebamme und engagiert sich leidenschaftlich für Frauengesundheit, Selbstbestimmung und soziale Gerechtigkeit. Energie ist dabei der Grundbaustein – ohne sie gibt es weder Neuanfänge noch körperliche oder geistige Fruchtbarkeit. Bitcoin wird durch Energie gestützt und kann als Werkzeug genutzt werden, um den Weg zu mehr Selbstbestimmung und nachhaltiger Gesundheit zu begleiten. Letztlich liegt es bei dir selbst, innovative Technologie für deine ganz eigenen Lösungswege einzusetzen. Lea ist Mitgründerin der Non-Profit-Initiative Bitcoin Block.",
       bgColor: "bg-[#FEF7CD]/50",
       bgSolidColor: "bg-[#FEF7CD]"
     },
@@ -325,13 +325,13 @@ const Speakers = () => {
       bgSolidColor: "bg-[#D3E4FD]"
     },
     {
-      name: "Lea Kelwin",
-      role: "Content Creatorin",
-      company: "",
-      image: "/images/speakers/Lea_Kelwin.jpg",
-      bio: "arbeitet als Hebamme und engagiert sich leidenschaftlich für Frauengesundheit, Selbstbestimmung und soziale Gerechtigkeit. Energie ist dabei der Grundbaustein – ohne sie gibt es weder Neuanfänge noch körperliche oder geistige Fruchtbarkeit. Bitcoin wird durch Energie gestützt und kann als Werkzeug genutzt werden, um den Weg zu mehr Selbstbestimmung und nachhaltiger Gesundheit zu begleiten. Letztlich liegt es bei dir selbst, innovative Technologie für deine ganz eigenen Lösungswege einzusetzen. Lea ist Mitgründerin der Non-Profit-Initiative Bitcoin Block.",
-      bgColor: "bg-[#FEF7CD]/50",
-      bgSolidColor: "bg-[#FEF7CD]"
+     name: "Patrick Linus",
+      role: "Lehrer",
+      company: "The Progressive Bitcoiner Podcast",
+      image: "/images/speakers/Patrick_Linus.jpg",
+      bio: "ist Lehrer, Lehrplanautor und Berater im Bildungsbereich, Podcaster und Familienvater. Seit 2017 setzt er sich leidenschaftlich dafür ein, die Souveränität der kommenden Generation im digitalen Zeitalter zu stärken. Er unterstützt Pädagogen und Schulen bei der konzeptionellen Umsetzung seines maßgeschneiderten Medienbildungskonzepts – ein modular flexibler, Open-Source-Lehrplan, der frei verfügbar ist. Überzeugt davon, dass grundlegendes Wissen über Medien und Kommunikation essenziell ist, sieht er hierin die Basis für die erfolgreiche Vermittlung innovativer Technologien wie Bitcoin und KI. Zudem ist Patrick Gründer der Non-Profit-Initiative Bitcoin Block und engagiert sich aktiv dafür, die kulturelle und gesellschaftliche Bedeutung von Bitcoin in der Öffentlichkeit sichtbar zu machen.",
+      bgColor: "bg-[#F2FCE2]/50",
+      bgSolidColor: "bg-[#F2FCE2]"
     },
     {
       name: "Harald Rauter",
