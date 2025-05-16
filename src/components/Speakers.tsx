@@ -28,8 +28,8 @@ const Speakers = () => {
       bgSolidColor: "bg-[#FEF7CD]"
     },
     {
-      name: "Chris Seedor",
-      role: "Gründer & Entwickler",
+      name: "Marc Friedrich",
+      role: "/images/speakers/Bitcoin_Block.png"
       company: "SEEDOR",
       image: "/images/speakers/Chris_Seedor.jpg",
       bio: "begann seine Karriere als Materialwissenschaftler und Fertigungsberater in Deutschland und China, bevor er seine größte Leidenschaft entdeckte: Bitcoin. Als Mitgründer und Geschäftsführer von seedor.io, bitsurance.io und satskeeper.com ist er eine zentrale Figur in der deutschen Bitcoin-Szene, insbesondere in den Bereichen Verwahrung, Versicherung und Vererbung von Bitcoin.",
@@ -37,8 +37,8 @@ const Speakers = () => {
       bgSolidColor:"bg-[#D3E4FD]"
     },
     {
-      name: "Marc Friedrich",
-      role: "NEUES FOTO",
+      name: "Roman Reher",
+      role: "/images/speakers/Bitcoin_Block.png",
       company: "",
       image: "/images/speakers/der_Helper.jpg",
       bio: "ist bekannt durch seine Infografiken und Erklärvideos, in denen er mit leicht verständlicher Sprache die Genialität von Bitcoin erklärt. Durch seine lockere Art und einfache Sprache gilt er für viele als erste Anlaufstelle, wenn es darum geht, einen Blick in den Bitcoin Kaninchenbau zu werfen.",
@@ -91,13 +91,13 @@ const Speakers = () => {
       bgSolidColor: "bg-[#FDE1D3]"
     },
     {
-      name: "Niko Jilch",
-      role: "",
-      company: "",
-      image: "/images/speakers/Niko_Jilch.jpg",
-      bio: "ist Finanzjournalist mit Fokus auf die Digitalisierung von Geld und Wirtschaft. Mit 'Was Bitcoin bringt' betreibt er einen der populärsten Podcasts und YouTube-Kanäle zum Thema Bitcoin und Finanzwelt. Niko ist ein gefragter Speaker und Berater rund und ums Thema Bitcoin, Geldpolitik und Geldgeschichte.",
-      bgColor: "bg-[#F2FCE2]/50",
-      bgSolidColor: "bg-[#F2FCE2]"
+      name: "Chris Seedor",
+      role: "Gründer & Entwickler",
+      company: "SEEDOR",
+      image: "/images/speakers/Chris_Seedor.jpg",
+      bio: "begann seine Karriere als Materialwissenschaftler und Fertigungsberater in Deutschland und China, bevor er seine größte Leidenschaft entdeckte: Bitcoin. Als Mitgründer und Geschäftsführer von seedor.io, bitsurance.io und satskeeper.com ist er eine zentrale Figur in der deutschen Bitcoin-Szene, insbesondere in den Bereichen Verwahrung, Versicherung und Vererbung von Bitcoin.",
+      bgColor: "bg-[#D3E4FD]/50",
+      bgSolidColor:"bg-[#D3E4FD]"
     },
     {
       name: "Daniel 'Loddi' Tröster",
@@ -154,13 +154,13 @@ const Speakers = () => {
       bgSolidColor: "bg-[#FDE1D3]"
     },
     {
-      name: "Florian Bruce",
+      name: "Niko Jilch",
       role: "",
       company: "",
-      image: "/images/speakers/Florian_Bruce.jpg",
-      bio: "berät mit seinem Unternehmen Schwarzberg BSC GmbH Family Offices und HNWIs bei der sicheren Eigenverwahrung von Bitcoin. Als Unternehmer, Bestseller-Autor und Host des Podcasts „Der Bitcoin Podcast“ zählt er zu den gefragtesten Experten im Bereich Bitcoin.",
-      bgColor: "bg-[#FEF7CD]/50",
-      bgSolidColor: "bg-[#FEF7CD]"
+      image: "/images/speakers/Niko_Jilch.jpg",
+      bio: "ist Finanzjournalist mit Fokus auf die Digitalisierung von Geld und Wirtschaft. Mit 'Was Bitcoin bringt' betreibt er einen der populärsten Podcasts und YouTube-Kanäle zum Thema Bitcoin und Finanzwelt. Niko ist ein gefragter Speaker und Berater rund und ums Thema Bitcoin, Geldpolitik und Geldgeschichte.",
+      bgColor: "bg-[#F2FCE2]/50",
+      bgSolidColor: "bg-[#F2FCE2]"
     },
     {
       name: "Dr. Peter Schmidt",
