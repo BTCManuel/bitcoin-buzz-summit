@@ -104,14 +104,15 @@ const Register = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {ticketTiers.map((tier, index) => (
-            <Card 
-                key={index} 
-                className={`border-0 shadow-xl hover:shadow-2xl transition-all duration-300 hover:translate-y-[-5px] overflow-hidden rounded-2xl ${
-                  tier.highlighted 
-                    ? 'bg-gradient-to-br from-gray-900 via-black to-black ring-2 ring-bitcoin' 
-                    : 'bg-gradient-to-br from-gray-800 to-gray-900'
-                }`}
-              >
+<Card 
+  key={index} 
+  className={`border-0 shadow-xl hover:shadow-2xl transition-all duration-300 hover:translate-y-[-5px] overflow-hidden rounded-2xl ${
+    tier.highlighted 
+      ? 'bg-gradient-to-br from-amber-900 via-zinc-900 to-black ring-2 ring-bitcoin' 
+      : 'bg-gradient-to-br from-gray-800 to-gray-900'
+  }`}
+>
+
                 <CardContent className={`p-0 ${tier.highlighted ? 'bg-black/60' : ''}`}>
                   <div className="p-8 relative">
                   {tier.highlighted && (
