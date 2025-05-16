@@ -127,13 +127,13 @@ const Speakers = () => {
       bgSolidColor: "bg-[#FEF7CD]"
     },
     {
-      name: "Maximilian Obwexer",
+      name: "Leon Wankum",
       role: "",
       company: "",
-      image: "/images/speakers/Maximilian_Obwexer.jpg",
-      bio: "ist Mitgründer und CEO von 21energy, dem Weltmarktführer für Bitcoin-Heizungen (4.000 Geräte in zwei Jahren). An der Schnittstelle von Energie und Bitcoin-Mining nutzt er hochleistungsfähige Hardware als kohlenstoffarme Heiztechnologie. Forbes, Bloomberg und Co. berichteten bereits über sein Konzept. Bei „2 Minuten 2 Millionen“ erhielt er ein 1,25-Mio.-Euro-Investment; als Speaker zeigt er, wie profitables Mining die Energiewende vorantreibt.",
-      bgColor: "bg-[#F2FCE2]/50",
-      bgSolidColor: "bg-[#F2FCE2]"
+      image: "/images/speakers/Leon_Wankum.jpg",
+      bio: "war einer der ersten VWL-Studenten (M.Sc.), der 2015 eine Abschlussarbeit über Bitcoin verfasst hat. Heute ist er im Bereich Immobilien und Venture Capital tätig. Er ist auf die Entwicklung von Bitcoin-Strategien für Immobilienentwickler spezialisiert.",
+      bgColor: "bg-[#D3E4FD]/50",
+      bgSolidColor: "bg-[#D3E4FD]"
     },
     {
       name: "Rachel Geyer",
@@ -208,13 +208,13 @@ const Speakers = () => {
       bgSolidColor: "bg-[#F2FCE2]"
     },
     {
-      name: "Leon Wankum",
+      name: "Maximilian Obwexer",
       role: "",
       company: "",
-      image: "/images/speakers/Leon_Wankum.jpg",
-      bio: "war einer der ersten VWL-Studenten (M.Sc.), der 2015 eine Abschlussarbeit über Bitcoin verfasst hat. Heute ist er im Bereich Immobilien und Venture Capital tätig. Er ist auf die Entwicklung von Bitcoin-Strategien für Immobilienentwickler spezialisiert.",
-      bgColor: "bg-[#D3E4FD]/50",
-      bgSolidColor: "bg-[#D3E4FD]"
+      image: "/images/speakers/Maximilian_Obwexer.jpg",
+      bio: "ist Mitgründer und CEO von 21energy, dem Weltmarktführer für Bitcoin-Heizungen (4.000 Geräte in zwei Jahren). An der Schnittstelle von Energie und Bitcoin-Mining nutzt er hochleistungsfähige Hardware als kohlenstoffarme Heiztechnologie. Forbes, Bloomberg und Co. berichteten bereits über sein Konzept. Bei „2 Minuten 2 Millionen“ erhielt er ein 1,25-Mio.-Euro-Investment; als Speaker zeigt er, wie profitables Mining die Energiewende vorantreibt.",
+      bgColor: "bg-[#F2FCE2]/50",
+      bgSolidColor: "bg-[#F2FCE2]"
     },
     {
       name: "Nicole Nowak",
