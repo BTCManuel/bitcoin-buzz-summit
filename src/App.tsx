@@ -7,29 +7,27 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Workshop from "./pages/Workshop";
 import ScrollToTop from "./pages/ScrollToTop";
-import GlobalPopup from "@/components/GlobalPopup";
+import { PopupProvider } from "@/pages/PopupContext"; // 👈 DAS IST DER WICHTIGE TEIL
 
 const queryClient = new QueryClient();
 
 const App = () => (
-  <div className="overflow-x-hidden">
-    <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <Toaster />
-        <Sonner />
+  <QueryClientProvider client={queryClient}>
+    <TooltipProvider>
+      <Toaster />
+      <Sonner />
+      <PopupProvider> {/* ✅ Hier einfügen */}
         <BrowserRouter>
           <ScrollToTop />
-          <GlobalPopup /> {/* 👈 Wichtig */}
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/workshop" element={<Workshop />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
-      </TooltipProvider>
-    </QueryClientProvider>
-  </div>
+      </PopupProvider>
+    </TooltipProvider>
+  </QueryClientProvider>
 );
-
 
 export default App;
