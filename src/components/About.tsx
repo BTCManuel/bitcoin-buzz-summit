@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Bitcoin, Users, Globe, Target, BookOpen, Shield, Code, Tv, Zap, Bolt, CalendarDays, Clock, Ticket } from 'lucide-react';
@@ -59,14 +58,14 @@ const About = () => {
             Es ist für jeden etwas dabei - egal ob Neuling oder technikbegeisterter Bitcoin-Enthusiast. Jeder ist willkommen.
           </p>
         </div>
-        
-        <div className="grid grid-cols-1 gap-6 lg:grid-cols-1">
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
           {features.map((feature, index) => (
             <Card 
               key={index} 
-              className={`border ${feature.borderColor} shadow-md hover:shadow-xl transition-all duration-300 hover:translate-y-[-5px] ${feature.bgColor}/30 text-gray-800 rounded-2xl overflow-hidden`}
+              className={`border ${feature.borderColor} shadow-md hover:shadow-xl transition-all duration-300 hover:translate-y-[-5px] ${feature.bgColor}/30 text-gray-800 rounded-2xl overflow-hidden h-full`}
             >
-              <CardContent className="p-6 flex flex-col h-full">
+              <CardContent className="p-6 flex flex-col h-full min-h-[400px]">
                 <div className="mx-auto flex justify-center bg-white/60 w-20 h-20 rounded-full items-center mb-6 shadow-inner border border-white/80">
                   {feature.icon}
                 </div>
@@ -93,7 +92,7 @@ const About = () => {
             </Card>
           ))}
         </div>
-        
+
         <div className="flex justify-center mt-16">
           <Button 
             className="bg-bitcoin hover:bg-bitcoin/80 text-white shadow-lg shadow-bitcoin/20 px-10 py-6 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105 flex items-center gap-2"
