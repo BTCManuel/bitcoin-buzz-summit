@@ -65,7 +65,7 @@ const About = () => {
   return (
     <section id="about" className="py-32 bg-gradient-to-b from-white to-[#F2FCE2]/50">
       <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto text-center mb-20">
+        <div className="max-w-5xl mx-auto text-center mb-20">
           <div className="inline-block mb-4 px-4 py-1 bg-[#FEF7CD] backdrop-blur-sm rounded-full border border-bitcoin/20">
             <span className="text-sm uppercase tracking-wider font-medium text-bitcoin">Über das Forum</span>
           </div>
