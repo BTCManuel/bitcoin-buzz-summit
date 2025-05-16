@@ -58,6 +58,68 @@ const Workshop = () => {
       requirements: "Grundlegendes Verständnis von Anlageklassen und Portfoliomanagement.",
       imageUrl: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3"
     },
+     {
+      id: 4,
+      title: "Bitcoin als Wertanlage",
+      subtitle: "für Family Offices",
+      description: "In diesem Workshop lernen Sie, wie Bitcoin als langfristige Wertanlage für Family Offices funktionieren kann.",
+      icon: workshopIcons[0],
+      bgColor: "bg-[#FEF7CD]",
+      borderColor: "border-[#FDE1D3]",
+      date: "9. Oktober",
+      time: "09:00 - 12:30",
+      location: "Raum A1",
+      instructor: "Dr. Michael Weber",
+      difficulty: "Fortgeschritten",
+      seats: 25,
+      fullDescription: `
+        <p>Dieser umfassende Workshop richtet sich speziell an Family Offices, Vermögensverwalter und professionelle Anleger, die Bitcoin als langfristige Wertanlage in Betracht ziehen.</p>
+        <p>In einer Zeit, in der digitale Assets zunehmend an Bedeutung gewinnen, bietet dieser Workshop tiefe Einblicke in die Funktionsweise von Bitcoin als Anlageform und praktische Strategien für die Integration in diversifizierte Portfolios.</p>
+        <h3>Themen:</h3>
+        <ul>
+          <li>Fundamentale Wertversprechen von Bitcoin im Vergleich zu traditionellen Anlageklassen</li>
+          <li>Portfolioallokation und Risikostrategien</li>
+          <li>Regulatorische Rahmenbedingungen für institutionelle Investoren</li>
+          <li>Sichere Verwahrungslösungen für Family Offices</li>
+          <li>Steuerliche Implikationen und Reporting-Anforderungen</li>
+          <li>Langfristige Anlagestrategien vs. kurzfristige Volatilität</li>
+        </ul>
+        <p>Die Teilnehmer erhalten praktische Tools zur Risikobewertung und Portfolioanalyse sowie umfassende Informationen zu institutionellen Custody-Lösungen.</p>
+      `,
+      requirements: "Grundlegendes Verständnis von Anlageklassen und Portfoliomanagement.",
+      imageUrl: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3"
+    },
+     {
+      id: 4,
+      title: "Bitcoin als Wertanlage",
+      subtitle: "für Family Offices",
+      description: "In diesem Workshop lernen Sie, wie Bitcoin als langfristige Wertanlage für Family Offices funktionieren kann.",
+      icon: workshopIcons[0],
+      bgColor: "bg-[#FEF7CD]",
+      borderColor: "border-[#FDE1D3]",
+      date: "9. Oktober",
+      time: "09:00 - 12:30",
+      location: "Raum A1",
+      instructor: "Dr. Michael Weber",
+      difficulty: "Fortgeschritten",
+      seats: 25,
+      fullDescription: `
+        <p>Dieser umfassende Workshop richtet sich speziell an Family Offices, Vermögensverwalter und professionelle Anleger, die Bitcoin als langfristige Wertanlage in Betracht ziehen.</p>
+        <p>In einer Zeit, in der digitale Assets zunehmend an Bedeutung gewinnen, bietet dieser Workshop tiefe Einblicke in die Funktionsweise von Bitcoin als Anlageform und praktische Strategien für die Integration in diversifizierte Portfolios.</p>
+        <h3>Themen:</h3>
+        <ul>
+          <li>Fundamentale Wertversprechen von Bitcoin im Vergleich zu traditionellen Anlageklassen</li>
+          <li>Portfolioallokation und Risikostrategien</li>
+          <li>Regulatorische Rahmenbedingungen für institutionelle Investoren</li>
+          <li>Sichere Verwahrungslösungen für Family Offices</li>
+          <li>Steuerliche Implikationen und Reporting-Anforderungen</li>
+          <li>Langfristige Anlagestrategien vs. kurzfristige Volatilität</li>
+        </ul>
+        <p>Die Teilnehmer erhalten praktische Tools zur Risikobewertung und Portfolioanalyse sowie umfassende Informationen zu institutionellen Custody-Lösungen.</p>
+      `,
+      requirements: "Grundlegendes Verständnis von Anlageklassen und Portfoliomanagement.",
+      imageUrl: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3"
+    },
     {
       id: 2,
       title: "Bitcoin Full Node",
@@ -305,15 +367,15 @@ const Workshop = () => {
               <div className="inline-block mb-4 px-4 py-1 bg-[#FEF7CD] backdrop-blur-sm rounded-full border border-bitcoin/20">
                 <span className="text-sm uppercase tracking-wider font-medium text-bitcoin">Workshops</span>
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800">Bitcoin Workshops</h1>
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800"> Workshops für jeden Geschmack</h1>
               <p className="text-xl text-gray-600 mb-8">
-                9. BIS 11. OKTOBER! - Technische Hochschule Ingolstadt
+                9. BIS 11. OKTOBER 2025
               </p>
               
               <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 mb-8 shadow-md border border-gray-100">
                 <p className="text-gray-600">
                   Vertiefen Sie Ihr Wissen in unseren praxisorientierten Workshops und erlangen Sie wertvolle 
-                  Kenntnisse und Fähigkeiten im Umgang mit Bitcoin und Blockchain-Technologie.
+                  Kenntnisse und Fähigkeiten im Umgang mit Bitcoin, der Blockchain-Technologie und ganz Allgemein über Finanzen.
                 </p>
               </div>
             </div>
@@ -322,7 +384,7 @@ const Workshop = () => {
               <TabsList className="grid w-full grid-cols-3 mb-8">
                 <TabsTrigger value="all">Alle Workshops</TabsTrigger>
                 <TabsTrigger value="beginner">Nach Datum</TabsTrigger>
-                <TabsTrigger value="advanced">Nach Schwierigkeit</TabsTrigger>
+                <TabsTrigger value="advanced">Nach Vorkenntnisniveau</TabsTrigger>
               </TabsList>
               <TabsContent value="all" className="mt-0">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
