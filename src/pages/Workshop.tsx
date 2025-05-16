@@ -48,9 +48,9 @@ const Workshop = () => {
         <p>In einer Zeit, in der digitale Assets zunehmend an Bedeutung gewinnen, bietet dieser Workshop tiefe Einblicke in die Funktionsweise von Bitcoin als Anlageform und praktische Strategien für die Integration in diversifizierte Portfolios.</p>
         <h3>Themen:</h3>
         <ul>
-          <li>Fundamentale Wertversprechen von Bitcoin im Vergleich zu traditionellen Anlageklassen</li>
-          <li>Portfolioallokation und Risikostrategien</li>
-          <li>Regulatorische Rahmenbedingungen für institutionelle Investoren</li>
+          <li><b>Dr. Sebastian Meier:</b> Fundamentale Wertversprechen von Bitcoin im Vergleich zu traditionellen Anlageklassen</li>
+          <li><b>Dr. Klaus Müller:</b> Portfolioallokation und Risikostrategien</li>
+          <li><b>Joe Martin:</b>Regulatorische Rahmenbedingungen für institutionelle Investoren</li>
           <li>Sichere Verwahrungslösungen für Family Offices</li>
           <li>Steuerliche Implikationen und Reporting-Anforderungen</li>
           <li>Langfristige Anlagestrategien vs. kurzfristige Volatilität</li>
