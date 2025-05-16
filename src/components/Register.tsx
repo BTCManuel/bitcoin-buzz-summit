@@ -51,17 +51,17 @@ const Register = () => {
       discountPercentage: 50
     },
     {
-      name: "Workshop: Family Office",
+      name: "Business Ticket",
       originalPrice: "121€",
       price: "95,59€",
       features: [
-        "Fundierte Einblicke in Bitcoin als 'digitales Gold'",
-        "Strategien zur Beimischung von Bitcoin",
-        "Zugang zu allen Vorträgen",
+        "Zugang an allen 3 Tagen",
+        "Inkl. Abendveranstaltung am Donnerstag",
+        "Zugang zu Vorträgen für Unternehmer, Banker, Family Offices",
       ],
-      buttonText: "Workshop Details",
+      buttonText: "Business Ticket registrieren",
       highlighted: false,
-      link: "/workshop",
+      link: "https://vr-bayernmitte.genolive.de/index.php?page=event-code&code=bitcoin25",
       isWorkshop: true,
       discountPercentage: 21
     }
@@ -81,7 +81,7 @@ const Register = () => {
           
           <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-8">
             <p className="text-xl text-gray-300">
-              Sichern Sie sich Ihren Platz beim 3. Bitcoin Forum 2025 und werden Sie Teil der Diskussion über die Zukunft von Bitcoin.
+              Sichern Sie sich Ihren Platz beim Bitcoin Forum 2025 und entscheiden Sie selbst wie Bitcoin Ihnen in Zukunft helfen kann.
             </p>
             
             <a href="https://vr-bayernmitte.genolive.de/index.php?page=event-code&code=bitcoin25" 
