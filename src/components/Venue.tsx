@@ -42,7 +42,6 @@ const Venue = () => {
                     <h3 className="text-2xl font-bold">Übersicht der Veranstaltungsorte</h3>
                   </div>
                 </div>
-
                 <div className="p-8 flex flex-wrap gap-4 justify-center md:justify-start">
                   <Button className="bg-bitcoin hover:bg-bitcoin-dark text-white rounded-full shadow-md shadow-bitcoin/20 transition-all duration-300 hover:scale-105">
                     <Navigation className="mr-2 h-5 w-5" />
@@ -67,24 +66,27 @@ const Venue = () => {
                     </a>
                   </Button>
 
+                <div className="ml-auto">
                   <CollapsibleTrigger asChild>
                     <Button 
                       variant="outline" 
-                      className="rounded-full hover:bg-[#D3E4FD]/20 border-bitcoin/20"
+                      className="bg-orange-500 hover:bg-orange-600 text-white rounded-full"
                     >
                       {isOpen ? (
                         <>
                           <span className="mr-2">Weniger anzeigen</span>
-                          <ChevronUp className="h-5 w-5 text-bitcoin" />
+                          <ChevronUp className="h-5 w-5" />
                         </>
                       ) : (
                         <>
                           <span className="mr-2">Mehr anzeigen</span>
-                          <ChevronDown className="h-5 w-5 text-bitcoin" />
+                          <ChevronDown className="h-5 w-5" />
                         </>
                       )}
                     </Button>
                   </CollapsibleTrigger>
+                </div>
+
                 </div>
               </CardContent>
             </Card>
