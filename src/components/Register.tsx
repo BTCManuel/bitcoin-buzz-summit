@@ -66,7 +66,6 @@ const Register = () => {
       buttonText: "Business Ticket registrieren",
       highlighted: false,
       link: "https://vr-bayernmitte.genolive.de/index.php?page=event-code&code=bitcoin25",
-      isWorkshop: true,
       discountPercentage: 21
     }
   ];
