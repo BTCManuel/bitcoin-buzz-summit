@@ -16,6 +16,8 @@ import { usePopup } from "@/pages/PopupContext";
 const Workshop = () => {
   const { openPopup } = usePopup();
   const [selectedWorkshop, setSelectedWorkshop] = useState<number | null>(null);
+  const [localPopupOpen, setLocalPopupOpen] = useState(false);
+
 
   const workshopIcons = [
     <img src="/images/workshop/bitcoin-card-credit-card.svg" alt="Bitcoin Charts" className="h-10 w-10" />,
@@ -701,9 +703,20 @@ const Workshop = () => {
                       </div>
                     </div>
 
-                    <Button className="w-full bg-bitcoin hover:bg-bitcoin/80 text-white flex items-center justify-center gap-2 mt-6">
+                    <Button
+                      className="w-full bg-bitcoin hover:bg-bitcoin/80 text-white flex items-center justify-center gap-2 mt-6"
+                      onClick={() => {
+                        handleCloseDialog();
+                        setTimeout(() => {
+                          openPopup({
+                            redirectUrl: "https://vr-bayernmitte.genolive.de/index.php?page=event-code&code=bitcoin25"
+                          });
+                        }, 250);
+                      }}
+                    >
                       <Ticket className="h-4 w-4" /> Sichere dein Ticket
                     </Button>
+
                   </div>
                 </div>
               </div>
