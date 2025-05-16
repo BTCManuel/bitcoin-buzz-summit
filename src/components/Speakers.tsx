@@ -248,7 +248,7 @@ const Speakers = () => {
       role: "",
       company: "",
       image: "/images/speakers/Jannis_Langer.jpg",
-      bio: "ist Unternehmer aus Karlsruhe und Gründer von solomining.de, wo er Bitaxe Home- und Solominer in Deutschland produziert und vertreibt. Als Teil der Bitcoin-Open-Source-Community überführt er die Open-Source-Entwicklungen in eine hochqualitative Serienfertigung „Made in Germany“, um so die Dezentralisierung der Mining-Infrastruktur voranzutreiben.",
+      bio: "ist Unternehmer aus Karlsruhe und Gründer von solomining.de, wo er Bitaxe Home- und Solominer in Deutschland produziert und vertreibt. Als Teil der Bitcoin-Open-Source-Community überführt er die Open-Source-Entwicklungen in eine hochqualitative Serienfertigung „Made in Germany“, um so die Dezentralisierung der Mining-Infrastruktur voranzutreiben.<br /><a href='https://linktr.ee/JoeMartinBTC' target='_blank' rel='noopener noreferrer'>https://linktr.ee/JoeMartinBTC</a>",
       bgColor: "bg-[#D3E4FD]/50",
       bgSolidColor: "bg-[#D3E4FD]"
     },
