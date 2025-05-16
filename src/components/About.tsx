@@ -11,7 +11,10 @@ const About = () => {
       title: "Bitcoin Block",
       description: "Schon ab dem 4. Oktober beginnt die Bitcoin Woche in Ingolstadt. Im Westpark Shoppingcenter öffent der Bitcoin Block seine Tore. Informationen über Bitcoin für interessierte Laien und Bitcoiner.",
       bgColor: "bg-transparent",
-      borderColor: "border-[#FDE1D3]"
+      borderColor: "border-[#FDE1D3]",
+      link: "/bitcoin-block",
+      buttonText: "Mehr erfahren",
+      external: false
     },
     {
       icon: <img src="/images/workshop/light-bulb-idea.svg" alt="BitcoinForum Bitcoin Mining" className="h-12 w-12 mb-4" loading="lazy" />,
@@ -19,14 +22,17 @@ const About = () => {
       description: "Bitcoin kann Stromnetze stabilisieren und wird überwiegend mit grüner Energie betrieben. Bitcoin Mining kann 'verschwendeten' grünen Strom (Solar/Wind/Bio) wirtschaftlicher machen.",
       bgColor: "bg-transparent",
       borderColor: "border-[#CCE8FF]",
-      link: "/workshop"
+      link: "/workshop",
+      buttonText: "Workshop ansehen",
+      external: false
     },
     {
       icon: <img src="/images/workshop/bitcoin-help-support.svg" alt="BitcoinForum BIP25" className="h-12 w-12 mb-4" loading="lazy" />,
       title: "BIP25 Members",
       description: "Das ist das engagiertes Team hinter der Organisation und Umsetzung des 3. BitcoinForums. Sie gestalten ein einzigartiges Event, das Wissen, Austausch und Inspiration vereint.",
       bgColor: "bg-transparent",
-      borderColor: "border-[#F2FCE2]"
+      borderColor: "border-[#F2FCE2]",
+      buttonText: "Mehr über das Team"
     },
     {
       icon: <img src="/images/workshop/seo-illustrations-2.svg" alt="BitcoinForum Partner" className="h-12 w-12 mb-4" loading="lazy" />,
@@ -34,14 +40,17 @@ const About = () => {
       description: "Wenn auch Sie sich bzw. Ihr Unternehmen beim 3. BitcoinForum präsentieren, können Sie hier die Ihr Sponsoring buchen.",
       bgColor: "bg-transparent",
       borderColor: "border-[#D3E4FD]",
-      link: "https://www.vr-bayernmitte.de/privatkunden/sparen-geldanlage/bitcoin/3--bitcoinforum/messepartner-werden.html"
+      link: "https://www.vr-bayernmitte.de/privatkunden/sparen-geldanlage/bitcoin/3--bitcoinforum/messepartner-werden.html",
+      buttonText: "Jetzt Partner werden",
+      external: true
     },
     {
-     icon: <img src="/images/workshop/robots.svg" alt="BitcoinForum Workshops" className="h-12 w-12 mb-4" loading="lazy" />,
+      icon: <img src="/images/workshop/robots.svg" alt="BitcoinForum Workshops" className="h-12 w-12 mb-4" loading="lazy" />,
       title: "Workshops",
       description: "Wir bereiten derzeit eine Vielzahl von Workshops für Sie vor. Anfänger und technikinteressierte Besucher finden hier ab Juli eine spannende Auswahl. WICHTIG: Jetzt schon Tickets bestellen zum rabattierten Preis, denn Workshops können nur auf Basis bestehender Tickets bestellt werden!",
       bgColor: "bg-transparent",
-      borderColor: "border-[#FEF7CD]"
+      borderColor: "border-[#FEF7CD]",
+      buttonText: "Tickets sichern"
     }
   ];
 
@@ -73,20 +82,36 @@ const About = () => {
                 <h3 className="text-2xl font-bold mb-3 text-gray-800">{feature.title}</h3>
                 <p className="text-gray-600 mb-6 flex-grow">{feature.description}</p>
                 {feature.link ? (
-                  <Link to={feature.link} className="mt-auto">
-                    <Button 
-                      variant="outline" 
-                      className="w-full border-bitcoin text-bitcoin hover:bg-bitcoin hover:text-white transition-all duration-300"
+                  feature.external ? (
+                    <a 
+                      href={feature.link} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="mt-auto"
                     >
-                      Weitere Infos folgen
-                    </Button>
-                  </Link>
+                      <Button 
+                        variant="outline" 
+                        className="w-full border-bitcoin text-bitcoin hover:bg-bitcoin hover:text-white transition-all duration-300"
+                      >
+                        {feature.buttonText || 'Weitere Infos folgen'}
+                      </Button>
+                    </a>
+                  ) : (
+                    <Link to={feature.link} className="mt-auto">
+                      <Button 
+                        variant="outline" 
+                        className="w-full border-bitcoin text-bitcoin hover:bg-bitcoin hover:text-white transition-all duration-300"
+                      >
+                        {feature.buttonText || 'Weitere Infos folgen'}
+                      </Button>
+                    </Link>
+                  )
                 ) : (
                   <Button 
                     variant="outline" 
                     className="w-full border-bitcoin text-bitcoin hover:bg-bitcoin hover:text-white transition-all duration-300 mt-auto"
                   >
-                    Weitere Infos folgen
+                    {feature.buttonText || 'Weitere Infos folgen'}
                   </Button>
                 )}
               </CardContent>
