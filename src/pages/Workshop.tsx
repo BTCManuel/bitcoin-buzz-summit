@@ -10,8 +10,11 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { usePopup } from "@/pages/PopupContext";
+
 
 const Workshop = () => {
+  const { openPopup } = usePopup();
   const [selectedWorkshop, setSelectedWorkshop] = useState<number | null>(null);
 
   const workshopIcons = [
@@ -432,11 +435,19 @@ const Workshop = () => {
                 </div>
                 
                 <div className="flex justify-center mt-12">
-                  <Button 
-                    className="bg-bitcoin hover:bg-bitcoin/80 text-white shadow-lg shadow-bitcoin/20 px-10 py-6 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105 flex items-center gap-2"
-                  >
-                    <Ticket className="h-5 w-5" /> Sichere dein Ticket
-                  </Button>
+                <Button
+                  onClick={() =>
+                    openPopup({
+                      redirectUrl: "https://vr-bayernmitte.genolive.de/index.php?page=event-code&code=bitcoin25"
+                    })
+                  }
+                  className="w-full bg-bitcoin hover:bg-bitcoin/80 text-white flex items-center justify-center gap-2 mt-6"
+                >
+                  <Ticket className="h-4 w-4" /> Sichere dein Ticket
+                </Button>
+
+
+
                 </div>
               </TabsContent>
               <TabsContent value="beginner" className="mt-0">
