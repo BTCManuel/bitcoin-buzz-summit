@@ -24,16 +24,17 @@ const About = () => {
     {
       icon: <Users className="h-12 w-12 text-bitcoin mb-4" />,
       title: "BIP25 Members",
-      description: "",
+      description: "Das ist das engagiertes Team hinter der Organisation und Umsetzung des 3. BitcoinForums. Sie gestalten ein einzigartiges Event, das Wissen, Austausch und Inspiration vereint.",
       bgColor: "bg-transparent",
       borderColor: "border-[#F2FCE2]"
     },
     {
-      icon: <Globe className="h-12 w-12 text-bitcoin mb-4" />,
-      title: "Messepartner werden",
-      description: "",
+      icon: <img src="/images/workshop/seo-illustrations-2.svg" alt="BitcoinForum Partner" className="h-12 w-12 mb-4" loading="lazy" />,
+      title: "Partner werden",
+      description: "Wenn auch Sie sich bzw. Ihr Unternehmen beim 3. BitcoinForum präsentieren, können Sie hier die Ihr Sponsoring buchen.",
       bgColor: "bg-transparent",
       borderColor: "border-[#D3E4FD]"
+      link: "https://www.vr-bayernmitte.de/privatkunden/sparen-geldanlage/bitcoin/3--bitcoinforum/messepartner-werden.html"
     },
     {
       icon: <Target className="h-12 w-12 text-bitcoin mb-4" />,
