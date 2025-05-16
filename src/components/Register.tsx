@@ -122,7 +122,7 @@ const Register = () => {
                   <h3 className="text-2xl font-bold mb-1 text-white">{tier.name}</h3>
                   
                   <div className="flex items-baseline gap-2 mb-1">
-                    <span className="text-gray-400 line-through text-lg">{tier.originalPrice}</span>
+                    <span className="text-red-500 line-through text-lg md:text-xl font-semibold">{tier.originalPrice}</span>
                     <div className="text-4xl font-bold text-bitcoin">{tier.price}</div>
                   </div>
                   
