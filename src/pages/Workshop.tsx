@@ -38,9 +38,7 @@ const Workshop = () => {
       date: "9. Oktober",
       time: "09:00 - 12:30",
       location: "Raum A1",
-      instructor: "Dr. Michael Weber",
-      instructor: "Dr. Michael Weber1",
-      instructor: "Dr. Michael Weber2",
+      instructors: ["Dr. Michael Weber", "Dr. Michael Weber1", "Dr. Michael Weber2"],
       difficulty: "Fortgeschritten",
       seats: 25,
       fullDescription: `
