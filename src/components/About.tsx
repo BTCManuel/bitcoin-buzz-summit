@@ -9,7 +9,7 @@ const About = () => {
     {
       icon: <img src="/images/speakers/Bitcoin_Block.png" alt="Bitcoin Block" className="h-12 w-12 mb-4" loading="lazy" />,
       title: "Bitcoin Block",
-      description: "Schon ab dem 4. Oktober beginnt die Bitcoin Woche in Ingolstadt. Im Westpark Shoppingcenter öffent der Bitcoin Block seine Tore. Informationen über Bitcoin für jeden.",
+      description: "Schon ab dem 4. Oktober beginnt die Bitcoin Woche in Ingolstadt. Im Westpark Shoppingcenter öffent der Bitcoin Block seine Tore. Informationen über Bitcoin für interessierte Laien und Bitcoiner.",
       bgColor: "bg-transparent",
       borderColor: "border-[#FDE1D3]"
     },
@@ -55,7 +55,7 @@ const About = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-8 text-gray-800">Das 3. Bitcoin Forum</h2>
           <p className="text-xl text-gray-600">
             Zum dritten Mal lädt die VR-Bank Bayern Mitte in diesem Jahr zum Bitcoin Forum ein. Erfahren Sie mehr über die 
-            Chancen und Risiken von Bitcoin direkt aus ersten Hand von Duzenden Experten. Neben reinen Vorträgen werden auch dieses Jahr viele Workshops und spezielle Seminare angeboten. 
+            Chancen und Risiken von Bitcoin direkt aus erster Hand von vielen Bitcoin- und Finanzexperten. Neben reinen Vorträgen werden auch dieses Jahr viele Workshops und spezielle Seminare angeboten. 
             Es ist für jeden etwas dabei - egal ob Neuling oder technikbegeisterter Bitcoin-Enthusiast. Jeder ist willkommen.
           </p>
         </div>
@@ -78,7 +78,7 @@ const About = () => {
                       variant="outline" 
                       className="w-full border-bitcoin text-bitcoin hover:bg-bitcoin hover:text-white transition-all duration-300"
                     >
-                      Mehr erfahren
+                      Weitere Infos folgen
                     </Button>
                   </Link>
                 ) : (
@@ -86,7 +86,7 @@ const About = () => {
                     variant="outline" 
                     className="w-full border-bitcoin text-bitcoin hover:bg-bitcoin hover:text-white transition-all duration-300 mt-auto"
                   >
-                    Mehr erfahren
+                    Weitere Infos folgen
                   </Button>
                 )}
               </CardContent>
@@ -98,7 +98,7 @@ const About = () => {
           <Button 
             className="bg-bitcoin hover:bg-bitcoin/80 text-white shadow-lg shadow-bitcoin/20 px-10 py-6 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105 flex items-center gap-2"
           >
-            <Ticket className="h-5 w-5" /> Sichere dein Ticket
+            <Ticket className="h-5 w-5" /> Sichere jetzt dein Ticket
           </Button>
         </div>
       </div>
