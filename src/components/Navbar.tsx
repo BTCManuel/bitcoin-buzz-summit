@@ -54,7 +54,7 @@ const Navbar = () => {
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
             {isOpen && (
-              <div className="fixed inset-0 top-20 bg-white/95 z-40 animate-fade-in">
+              <div className="fixed left-0 right-0 top-20 bottom-0 bg-white/95 z-40 animate-fade-in">
                 <div className="container mx-auto px-4 py-12 flex flex-col space-y-8">
                   <Link to="/#about" onClick={toggleMenu} className="text-xl font-medium px-4 py-3 text-gray-800 hover:text-bitcoin transition-colors">Über das Forum</Link>
                   <Link to="/#speakers" onClick={toggleMenu} className="text-xl font-medium px-4 py-3 text-gray-800 hover:text-bitcoin transition-colors">Speakers</Link>
