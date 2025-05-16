@@ -3,6 +3,8 @@ import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Check, Star, TicketPercent } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { usePopup } from "@/pages/PopupContext";
+
 
 interface TicketTier {
   name: string;
@@ -17,6 +19,8 @@ interface TicketTier {
 }
 
 const Register = () => {
+  const { openPopup } = usePopup();
+
   const ticketTiers: TicketTier[] = [
     {
       name: "Forum-Ticket",
@@ -158,10 +162,12 @@ const Register = () => {
                       {tier.buttonText}
                     </Link>
                   ) : (
-                    <a
-                      href={tier.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                    <button
+                      onClick={() =>
+                        openPopup({
+                          redirectUrl: tier.link
+                        })
+                      }
                       className={`block text-center w-full rounded-full py-3 transition-all duration-300 font-medium ${
                         tier.highlighted 
                           ? 'bg-bitcoin hover:bg-bitcoin-dark text-white shadow-lg shadow-bitcoin/20' 
@@ -169,7 +175,8 @@ const Register = () => {
                       }`}
                     >
                       {tier.buttonText}
-                    </a>
+                    </button>
+
                   )}
                 </div>
               </CardContent>
