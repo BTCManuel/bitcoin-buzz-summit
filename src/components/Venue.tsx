@@ -26,26 +26,50 @@ const Venue = () => {
         
         {/* Collapsible section for maps and venue details */}
         <Collapsible open={isOpen} onOpenChange={setIsOpen}>
-          <div className="flex justify-end mb-4">
-            <CollapsibleTrigger asChild>
-              <Button 
-                variant="outline" 
-                className="rounded-full hover:bg-[#D3E4FD]/20 border-bitcoin/20"
-              >
-                {isOpen ? (
-                  <>
-                    <span className="mr-2">Weniger anzeigen</span>
-                    <ChevronUp className="h-5 w-5 text-bitcoin" />
-                  </>
-                ) : (
-                  <>
-                    <span className="mr-2">Mehr anzeigen</span>
-                    <ChevronDown className="h-5 w-5 text-bitcoin" />
-                  </>
-                )}
-              </Button>
-            </CollapsibleTrigger>
-          </div>
+        <div className="p-8 flex flex-wrap gap-4 justify-center md:justify-start">
+  <Button className="bg-bitcoin hover:bg-bitcoin-dark text-white rounded-full shadow-md shadow-bitcoin/20 transition-all duration-300 hover:scale-105">
+    <Navigation className="mr-2 h-5 w-5" />
+    <a
+      href="https://www.google.com/maps/place/SATURN-Arena/..."
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-white"
+    >
+      Anfahrt
+    </a>
+  </Button>
+  
+  <Button variant="outline" className="rounded-full hover:bg-[#D3E4FD]/20">
+    <MapPin className="mr-2 h-5 w-5 text-bitcoin" />
+    <a
+      href="https://www.google.com/maps/search/Parkplätze+Saturn+Arena+Ingolstadt"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Parkplätze
+    </a>
+  </Button>
+
+  <CollapsibleTrigger asChild>
+    <Button 
+      variant="outline" 
+      className="rounded-full hover:bg-[#D3E4FD]/20 border-bitcoin/20"
+    >
+      {isOpen ? (
+        <>
+          <span className="mr-2">Weniger anzeigen</span>
+          <ChevronUp className="h-5 w-5 text-bitcoin" />
+        </>
+      ) : (
+        <>
+          <span className="mr-2">Mehr anzeigen</span>
+          <ChevronDown className="h-5 w-5 text-bitcoin" />
+        </>
+      )}
+    </Button>
+  </CollapsibleTrigger>
+</div>
+
           
           <CollapsibleContent>
             {/* Large full-width event locations map - adjusted aspect ratio for better visibility */}
