@@ -121,10 +121,11 @@ const Register = () => {
                   )}
                   <h3 className="text-2xl font-bold mb-1 text-white">{tier.name}</h3>
                   
-                  <div className="flex items-baseline gap-2 mb-1">
-                    <span className="text-red-500 line-through text-lg md:text-xl font-semibold">{tier.originalPrice}</span>
-                    <div className="text-4xl font-bold text-bitcoin">{tier.price}</div>
+                  <div className="mb-3">
+                    <div className="text-4xl font-bold text-red-500 line-through">{tier.originalPrice}</div>
+                    <div className="text-4xl font-bold text-bitcoin mt-1">{tier.price}</div>
                   </div>
+
                   
                   {tier.discountPercentage && (
                     <div className="inline-flex items-center bg-bitcoin/20 px-2 py-1 rounded text-sm text-white mb-2">
