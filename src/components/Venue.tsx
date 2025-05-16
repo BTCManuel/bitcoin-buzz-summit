@@ -69,9 +69,7 @@ const Venue = () => {
                 <div className="ml-auto">
                   <CollapsibleTrigger asChild>
                     <Button 
-                      variant="outline" 
-                      className="bg-orange-500 hover:bg-orange-600 text-white rounded-full"
-                    >
+                      className="bg-bitcoin hover:bg-bitcoin-dark text-white rounded-full shadow-md shadow-bitcoin/20 transition-all duration-300 hover:scale-105"                    >
                       {isOpen ? (
                         <>
                           <span className="mr-2">Weniger anzeigen</span>
