@@ -26,6 +26,14 @@ const About = () => {
       buttonText: "Workshop ansehen",
       external: false
     },
+     {
+      icon: <img src="/images/workshop/le_femmes.png" alt="Les Femmes Orange" className="h-12 w-12 mb-4" loading="lazy" />,
+      title: "Les Femmes Orange",
+      description: "Les Femmes Orange hat das Ziel, eine lebendige und unterstützende Gemeinschaft für Frauen weltweit aufzubauen – egal ob Einsteigerin oder Fortgeschrittene.",
+      bgColor: "bg-transparent",
+      borderColor: "border-[#F2FCE2]",
+      buttonText: "Platz reservieren"
+    },
     {
       icon: <img src="/images/workshop/bitcoin-help-support.svg" alt="BitcoinForum BIP25" className="h-12 w-12 mb-4" loading="lazy" />,
       title: "BIP25 Members",
