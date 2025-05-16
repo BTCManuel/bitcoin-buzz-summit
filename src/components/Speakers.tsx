@@ -46,11 +46,11 @@ const Speakers = () => {
       bgSolidColor: "bg-[#FDE1D3]"
     },
     {
-      name: "Lea Kelwin",
-      role: "Content Creatorin",
-      company: "",
-      image: "/images/speakers/Lea_Kelwin.jpg",
-      bio: "arbeitet als Hebamme und engagiert sich leidenschaftlich für Frauengesundheit, Selbstbestimmung und soziale Gerechtigkeit. Energie ist dabei der Grundbaustein – ohne sie gibt es weder Neuanfänge noch körperliche oder geistige Fruchtbarkeit. Bitcoin wird durch Energie gestützt und kann als Werkzeug genutzt werden, um den Weg zu mehr Selbstbestimmung und nachhaltiger Gesundheit zu begleiten. Letztlich liegt es bei dir selbst, innovative Technologie für deine ganz eigenen Lösungswege einzusetzen. Lea ist Mitgründerin der Non-Profit-Initiative Bitcoin Block.",
+      name: "Joe Martin",
+      role: "Co-Founder_test_test.83..",
+      company: "Bitcoin Forum_test",
+      image: "/images/speakers/Joe_Martin.jpg",
+      bio: "ist als Journalist, Keynote-Speaker und Buchautor mit über 30 Jahren Berufserfahrung in der Welt der Technologie einer der wichtigsten Bitcoin-Erklärer Deutschlands. Er hat auch die Volksbank Raiffeisenbank Bayern Mitte bei der Einführung des Angebots von Bitcoin und Bitcoin-Lösungen begleitet und unterstützt. Joe Martin ist Co-Founder und Hauptansprechpartner für alle Speaker beim 3. BitcoinForum. Kontaktdaten: https://linktr.ee/JoeMartinBTC",
       bgColor: "bg-[#FEF7CD]/50",
       bgSolidColor: "bg-[#FEF7CD]"
     },
