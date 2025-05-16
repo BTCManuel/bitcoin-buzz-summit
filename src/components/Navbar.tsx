@@ -86,11 +86,11 @@ const Navbar = () => {
                 Über das Forum
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-bitcoin group-hover:w-full transition-all duration-300"></span>
               </a>
-              <a href="#speakers" className="text-sm font-medium text-gray-800 hover:text-bitcoin transition-colors relative group">
+              <a href="/#speakers" className="text-sm font-medium text-gray-800 hover:text-bitcoin transition-colors relative group">
                 Referenten
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-bitcoin group-hover:w-full transition-all duration-300"></span>
               </a>
-              <a href="#schedule" className="text-sm font-medium text-gray-800 hover:text-bitcoin transition-colors relative group">
+              <a href="/#schedule" className="text-sm font-medium text-gray-800 hover:text-bitcoin transition-colors relative group">
                 Agenda
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-bitcoin group-hover:w-full transition-all duration-300"></span>
               </a>
