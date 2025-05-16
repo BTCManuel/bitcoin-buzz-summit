@@ -611,7 +611,7 @@ const Workshop = () => {
                 </DialogTitle>
                 <p className="text-bitcoin font-medium">{getSelectedWorkshop()?.subtitle}</p>
               </DialogHeader>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 py-6">
                 <div className="md:col-span-2 space-y-6">
                   <div className="rounded-lg overflow-hidden h-[200px] md:h-[250px] relative">
@@ -627,7 +627,7 @@ const Workshop = () => {
                       </div>
                     </div>
                   </div>
-                  
+
                   <div>
                     <h3 className="text-lg font-semibold mb-3">Beschreibung</h3>
                     <div 
@@ -635,17 +635,17 @@ const Workshop = () => {
                       dangerouslySetInnerHTML={{ __html: getSelectedWorkshop()?.fullDescription || "" }}
                     />
                   </div>
-                  
+
                   <div>
                     <h3 className="text-lg font-semibold mb-3">Voraussetzungen</h3>
                     <p className="text-gray-700">{getSelectedWorkshop()?.requirements}</p>
                   </div>
                 </div>
-                
+
                 <div className="space-y-6">
                   <div className="bg-gray-50 rounded-lg p-5 border border-gray-100">
                     <h3 className="font-medium mb-4 pb-2 border-b border-gray-200">Informationen</h3>
-                    
+
                     <div className="space-y-4">
                       <div className="flex items-center gap-3">
                         <CalendarDays className="h-5 w-5 text-bitcoin flex-shrink-0" />
@@ -654,7 +654,7 @@ const Workshop = () => {
                           <p className="text-sm text-gray-600">{getSelectedWorkshop()?.date}</p>
                         </div>
                       </div>
-                      
+
                       <div className="flex items-center gap-3">
                         <Clock className="h-5 w-5 text-bitcoin flex-shrink-0" />
                         <div>
@@ -662,7 +662,7 @@ const Workshop = () => {
                           <p className="text-sm text-gray-600">{getSelectedWorkshop()?.time}</p>
                         </div>
                       </div>
-                      
+
                       <div className="flex items-center gap-3">
                         <MapPin className="h-5 w-5 text-bitcoin flex-shrink-0" />
                         <div>
@@ -670,25 +670,26 @@ const Workshop = () => {
                           <p className="text-sm text-gray-600">{getSelectedWorkshop()?.location}</p>
                         </div>
                       </div>
-                      
-<div className="flex items-start gap-3">
-  <User className="h-5 w-5 text-bitcoin flex-shrink-0 mt-1" />
-  <div>
-    <p className="text-sm font-medium">
-      {getSelectedWorkshop()?.instructors?.length > 1 ? 'Dozenten' : 'Dozent'}
-    </p>
-    <ul className="text-sm text-gray-600 space-y-1 list-disc list-inside mt-1">
-      {getSelectedWorkshop()?.instructors?.map((name, index) => (
-        <li key={index}>{name}</li>
-      ))}
-    </ul>
-  </div>
-</div>
 
-                  
-                  <Button className="w-full bg-bitcoin hover:bg-bitcoin/80 text-white flex items-center justify-center gap-2">
-                    <Ticket className="h-4 w-4" /> Sichere dein Ticket
-                  </Button>
+                      <div className="flex items-start gap-3">
+                        <User className="h-5 w-5 text-bitcoin flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="text-sm font-medium">
+                            {getSelectedWorkshop()?.instructors?.length > 1 ? 'Dozenten' : 'Dozent'}
+                          </p>
+                          <ul className="text-sm text-gray-600 space-y-1 list-disc list-inside mt-1">
+                            {getSelectedWorkshop()?.instructors?.map((name, index) => (
+                              <li key={index}>{name}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <Button className="w-full bg-bitcoin hover:bg-bitcoin/80 text-white flex items-center justify-center gap-2 mt-6">
+                      <Ticket className="h-4 w-4" /> Sichere dein Ticket
+                    </Button>
+                  </div>
                 </div>
               </div>
             </>
