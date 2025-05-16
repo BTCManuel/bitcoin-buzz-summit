@@ -21,7 +21,7 @@ const Register = () => {
     {
       name: "Forum-Ticket",
       originalPrice: "21€",
-      price: "10€ pro Tag",
+      price: "16,59€ pro Tag",
       features: [
         "Voller Zugang zur Konferenz",
         "Zugang zu allen Vorträgen & Diskussionsrunden",
@@ -30,7 +30,7 @@ const Register = () => {
       buttonText: "Jetzt registrieren",
       highlighted: false,
       link: "https://vr-bayernmitte.genolive.de/index.php?page=event-code&code=bitcoin25",
-      discountPercentage: 52
+      discountPercentage: 21
     },
     {
       name: "VIP-Ticket",
@@ -53,7 +53,7 @@ const Register = () => {
     {
       name: "Workshop: Family Office",
       originalPrice: "121€",
-      price: "95€",
+      price: "95,59€",
       features: [
         "Fundierte Einblicke in Bitcoin als 'digitales Gold'",
         "Strategien zur Beimischung von Bitcoin",
