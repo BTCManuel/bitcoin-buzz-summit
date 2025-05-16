@@ -73,10 +73,29 @@ const Schedule = () => {
             </div>
 
             {!showSchedule ? (
-              <div className="text-center text-gray-600 text-lg py-12">
-                <p> Wir arbeiten an dem besten Programm aller Zeiten. Duzende von Experten werden Vorträge und Workshops, Seminare und Expertengespräche anbieten. 
-                  Es werden wertvolle Informationen für jedermann, ganz nach dem persönlichen Kenntnisstand und Interesse dabei sein. Das Programm werden wir im Sommer veröffentlichen.</p>
+              <div className="flex flex-col md:flex-row items-center gap-8 py-12">
+                {/* Video-Box */}
+                <div className="w-full md:w-1/2">
+                  <div className="aspect-video rounded-xl overflow-hidden shadow-lg">
+                    <iframe
+                      src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID?autoplay=1&mute=1&loop=1&playlist=YOUTUBE_VIDEO_ID"
+                      title="Bitcoin Forum Preview"
+                      allow="autoplay; loop"
+                      allowFullScreen
+                      className="w-full h-full"
+                    ></iframe>
+                  </div>
+                </div>
+
+                {/* Text-Box */}
+                <div className="w-full md:w-1/2 text-gray-600 text-lg">
+                  <p>
+                    Wir arbeiten an dem besten Programm aller Zeiten. Duzende von Experten werden Vorträge und Workshops, Seminare und Expertengespräche anbieten. 
+                    Es werden wertvolle Informationen für jedermann, ganz nach dem persönlichen Kenntnisstand und Interesse dabei sein. Das Programm werden wir im Sommer veröffentlichen.
+                  </p>
+                </div>
               </div>
+
             ) : (
               <div className="overflow-x-auto">
                 <Table>
