@@ -37,9 +37,9 @@ const About = () => {
       link: "https://www.vr-bayernmitte.de/privatkunden/sparen-geldanlage/bitcoin/3--bitcoinforum/messepartner-werden.html"
     },
     {
-      icon: <Target className="h-12 w-12 text-bitcoin mb-4" />,
+     icon: <img src="/images/workshop/robots.svg" alt="BitcoinForum Workshops" className="h-12 w-12 mb-4" loading="lazy" />,
       title: "Workshops",
-      description: "",
+      description: "Wir bereiten derzeit eine Vielzahl von Workshops für Sie vor. Anfänger und technikinteressierte Besucher finden hier ab Juli eine spannende Auswahl. WICHTIG: Jetzt schon Tickets bestellen zum rabattierten Preis, denn Workshops können nur auf Basis bestehender Tickets bestellt werden!",
       bgColor: "bg-transparent",
       borderColor: "border-[#FEF7CD]"
     }
