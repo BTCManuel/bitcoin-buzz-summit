@@ -28,7 +28,38 @@ const Workshop = () => {
 
   const workshops = [
     {
-      id: 11,
+      id: 1,
+      title: "Bitcoin als Wertanlage",
+      subtitle: "für Family Offices",
+      description: "13:00 - 15:30 Uhr Experten für Family Office Belange <br>16:00 - 18:30 Uhr Finantwirtschaftliche Aspekte <br> 19:30 Abendprogram mit 'Mr.Börse vor Acht' ",
+      icon: workshopIcons[0],
+      bgColor: "bg-[#FEF7CD]",
+      borderColor: "border-[#FDE1D3]",
+      date: "9. Oktober",
+      time: "09:00 - 12:30",
+      location: "Raum A1",
+      instructor: "Dr. Michael Weber",
+      difficulty: "Fortgeschritten",
+      seats: 25,
+      fullDescription: `
+        <p>Dieser umfassende Workshop richtet sich speziell an Family Offices, Vermögensverwalter und professionelle Anleger, die Bitcoin als langfristige Wertanlage in Betracht ziehen.</p>
+        <p>In einer Zeit, in der digitale Assets zunehmend an Bedeutung gewinnen, bietet dieser Workshop tiefe Einblicke in die Funktionsweise von Bitcoin als Anlageform und praktische Strategien für die Integration in diversifizierte Portfolios.</p>
+        <h3>Themen:</h3>
+        <ul>
+          <li>Fundamentale Wertversprechen von Bitcoin im Vergleich zu traditionellen Anlageklassen</li>
+          <li>Portfolioallokation und Risikostrategien</li>
+          <li>Regulatorische Rahmenbedingungen für institutionelle Investoren</li>
+          <li>Sichere Verwahrungslösungen für Family Offices</li>
+          <li>Steuerliche Implikationen und Reporting-Anforderungen</li>
+          <li>Langfristige Anlagestrategien vs. kurzfristige Volatilität</li>
+        </ul>
+        <p>Die Teilnehmer erhalten praktische Tools zur Risikobewertung und Portfolioanalyse sowie umfassende Informationen zu institutionellen Custody-Lösungen.</p>
+      `,
+      requirements: "Grundlegendes Verständnis von Anlageklassen und Portfoliomanagement.",
+      imageUrl: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3"
+    },
+     {
+      id: 2,
       title: "Bitcoin als Wertanlage",
       subtitle: "für Family Offices",
       description: "In diesem Workshop lernen Sie, wie Bitcoin als langfristige Wertanlage für Family Offices funktionieren kann.",
@@ -59,38 +90,7 @@ const Workshop = () => {
       imageUrl: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3"
     },
      {
-      id: 12,
-      title: "Bitcoin als Wertanlage",
-      subtitle: "für Family Offices",
-      description: "In diesem Workshop lernen Sie, wie Bitcoin als langfristige Wertanlage für Family Offices funktionieren kann.",
-      icon: workshopIcons[0],
-      bgColor: "bg-[#FEF7CD]",
-      borderColor: "border-[#FDE1D3]",
-      date: "9. Oktober",
-      time: "09:00 - 12:30",
-      location: "Raum A1",
-      instructor: "Dr. Michael Weber",
-      difficulty: "Fortgeschritten",
-      seats: 25,
-      fullDescription: `
-        <p>Dieser umfassende Workshop richtet sich speziell an Family Offices, Vermögensverwalter und professionelle Anleger, die Bitcoin als langfristige Wertanlage in Betracht ziehen.</p>
-        <p>In einer Zeit, in der digitale Assets zunehmend an Bedeutung gewinnen, bietet dieser Workshop tiefe Einblicke in die Funktionsweise von Bitcoin als Anlageform und praktische Strategien für die Integration in diversifizierte Portfolios.</p>
-        <h3>Themen:</h3>
-        <ul>
-          <li>Fundamentale Wertversprechen von Bitcoin im Vergleich zu traditionellen Anlageklassen</li>
-          <li>Portfolioallokation und Risikostrategien</li>
-          <li>Regulatorische Rahmenbedingungen für institutionelle Investoren</li>
-          <li>Sichere Verwahrungslösungen für Family Offices</li>
-          <li>Steuerliche Implikationen und Reporting-Anforderungen</li>
-          <li>Langfristige Anlagestrategien vs. kurzfristige Volatilität</li>
-        </ul>
-        <p>Die Teilnehmer erhalten praktische Tools zur Risikobewertung und Portfolioanalyse sowie umfassende Informationen zu institutionellen Custody-Lösungen.</p>
-      `,
-      requirements: "Grundlegendes Verständnis von Anlageklassen und Portfoliomanagement.",
-      imageUrl: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3"
-    },
-     {
-      id: 13,
+      id: 3,
       title: "Bitcoin als Wertanlage",
       subtitle: "für Family Offices",
       description: "In diesem Workshop lernen Sie, wie Bitcoin als langfristige Wertanlage für Family Offices funktionieren kann.",
