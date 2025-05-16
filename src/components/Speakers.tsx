@@ -29,18 +29,18 @@ const Speakers = () => {
     },
     {
       name: "Marc Friedrich",
-      role: "/images/speakers/Bitcoin_Block.png",
-      company: "SEEDOR",
-      image: "/images/speakers/Chris_Seedor.jpg",
+      role: "FOTO NEEDED",
+      company: "FOTO NEEDED",
+      image: "/images/speakers/Bitcoin_Block.png",
       bio: "begann seine Karriere als Materialwissenschaftler und Fertigungsberater in Deutschland und China, bevor er seine größte Leidenschaft entdeckte: Bitcoin. Als Mitgründer und Geschäftsführer von seedor.io, bitsurance.io und satskeeper.com ist er eine zentrale Figur in der deutschen Bitcoin-Szene, insbesondere in den Bereichen Verwahrung, Versicherung und Vererbung von Bitcoin.",
       bgColor: "bg-[#D3E4FD]/50",
       bgSolidColor:"bg-[#D3E4FD]"
     },
     {
       name: "Roman Reher",
-      role: "/images/speakers/Bitcoin_Block.png",
-      company: "Blocktrainer",
-      image: "/images/speakers/der_Helper.jpg",
+      role: "FOTO NEEDED",
+      company: "FOTO NEEDED",
+      image: "/images/speakers/Bitcoin_Block.png",
       bio: "ist bekannt durch seine Infografiken und Erklärvideos, in denen er mit leicht verständlicher Sprache die Genialität von Bitcoin erklärt. Durch seine lockere Art und einfache Sprache gilt er für viele als erste Anlaufstelle, wenn es darum geht, einen Blick in den Bitcoin Kaninchenbau zu werfen.",
       bgColor: "bg-[#FDE1D3]/50",
       bgSolidColor: "bg-[#FDE1D3]"
