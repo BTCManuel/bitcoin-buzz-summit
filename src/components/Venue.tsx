@@ -5,9 +5,13 @@ import { Button } from '@/components/ui/button';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { BITCOIN_COLOR } from '@/lib/utils';
-import TicketButton from './TicketButton';
+import { usePopup } from "@/pages/PopupContext";
+import {Ticket } from 'lucide-react';
+
+
 
 const Venue = () => {
+  const { openPopup } = usePopup();
   const [isOpen, setIsOpen] = useState(false); 
 
   return (
@@ -270,7 +274,18 @@ const Venue = () => {
 
         {/* Ticket Button */}
         <div className="flex justify-center mt-16">
-          <TicketButton />
+  <Button
+    onClick={() =>
+      openPopup({
+        redirectUrl: "https://vr-bayernmitte.genolive.de/index.php?page=event-code&code=bitcoin25"
+      })
+    }
+    className="bg-bitcoin hover:bg-bitcoin/80 text-white shadow-lg shadow-bitcoin/20 px-10 py-6 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105 flex items-center gap-2"
+  >
+    <Ticket className="h-5 w-5" /> Sichere dein Ticket
+  </Button>
+
+
         </div>
       </div>
     </section>
