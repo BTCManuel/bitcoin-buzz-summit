@@ -89,7 +89,7 @@ const Register = () => {
                aria-label="Frühbucher Rabatt 21%-50%">
               <div className="relative group">
                 <img 
-                  src="/lovable-uploads/dcd31e67-f5a8-4f64-932c-282cbd946eb3.png" 
+                  src="/public/images/ticket/21% - 50%.png" 
                   alt="Frühbucher Rabatt 21%-50%" 
                   className="w-48 h-48 md:w-64 md:h-64 object-contain animate-pulse rounded-full" 
                   style={{
