@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Workshop from "./pages/Workshop";
 import ScrollToTop from "./pages/ScrollToTop";
+import GlobalPopup from "@/components/GlobalPopup"; // 👈 falls du das hast
 import { PopupProvider } from "@/pages/PopupContext"; // 👈 DAS IST DER WICHTIGE TEIL
 
 const queryClient = new QueryClient();
@@ -18,6 +19,7 @@ const App = () => (
       <Sonner />
       <PopupProvider> {/* ✅ Hier einfügen */}
         <BrowserRouter>
+          <GlobalPopup /> {/* 👈 falls du es global anzeigen willst */}
           <ScrollToTop />
           <Routes>
             <Route path="/" element={<Index />} />
