@@ -26,13 +26,21 @@ const About = () => {
       buttonText: "Workshop ansehen",
       external: false
     },
+     {
+      icon: <img src="/images/workshop/le_femmes.png" alt="Les Femmes Orange" className="h-12 w-12 mb-4" loading="lazy" />,
+      title: "Les Femmes Orange",
+      description: "Les Femmes Orange hat das Ziel, eine lebendige und unterstützende Gemeinschaft für Frauen weltweit aufzubauen – egal ob Einsteigerin oder Fortgeschrittene.",
+      bgColor: "bg-transparent",
+      borderColor: "border-[#F2FCE2]",
+      buttonText: "Platz reservieren",
+    },
     {
       icon: <img src="/images/workshop/bitcoin-help-support.svg" alt="BitcoinForum BIP25" className="h-12 w-12 mb-4" loading="lazy" />,
       title: "BIP25 Members",
       description: "Das ist das engagiertes Team hinter der Organisation und Umsetzung des 3. BitcoinForums. Sie gestalten ein einzigartiges Event, das Wissen, Austausch und Inspiration vereint.",
       bgColor: "bg-transparent",
       borderColor: "border-[#F2FCE2]",
-      buttonText: "Mehr über das Team"
+      buttonText: "Mehr über das Team",
     },
     {
       icon: <img src="/images/workshop/seo-illustrations-2.svg" alt="BitcoinForum Partner" className="h-12 w-12 mb-4" loading="lazy" />,
@@ -50,7 +58,7 @@ const About = () => {
       description: "Wir bereiten derzeit eine Vielzahl von Workshops für Sie vor. Anfänger und technikinteressierte Besucher finden hier ab Juli eine spannende Auswahl. WICHTIG: Jetzt schon Tickets bestellen zum rabattierten Preis, denn Workshops können nur auf Basis bestehender Tickets bestellt werden!",
       bgColor: "bg-transparent",
       borderColor: "border-[#FEF7CD]",
-      buttonText: "Tickets sichern"
+      buttonText: "Tickets sichern",
     }
   ];
 
