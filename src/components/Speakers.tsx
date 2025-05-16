@@ -760,7 +760,7 @@ const speakersData = [
           </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-5 text-gray-800">Unsere Experten</h2>
           <p className="text-lg text-gray-600">
-            Lernen Sie von führenden Experten im Bereich Bitcoin und digitale Finanzen
+            Lernen Sie von führenden Experten im Bereich Bitcoin und der Finanzwelt
           </p>
         </div>
 
