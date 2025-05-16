@@ -108,8 +108,8 @@ const Register = () => {
   key={index} 
   className={`border-0 shadow-xl hover:shadow-2xl transition-all duration-300 hover:translate-y-[-5px] overflow-hidden rounded-2xl ${
     tier.highlighted 
-      ? 'bg-gradient-to-br from-amber-900 via-zinc-900 to-black ring-2 ring-bitcoin' 
-      : 'bg-gradient-to-br from-gray-300 to-gray-900'
+      ? 'bg-gradient-to-br from-bitcoin via-zinc-900 to-black ring-2 ring-bitcoin' 
+      : 'bg-gradient-to-br from-gray-800 to-gray-900'
   }`}
 >
 
