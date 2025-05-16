@@ -11,7 +11,7 @@ const Hero = () => {
         <div className="absolute inset-0 bg-[url('public/lovable-uploads/2e1fd836-1d6d-4649-acee-c2ec7d832dac.png')] opacity-5 bg-cover bg-center mix-blend-overlay"></div>
         <div className="absolute inset-0 bg-gradient-to-br from-[#FEF7CD]/20 to-transparent opacity-50"></div>
       </div>
-      <div className="container mx-auto px-4 pt-30 pb-8 md:py-12 relative z-10">
+      className="container mx-auto px-4 pt-20 md:pt-40 pb-8 md:py-12 relative z-10"
         <div className="max-w-3xl mx-auto text-center">
           <div className="inline-block mb-3 px-4 py-1 bg-[#FDE1D3] backdrop-blur-sm rounded-full border border-bitcoin/20">
             <span className="text-sm md:text-base font-medium text-bitcoin"> 09.-11.Oktober 2025 • Ingolstadt</span>
