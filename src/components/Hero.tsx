@@ -24,16 +24,17 @@ const Hero = () => {
             Die spannende Welt von Bitcoin und der Blockchain-Technologie
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                  <Button
-                    onClick={() =>
-                      openPopup({
-                        redirectUrl: "https://vr-bayernmitte.genolive.de/index.php?page=event-code&code=bitcoin25"
-                      })
-                    }
-              className="bg-bitcoin hover:bg-bitcoin-dark text-white text-lg py-7 px-10 rounded-full shadow-lg shadow-bitcoin/20 transition-all duration-300 hover:scale-105 text-center font-medium"
-            >
-                  Jetzt Anmelden
-                  </Button>
+<a
+  onClick={() =>
+    openPopup({
+      redirectUrl: "https://vr-bayernmitte.genolive.de/index.php?page=event-code&code=bitcoin25"
+    })
+  }
+  className="cursor-pointer bg-bitcoin hover:bg-bitcoin-dark text-white text-lg py-7 px-10 rounded-full shadow-lg shadow-bitcoin/20 transition-all duration-300 hover:scale-105 text-center font-medium"
+>
+  Jetzt Anmelden
+</a>
+
             <a
               href="#schedule"
               className="border-[#D3E4FD] bg-white/70 text-gray-700 hover:bg-[#D3E4FD]/30 text-lg py-7 px-10 rounded-full backdrop-blur-sm transition-all duration-300 hover:scale-105 text-center font-medium"
