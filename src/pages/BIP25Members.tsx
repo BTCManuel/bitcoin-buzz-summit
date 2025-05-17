@@ -50,7 +50,7 @@ const members: Member[] = [
     image: "/images/speakers/Joe_Martin.jpg",
     bio: (
       <>
-        Technologieberater mit Fokus auf Bitcoin und KI. Autor des ersten Bitcoin Buches in deutscher Sprache. <br />
+        Technologieberater mit Fokus auf Bitcoin und KI. Autor des ersten Bitcoin Buches in deutscher Sprache. Co-Founder des BitcoinForums. <br />
         Kontakt: <a href="https://linktr.ee/JoeMartinBTC" className="text-bitcoin underline">https://linktr.ee/JoeMartinBTC</a>
       </>
     ),
