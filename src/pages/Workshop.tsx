@@ -105,6 +105,50 @@ const Workshop = () => {
       ]
     },
     {
+      id: 1,
+      title: "Bitcoin als Wertanlage",
+      subtitle: "für Family Offices",
+      description: "Ein kompakter Workshop über die langfristigen Investmentstrategien mit Bitcoin für Family Offices und professionelle Vermögensverwalter.",
+      icon: workshopIcons[0],
+      bgColor: "bg-[#FEF7CD]",
+      borderColor: "border-[#FDE1D3]",
+      date: "9. Oktober",
+      time: "09:00 - 12:30",
+      location: "Raum A1",
+      instructors: [
+        { name: "Dr. Sebastian Meier", title: "Head of Digital Assets", timeSlot: "09:00 - 09:30", topic: "Fundamentale Wertversprechen von Bitcoin im Vergleich zu traditionellen Anlageklassen" },
+        { name: "Dr. Klaus Müller", title: "Portfolio Manager", timeSlot: "09:30 - 10:00", topic: "Portfolioallokation und Risikostrategien" },
+        { name: "Joe Martin", title: "Regulatory Expert", timeSlot: "10:15 - 10:45", topic: "Regulatorische Rahmenbedingungen für institutionelle Investoren" }
+      ],
+      difficulty: "Fortgeschritten",
+      seats: 25,
+      fullDescription: `
+        <p>Dieser umfassende Workshop richtet sich speziell an Family Offices, Vermögensverwalter und professionelle Anleger, die Bitcoin als langfristige Wertanlage in Betracht ziehen.</p>
+        <p>In einer Zeit, in der digitale Assets zunehmend an Bedeutung gewinnen, bietet dieser Workshop tiefe Einblicke in die Funktionsweise von Bitcoin als Anlageform und praktische Strategien für die Integration in diversifizierte Portfolios.</p>
+        <h3>Themen:</h3>
+        <ul>
+          <li>Fundamentale Wertversprechen von Bitcoin im Vergleich zu traditionellen Anlageklassen</li>
+          <li>Portfolioallokation und Risikostrategien</li>
+          <li>Regulatorische Rahmenbedingungen für institutionelle Investoren</li>
+          <li>Sichere Verwahrungslösungen für Family Offices</li>
+          <li>Steuerliche Implikationen und Reporting-Anforderungen</li>
+          <li>Langfristige Anlagestrategien vs. kurzfristige Volatilität</li>
+        </ul>
+        <p>Die Teilnehmer erhalten praktische Tools zur Risikobewertung und Portfolioanalyse sowie umfassende Informationen zu institutionellen Custody-Lösungen.</p>
+      `,
+      requirements: "Grundlegendes Verständnis von Anlageklassen und Portfoliomanagement.",
+      imageUrl: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3",
+      agenda: [
+        { timeSlot: "09:00 - 09:30", speaker: "Dr. Sebastian Meier", topic: "Fundamentale Wertversprechen von Bitcoin" },
+        { timeSlot: "09:30 - 10:00", speaker: "Dr. Klaus Müller", topic: "Portfolioallokation und Risikostrategien" },
+        { timeSlot: "10:00 - 10:15", speaker: "", topic: "Kaffeepause" },
+        { timeSlot: "10:15 - 10:45", speaker: "Joe Martin", topic: "Regulatorische Rahmenbedingungen" },
+        { timeSlot: "10:45 - 11:15", speaker: "Dr. Sebastian Meier", topic: "Sichere Verwahrungslösungen" },
+        { timeSlot: "11:15 - 11:45", speaker: "Dr. Klaus Müller", topic: "Steuerliche Implikationen" },
+        { timeSlot: "11:45 - 12:30", speaker: "Panel Diskussion", topic: "Anlagestrategien und Zukunftsausblick" }
+      ]
+    },
+    {
       id: 2,
       title: "Bitcoin Full Node",
       subtitle: "aufsetzen und betreiben",
