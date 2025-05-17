@@ -15,7 +15,7 @@ const About = () => {
       description: "Schon ab dem 4. Oktober beginnt die Bitcoin Woche in Ingolstadt. Im Westpark Shoppingcenter öffent der Bitcoin Block seine Tore. Informationen über Bitcoin für interessierte Laien und Bitcoiner.",
       bgColor: "bg-transparent",
       borderColor: "border-[#FDE1D3]",
-      link: "/bitcoin-block",
+     
       buttonText: "Mehr erfahren",
       external: false
     },
@@ -25,8 +25,8 @@ const About = () => {
       description: "Bitcoin kann Stromnetze stabilisieren und wird überwiegend mit grüner Energie betrieben. Bitcoin Mining kann 'verschwendeten' grünen Strom (Solar/Wind/Bio) wirtschaftlicher machen.",
       bgColor: "bg-transparent",
       borderColor: "border-[#CCE8FF]",
-      link: "/workshop",
-      buttonText: "Workshop ansehen",
+     
+      buttonText: "im Aufbau",
       external: false
     },
      {
@@ -35,7 +35,7 @@ const About = () => {
       description: "Les Femmes Orange hat das Ziel, eine lebendige und unterstützende Gemeinschaft für Frauen weltweit aufzubauen – egal ob Einsteigerin oder Fortgeschrittene.",
       bgColor: "bg-transparent",
       borderColor: "border-[#F2FCE2]",
-      buttonText: "Platz reservieren",
+      buttonText: "im Aufbau",
     },
     {
       icon: <img src="/images/workshop/bitcoin-help-support.svg" alt="BitcoinForum BIP25" className="h-12 w-12 mb-4" loading="lazy" />,
@@ -63,7 +63,7 @@ const About = () => {
       description: "Wir bereiten derzeit eine Vielzahl von Workshops für Sie vor. Anfänger und technikinteressierte Besucher finden hier ab Juli eine spannende Auswahl. WICHTIG: Jetzt schon Tickets bestellen zum rabattierten Preis, denn Workshops können nur auf Basis bestehender Tickets bestellt werden!",
       bgColor: "bg-transparent",
       borderColor: "border-[#FEF7CD]",
-      buttonText: "Tickets sichern",
+      buttonText: "im Aufbau",
     }
   ];
 
