@@ -2,7 +2,7 @@
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter, DialogDescription } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { usePopup } from "@/pages/PopupContext";
-import { ArrowRight, Calendar, Clock, MapPin, Users, Star } from "lucide-react";
+import { ArrowRight, Calendar, Clock, MapPin, Users, Star, Sparkles } from "lucide-react";
 
 const GlobalPopup = () => {
   const { open, data, closePopup } = usePopup();
@@ -31,6 +31,14 @@ const GlobalPopup = () => {
   );
   
   if (!open || !data) return null;
+
+  // Function to determine if an agenda item is the evening event (last item)
+  const isEveningEvent = (item: any, index: number, array: any[]) => {
+    return index === array.length - 1 && 
+           (item.topic.includes("Anekdoten") || 
+            item.timeSlot?.includes("20:00") || 
+            parseInt(item.timeSlot?.split(':')[0]) >= 19);
+  };
 
   return (
     <Dialog open={open} onOpenChange={closePopup}>
@@ -71,13 +79,23 @@ const GlobalPopup = () => {
               <h3 className="font-semibold text-lg border-b pb-2">Workshop Agenda</h3>
               <div className="space-y-3">
                 {data.agenda.map((item, index) => (
-                  <div key={index} className={`flex gap-4 p-3 rounded-lg ${index % 2 === 0 ? 'bg-gray-50' : 'bg-[#FEF7CD]/30'}`}>
-                    <div className="shrink-0 w-28 text-sm text-gray-700 font-medium flex items-center gap-1.5">
-                      <Clock className="h-4 w-4 text-bitcoin" />
-                      {item.timeSlot}
+                  <div key={index} className={`p-3 rounded-lg ${index % 2 === 0 ? 'bg-gray-50' : 'bg-[#FEF7CD]/30'} ${
+                    isEveningEvent(item, index, data.agenda) ? 'border-l-4 border-bitcoin' : ''
+                  }`}>
+                    <div className="flex items-center gap-2">
+                      <Clock className="h-4 w-4 text-bitcoin shrink-0" />
+                      <span className="text-sm text-gray-700 font-medium">{item.timeSlot}</span>
                     </div>
-                    <div className="flex-1">
-                      <div className="font-medium text-gray-800">{item.topic}</div>
+                    <div className="mt-1">
+                      <div className="font-medium text-gray-800">
+                        {isEveningEvent(item, index, data.agenda) && (
+                          <div className="flex items-center gap-2 mb-1 text-bitcoin">
+                            <Sparkles className="h-4 w-4" />
+                            <span className="font-semibold">Besonderes Highlight - Abendveranstaltung</span>
+                          </div>
+                        )}
+                        {item.topic}
+                      </div>
                       {item.speaker && <div className="text-sm text-bitcoin mt-0.5">{item.speaker}</div>}
                     </div>
                   </div>
@@ -102,11 +120,6 @@ const GlobalPopup = () => {
                       <div className="font-semibold text-gray-800">{typeof instructor === 'string' ? instructor : instructor.name}</div>
                       {typeof instructor !== 'string' && instructor.title && (
                         <div className="text-sm text-gray-600 mt-0.5">{instructor.title}</div>
-                      )}
-                      {typeof instructor !== 'string' && instructor.timeSlot && instructor.topic && (
-                        <div className="mt-2 text-xs bg-bitcoin/5 text-bitcoin px-2 py-1 rounded-full inline-block">
-                          <span className="font-medium">{instructor.timeSlot}</span>: {instructor.topic}
-                        </div>
                       )}
                     </div>
                   </div>
