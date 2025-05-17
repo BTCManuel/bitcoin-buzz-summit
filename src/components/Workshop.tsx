@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -532,13 +533,13 @@ const Workshop = () => {
       </main>
       <Footer />
 
-      {/* Enhanced Workshop Details Dialog */}
+      {/* Enhanced Workshop Details Dialog - Redesigned for a high-end look */}
       <Dialog open={selectedWorkshop !== null} onOpenChange={handleCloseDialog}>
-        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto p-0">
+        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto p-0 rounded-xl">
           {getSelectedWorkshop() && (
             <>
-              {/* Workshop Header Section with Background Image */}
-              <div className="relative h-48 md:h-64 overflow-hidden">
+              {/* Workshop Header with Background Image */}
+              <div className="relative h-48 md:h-64 overflow-hidden rounded-t-xl">
                 <img 
                   src={getSelectedWorkshop()?.imageUrl} 
                   alt={getSelectedWorkshop()?.title} 
@@ -565,59 +566,102 @@ const Workshop = () => {
                 </DialogClose>
               </div>
 
-              {/* Workshop Content */}
+              {/* Workshop Content - Redesigned Layout */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
-                {/* Main Content (Left) */}
-                <div className="md:col-span-2 space-y-8">
+                {/* Main Content (Left and Middle) */}
+                <div className="md:col-span-2 space-y-6">
                   {/* Workshop Description */}
                   <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-                    <h3 className="text-xl font-semibold mb-4 text-gray-800">Beschreibung</h3>
+                    <h3 className="text-xl font-semibold mb-4 text-gray-800 flex items-center gap-2">
+                      <span className="h-8 w-8 rounded-full bg-[#FEF7CD] flex items-center justify-center">
+                        <BookOpen className="h-4 w-4 text-bitcoin" />
+                      </span>
+                      Beschreibung
+                    </h3>
                     <div 
                       className="prose prose-sm max-w-none prose-headings:font-semibold prose-headings:text-gray-900 prose-p:text-gray-600"
                       dangerouslySetInnerHTML={{ __html: getSelectedWorkshop()?.fullDescription || "" }}
                     />
                   </div>
                   
-                  {/* Workshop Schedule */}
+                  {/* Workshop Schedule - Redesigned with Timeline */}
                   <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-                    <h3 className="text-xl font-semibold mb-4 text-gray-800">Agenda</h3>
+                    <h3 className="text-xl font-semibold mb-5 text-gray-800 flex items-center gap-2">
+                      <span className="h-8 w-8 rounded-full bg-[#E2F4FF] flex items-center justify-center">
+                        <Clock className="h-4 w-4 text-bitcoin" />
+                      </span>
+                      Agenda
+                    </h3>
                     
-                    <div className="space-y-4">
-                      {getSelectedWorkshop()?.agenda?.map((item, index) => (
-                        <div key={index} className={`flex gap-4 p-3 rounded-lg ${item.speaker ? 'bg-gray-50' : 'bg-[#FEF7CD]/30'}`}>
-                          <div className="shrink-0 w-24 text-sm text-gray-600 font-medium">
-                            {item.timeSlot}
+                    <div className="relative">
+                      {/* Timeline Line */}
+                      <div className="absolute left-[29px] top-0 bottom-0 w-0.5 bg-gray-200"></div>
+                      
+                      {/* Timeline Items */}
+                      <div className="space-y-6">
+                        {getSelectedWorkshop()?.agenda?.map((item, index) => (
+                          <div key={index} className="flex gap-5">
+                            {/* Timeline Dot */}
+                            <div className={`relative z-10 shrink-0 mt-0.5 h-6 w-6 rounded-full ${item.speaker ? 'bg-bitcoin' : 'bg-gray-200'} flex items-center justify-center`}>
+                              {item.speaker ? (
+                                <span className="text-white text-xs font-bold">{index + 1}</span>
+                              ) : (
+                                <span className="text-gray-500 text-xs">⏱️</span>
+                              )}
+                            </div>
+                            
+                            {/* Timeline Content */}
+                            <div className={`flex-1 ${!item.speaker ? 'opacity-80' : ''}`}>
+                              <div className="bg-white p-3 rounded-lg border ${item.speaker ? 'border-bitcoin/20 shadow-sm' : 'border-gray-100'} hover:shadow-md transition-shadow">
+                                <div className="font-medium text-gray-800 mb-1">{item.topic}</div>
+                                <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+                                  <div className="flex items-center gap-1.5">
+                                    <Clock className="h-3.5 w-3.5 text-bitcoin" />
+                                    <span className="text-sm text-gray-600">{item.timeSlot}</span>
+                                  </div>
+                                  {item.speaker && (
+                                    <div className="flex items-center gap-1.5">
+                                      <User className="h-3.5 w-3.5 text-bitcoin" />
+                                      <span className="text-sm text-bitcoin font-medium">{item.speaker}</span>
+                                    </div>
+                                  )}
+                                </div>
+                              </div>
+                            </div>
                           </div>
-                          <div className={`flex-1 ${!item.speaker && 'italic text-gray-500'}`}>
-                            <div className="font-medium">{item.topic}</div>
-                            {item.speaker && <div className="text-sm text-bitcoin">{item.speaker}</div>}
-                          </div>
-                        </div>
-                      ))}
+                        ))}
+                      </div>
                     </div>
                   </div>
                   
                   {/* Requirements */}
                   <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-                    <h3 className="text-xl font-semibold mb-4 text-gray-800">Voraussetzungen</h3>
+                    <h3 className="text-xl font-semibold mb-4 text-gray-800 flex items-center gap-2">
+                      <span className="h-8 w-8 rounded-full bg-[#F2FCE2] flex items-center justify-center">
+                        <Check className="h-4 w-4 text-bitcoin" />
+                      </span>
+                      Voraussetzungen
+                    </h3>
                     <p className="text-gray-600">{getSelectedWorkshop()?.requirements}</p>
                   </div>
                 </div>
                 
                 {/* Workshop Info Sidebar (Right) */}
                 <div className="space-y-6">
-                  {/* Info Card */}
-                  <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 sticky top-6">
-                    <h3 className="font-semibold text-lg mb-6 pb-4 border-b border-gray-200 text-center">Informationen</h3>
-
-                    <div className="space-y-5">
+                  {/* Info Card - Redesigned with better visual hierarchy */}
+                  <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 sticky top-6">
+                    <div className="bg-[#FEF7CD]/30 p-4 border-b border-[#FEF7CD]">
+                      <h3 className="font-semibold text-lg text-gray-800">Workshop Details</h3>
+                    </div>
+                    
+                    <div className="p-5 space-y-5">
                       <div className="flex items-center gap-4">
                         <div className="bg-[#FEF7CD]/50 p-2 rounded-full">
                           <CalendarDays className="h-5 w-5 text-bitcoin" />
                         </div>
                         <div>
-                          <p className="text-sm text-gray-500">Datum</p>
-                          <p className="font-medium">{getSelectedWorkshop()?.date}</p>
+                          <p className="text-xs uppercase tracking-wider text-gray-500 font-medium">Datum</p>
+                          <p className="font-medium text-gray-800">{getSelectedWorkshop()?.date}</p>
                         </div>
                       </div>
 
@@ -626,8 +670,8 @@ const Workshop = () => {
                           <Clock className="h-5 w-5 text-bitcoin" />
                         </div>
                         <div>
-                          <p className="text-sm text-gray-500">Zeit</p>
-                          <p className="font-medium">{getSelectedWorkshop()?.time}</p>
+                          <p className="text-xs uppercase tracking-wider text-gray-500 font-medium">Zeit</p>
+                          <p className="font-medium text-gray-800">{getSelectedWorkshop()?.time}</p>
                         </div>
                       </div>
 
@@ -636,44 +680,54 @@ const Workshop = () => {
                           <MapPin className="h-5 w-5 text-bitcoin" />
                         </div>
                         <div>
-                          <p className="text-sm text-gray-500">Ort</p>
-                          <p className="font-medium">{getSelectedWorkshop()?.location}</p>
+                          <p className="text-xs uppercase tracking-wider text-gray-500 font-medium">Ort</p>
+                          <p className="font-medium text-gray-800">{getSelectedWorkshop()?.location}</p>
                         </div>
                       </div>
+                      
+                      <Separator className="bg-gray-100" />
 
-                      <div className="flex items-start gap-4">
-                        <div className="bg-[#FDE1D3]/50 p-2 rounded-full mt-1">
-                          <User className="h-5 w-5 text-bitcoin" />
-                        </div>
-                        <div>
-                          <p className="text-sm text-gray-500">
-                            {getSelectedWorkshop()?.instructors?.length > 1 ? 'Referenten' : 'Referent'}
-                          </p>
-                          <ul className="space-y-2 mt-2">
-                            {getSelectedWorkshop()?.instructors?.map((instructor, index) => (
-                              <li key={index} className="flex flex-col">
-                                <span className="font-medium">{instructor.name}</span>
-                                {instructor.title && <span className="text-sm text-gray-500">{instructor.title}</span>}
-                              </li>
-                            ))}
-                          </ul>
+                      <div>
+                        <p className="text-xs uppercase tracking-wider text-gray-500 font-medium mb-3 flex items-center gap-1.5">
+                          <Users className="h-3.5 w-3.5" />
+                          {getSelectedWorkshop()?.instructors.length > 1 ? 'Referenten' : 'Referent'}
+                        </p>
+                        <div className="space-y-3">
+                          {getSelectedWorkshop()?.instructors?.map((instructor, index) => (
+                            <div key={index} className="bg-gray-50 rounded-lg p-3 border border-gray-100">
+                              <div className="font-medium text-gray-800">{instructor.name}</div>
+                              {instructor.title && (
+                                <div className="text-xs text-gray-500">{instructor.title}</div>
+                              )}
+                              {instructor.timeSlot && instructor.topic && (
+                                <div className="mt-2 flex items-center gap-1.5">
+                                  <Badge variant="outline" className="text-xs bg-bitcoin/5 text-bitcoin border-bitcoin/20">
+                                    {instructor.timeSlot}
+                                  </Badge>
+                                  <span className="text-xs text-gray-600">{instructor.topic}</span>
+                                </div>
+                              )}
+                            </div>
+                          ))}
                         </div>
                       </div>
                     </div>
 
-                    <Button
-                      className="w-full mt-8 bg-bitcoin hover:bg-bitcoin/80 text-white py-6 rounded-lg shadow-lg shadow-bitcoin/20 flex items-center justify-center gap-2 transition-all hover:translate-y-[-2px]"
-                      onClick={() => {
-                        handleCloseDialog();
-                        setTimeout(() => {
-                          openPopup({
-                            redirectUrl: "https://vr-bayernmitte.genolive.de/index.php?page=event-code&code=bitcoin25"
-                          });
-                        }, 250);
-                      }}
-                    >
-                      <Ticket className="h-5 w-5" /> Ticket sichern
-                    </Button>
+                    <div className="p-5 bg-gray-50 border-t border-gray-100">
+                      <Button
+                        className="w-full bg-bitcoin hover:bg-bitcoin/80 text-white py-6 rounded-lg shadow-lg shadow-bitcoin/10 flex items-center justify-center gap-2 transition-all hover:translate-y-[-2px]"
+                        onClick={() => {
+                          handleCloseDialog();
+                          setTimeout(() => {
+                            openPopup({
+                              redirectUrl: "https://vr-bayernmitte.genolive.de/index.php?page=event-code&code=bitcoin25"
+                            });
+                          }, 250);
+                        }}
+                      >
+                        <Ticket className="h-5 w-5" /> Ticket sichern
+                      </Button>
+                    </div>
                   </div>
                 </div>
               </div>
