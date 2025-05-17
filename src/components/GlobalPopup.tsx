@@ -5,8 +5,8 @@ import { usePopup } from "@/pages/PopupContext";
 const GlobalPopup = () => {
   const { open, data, closePopup } = usePopup();
 
-  const defaultTitle = "Willst du fortfahren?";
-  const defaultMessage = "Du wirst gleich weitergeleitet. Bitte halte deine Daten bereit.";
+  const defaultTitle = "Willst du fortfahren? TEST HEAD";
+  const defaultMessage = "Du wirst gleich weitergeleitet. Bitte halte deine Daten bereit. TEST BOTTOM";
 
   if (!open || !data) return null;
 
