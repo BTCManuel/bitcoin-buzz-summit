@@ -32,7 +32,7 @@ const members: Member[] = [
   },
   {
     name: "Günter Staud",
-    image: "/images/speakers/frankenberg.jpg",
+    image: "/images/speakers/BitcoinForum_BIP25-Member_Staud.png",
     bio: (
       <>
         Verantwortet seit 2002 das Marketing der VR Bayern Mitte. Organisator des 3. BitcoinForums. <br />
