@@ -62,7 +62,7 @@ const Workshop = () => {
   const workshops: WorkshopType[] = [
     {
       id: 1,
-      title: "Bitcoin als Wertanlage",
+      title: "Bitcoin als Wertanlage I",
       subtitle: "für Family Offices",
       description: "Ein kompakter Workshop über die langfristigen Investmentstrategien mit Bitcoin für Family Offices und professionelle Vermögensverwalter.",
       icon: workshopIcons[0],
@@ -106,7 +106,7 @@ const Workshop = () => {
     },
     {
       id: 1,
-      title: "Bitcoin als Wertanlage",
+      title: "Bitcoin als Wertanlage II",
       subtitle: "für Family Offices",
       description: "Ein kompakter Workshop über die langfristigen Investmentstrategien mit Bitcoin für Family Offices und professionelle Vermögensverwalter.",
       icon: workshopIcons[0],
@@ -139,12 +139,12 @@ const Workshop = () => {
       requirements: "Grundlegendes Verständnis von Anlageklassen und Portfoliomanagement.",
       imageUrl: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3",
       agenda: [
-        { timeSlot: "09:00 - 09:30", speaker: "Dr. Sebastian Meier", topic: "Fundamentale Wertversprechen von Bitcoin" },
-        { timeSlot: "09:30 - 10:00", speaker: "Dr. Klaus Müller", topic: "Portfolioallokation und Risikostrategien" },
+        { timeSlot: "09:00 - 09:30", speaker: "Dr. Karl Meier", topic: "Fundamentale Wertversprechen von Bitcoin" },
+        { timeSlot: "09:30 - 10:00", speaker: "Dr. Sepp Müller", topic: "Portfolioallokation und Risikostrategien" },
         { timeSlot: "10:00 - 10:15", speaker: "", topic: "Kaffeepause" },
         { timeSlot: "10:15 - 10:45", speaker: "Joe Martin", topic: "Regulatorische Rahmenbedingungen" },
-        { timeSlot: "10:45 - 11:15", speaker: "Dr. Sebastian Meier", topic: "Sichere Verwahrungslösungen" },
-        { timeSlot: "11:15 - 11:45", speaker: "Dr. Klaus Müller", topic: "Steuerliche Implikationen" },
+        { timeSlot: "10:45 - 11:15", speaker: "Dr. Miriam Meier", topic: "Sichere Verwahrungslösungen" },
+        { timeSlot: "11:15 - 11:45", speaker: "Dr. Josef Müller", topic: "Steuerliche Implikationen" },
         { timeSlot: "11:45 - 12:30", speaker: "Panel Diskussion", topic: "Anlagestrategien und Zukunftsausblick" }
       ]
     },
