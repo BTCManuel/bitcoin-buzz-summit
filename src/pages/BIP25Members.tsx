@@ -223,7 +223,7 @@ const BIP25Members = () => {
             </div>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">BIP25-Mitglieder</h2>
             <p className="max-w-3xl mx-auto text-lg text-gray-600">
-              Lerne die engagierten Köpfe kennen, die hinter der Organisation des BitcoinForums stehen.
+              Wie bei jeder großen Veranstaltung ist so etwas nur gemeinsam möglich. Deshalb haben wir die Bitcoin-Community um Unterstützung gebeten – und die BIP25-Gruppe ins Leben gerufen. Unser besonderer Dank gilt allen engagierten Helferinnen und Helfern, die mit Zeit, Ideen und Leidenschaft dazu beitragen, das dritte Bitcoin Forum möglich zu machen. Ohne euch wäre dieses Event nicht denkbar – danke für euren großartigen Einsatz!
             </p>
           </div>
 
