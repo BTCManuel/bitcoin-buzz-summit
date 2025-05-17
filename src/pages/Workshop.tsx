@@ -849,16 +849,18 @@ const Workshop = () => {
                             
                             {/* Timeline Content */}
                             <div className={`flex-1 ${!item.speaker ? 'opacity-80' : ''}`}>
-                              <div className={`bg-white p-3 rounded-lg ${item.speaker ? 'border border-bitcoin/20 shadow-sm' : 'border border-gray-100'} hover:shadow-md transition-shadow ${
-                                isEveningEvent(item, index, array) ? 'border-l-4 border-bitcoin' : ''
-                              }`}>
+                              <div className={`bg-white p-3 rounded-lg ${
+                                isEveningEvent(item, index, array) 
+                                  ? 'border-l-4 border-bitcoin bg-gradient-to-r from-[#FEF7CD]/80 to-white shadow-md' 
+                                  : (item.speaker ? 'border border-bitcoin/20 shadow-sm' : 'border border-gray-100')
+                              } hover:shadow-md transition-shadow`}>
+                                {isEveningEvent(item, index, array) && (
+                                  <div className="flex items-center gap-2 mb-3 bg-bitcoin text-white px-3 py-1.5 rounded-md shadow-inner animate-pulse max-w-max">
+                                    <Sparkles className="h-4 w-4" />
+                                    <span className="font-semibold text-sm uppercase tracking-wider">Besonderes Highlight - Abendveranstaltung</span>
+                                  </div>
+                                )}
                                 <div className="font-medium text-gray-800 mb-1">
-                                  {isEveningEvent(item, index, array) && (
-                                    <div className="flex items-center gap-2 mb-2 text-bitcoin">
-                                      <Sparkles className="h-4 w-4" />
-                                      <span className="font-semibold">Besonderes Highlight - Abendveranstaltung</span>
-                                    </div>
-                                  )}
                                   {item.topic}
                                 </div>
                                 <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
