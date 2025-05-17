@@ -62,9 +62,9 @@ const Workshop = () => {
   const workshops: WorkshopType[] = [
     {
       id: 1,
-      title: "Bitcoin als Wertanlage",
-      subtitle: "für Family Offices",
-      description: "Ein kompakter Workshop über die langfristigen Investmentstrategien mit Bitcoin für Family Offices und professionelle Vermögensverwalter.",
+      title: "Bitcoin in der Bank",
+      subtitle: "für alle Banker",
+      description: "Ein spzieller Workshop über die Strategien, Gefahren und Regulierung in Zusammenhang mit Kryptoangeboten an die Kunden einer Bank.",
       icon: workshopIcons[0],
       bgColor: "bg-[#FEF7CD]",
       borderColor: "border-[#FDE1D3]",
@@ -72,11 +72,18 @@ const Workshop = () => {
       time: "09:00 - 12:30",
       location: "Raum A1",
       instructors: [
-        { name: "Dr. Sebastian Meier", title: "Head of Digital Assets", timeSlot: "09:00 - 09:30", topic: "Fundamentale Wertversprechen von Bitcoin im Vergleich zu traditionellen Anlageklassen" },
-        { name: "Dr. Klaus Müller", title: "Portfolio Manager", timeSlot: "09:30 - 10:00", topic: "Portfolioallokation und Risikostrategien" },
-        { name: "Joe Martin", title: "Regulatory Expert", timeSlot: "10:15 - 10:45", topic: "Regulatorische Rahmenbedingungen für institutionelle Investoren" }
+        { name: "Andreas Streb", title: "CEO VR Bank Bayern Mitte", timeSlot: "14:00 - 14:20", topic: "Wie wird unseren Kunden Bitcoin anbieten und warum." },
+        { name: "Dr. Steffen Hahn", title: "MICAR", timeSlot: "14:30 - 15:15", topic: "Welche genauen Anforderungen stellt diese neue Regulierung?" },
+        { name: "VRBM Banker", title: "Asset Allocation", timeSlot: "15:30 - 15:45", topic: "Warum eine Beimischung von Bitcoin das Portfolio stärkt." }
+        { name: "VRBM Banker", title: "BIG", timeSlot: "15:45 - 16:15", topic: "Warum eine Beimischung von Bitcoin das Portfolio stärkt." }
+        { name: "Q&Ar", title: "Q&A", timeSlot: "16:15 - 16:30", topic: "Diskussion und Fragen" }
+        { name: "Florian Bruce-Boye", title: "Bitcoin Experten", timeSlot: "17:00 - 17:30", topic: "Warum Bitcoin der optimale Wertspeicher ist" }
+        { name: "Daniel 'Loddi' ", title: "Bitcoin Podcaster", timeSlot: "17:30 - 18:00", topic: "Wie funktioniert unser Geldsystem?" }
+        { name: "Karl Steuerberater", title: "Steuerberater", timeSlot: "18:00 - 18:30", topic: "Wie ist Bitcoin steuerlich einzuordnen?" }
+        { name: "Andreas Streb", title: "CEO VR Bank Bayern Mitte", timeSlot: "18:30 - 19:00", topic: "Abschluss Panel und Q&A" }
+        { name: "Markus Gürne", title: "Moderator der Sendung Wirtschaft vor acht", timeSlot: "20:00 - 22:00", topic: "Anektdoten aus der Welt der Finanzen." }
       ],
-      difficulty: "Fortgeschritten",
+      difficulty: "Alle Banker",
       seats: 25,
       fullDescription: `
         <p>Dieser umfassende Workshop richtet sich speziell an Family Offices, Vermögensverwalter und professionelle Anleger, die Bitcoin als langfristige Wertanlage in Betracht ziehen.</p>
