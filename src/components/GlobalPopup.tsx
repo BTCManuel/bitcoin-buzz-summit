@@ -56,7 +56,7 @@ const GlobalPopup = () => {
         <div className={`${!data.imageUrl ? 'pt-6' : ''} px-6 pb-6`}>
           {!data.imageUrl && (
             <DialogHeader>
-              <DialogTitle>{data.title || defaultTitle}</DialogTitle>
+              <DialogTitle className="text-xl md:text-2xl">{data.title || defaultTitle}</DialogTitle>
               {data.subtitle && <p className="text-gray-600 text-sm mt-1">{data.subtitle}</p>}
             </DialogHeader>
           )}
@@ -67,18 +67,18 @@ const GlobalPopup = () => {
 
           {/* Workshop Details Section */}
           {data.agenda && data.agenda.length > 0 && (
-            <div className="mt-4 space-y-4">
-              <h3 className="font-semibold text-lg">Agenda</h3>
+            <div className="mt-6 space-y-4">
+              <h3 className="font-semibold text-lg border-b pb-2">Workshop Agenda</h3>
               <div className="space-y-3">
                 {data.agenda.map((item, index) => (
-                  <div key={index} className={`flex gap-4 p-3 rounded-lg ${item.speaker ? 'bg-gray-50' : 'bg-[#FEF7CD]/30'}`}>
-                    <div className="shrink-0 w-24 text-sm text-gray-600 font-medium flex items-center gap-1">
-                      <Clock className="h-3.5 w-3.5 text-bitcoin" />
+                  <div key={index} className={`flex gap-4 p-3 rounded-lg ${index % 2 === 0 ? 'bg-gray-50' : 'bg-[#FEF7CD]/30'}`}>
+                    <div className="shrink-0 w-28 text-sm text-gray-700 font-medium flex items-center gap-1.5">
+                      <Clock className="h-4 w-4 text-bitcoin" />
                       {item.timeSlot}
                     </div>
-                    <div className={`flex-1 ${!item.speaker && 'italic text-gray-500'}`}>
-                      <div className="font-medium">{item.topic}</div>
-                      {item.speaker && <div className="text-sm text-bitcoin">{item.speaker}</div>}
+                    <div className="flex-1">
+                      <div className="font-medium text-gray-800">{item.topic}</div>
+                      {item.speaker && <div className="text-sm text-bitcoin mt-0.5">{item.speaker}</div>}
                     </div>
                   </div>
                 ))}
@@ -88,23 +88,23 @@ const GlobalPopup = () => {
 
           {/* Speakers Section */}
           {data.instructors && data.instructors.length > 0 && (
-            <div className="mt-6">
-              <h3 className="font-semibold text-lg mb-3">
-                {data.instructors.length > 1 ? 'Referenten' : 'Referent'}
+            <div className="mt-8">
+              <h3 className="font-semibold text-lg border-b pb-2 mb-4">
+                {data.instructors.length > 1 ? 'Workshop Referenten' : 'Workshop Referent'}
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {data.instructors.map((instructor, index) => (
-                  <div key={index} className="bg-gray-50 p-3 rounded-lg flex items-center gap-3">
-                    <div className="h-10 w-10 rounded-full bg-bitcoin/10 flex items-center justify-center text-bitcoin">
-                      <Users className="h-5 w-5" />
+                  <div key={index} className="bg-gray-50 border border-gray-100 p-4 rounded-lg flex items-start gap-4 shadow-sm hover:shadow-md transition-shadow">
+                    <div className="h-12 w-12 rounded-full bg-bitcoin/10 flex items-center justify-center text-bitcoin shrink-0">
+                      <Users className="h-6 w-6" />
                     </div>
                     <div>
-                      <div className="font-medium">{typeof instructor === 'string' ? instructor : instructor.name}</div>
+                      <div className="font-semibold text-gray-800">{typeof instructor === 'string' ? instructor : instructor.name}</div>
                       {typeof instructor !== 'string' && instructor.title && (
-                        <div className="text-sm text-gray-600">{instructor.title}</div>
+                        <div className="text-sm text-gray-600 mt-0.5">{instructor.title}</div>
                       )}
                       {typeof instructor !== 'string' && instructor.timeSlot && instructor.topic && (
-                        <div className="mt-2 text-xs text-gray-500">
+                        <div className="mt-2 text-xs bg-bitcoin/5 text-bitcoin px-2 py-1 rounded-full inline-block">
                           <span className="font-medium">{instructor.timeSlot}</span>: {instructor.topic}
                         </div>
                       )}
@@ -117,59 +117,59 @@ const GlobalPopup = () => {
 
           {/* Workshop Info Section */}
           {(data.date || data.time || data.location || data.difficulty || data.seats) && (
-            <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               {data.date && (
-                <div className="bg-gray-50 p-4 rounded-lg flex items-center gap-3">
+                <div className="bg-gray-50 border border-gray-100 p-4 rounded-lg flex items-center gap-3 shadow-sm">
                   <div className="h-10 w-10 rounded-full bg-bitcoin/10 flex items-center justify-center text-bitcoin">
                     <Calendar className="h-5 w-5" />
                   </div>
                   <div>
-                    <p className="text-sm text-gray-500">Datum</p>
-                    <p className="font-medium">{data.date}</p>
+                    <p className="text-xs uppercase tracking-wider text-gray-500">Datum</p>
+                    <p className="font-medium text-gray-800">{data.date}</p>
                   </div>
                 </div>
               )}
               {data.time && (
-                <div className="bg-gray-50 p-4 rounded-lg flex items-center gap-3">
+                <div className="bg-gray-50 border border-gray-100 p-4 rounded-lg flex items-center gap-3 shadow-sm">
                   <div className="h-10 w-10 rounded-full bg-bitcoin/10 flex items-center justify-center text-bitcoin">
                     <Clock className="h-5 w-5" />
                   </div>
                   <div>
-                    <p className="text-sm text-gray-500">Zeit</p>
-                    <p className="font-medium">{data.time}</p>
+                    <p className="text-xs uppercase tracking-wider text-gray-500">Zeit</p>
+                    <p className="font-medium text-gray-800">{data.time}</p>
                   </div>
                 </div>
               )}
               {data.location && (
-                <div className="bg-gray-50 p-4 rounded-lg flex items-center gap-3">
+                <div className="bg-gray-50 border border-gray-100 p-4 rounded-lg flex items-center gap-3 shadow-sm">
                   <div className="h-10 w-10 rounded-full bg-bitcoin/10 flex items-center justify-center text-bitcoin">
                     <MapPin className="h-5 w-5" />
                   </div>
                   <div>
-                    <p className="text-sm text-gray-500">Ort</p>
-                    <p className="font-medium">{data.location}</p>
+                    <p className="text-xs uppercase tracking-wider text-gray-500">Ort</p>
+                    <p className="font-medium text-gray-800">{data.location}</p>
                   </div>
                 </div>
               )}
               {data.seats && (
-                <div className="bg-gray-50 p-4 rounded-lg flex items-center gap-3">
+                <div className="bg-gray-50 border border-gray-100 p-4 rounded-lg flex items-center gap-3 shadow-sm">
                   <div className="h-10 w-10 rounded-full bg-bitcoin/10 flex items-center justify-center text-bitcoin">
                     <Users className="h-5 w-5" />
                   </div>
                   <div>
-                    <p className="text-sm text-gray-500">Verfügbare Plätze</p>
-                    <p className="font-medium">{data.seats}</p>
+                    <p className="text-xs uppercase tracking-wider text-gray-500">Verfügbare Plätze</p>
+                    <p className="font-medium text-gray-800">{data.seats}</p>
                   </div>
                 </div>
               )}
               {data.difficulty && (
-                <div className="bg-gray-50 p-4 rounded-lg flex items-center gap-3">
+                <div className="bg-gray-50 border border-gray-100 p-4 rounded-lg flex items-center gap-3 shadow-sm">
                   <div className="h-10 w-10 rounded-full bg-bitcoin/10 flex items-center justify-center text-bitcoin">
                     <Star className="h-5 w-5" />
                   </div>
                   <div>
-                    <p className="text-sm text-gray-500">Schwierigkeit</p>
-                    <p className="font-medium">{data.difficulty}</p>
+                    <p className="text-xs uppercase tracking-wider text-gray-500">Schwierigkeit</p>
+                    <p className="font-medium text-gray-800">{data.difficulty}</p>
                   </div>
                 </div>
               )}
@@ -179,7 +179,7 @@ const GlobalPopup = () => {
 
         <DialogFooter className="p-6 border-t bg-gray-50">
           <Button
-            className="w-full md:w-auto bg-bitcoin hover:bg-bitcoin/90 flex items-center gap-2"
+            className="w-full md:w-auto bg-bitcoin hover:bg-bitcoin/90 flex items-center gap-2 text-white"
             onClick={() => {
               closePopup();
               if (data.redirectUrl) {

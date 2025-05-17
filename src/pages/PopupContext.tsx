@@ -3,7 +3,7 @@
 
 import React, { createContext, useContext, useState, ReactNode } from "react";
 
-// Instructor or speaker type
+// Instructor or speaker type with time slot and topic information
 type Instructor = {
   name: string;
   title?: string;
@@ -11,7 +11,7 @@ type Instructor = {
   topic?: string;
 } | string;
 
-// Agenda item type
+// Agenda item type for detailed workshop schedules
 type AgendaItem = {
   timeSlot: string;
   topic: string;
