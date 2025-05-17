@@ -30,7 +30,7 @@ const About = () => {
       external: false
     },
      {
-      icon: <img src="/images/workshop/le_femmes.png" alt="Les Femmes Orange" className="h-12 w-12 mb-4" loading="lazy" />,
+      icon: <img src="/images/workshop/le_feemes_old.png" alt="Les Femmes Orange" className="h-12 w-12 mb-4" loading="lazy" />,
       title: "Les Femmes Orange",
       description: "Les Femmes Orange hat das Ziel, eine lebendige und unterstützende Gemeinschaft für Frauen weltweit aufzubauen – egal ob Einsteigerin oder Fortgeschrittene.",
       bgColor: "bg-transparent",
