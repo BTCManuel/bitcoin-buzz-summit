@@ -107,7 +107,7 @@ const members: Member[] = [
   },
   {
     name: "Lukas Waldner",
-    image: "/images/speakers/Lukas_Waldner.jpg",
+    image: "/images/speakers/BitcoinForum_BIP25-Member_Waldner_583x500_2025-02.jpg",
     bio: (
       <>
         COO & Co-Founder von 21energy. Veranstaltungsorganisator, Sportler und Alpinist.
@@ -118,7 +118,7 @@ const members: Member[] = [
   },
   {
     name: "Anna von Schilcher",
-    image: "/images/speakers/Anna_von_Schilcher.jpg",
+    image: "/images/speakers/BitcoinForum_BIP25-Member_Schilcher_583x500_2025-02.jpg",
     bio: <>Infos folgen</>,
     bgColor: "bg-[#FEF7CD]/50",
     bgSolidColor: "bg-[#FEF7CD]"
@@ -156,7 +156,7 @@ const members: Member[] = [
   },
   {
     name: "Leonardo Conti",
-    image: "/images/speakers/Leonardo_Conti.jpg",
+    image: "/images/speakers/BitcoinForum_BIP25-Member_Conti_583x500_2025-02.jpg",
     bio: (
       <>
         Ehemaliger Nationaltorhüter, Berater für Marketing & Strategie. <br />
@@ -181,7 +181,7 @@ const members: Member[] = [
   },
   {
     name: "Abu Akkuc",
-    image: "/images/speakers/Abu_Akkuc.jpg",
+    image: "/images/speakers/BitcoinForum_BIP25-Member_Akkuc_583x500_2025-02.jpg",
     bio: (
       <>
         Gründer von Bitart und 21Million Fashion. Ansprechpartner für die Kunstgalerie. <br />
