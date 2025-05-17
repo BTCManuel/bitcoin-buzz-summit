@@ -12,7 +12,7 @@ const GlobalPopup = () => {
       Für den Eintritt zur Saturnarena ist immer ein Ticket erforderlich – auch bei kostenlosen Messetickets.
       Danach können Sie sich Ihre Wunsch-Workshops sichern, sobald diese verfügbar sind. Beim Ticketkauf können Sie dafür bequem einen Alarm setzen.
     </p>
-    <p>
+    <p><br></br>
       Der Ticketkauf erfolgt über die <strong>Volksbank Raiffeisenbank Bayern Mitte eG</strong>, die zugleich Veranstalter des <strong>3. Bitcoin Forums</strong> ist – 100 % DSGVO-konform und in wenigen Schritten erledigt.
     </p>
     <p> <br></br>
@@ -22,7 +22,7 @@ const GlobalPopup = () => {
     <p><br></br>
       <strong>Und das Beste:</strong> Nach dem Ticketkauf können Sie Ihr Erlebnis mit Workshops erweitern – von Einsteiger-Sessions bis hin zu technischen Masterclasses.
     </p>
-    <p>
+    <p><br></br>
       <strong>Sichern Sie sich jetzt Ihr Ticket</strong> und gestalten Sie Ihr ganz persönliches Programm!
     </p>
   </>
