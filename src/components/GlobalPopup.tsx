@@ -2,33 +2,34 @@
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter, DialogDescription } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { usePopup } from "@/pages/PopupContext";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Calendar, Clock, MapPin, Users, Star } from "lucide-react";
 
 const GlobalPopup = () => {
   const { open, data, closePopup } = usePopup();
 
   const defaultTitle = <strong>Zuerst ein Ticket, dann die volle Auswahl</strong>;
- const defaultMessage = (
-  <>
-    <p>
-      Für den Eintritt zur Saturnarena ist immer ein Ticket erforderlich – auch bei kostenlosen Messetickets.
-      Danach können Sie sich Ihre Wunsch-Workshops sichern, sobald diese verfügbar sind. Beim Ticketkauf können Sie dafür bequem einen Alarm setzen.
-    </p>
-    <p><br></br>
-      Der Ticketkauf erfolgt über die <strong>Volksbank Raiffeisenbank Bayern Mitte eG</strong>, die zugleich Veranstalter des <strong>3. Bitcoin Forums</strong> ist – 100 % DSGVO-konform und in wenigen Schritten erledigt.
-    </p>
-    <p> <br></br>
-      Je nach Ticketkategorie genießen Sie Zugang zur Ausstellung, spannenden Vorträgen oder exklusiv zum VIP-Bereich
-      mit zusätzlichen Vorträgen, Kamingesprächen, voller Verpflegung und weiteren Extras.
-    </p>
-    <p><br></br>
-      <strong>Und das Beste:</strong> Nach dem Ticketkauf können Sie Ihr Erlebnis mit Workshops erweitern – von Einsteiger-Sessions bis hin zu technischen Masterclasses.
-    </p>
-    <p><br></br>
-      <strong>Sichern Sie sich jetzt Ihr Ticket</strong> und gestalten Sie Ihr ganz persönliches Programm!
-    </p>
-  </>
-);
+  const defaultMessage = (
+    <>
+      <p>
+        Für den Eintritt zur Saturnarena ist immer ein Ticket erforderlich – auch bei kostenlosen Messetickets.
+        Danach können Sie sich Ihre Wunsch-Workshops sichern, sobald diese verfügbar sind. Beim Ticketkauf können Sie dafür bequem einen Alarm setzen.
+      </p>
+      <p><br></br>
+        Der Ticketkauf erfolgt über die <strong>Volksbank Raiffeisenbank Bayern Mitte eG</strong>, die zugleich Veranstalter des <strong>3. Bitcoin Forums</strong> ist – 100 % DSGVO-konform und in wenigen Schritten erledigt.
+      </p>
+      <p> <br></br>
+        Je nach Ticketkategorie genießen Sie Zugang zur Ausstellung, spannenden Vorträgen oder exklusiv zum VIP-Bereich
+        mit zusätzlichen Vorträgen, Kamingesprächen, voller Verpflegung und weiteren Extras.
+      </p>
+      <p><br></br>
+        <strong>Und das Beste:</strong> Nach dem Ticketkauf können Sie Ihr Erlebnis mit Workshops erweitern – von Einsteiger-Sessions bis hin zu technischen Masterclasses.
+      </p>
+      <p><br></br>
+        <strong>Sichern Sie sich jetzt Ihr Ticket</strong> und gestalten Sie Ihr ganz persönliches Programm!
+      </p>
+    </>
+  );
+  
   if (!open || !data) return null;
 
   return (
@@ -56,6 +57,7 @@ const GlobalPopup = () => {
           {!data.imageUrl && (
             <DialogHeader>
               <DialogTitle>{data.title || defaultTitle}</DialogTitle>
+              {data.subtitle && <p className="text-gray-600 text-sm mt-1">{data.subtitle}</p>}
             </DialogHeader>
           )}
 
@@ -70,7 +72,8 @@ const GlobalPopup = () => {
               <div className="space-y-3">
                 {data.agenda.map((item, index) => (
                   <div key={index} className={`flex gap-4 p-3 rounded-lg ${item.speaker ? 'bg-gray-50' : 'bg-[#FEF7CD]/30'}`}>
-                    <div className="shrink-0 w-24 text-sm text-gray-600 font-medium">
+                    <div className="shrink-0 w-24 text-sm text-gray-600 font-medium flex items-center gap-1">
+                      <Clock className="h-3.5 w-3.5 text-bitcoin" />
                       {item.timeSlot}
                     </div>
                     <div className={`flex-1 ${!item.speaker && 'italic text-gray-500'}`}>
@@ -91,14 +94,21 @@ const GlobalPopup = () => {
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {data.instructors.map((instructor, index) => (
-                  <div key={index} className="bg-gray-50 p-3 rounded-lg">
-                    <div className="font-medium">{instructor.name || instructor}</div>
-                    {instructor.title && <div className="text-sm text-gray-600">{instructor.title}</div>}
-                    {instructor.timeSlot && instructor.topic && (
-                      <div className="mt-2 text-xs text-gray-500">
-                        <span className="font-medium">{instructor.timeSlot}</span>: {instructor.topic}
-                      </div>
-                    )}
+                  <div key={index} className="bg-gray-50 p-3 rounded-lg flex items-center gap-3">
+                    <div className="h-10 w-10 rounded-full bg-bitcoin/10 flex items-center justify-center text-bitcoin">
+                      <Users className="h-5 w-5" />
+                    </div>
+                    <div>
+                      <div className="font-medium">{typeof instructor === 'string' ? instructor : instructor.name}</div>
+                      {typeof instructor !== 'string' && instructor.title && (
+                        <div className="text-sm text-gray-600">{instructor.title}</div>
+                      )}
+                      {typeof instructor !== 'string' && instructor.timeSlot && instructor.topic && (
+                        <div className="mt-2 text-xs text-gray-500">
+                          <span className="font-medium">{instructor.timeSlot}</span>: {instructor.topic}
+                        </div>
+                      )}
+                    </div>
                   </div>
                 ))}
               </div>
@@ -107,42 +117,67 @@ const GlobalPopup = () => {
 
           {/* Workshop Info Section */}
           {(data.date || data.time || data.location || data.difficulty || data.seats) && (
-            <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 bg-gray-50 p-4 rounded-lg">
+            <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               {data.date && (
-                <div>
-                  <p className="text-sm text-gray-500">Datum</p>
-                  <p className="font-medium">{data.date}</p>
+                <div className="bg-gray-50 p-4 rounded-lg flex items-center gap-3">
+                  <div className="h-10 w-10 rounded-full bg-bitcoin/10 flex items-center justify-center text-bitcoin">
+                    <Calendar className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <p className="text-sm text-gray-500">Datum</p>
+                    <p className="font-medium">{data.date}</p>
+                  </div>
                 </div>
               )}
               {data.time && (
-                <div>
-                  <p className="text-sm text-gray-500">Zeit</p>
-                  <p className="font-medium">{data.time}</p>
+                <div className="bg-gray-50 p-4 rounded-lg flex items-center gap-3">
+                  <div className="h-10 w-10 rounded-full bg-bitcoin/10 flex items-center justify-center text-bitcoin">
+                    <Clock className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <p className="text-sm text-gray-500">Zeit</p>
+                    <p className="font-medium">{data.time}</p>
+                  </div>
                 </div>
               )}
               {data.location && (
-                <div>
-                  <p className="text-sm text-gray-500">Ort</p>
-                  <p className="font-medium">{data.location}</p>
+                <div className="bg-gray-50 p-4 rounded-lg flex items-center gap-3">
+                  <div className="h-10 w-10 rounded-full bg-bitcoin/10 flex items-center justify-center text-bitcoin">
+                    <MapPin className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <p className="text-sm text-gray-500">Ort</p>
+                    <p className="font-medium">{data.location}</p>
+                  </div>
                 </div>
               )}
               {data.seats && (
-                <div>
-                  <p className="text-sm text-gray-500">Verfügbare Plätze</p>
-                  <p className="font-medium">{data.seats}</p>
+                <div className="bg-gray-50 p-4 rounded-lg flex items-center gap-3">
+                  <div className="h-10 w-10 rounded-full bg-bitcoin/10 flex items-center justify-center text-bitcoin">
+                    <Users className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <p className="text-sm text-gray-500">Verfügbare Plätze</p>
+                    <p className="font-medium">{data.seats}</p>
+                  </div>
                 </div>
               )}
               {data.difficulty && (
-                <div>
-                  <p className="text-sm text-gray-500">Schwierigkeit</p>
-                  <p className="font-medium">{data.difficulty}</p>
+                <div className="bg-gray-50 p-4 rounded-lg flex items-center gap-3">
+                  <div className="h-10 w-10 rounded-full bg-bitcoin/10 flex items-center justify-center text-bitcoin">
+                    <Star className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <p className="text-sm text-gray-500">Schwierigkeit</p>
+                    <p className="font-medium">{data.difficulty}</p>
+                  </div>
                 </div>
               )}
             </div>
           )}
         </div>
 
-        <DialogFooter className="p-6 border-t">
+        <DialogFooter className="p-6 border-t bg-gray-50">
           <Button
             className="w-full md:w-auto bg-bitcoin hover:bg-bitcoin/90 flex items-center gap-2"
             onClick={() => {

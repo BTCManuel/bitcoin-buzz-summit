@@ -1,11 +1,37 @@
+
 // src/pages/PopupContext.tsx
 
 import React, { createContext, useContext, useState, ReactNode } from "react";
 
+// Instructor or speaker type
+type Instructor = {
+  name: string;
+  title?: string;
+  timeSlot?: string;
+  topic?: string;
+} | string;
+
+// Agenda item type
+type AgendaItem = {
+  timeSlot: string;
+  topic: string;
+  speaker?: string;
+};
+
 type PopupData = {
   title?: string;
-  message?: string;
+  subtitle?: string;
+  message?: React.ReactNode;
   redirectUrl: string;
+  buttonText?: string;
+  imageUrl?: string;
+  date?: string;
+  time?: string;
+  location?: string;
+  difficulty?: string;
+  seats?: string;
+  instructors?: Instructor[];
+  agenda?: AgendaItem[];
 };
 
 type PopupContextType = {
