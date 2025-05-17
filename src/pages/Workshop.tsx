@@ -275,6 +275,182 @@ const Workshop = () => {
         { timeSlot: "15:45 - 16:15", speaker: "Sarah Wagner", topic: "Treasury-Management" },
         { timeSlot: "16:15 - 17:00", speaker: "Beide", topic: "Praxisbeispiele und Q&A" }
       ]
+    },
+        {
+      id: 6,
+      title: "Bitcoin für Unternehmen",
+      subtitle: "Integration & Buchhaltung",
+      description: "Wie Unternehmen Bitcoin in ihre Geschäftsprozesse integrieren können.",
+      icon: workshopIcons[4],
+      bgColor: "bg-[#FDE1D3]",
+      borderColor: "border-[#FEF7CD]",
+      date: "10. Oktober",
+      time: "13:30 - 17:00",
+      location: "Konferenzraum D",
+      instructors: [
+        { name: "Sarah Wagner", title: "Fintech Beraterin", timeSlot: "13:30 - 14:00", topic: "Bitcoin-Zahlungslösungen" },
+        { name: "Michael Weber", title: "Steuerberater", timeSlot: "14:00 - 14:30", topic: "Buchhaltung und Bilanzierung" }
+      ],
+      difficulty: "Mittel",
+      seats: 30,
+      fullDescription: `
+        <p>Dieser praxisorientierte Workshop richtet sich an Unternehmer, Finanzverantwortliche und Berater, die Bitcoin in ihre Geschäftsprozesse integrieren möchten.</p>
+        <p>Von der Akzeptanz von Bitcoin als Zahlungsmittel bis hin zur Bilanzierung – dieser Workshop deckt alle wesentlichen Aspekte der Unternehmensintegration ab.</p>
+        <h3>Themen:</h3>
+        <ul>
+          <li>Implementierung von Bitcoin-Zahlungslösungen</li>
+          <li>Buchhaltung und Bilanzierung von Bitcoin-Beständen</li>
+          <li>Steuerliche Behandlung in Deutschland und der EU</li>
+          <li>Risikomanagement und Compliance</li>
+          <li>Treasury-Management mit Bitcoin</li>
+          <li>Geschäftsmodelle im Bitcoin-Ökosystem</li>
+          <li>Praxisbeispiele erfolgreicher Unternehmensintegration</li>
+        </ul>
+        <p>Die Teilnehmer erhalten praktische Leitfäden, Checklisten und direkte Beratung zu ihren spezifischen Unternehmensanforderungen.</p>
+      `,
+      requirements: "Grundlegendes Verständnis von Unternehmensfinanzen und Buchhaltung.",
+      imageUrl: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3",
+      agenda: [
+        { timeSlot: "13:30 - 14:00", speaker: "Sarah Wagner", topic: "Bitcoin-Zahlungslösungen für Unternehmen" },
+        { timeSlot: "14:00 - 14:30", speaker: "Michael Weber", topic: "Buchhaltung und Bilanzierung" },
+        { timeSlot: "14:30 - 15:00", speaker: "Sarah Wagner", topic: "Steuerliche Behandlung" },
+        { timeSlot: "15:00 - 15:15", speaker: "", topic: "Pause" },
+        { timeSlot: "15:15 - 15:45", speaker: "Michael Weber", topic: "Compliance und Risikomanagement" },
+        { timeSlot: "15:45 - 16:15", speaker: "Sarah Wagner", topic: "Treasury-Management" },
+        { timeSlot: "16:15 - 17:00", speaker: "Beide", topic: "Praxisbeispiele und Q&A" }
+      ]
+    },    
+    {
+      id: 7,
+      title: "Bitcoin für Unternehmen",
+      subtitle: "Integration & Buchhaltung",
+      description: "Wie Unternehmen Bitcoin in ihre Geschäftsprozesse integrieren können.",
+      icon: workshopIcons[4],
+      bgColor: "bg-[#FDE1D3]",
+      borderColor: "border-[#FEF7CD]",
+      date: "10. Oktober",
+      time: "13:30 - 17:00",
+      location: "Konferenzraum D",
+      instructors: [
+        { name: "Sarah Wagner", title: "Fintech Beraterin", timeSlot: "13:30 - 14:00", topic: "Bitcoin-Zahlungslösungen" },
+        { name: "Michael Weber", title: "Steuerberater", timeSlot: "14:00 - 14:30", topic: "Buchhaltung und Bilanzierung" }
+      ],
+      difficulty: "Mittel",
+      seats: 30,
+      fullDescription: `
+        <p>Dieser praxisorientierte Workshop richtet sich an Unternehmer, Finanzverantwortliche und Berater, die Bitcoin in ihre Geschäftsprozesse integrieren möchten.</p>
+        <p>Von der Akzeptanz von Bitcoin als Zahlungsmittel bis hin zur Bilanzierung – dieser Workshop deckt alle wesentlichen Aspekte der Unternehmensintegration ab.</p>
+        <h3>Themen:</h3>
+        <ul>
+          <li>Implementierung von Bitcoin-Zahlungslösungen</li>
+          <li>Buchhaltung und Bilanzierung von Bitcoin-Beständen</li>
+          <li>Steuerliche Behandlung in Deutschland und der EU</li>
+          <li>Risikomanagement und Compliance</li>
+          <li>Treasury-Management mit Bitcoin</li>
+          <li>Geschäftsmodelle im Bitcoin-Ökosystem</li>
+          <li>Praxisbeispiele erfolgreicher Unternehmensintegration</li>
+        </ul>
+        <p>Die Teilnehmer erhalten praktische Leitfäden, Checklisten und direkte Beratung zu ihren spezifischen Unternehmensanforderungen.</p>
+      `,
+      requirements: "Grundlegendes Verständnis von Unternehmensfinanzen und Buchhaltung.",
+      imageUrl: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3",
+      agenda: [
+        { timeSlot: "13:30 - 14:00", speaker: "Sarah Wagner", topic: "Bitcoin-Zahlungslösungen für Unternehmen" },
+        { timeSlot: "14:00 - 14:30", speaker: "Michael Weber", topic: "Buchhaltung und Bilanzierung" },
+        { timeSlot: "14:30 - 15:00", speaker: "Sarah Wagner", topic: "Steuerliche Behandlung" },
+        { timeSlot: "15:00 - 15:15", speaker: "", topic: "Pause" },
+        { timeSlot: "15:15 - 15:45", speaker: "Michael Weber", topic: "Compliance und Risikomanagement" },
+        { timeSlot: "15:45 - 16:15", speaker: "Sarah Wagner", topic: "Treasury-Management" },
+        { timeSlot: "16:15 - 17:00", speaker: "Beide", topic: "Praxisbeispiele und Q&A" }
+      ]
+    },
+        {
+      id: 8,
+      title: "Bitcoin für Unternehmen",
+      subtitle: "Integration & Buchhaltung",
+      description: "Wie Unternehmen Bitcoin in ihre Geschäftsprozesse integrieren können.",
+      icon: workshopIcons[4],
+      bgColor: "bg-[#FDE1D3]",
+      borderColor: "border-[#FEF7CD]",
+      date: "10. Oktober",
+      time: "13:30 - 17:00",
+      location: "Konferenzraum D",
+      instructors: [
+        { name: "Sarah Wagner", title: "Fintech Beraterin", timeSlot: "13:30 - 14:00", topic: "Bitcoin-Zahlungslösungen" },
+        { name: "Michael Weber", title: "Steuerberater", timeSlot: "14:00 - 14:30", topic: "Buchhaltung und Bilanzierung" }
+      ],
+      difficulty: "Mittel",
+      seats: 30,
+      fullDescription: `
+        <p>Dieser praxisorientierte Workshop richtet sich an Unternehmer, Finanzverantwortliche und Berater, die Bitcoin in ihre Geschäftsprozesse integrieren möchten.</p>
+        <p>Von der Akzeptanz von Bitcoin als Zahlungsmittel bis hin zur Bilanzierung – dieser Workshop deckt alle wesentlichen Aspekte der Unternehmensintegration ab.</p>
+        <h3>Themen:</h3>
+        <ul>
+          <li>Implementierung von Bitcoin-Zahlungslösungen</li>
+          <li>Buchhaltung und Bilanzierung von Bitcoin-Beständen</li>
+          <li>Steuerliche Behandlung in Deutschland und der EU</li>
+          <li>Risikomanagement und Compliance</li>
+          <li>Treasury-Management mit Bitcoin</li>
+          <li>Geschäftsmodelle im Bitcoin-Ökosystem</li>
+          <li>Praxisbeispiele erfolgreicher Unternehmensintegration</li>
+        </ul>
+        <p>Die Teilnehmer erhalten praktische Leitfäden, Checklisten und direkte Beratung zu ihren spezifischen Unternehmensanforderungen.</p>
+      `,
+      requirements: "Grundlegendes Verständnis von Unternehmensfinanzen und Buchhaltung.",
+      imageUrl: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3",
+      agenda: [
+        { timeSlot: "13:30 - 14:00", speaker: "Sarah Wagner", topic: "Bitcoin-Zahlungslösungen für Unternehmen" },
+        { timeSlot: "14:00 - 14:30", speaker: "Michael Weber", topic: "Buchhaltung und Bilanzierung" },
+        { timeSlot: "14:30 - 15:00", speaker: "Sarah Wagner", topic: "Steuerliche Behandlung" },
+        { timeSlot: "15:00 - 15:15", speaker: "", topic: "Pause" },
+        { timeSlot: "15:15 - 15:45", speaker: "Michael Weber", topic: "Compliance und Risikomanagement" },
+        { timeSlot: "15:45 - 16:15", speaker: "Sarah Wagner", topic: "Treasury-Management" },
+        { timeSlot: "16:15 - 17:00", speaker: "Beide", topic: "Praxisbeispiele und Q&A" }
+      ]
+    },
+        {
+      id: 9,
+      title: "Bitcoin für Unternehmen",
+      subtitle: "Integration & Buchhaltung",
+      description: "Wie Unternehmen Bitcoin in ihre Geschäftsprozesse integrieren können.",
+      icon: workshopIcons[4],
+      bgColor: "bg-[#FDE1D3]",
+      borderColor: "border-[#FEF7CD]",
+      date: "10. Oktober",
+      time: "13:30 - 17:00",
+      location: "Konferenzraum D",
+      instructors: [
+        { name: "Sarah Wagner", title: "Fintech Beraterin", timeSlot: "13:30 - 14:00", topic: "Bitcoin-Zahlungslösungen" },
+        { name: "Michael Weber", title: "Steuerberater", timeSlot: "14:00 - 14:30", topic: "Buchhaltung und Bilanzierung" }
+      ],
+      difficulty: "Mittel",
+      seats: 30,
+      fullDescription: `
+        <p>Dieser praxisorientierte Workshop richtet sich an Unternehmer, Finanzverantwortliche und Berater, die Bitcoin in ihre Geschäftsprozesse integrieren möchten.</p>
+        <p>Von der Akzeptanz von Bitcoin als Zahlungsmittel bis hin zur Bilanzierung – dieser Workshop deckt alle wesentlichen Aspekte der Unternehmensintegration ab.</p>
+        <h3>Themen:</h3>
+        <ul>
+          <li>Implementierung von Bitcoin-Zahlungslösungen</li>
+          <li>Buchhaltung und Bilanzierung von Bitcoin-Beständen</li>
+          <li>Steuerliche Behandlung in Deutschland und der EU</li>
+          <li>Risikomanagement und Compliance</li>
+          <li>Treasury-Management mit Bitcoin</li>
+          <li>Geschäftsmodelle im Bitcoin-Ökosystem</li>
+          <li>Praxisbeispiele erfolgreicher Unternehmensintegration</li>
+        </ul>
+        <p>Die Teilnehmer erhalten praktische Leitfäden, Checklisten und direkte Beratung zu ihren spezifischen Unternehmensanforderungen.</p>
+      `,
+      requirements: "Grundlegendes Verständnis von Unternehmensfinanzen und Buchhaltung.",
+      imageUrl: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3",
+      agenda: [
+        { timeSlot: "13:30 - 14:00", speaker: "Sarah Wagner", topic: "Bitcoin-Zahlungslösungen für Unternehmen" },
+        { timeSlot: "14:00 - 14:30", speaker: "Michael Weber", topic: "Buchhaltung und Bilanzierung" },
+        { timeSlot: "14:30 - 15:00", speaker: "Sarah Wagner", topic: "Steuerliche Behandlung" },
+        { timeSlot: "15:00 - 15:15", speaker: "", topic: "Pause" },
+        { timeSlot: "15:15 - 15:45", speaker: "Michael Weber", topic: "Compliance und Risikomanagement" },
+        { timeSlot: "15:45 - 16:15", speaker: "Sarah Wagner", topic: "Treasury-Management" },
+        { timeSlot: "16:15 - 17:00", speaker: "Beide", topic: "Praxisbeispiele und Q&A" }
+      ]
     }
   ];
 
