@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { Check, ArrowRight, Bitcoin, BookOpen, Target, Users, Shield, Code, Tv, Clock, CalendarDays, MapPin, User, Ticket } from 'lucide-react';
+import { Check, ArrowRight, Bitcoin, BookOpen, Target, Users, Shield, Code, Tv, Clock, CalendarDays, MapPin, User, Ticket, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
@@ -519,6 +519,14 @@ const Workshop = () => {
     return workshops.find(workshop => workshop.id === selectedWorkshop);
   };
 
+  // Function to determine if an agenda item is the evening event (last item)
+  const isEveningEvent = (item: any, index: number, array: any[]) => {
+    return index === array.length - 1 && 
+           (item.topic?.includes("Anekdoten") || 
+            item.timeSlot?.includes("20:00") || 
+            parseInt(item.timeSlot?.split(':')[0]) >= 19);
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-50 to-gray-100">
       <Navbar />
@@ -813,7 +821,7 @@ const Workshop = () => {
                     />
                   </div>
                   
-                  {/* Workshop Schedule - Redesigned with Timeline */}
+                  {/* Workshop Schedule - Redesigned - Modified to remove time bubbles and add highlight label */}
                   <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
                     <h3 className="text-xl font-semibold mb-5 text-gray-800 flex items-center gap-2">
                       <span className="h-8 w-8 rounded-full bg-[#E2F4FF] flex items-center justify-center">
@@ -828,7 +836,7 @@ const Workshop = () => {
                       
                       {/* Timeline Items */}
                       <div className="space-y-6">
-                        {getSelectedWorkshop()?.agenda?.map((item, index) => (
+                        {getSelectedWorkshop()?.agenda?.map((item, index, array) => (
                           <div key={index} className="flex gap-5">
                             {/* Timeline Dot */}
                             <div className={`relative z-10 shrink-0 mt-0.5 h-6 w-6 rounded-full ${item.speaker ? 'bg-bitcoin' : 'bg-gray-200'} flex items-center justify-center`}>
@@ -841,8 +849,18 @@ const Workshop = () => {
                             
                             {/* Timeline Content */}
                             <div className={`flex-1 ${!item.speaker ? 'opacity-80' : ''}`}>
-                              <div className="bg-white p-3 rounded-lg border ${item.speaker ? 'border-bitcoin/20 shadow-sm' : 'border-gray-100'} hover:shadow-md transition-shadow">
-                                <div className="font-medium text-gray-800 mb-1">{item.topic}</div>
+                              <div className={`bg-white p-3 rounded-lg ${item.speaker ? 'border border-bitcoin/20 shadow-sm' : 'border border-gray-100'} hover:shadow-md transition-shadow ${
+                                isEveningEvent(item, index, array) ? 'border-l-4 border-bitcoin' : ''
+                              }`}>
+                                <div className="font-medium text-gray-800 mb-1">
+                                  {isEveningEvent(item, index, array) && (
+                                    <div className="flex items-center gap-2 mb-2 text-bitcoin">
+                                      <Sparkles className="h-4 w-4" />
+                                      <span className="font-semibold">Besonderes Highlight - Abendveranstaltung</span>
+                                    </div>
+                                  )}
+                                  {item.topic}
+                                </div>
                                 <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
                                   <div className="flex items-center gap-1.5">
                                     <Clock className="h-3.5 w-3.5 text-bitcoin" />
@@ -928,14 +946,7 @@ const Workshop = () => {
                               {instructor.title && (
                                 <div className="text-xs text-gray-500">{instructor.title}</div>
                               )}
-                              {instructor.timeSlot && instructor.topic && (
-                                <div className="mt-2 flex items-center gap-1.5">
-                                  <Badge variant="outline" className="text-xs bg-bitcoin/5 text-bitcoin border-bitcoin/20">
-                                    {instructor.timeSlot}
-                                  </Badge>
-                                  <span className="text-xs text-gray-600">{instructor.topic}</span>
-                                </div>
-                              )}
+                              {/* Removed time slot bubbles here */}
                             </div>
                           ))}
                         </div>
