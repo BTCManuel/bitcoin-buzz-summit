@@ -191,20 +191,6 @@ const members: Member[] = [
     ),
     bgColor: "bg-[#FEF7CD]/50",
     bgSolidColor: "bg-[#FEF7CD]"
-  },
-  {
-    name: "Sascha Minic",
-    image: "/images/speakers/Sascha_Minic.jpg",
-    bio: <>Infos folgen</>,
-    bgColor: "bg-[#F2FCE2]/50",
-    bgSolidColor: "bg-[#F2FCE2]"
-  },
-  {
-    name: "Marc Guilliard",
-    image: "/images/speakers/Marc_Guilliard.jpg",
-    bio: <>Infos folgen</>,
-    bgColor: "bg-[#D3E4FD]/50",
-    bgSolidColor: "bg-[#D3E4FD]"
   }
 ];
 
