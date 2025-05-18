@@ -90,11 +90,11 @@ const Workshop = () => {
     <p>Behandelt werden regulatorische Anforderungen, praktische Umsetzungsmöglichkeiten sowie strategische Aspekte der Integration von Bitcoin in bestehende Produkt- und Portfoliostrukturen einer Bank.</p>
     <h3>Schwerpunkte:</h3>
     <ul>
-      <li>Bitcoin als Anlageprodukt für Bankkunden</li>
-      <li>Regulatorische Anforderungen (u.a. MiCAR)</li>
-      <li>Strategische Überlegungen zu Asset Allocation</li>
-      <li>Verantwortung und Risiko in der Kundenberatung</li>
-      <li>Technische und steuerliche Umsetzung</li>
+      <li>- Bitcoin als Anlageprodukt für Bankkunden</li>
+      <li>- Regulatorische Anforderungen (u.a. MiCAR)</li>
+      <li>- Strategische Überlegungen zu Asset Allocation</li>
+      <li>- Verantwortung und Risiko in der Kundenberatung</li>
+      <li>- Technische und steuerliche Umsetzung</li>
     </ul>
     <p>Die Inhalte richten sich ausdrücklich an Fach- und Führungskräfte im Bankensektor.</p>
   `,
@@ -104,7 +104,7 @@ const Workshop = () => {
     { timeSlot: "14:00 - 14:20", speaker: "Andreas Streb", topic: "Wie wir unseren Kunden Bitcoin anbieten und warum." },
     { timeSlot: "14:30 - 15:15", speaker: "Dr. Steffen Hahn", topic: "Welche genauen Anforderungen stellt diese neue Regulierung?" },
     { timeSlot: "15:30 - 15:45", speaker: "VRBM Banker", topic: "Warum eine Beimischung von Bitcoin das Portfolio stärkt." },
-    { timeSlot: "15:45 - 16:15", speaker: "VRBM Banker", topic: "Warum eine Beimischung von Bitcoin das Portfolio stärkt." },
+    { timeSlot: "15:45 - 16:15", speaker: "VRBM Banker", topic: "Das Bitcoin Informations Gespräch der VR Bayern Mitte." },
     { timeSlot: "16:15 - 16:30", speaker: "Q&Ar", topic: "Diskussion und Fragen" },
     { timeSlot: "17:00 - 17:30", speaker: "Florian Bruce-Boye", topic: "Warum Bitcoin der optimale Wertspeicher ist" },
     { timeSlot: "17:30 - 18:00", speaker: "Daniel 'Loddi'", topic: "Wie funktioniert unser Geldsystem?" },
