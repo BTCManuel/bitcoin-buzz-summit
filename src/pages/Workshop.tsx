@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { Check, ArrowRight, Bitcoin, BookOpen, Target, Users, Shield, Code, Tv, Clock, CalendarDays, MapPin, User, Ticket, Sparkles, Eye, EyeOff } from 'lucide-react';
+import { Check, ArrowRight, Bitcoin, BookOpen, Target, Users, Shield, Code, Tv, Clock, CalendarDays, MapPin, User, Ticket, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
@@ -602,17 +602,11 @@ const Workshop = () => {
                             <Badge variant="outline" className="text-xs bg-white/50 border-bitcoin/20 text-bitcoin font-normal">
                               Workshop {workshop.id}
                             </Badge>
-                            <div className="flex items-center" title={workshopsVisibility[workshop.id] ? 'Workshop sichtbar' : 'Workshop ausgeblendet'}>
-                              <Switch 
-                                checked={workshopsVisibility[workshop.id] !== false}
-                                onCheckedChange={() => handleToggleVisibility(workshop.id)}
-                                className="data-[state=checked]:bg-bitcoin"
-                              />
-                              {workshopsVisibility[workshop.id] !== false ? 
-                                <Eye className="h-4 w-4 ml-1 text-bitcoin" /> : 
-                                <EyeOff className="h-4 w-4 ml-1 text-gray-400" />
-                              }
-                            </div>
+                            <Switch 
+                              checked={workshopsVisibility[workshop.id] !== false}
+                              onCheckedChange={() => handleToggleVisibility(workshop.id)}
+                              className="data-[state=checked]:bg-bitcoin"
+                            />
                           </div>
                         </div>
                         <h3 className="text-lg font-bold mb-1 text-gray-800">{workshop.title}</h3>
@@ -679,13 +673,11 @@ const Workshop = () => {
                               <CardContent className="p-4 flex flex-col h-full">
                                 <div className="flex justify-between items-start mb-2">
                                   <h3 className="text-lg font-bold mb-1 text-gray-800">{workshop.title}</h3>
-                                  <div className="flex items-center" title={workshopsVisibility[workshop.id] ? 'Workshop sichtbar' : 'Workshop ausgeblendet'}>
-                                    <Switch 
-                                      checked={workshopsVisibility[workshop.id] !== false}
-                                      onCheckedChange={() => handleToggleVisibility(workshop.id)}
-                                      className="data-[state=checked]:bg-bitcoin"
-                                    />
-                                  </div>
+                                  <Switch 
+                                    checked={workshopsVisibility[workshop.id] !== false}
+                                    onCheckedChange={() => handleToggleVisibility(workshop.id)}
+                                    className="data-[state=checked]:bg-bitcoin"
+                                  />
                                 </div>
                                 <p className="text-sm text-bitcoin mb-3">{workshop.subtitle}</p>
                                 <div className="flex items-center gap-1.5 text-xs mb-2">
@@ -735,13 +727,11 @@ const Workshop = () => {
                               <CardContent className="p-3 flex flex-col">
                                 <div className="flex justify-between items-start mb-2">
                                   <h4 className="text-base font-bold">{workshop.title}</h4>
-                                  <div className="flex items-center" title={workshopsVisibility[workshop.id] ? 'Workshop sichtbar' : 'Workshop ausgeblendet'}>
-                                    <Switch 
-                                      checked={workshopsVisibility[workshop.id] !== false}
-                                      onCheckedChange={() => handleToggleVisibility(workshop.id)}
-                                      className="data-[state=checked]:bg-bitcoin"
-                                    />
-                                  </div>
+                                  <Switch 
+                                    checked={workshopsVisibility[workshop.id] !== false}
+                                    onCheckedChange={() => handleToggleVisibility(workshop.id)}
+                                    className="data-[state=checked]:bg-bitcoin"
+                                  />
                                 </div>
                                 <p className="text-xs text-gray-600 mb-2">{workshop.date}, {workshop.time}</p>
                                 <Button 
