@@ -75,7 +75,7 @@ const Workshop = () => {
     { name: "Andreas Streb", title: "CEO VR Bank Bayern Mitte", timeSlot: "14:00 - 14:20", topic: "Wie wir unseren Kunden Bitcoin anbieten und warum." },
     { name: "Dr. Steffen Hahn", title: "MICAR", timeSlot: "14:30 - 15:15", topic: "Welche genauen Anforderungen stellt diese neue Regulierung?" },
     { name: "VRBM Banker", title: "Asset Allocation", timeSlot: "15:30 - 15:45", topic: "Warum eine Beimischung von Bitcoin das Portfolio stärkt." },
-    { name: "VRBM Banker", title: "BIG", timeSlot: "15:45 - 16:15", topic: "Warum eine Beimischung von Bitcoin das Portfolio stärkt." },
+    { name: "VRBM Banker", title: "BIG", timeSlot: "15:45 - 16:15", topic: "Das Bitcoin Informations Gespräch der VR Bayern Mitte." },
     { name: "Q&Ar", title: "Q&A", timeSlot: "16:15 - 16:30", topic: "Diskussion und Fragen" },
     { name: "Florian Bruce-Boye", title: "Bitcoin Experte", timeSlot: "17:00 - 17:30", topic: "Warum Bitcoin der optimale Wertspeicher ist" },
     { name: "Daniel 'Loddi'", title: "Bitcoin Podcaster", timeSlot: "17:30 - 18:00", topic: "Wie funktioniert unser Geldsystem?" },
