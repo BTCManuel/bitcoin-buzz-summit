@@ -90,11 +90,11 @@ const Workshop = () => {
   <p>Behandelt werden regulatorische Anforderungen, praktische Umsetzungsmöglichkeiten sowie strategische Aspekte der Integration von Bitcoin in bestehende Produkt- und Portfoliostrukturen einer Bank.</p>
   <h3><strong>Schwerpunkte:</strong></h3>
   <ul>
-    <li><span class="text-[#f97316] font-medium">Bitcoin als Anlageprodukt für Bankkunden</span></li>
-    <li><span class="text-[#f97316] font-medium">Regulatorische Anforderungen (u.a. MiCAR)</span></li>
-    <li><span class="text-[#f97316] font-medium">Strategische Überlegungen zu Asset Allocation</span></li>
-    <li><span class="text-[#f97316] font-medium">Verantwortung und Risiko in der Kundenberatung</span></li>
-    <li><span class="text-[#f97316] font-medium">Technische und steuerliche Umsetzung</span></li>
+    <li><em>Bitcoin als Anlageprodukt für Bankkunden</em></li>
+    <li><em>Regulatorische Anforderungen (u.a. MiCAR)</em></li>
+    <li><em>Strategische Überlegungen zu Asset Allocation</em></li>
+    <li><em>Verantwortung und Risiko in der Kundenberatung</em></li>
+    <li><em>Technische und steuerliche Umsetzung</em></li>
   </ul>
   <p>Die Inhalte richten sich ausdrücklich an Fach- und Führungskräfte im Bankensektor.</p>
   `,
@@ -527,12 +527,6 @@ const Workshop = () => {
             parseInt(item.timeSlot?.split(':')[0]) >= 19);
   };
 
-  // Toggle flags for optional boxes in workshop details
-  const SHOW_INFO_BOX = true; // Set to false to hide
-  const SHOW_REQUIREMENTS_BOX = true; // Set to false to hide
-  const [isInfoOpen, setIsInfoOpen] = useState(false);
-  const [isRequirementsOpen, setIsRequirementsOpen] = useState(false);
-
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-50 to-gray-100">
       <Navbar />
@@ -776,30 +770,30 @@ const Workshop = () => {
       </main>
       <Footer />
 
-      {/* Workshop Details Dialog - Enhanced to match the reference image */}
+      {/* Enhanced Workshop Details Dialog - Redesigned for a high-end look */}
       <Dialog open={selectedWorkshop !== null} onOpenChange={handleCloseDialog}>
         <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto p-0 rounded-xl">
           {getSelectedWorkshop() && (
             <>
-              {/* Workshop Header with Circuit Board Background */}
+              {/* Workshop Header with Background Image */}
               <div className="relative h-48 md:h-64 overflow-hidden rounded-t-xl">
                 <img 
-                  src="/lovable-uploads/b9e4fad1-5226-47df-a837-33e96aed0237.png" 
+                  src={getSelectedWorkshop()?.imageUrl} 
                   alt={getSelectedWorkshop()?.title} 
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent flex flex-col justify-end">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col justify-end">
                   <div className="p-6 text-white">
-                    <div className="flex items-center space-x-2 mb-3">
-                      <Badge className="bg-[#f97316] border-none text-white text-xs px-4 py-1">
+                    <div className="flex items-center space-x-2 mb-2">
+                      <Badge className="bg-bitcoin border-none text-xs uppercase tracking-wider">
                         {getSelectedWorkshop()?.difficulty}
                       </Badge>
-                      <Badge variant="outline" className="bg-white/10 border-white/40 text-white text-xs">
+                      <Badge variant="outline" className="bg-white/20 border-white/40 text-white text-xs">
                         {getSelectedWorkshop()?.seats} Plätze verfügbar
                       </Badge>
                     </div>
-                    <h2 className="text-3xl md:text-4xl font-bold">{getSelectedWorkshop()?.title}</h2>
-                    <p className="text-white/90 text-xl">{getSelectedWorkshop()?.subtitle}</p>
+                    <h2 className="text-2xl md:text-3xl font-bold">{getSelectedWorkshop()?.title}</h2>
+                    <p className="text-white/90 text-lg">{getSelectedWorkshop()?.subtitle}</p>
                   </div>
                 </div>
                 <DialogClose className="absolute top-4 right-4 rounded-full bg-black/20 p-2 hover:bg-black/40 transition-colors text-white">
@@ -809,82 +803,32 @@ const Workshop = () => {
                 </DialogClose>
               </div>
 
-              {/* Workshop Content - New Layout Based on Reference Image */}
+              {/* Workshop Content - Redesigned Layout */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
-                {/* Main Content (Left) */}
+                {/* Main Content (Left and Middle) */}
                 <div className="md:col-span-2 space-y-6">
                   {/* Workshop Description */}
                   <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="h-10 w-10 rounded-full bg-[#FEF7CD]/50 flex items-center justify-center">
-                        <BookOpen className="h-5 w-5 text-bitcoin" />
-                      </div>
-                      <h3 className="text-xl font-semibold text-gray-800">Beschreibung</h3>
-                    </div>
+                    <h3 className="text-xl font-semibold mb-4 text-gray-800 flex items-center gap-2">
+                      <span className="h-8 w-8 rounded-full bg-[#FEF7CD] flex items-center justify-center">
+                        <BookOpen className="h-4 w-4 text-bitcoin" />
+                      </span>
+                      Beschreibung
+                    </h3>
                     <div 
                       className="prose prose-sm max-w-none prose-headings:font-semibold prose-headings:text-gray-900 prose-p:text-gray-600"
                       dangerouslySetInnerHTML={{ __html: getSelectedWorkshop()?.fullDescription || "" }}
                     />
-                    
-                    {/* Optional information boxes - Visible only when toggled on */}
-                    {SHOW_INFO_BOX && (
-                      <div className="mt-6">
-                        <Card className="border border-[#F2FCE2] shadow-sm rounded-xl overflow-hidden bg-white">
-                          <Collapsible open={isInfoOpen} onOpenChange={setIsInfoOpen}>
-                            <div className="p-4 flex justify-between items-center border-b border-gray-100">
-                              <h4 className="text-base font-medium text-gray-800">Workshop Details</h4>
-                              <CollapsibleTrigger asChild>
-                                <Button variant="ghost" size="sm" className="rounded-full h-8 w-8 p-0">
-                                  {isInfoOpen ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
-                                </Button>
-                              </CollapsibleTrigger>
-                            </div>
-                            <CollapsibleContent>
-                              <div className="p-6">
-                                <p className="text-gray-600">
-                                  Hier können Sie beliebige zusätzliche Informationen einfügen. 
-                                  Dieser Bereich kann über die Variable SHOW_INFO_BOX ein- oder ausgeblendet werden.
-                                </p>
-                              </div>
-                            </CollapsibleContent>
-                          </Collapsible>
-                        </Card>
-                      </div>
-                    )}
-
-                    {SHOW_REQUIREMENTS_BOX && (
-                      <div className="mt-3">
-                        <Card className="border border-[#FDE1D3] shadow-sm rounded-xl overflow-hidden bg-white">
-                          <Collapsible open={isRequirementsOpen} onOpenChange={setIsRequirementsOpen}>
-                            <div className="p-4 flex justify-between items-center border-b border-gray-100">
-                              <h4 className="text-base font-medium text-gray-800">Voraussetzungen</h4>
-                              <CollapsibleTrigger asChild>
-                                <Button variant="ghost" size="sm" className="rounded-full h-8 w-8 p-0">
-                                  {isRequirementsOpen ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
-                                </Button>
-                              </CollapsibleTrigger>
-                            </div>
-                            <CollapsibleContent>
-                              <div className="p-6">
-                                <p className="text-gray-600">
-                                  {getSelectedWorkshop()?.requirements}
-                                </p>
-                              </div>
-                            </CollapsibleContent>
-                          </Collapsible>
-                        </Card>
-                      </div>
-                    )}
                   </div>
                   
-                  {/* Workshop Agenda - Redesigned based on reference image */}
+                  {/* Workshop Schedule - Redesigned - Modified to remove time bubbles and add highlight label */}
                   <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-                    <div className="flex items-center gap-3 mb-5">
-                      <div className="h-10 w-10 rounded-full bg-[#E2F4FF]/50 flex items-center justify-center">
-                        <Clock className="h-5 w-5 text-bitcoin" />
-                      </div>
-                      <h3 className="text-xl font-semibold text-gray-800">Agenda</h3>
-                    </div>
+                    <h3 className="text-xl font-semibold mb-5 text-gray-800 flex items-center gap-2">
+                      <span className="h-8 w-8 rounded-full bg-[#E2F4FF] flex items-center justify-center">
+                        <Clock className="h-4 w-4 text-bitcoin" />
+                      </span>
+                      Agenda
+                    </h3>
                     
                     <div className="relative">
                       {/* Timeline Line */}
@@ -938,12 +882,23 @@ const Workshop = () => {
                       </div>
                     </div>
                   </div>
+                  
+                  {/* Requirements */}
+                  <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+                    <h3 className="text-xl font-semibold mb-4 text-gray-800 flex items-center gap-2">
+                      <span className="h-8 w-8 rounded-full bg-[#F2FCE2] flex items-center justify-center">
+                        <Check className="h-4 w-4 text-bitcoin" />
+                      </span>
+                      Voraussetzungen
+                    </h3>
+                    <p className="text-gray-600">{getSelectedWorkshop()?.requirements}</p>
+                  </div>
                 </div>
                 
-                {/* Workshop Info Sidebar (Right) - Redesigned based on reference image */}
+                {/* Workshop Info Sidebar (Right) */}
                 <div className="space-y-6">
-                  {/* Workshop Details Card */}
-                  <div className="bg-white/50 backdrop-blur-sm rounded-xl overflow-hidden shadow-md border border-gray-100 sticky top-6">
+                  {/* Info Card - Redesigned with better visual hierarchy */}
+                  <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 sticky top-6">
                     <div className="bg-[#FEF7CD]/30 p-4 border-b border-[#FEF7CD]">
                       <h3 className="font-semibold text-lg text-gray-800">Workshop Details</h3>
                     </div>
@@ -954,7 +909,7 @@ const Workshop = () => {
                           <CalendarDays className="h-5 w-5 text-bitcoin" />
                         </div>
                         <div>
-                          <p className="text-xs uppercase tracking-wider text-gray-500 font-medium">DATUM</p>
+                          <p className="text-xs uppercase tracking-wider text-gray-500 font-medium">Datum</p>
                           <p className="font-medium text-gray-800">{getSelectedWorkshop()?.date}</p>
                         </div>
                       </div>
@@ -964,7 +919,7 @@ const Workshop = () => {
                           <Clock className="h-5 w-5 text-bitcoin" />
                         </div>
                         <div>
-                          <p className="text-xs uppercase tracking-wider text-gray-500 font-medium">ZEIT</p>
+                          <p className="text-xs uppercase tracking-wider text-gray-500 font-medium">Zeit</p>
                           <p className="font-medium text-gray-800">{getSelectedWorkshop()?.time}</p>
                         </div>
                       </div>
@@ -974,7 +929,7 @@ const Workshop = () => {
                           <MapPin className="h-5 w-5 text-bitcoin" />
                         </div>
                         <div>
-                          <p className="text-xs uppercase tracking-wider text-gray-500 font-medium">ORT</p>
+                          <p className="text-xs uppercase tracking-wider text-gray-500 font-medium">Ort</p>
                           <p className="font-medium text-gray-800">{getSelectedWorkshop()?.location}</p>
                         </div>
                       </div>
@@ -984,17 +939,16 @@ const Workshop = () => {
                       <div>
                         <p className="text-xs uppercase tracking-wider text-gray-500 font-medium mb-3 flex items-center gap-1.5">
                           <Users className="h-3.5 w-3.5" />
-                          REFERENTEN
+                          {getSelectedWorkshop()?.instructors.length > 1 ? 'Referenten' : 'Referent'}
                         </p>
                         <div className="space-y-3">
-                          {getSelectedWorkshop()?.instructors?.filter(instructor => 
-                            instructor.name !== "Q&A" && !instructor.name.includes("Markus Gürne")
-                          ).slice(0, 5).map((instructor, index) => (
+                          {getSelectedWorkshop()?.instructors?.map((instructor, index) => (
                             <div key={index} className="bg-gray-50 rounded-lg p-3 border border-gray-100">
                               <div className="font-medium text-gray-800">{instructor.name}</div>
                               {instructor.title && (
                                 <div className="text-xs text-gray-500">{instructor.title}</div>
                               )}
+                              {/* Removed time slot bubbles here */}
                             </div>
                           ))}
                         </div>
