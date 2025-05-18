@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { Check, ArrowRight, Bitcoin, BookOpen, Target, Users, Shield, Code, Tv, Clock, CalendarDays, MapPin, User, Ticket, Sparkles } from 'lucide-react';
+import { Check, ArrowRight, Bitcoin, BookOpen, Target, Users, Shield, Code, Tv, Clock, CalendarDays, MapPin, User, Ticket, Sparkles, Eye, EyeOff } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
@@ -11,6 +11,7 @@ import { Separator } from '@/components/ui/separator';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogClose } from "@/components/ui/dialog";
 import { usePopup } from "@/pages/PopupContext";
 import { BITCOIN_COLOR } from '@/lib/utils';
+import { Switch } from '@/components/ui/switch';
 
 interface Speaker {
   name: string;
@@ -36,6 +37,7 @@ interface WorkshopType {
   fullDescription: string;
   requirements: string;
   imageUrl: string;
+  visible?: boolean; // New property for visibility control
   agenda?: {
     timeSlot: string;
     speaker: string;
@@ -46,6 +48,7 @@ interface WorkshopType {
 const Workshop = () => {
   const { openPopup } = usePopup();
   const [selectedWorkshop, setSelectedWorkshop] = useState<number | null>(null);
+  const [workshopsVisibility, setWorkshopsVisibility] = useState<Record<number, boolean>>({});
 
   const workshopIcons = [
     <img src="/images/workshop/bitcoin-card-credit-card.svg" alt="Bitcoin Charts" className="h-10 w-10" />,
@@ -105,7 +108,7 @@ const Workshop = () => {
         { timeSlot: "14:30 - 15:15", speaker: "Dr. Steffen Hahn", topic: "Welche genauen Anforderungen stellt diese neue Regulierung?" },
         { timeSlot: "15:30 - 15:45", speaker: "VRBM Banker", topic: "Warum eine Beimischung von Bitcoin das Portfolio stärkt." },
         { timeSlot: "15:45 - 16:15", speaker: "VRBM Banker", topic: "Das Bitcoin Informations Gespräch der VR Bayern Mitte." },
-        { timeSlot: "16:15 - 16:30", speaker: "Q&Ar", topic: "Diskussion und Fragen" },
+        { timeSlot: "16:15 - 16:30", speaker: "Q&A", topic: "Diskussion und Fragen" },
         { timeSlot: "17:00 - 17:30", speaker: "Florian Bruce-Boye", topic: "Warum Bitcoin der optimale Wertspeicher ist" },
         { timeSlot: "17:30 - 18:00", speaker: "Daniel 'Loddi'", topic: "Wie funktioniert unser Geldsystem?" },
         { timeSlot: "18:00 - 18:30", speaker: "Karl Steuerberater", topic: "Wie ist Bitcoin steuerlich einzuordnen?" },
@@ -507,6 +510,31 @@ const Workshop = () => {
     }
   ];
 
+  // Initialize visibility state if not already set
+  React.useEffect(() => {
+    const initialVisibility: Record<number, boolean> = {};
+    workshops.forEach(workshop => {
+      if (workshopsVisibility[workshop.id] === undefined) {
+        initialVisibility[workshop.id] = true; // Default all workshops to visible
+      }
+    });
+    
+    if (Object.keys(initialVisibility).length > 0) {
+      setWorkshopsVisibility(prev => ({ ...prev, ...initialVisibility }));
+    }
+  }, [workshops]);
+
+  const handleToggleVisibility = (id: number) => {
+    setWorkshopsVisibility(prev => ({
+      ...prev,
+      [id]: !prev[id]
+    }));
+  };
+
+  const visibleWorkshops = workshops.filter(workshop => 
+    workshopsVisibility[workshop.id] !== false
+  );
+
   const handleDetailsClick = (workshopId: number) => {
     setSelectedWorkshop(workshopId);
   };
@@ -562,16 +590,30 @@ const Workshop = () => {
                     <Card 
                       key={workshop.id} 
                       className={`border ${workshop.borderColor} shadow-md hover:shadow-xl transition-all duration-300 
-                      hover:translate-y-[-5px] ${workshop.bgColor}/30 text-gray-800 rounded-xl overflow-hidden h-full`}
+                      hover:translate-y-[-5px] ${workshop.bgColor}/30 text-gray-800 rounded-xl overflow-hidden h-full
+                      ${workshopsVisibility[workshop.id] === false ? 'opacity-50' : ''}`}
                     >
                       <CardContent className="p-4 flex flex-col h-full">
                         <div className="flex justify-between items-start mb-3">
                           <div className="flex justify-center bg-white/60 w-14 h-14 rounded-full items-center shadow-inner border border-white/80">
                             {workshop.icon}
                           </div>
-                          <Badge variant="outline" className="text-xs bg-white/50 border-bitcoin/20 text-bitcoin font-normal">
-                            Workshop {workshop.id}
-                          </Badge>
+                          <div className="flex items-center gap-2">
+                            <Badge variant="outline" className="text-xs bg-white/50 border-bitcoin/20 text-bitcoin font-normal">
+                              Workshop {workshop.id}
+                            </Badge>
+                            <div className="flex items-center" title={workshopsVisibility[workshop.id] ? 'Workshop sichtbar' : 'Workshop ausgeblendet'}>
+                              <Switch 
+                                checked={workshopsVisibility[workshop.id] !== false}
+                                onCheckedChange={() => handleToggleVisibility(workshop.id)}
+                                className="data-[state=checked]:bg-bitcoin"
+                              />
+                              {workshopsVisibility[workshop.id] !== false ? 
+                                <Eye className="h-4 w-4 ml-1 text-bitcoin" /> : 
+                                <EyeOff className="h-4 w-4 ml-1 text-gray-400" />
+                              }
+                            </div>
+                          </div>
                         </div>
                         <h3 className="text-lg font-bold mb-1 text-gray-800">{workshop.title}</h3>
                         <p className="text-sm text-bitcoin mb-2">{workshop.subtitle}</p>
@@ -626,7 +668,7 @@ const Workshop = () => {
                         {date}
                       </h3>
                       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {workshops
+                        {visibleWorkshops
                           .filter(workshop => workshop.date === date)
                           .map(workshop => (
                             <Card 
@@ -635,7 +677,16 @@ const Workshop = () => {
                               ${workshop.bgColor}/30 text-gray-800 rounded-xl overflow-hidden h-full`}
                             >
                               <CardContent className="p-4 flex flex-col h-full">
-                                <h3 className="text-lg font-bold mb-1 text-gray-800">{workshop.title}</h3>
+                                <div className="flex justify-between items-start mb-2">
+                                  <h3 className="text-lg font-bold mb-1 text-gray-800">{workshop.title}</h3>
+                                  <div className="flex items-center" title={workshopsVisibility[workshop.id] ? 'Workshop sichtbar' : 'Workshop ausgeblendet'}>
+                                    <Switch 
+                                      checked={workshopsVisibility[workshop.id] !== false}
+                                      onCheckedChange={() => handleToggleVisibility(workshop.id)}
+                                      className="data-[state=checked]:bg-bitcoin"
+                                    />
+                                  </div>
+                                </div>
                                 <p className="text-sm text-bitcoin mb-3">{workshop.subtitle}</p>
                                 <div className="flex items-center gap-1.5 text-xs mb-2">
                                   <Clock className="h-3.5 w-3.5 text-bitcoin" />
@@ -673,7 +724,7 @@ const Workshop = () => {
                         {level}
                       </h3>
                       <div className="space-y-4">
-                        {workshops
+                        {visibleWorkshops
                           .filter(workshop => workshop.difficulty === level)
                           .map(workshop => (
                             <Card 
@@ -682,7 +733,16 @@ const Workshop = () => {
                               ${workshop.bgColor}/30 text-gray-800 rounded-xl overflow-hidden`}
                             >
                               <CardContent className="p-3 flex flex-col">
-                                <h4 className="text-base font-bold mb-1">{workshop.title}</h4>
+                                <div className="flex justify-between items-start mb-2">
+                                  <h4 className="text-base font-bold">{workshop.title}</h4>
+                                  <div className="flex items-center" title={workshopsVisibility[workshop.id] ? 'Workshop sichtbar' : 'Workshop ausgeblendet'}>
+                                    <Switch 
+                                      checked={workshopsVisibility[workshop.id] !== false}
+                                      onCheckedChange={() => handleToggleVisibility(workshop.id)}
+                                      className="data-[state=checked]:bg-bitcoin"
+                                    />
+                                  </div>
+                                </div>
                                 <p className="text-xs text-gray-600 mb-2">{workshop.date}, {workshop.time}</p>
                                 <Button 
                                   variant="outline" 
@@ -770,7 +830,7 @@ const Workshop = () => {
       </main>
       <Footer />
 
-      {/* Enhanced Workshop Details Dialog - Redesigned for a high-end look */}
+      {/* Workshop Details Dialog */}
       <Dialog open={selectedWorkshop !== null} onOpenChange={handleCloseDialog}>
         <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto p-0 rounded-xl">
           {getSelectedWorkshop() && (
