@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Check, ArrowRight, Bitcoin, BookOpen, Target, Users, Shield, Code, Tv, Clock, CalendarDays, MapPin, User, Ticket, Sparkles } from 'lucide-react';
@@ -46,6 +46,7 @@ interface WorkshopType {
 const Workshop = () => {
   const { openPopup } = usePopup();
   const [selectedWorkshop, setSelectedWorkshop] = useState<number | null>(null);
+  const [workshopsVisibility, setWorkshopsVisibility] = useState<Record<number, boolean>>({});
 
   const workshopIcons = [
     <img src="/images/workshop/bitcoin-card-credit-card.svg" alt="Bitcoin Charts" className="h-10 w-10" />,
@@ -105,7 +106,7 @@ const Workshop = () => {
         { timeSlot: "14:30 - 15:15", speaker: "Dr. Steffen Hahn", topic: "Welche genauen Anforderungen stellt diese neue Regulierung?" },
         { timeSlot: "15:30 - 15:45", speaker: "VRBM Banker", topic: "Warum eine Beimischung von Bitcoin das Portfolio stärkt." },
         { timeSlot: "15:45 - 16:15", speaker: "VRBM Banker", topic: "Das Bitcoin Informations Gespräch der VR Bayern Mitte." },
-        { timeSlot: "16:15 - 16:30", speaker: "Q&Ar", topic: "Diskussion und Fragen" },
+        { timeSlot: "16:15 - 16:30", speaker: "Q&A", topic: "Diskussion und Fragen" },
         { timeSlot: "17:00 - 17:30", speaker: "Florian Bruce-Boye", topic: "Warum Bitcoin der optimale Wertspeicher ist" },
         { timeSlot: "17:30 - 18:00", speaker: "Daniel 'Loddi'", topic: "Wie funktioniert unser Geldsystem?" },
         { timeSlot: "18:00 - 18:30", speaker: "Karl Steuerberater", topic: "Wie ist Bitcoin steuerlich einzuordnen?" },
@@ -114,7 +115,7 @@ const Workshop = () => {
       ]
     },
     {
-      id: 1,
+      id: 2,
       title: "Bitcoin als Wertanlage",
       subtitle: "für Family Offices",
       description: "Ein kompakter Workshop über die langfristigen Investmentstrategien mit Bitcoin für Family Offices und professionelle Vermögensverwalter.",
@@ -158,7 +159,7 @@ const Workshop = () => {
       ]
     },
     {
-      id: 2,
+      id: 3,
       title: "Bitcoin Full Node",
       subtitle: "aufsetzen und betreiben",
       description: "Praktischer Workshop zum Aufsetzen und Betreiben einer eigenen Bitcoin Full Node.",
@@ -201,7 +202,7 @@ const Workshop = () => {
       ]
     },
     {
-      id: 3,
+      id: 4,
       title: "Hardware-Wallet",
       subtitle: "bauen und verstehen",
       description: "Bauen Sie Ihre eigene Hardware-Wallet und verstehen Sie die Sicherheitskonzepte dahinter.",
@@ -243,7 +244,7 @@ const Workshop = () => {
       ]
     },
     {
-      id: 4,
+      id: 5,
       title: "Lightning Network",
       subtitle: "im Detail verstehen",
       description: "Tauchen Sie tief in das Lightning Network ein und verstehen Sie die technischen Details.",
@@ -283,50 +284,6 @@ const Workshop = () => {
         { timeSlot: "10:15 - 11:00", speaker: "Felix Schneider", topic: "Routing und Network Topologie" },
         { timeSlot: "11:00 - 11:45", speaker: "Sarah Wagner", topic: "LApps Development" },
         { timeSlot: "11:45 - 12:30", speaker: "Beide", topic: "Live Demonstrationen" }
-      ]
-    },
-    {
-      id: 5,
-      title: "Bitcoin für Unternehmen",
-      subtitle: "Integration & Buchhaltung",
-      description: "Wie Unternehmen Bitcoin in ihre Geschäftsprozesse integrieren können.",
-      icon: workshopIcons[4],
-      bgColor: "bg-[#FDE1D3]",
-      borderColor: "border-[#FEF7CD]",
-      date: "10. Oktober",
-      time: "13:30 - 17:00",
-      location: "Konferenzraum D",
-      instructors: [
-        { name: "Sarah Wagner", title: "Fintech Beraterin", timeSlot: "13:30 - 14:00", topic: "Bitcoin-Zahlungslösungen" },
-        { name: "Michael Weber", title: "Steuerberater", timeSlot: "14:00 - 14:30", topic: "Buchhaltung und Bilanzierung" }
-      ],
-      difficulty: "Mittel",
-      seats: 30,
-      fullDescription: `
-        <p>Dieser praxisorientierte Workshop richtet sich an Unternehmer, Finanzverantwortliche und Berater, die Bitcoin in ihre Geschäftsprozesse integrieren möchten.</p>
-        <p>Von der Akzeptanz von Bitcoin als Zahlungsmittel bis hin zur Bilanzierung – dieser Workshop deckt alle wesentlichen Aspekte der Unternehmensintegration ab.</p>
-        <h3>Themen:</h3>
-        <ul>
-          <li>Implementierung von Bitcoin-Zahlungslösungen</li>
-          <li>Buchhaltung und Bilanzierung von Bitcoin-Beständen</li>
-          <li>Steuerliche Behandlung in Deutschland und der EU</li>
-          <li>Risikomanagement und Compliance</li>
-          <li>Treasury-Management mit Bitcoin</li>
-          <li>Geschäftsmodelle im Bitcoin-Ökosystem</li>
-          <li>Praxisbeispiele erfolgreicher Unternehmensintegration</li>
-        </ul>
-        <p>Die Teilnehmer erhalten praktische Leitfäden, Checklisten und direkte Beratung zu ihren spezifischen Unternehmensanforderungen.</p>
-      `,
-      requirements: "Grundlegendes Verständnis von Unternehmensfinanzen und Buchhaltung.",
-      imageUrl: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3",
-      agenda: [
-        { timeSlot: "13:30 - 14:00", speaker: "Sarah Wagner", topic: "Bitcoin-Zahlungslösungen für Unternehmen" },
-        { timeSlot: "14:00 - 14:30", speaker: "Michael Weber", topic: "Buchhaltung und Bilanzierung" },
-        { timeSlot: "14:30 - 15:00", speaker: "Sarah Wagner", topic: "Steuerliche Behandlung" },
-        { timeSlot: "15:00 - 15:15", speaker: "", topic: "Pause" },
-        { timeSlot: "15:15 - 15:45", speaker: "Michael Weber", topic: "Compliance und Risikomanagement" },
-        { timeSlot: "15:45 - 16:15", speaker: "Sarah Wagner", topic: "Treasury-Management" },
-        { timeSlot: "16:15 - 17:00", speaker: "Beide", topic: "Praxisbeispiele und Q&A" }
       ]
     },
     {
@@ -372,7 +329,7 @@ const Workshop = () => {
         { timeSlot: "15:45 - 16:15", speaker: "Sarah Wagner", topic: "Treasury-Management" },
         { timeSlot: "16:15 - 17:00", speaker: "Beide", topic: "Praxisbeispiele und Q&A" }
       ]
-    },    
+    },
     {
       id: 7,
       title: "Bitcoin für Unternehmen",
@@ -507,6 +464,19 @@ const Workshop = () => {
     }
   ];
 
+  useEffect(() => {
+    const initialVisibility: Record<number, boolean> = {};
+    workshops.forEach(workshop => {
+      initialVisibility[workshop.id] = true;
+    });
+    
+    setWorkshopsVisibility(initialVisibility);
+  }, []);
+
+  const visibleWorkshops = workshops.filter(workshop => 
+    workshopsVisibility[workshop.id] !== false
+  );
+
   const handleDetailsClick = (workshopId: number) => {
     setSelectedWorkshop(workshopId);
   };
@@ -519,13 +489,26 @@ const Workshop = () => {
     return workshops.find(workshop => workshop.id === selectedWorkshop);
   };
 
-  // Function to determine if an agenda item is the evening event (last item)
   const isEveningEvent = (item: any, index: number, array: any[]) => {
     return index === array.length - 1 && 
            (item.topic?.includes("Anekdoten") || 
             item.timeSlot?.includes("20:00") || 
             parseInt(item.timeSlot?.split(':')[0]) >= 19);
   };
+
+  React.useEffect(() => {
+    (window as any).toggleWorkshopVisibility = (workshopId: number, isVisible: boolean) => {
+      setWorkshopsVisibility(prev => ({
+        ...prev,
+        [workshopId]: isVisible
+      }));
+      console.log(`Workshop ${workshopId} visibility set to: ${isVisible}`);
+    };
+    
+    return () => {
+      delete (window as any).toggleWorkshopVisibility;
+    };
+  }, []);
 
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-50 to-gray-100">
@@ -558,7 +541,7 @@ const Workshop = () => {
               </TabsList>
               <TabsContent value="all" className="mt-0">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                  {workshops.map((workshop) => (
+                  {visibleWorkshops.map((workshop) => (
                     <Card 
                       key={workshop.id} 
                       className={`border ${workshop.borderColor} shadow-md hover:shadow-xl transition-all duration-300 
@@ -626,7 +609,7 @@ const Workshop = () => {
                         {date}
                       </h3>
                       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {workshops
+                        {visibleWorkshops
                           .filter(workshop => workshop.date === date)
                           .map(workshop => (
                             <Card 
@@ -673,7 +656,7 @@ const Workshop = () => {
                         {level}
                       </h3>
                       <div className="space-y-4">
-                        {workshops
+                        {visibleWorkshops
                           .filter(workshop => workshop.difficulty === level)
                           .map(workshop => (
                             <Card 
@@ -770,12 +753,10 @@ const Workshop = () => {
       </main>
       <Footer />
 
-      {/* Enhanced Workshop Details Dialog - Redesigned for a high-end look */}
       <Dialog open={selectedWorkshop !== null} onOpenChange={handleCloseDialog}>
         <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto p-0 rounded-xl">
           {getSelectedWorkshop() && (
             <>
-              {/* Workshop Header with Background Image */}
               <div className="relative h-48 md:h-64 overflow-hidden rounded-t-xl">
                 <img 
                   src={getSelectedWorkshop()?.imageUrl} 
@@ -803,11 +784,8 @@ const Workshop = () => {
                 </DialogClose>
               </div>
 
-              {/* Workshop Content - Redesigned Layout */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
-                {/* Main Content (Left and Middle) */}
                 <div className="md:col-span-2 space-y-6">
-                  {/* Workshop Description */}
                   <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
                     <h3 className="text-xl font-semibold mb-4 text-gray-800 flex items-center gap-2">
                       <span className="h-8 w-8 rounded-full bg-[#FEF7CD] flex items-center justify-center">
@@ -821,7 +799,6 @@ const Workshop = () => {
                     />
                   </div>
                   
-                  {/* Workshop Schedule - Redesigned - Modified to remove time bubbles and add highlight label */}
                   <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
                     <h3 className="text-xl font-semibold mb-5 text-gray-800 flex items-center gap-2">
                       <span className="h-8 w-8 rounded-full bg-[#E2F4FF] flex items-center justify-center">
@@ -831,14 +808,11 @@ const Workshop = () => {
                     </h3>
                     
                     <div className="relative">
-                      {/* Timeline Line */}
                       <div className="absolute left-[29px] top-0 bottom-0 w-0.5 bg-gray-200"></div>
                       
-                      {/* Timeline Items */}
                       <div className="space-y-6">
                         {getSelectedWorkshop()?.agenda?.map((item, index, array) => (
                           <div key={index} className="flex gap-5">
-                            {/* Timeline Dot */}
                             <div className={`relative z-10 shrink-0 mt-0.5 h-6 w-6 rounded-full ${item.speaker ? 'bg-bitcoin' : 'bg-gray-200'} flex items-center justify-center`}>
                               {item.speaker ? (
                                 <span className="text-white text-xs font-bold">{index + 1}</span>
@@ -847,7 +821,6 @@ const Workshop = () => {
                               )}
                             </div>
                             
-                            {/* Timeline Content */}
                             <div className={`flex-1 ${!item.speaker ? 'opacity-80' : ''}`}>
                               <div className={`bg-white p-3 rounded-lg ${
                                 isEveningEvent(item, index, array) 
@@ -883,7 +856,6 @@ const Workshop = () => {
                     </div>
                   </div>
                   
-                  {/* Requirements */}
                   <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
                     <h3 className="text-xl font-semibold mb-4 text-gray-800 flex items-center gap-2">
                       <span className="h-8 w-8 rounded-full bg-[#F2FCE2] flex items-center justify-center">
@@ -895,9 +867,7 @@ const Workshop = () => {
                   </div>
                 </div>
                 
-                {/* Workshop Info Sidebar (Right) */}
                 <div className="space-y-6">
-                  {/* Info Card - Redesigned with better visual hierarchy */}
                   <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 sticky top-6">
                     <div className="bg-[#FEF7CD]/30 p-4 border-b border-[#FEF7CD]">
                       <h3 className="font-semibold text-lg text-gray-800">Workshop Details</h3>
@@ -948,7 +918,6 @@ const Workshop = () => {
                               {instructor.title && (
                                 <div className="text-xs text-gray-500">{instructor.title}</div>
                               )}
-                              {/* Removed time slot bubbles here */}
                             </div>
                           ))}
                         </div>
