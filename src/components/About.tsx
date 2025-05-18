@@ -12,7 +12,7 @@ const About = () => {
     {
       icon: <img src="/images/speakers/Bitcoin_Block.png" alt="Bitcoin Block" className="h-12 w-12 mb-4" loading="lazy" />,
       title: "Bitcoin Block",
-      description: "Schon ab dem 4. Oktober beginnt die Bitcoin Woche in Ingolstadt. Im Westpark Shoppingcenter öffent der Bitcoin Block seine Tore. Informationen über Bitcoin für interessierte Laien und Bitcoiner.",
+      description: "Schon ab dem 4. Oktober beginnt die Bitcoin Woche in Ingolstadt. Im Westpark Shoppingcenter öffnet der Bitcoin Block seine Tore. Informationen über Bitcoin für interessierte Laien und Bitcoiner.",
       bgColor: "bg-transparent",
       borderColor: "border-[#FDE1D3]",
      
@@ -40,7 +40,7 @@ const About = () => {
     {
       icon: <img src="/images/workshop/bitcoin-help-support.svg" alt="BitcoinForum BIP25" className="h-12 w-12 mb-4" loading="lazy" />,
       title: "BIP25 Members",
-      description: "Das ist das engagiertes Team hinter der Organisation und Umsetzung des 3. BitcoinForums. Sie gestalten ein einzigartiges Event, das Wissen, Austausch und Inspiration vereint.",
+      description: "Das ist das engagierte Team hinter der Organisation und Umsetzung des 3. BitcoinForums. Sie gestalten ein einzigartiges Event, das Wissen, Austausch und Inspiration vereint.",
       bgColor: "bg-transparent",
       borderColor: "border-[#F2FCE2]",
       link: "/bip25-members",
@@ -50,7 +50,7 @@ const About = () => {
     {
       icon: <img src="/images/workshop/seo-illustrations-2.svg" alt="BitcoinForum Partner" className="h-12 w-12 mb-4" loading="lazy" />,
       title: "Partner werden",
-      description: "Wenn auch Sie sich bzw. Ihr Unternehmen beim 3. BitcoinForum präsentieren, können Sie hier die Ihr Sponsoring buchen.",
+      description: "Wenn auch Sie sich bzw. Ihr Unternehmen beim 3. BitcoinForum präsentieren, können Sie hier Ihr Sponsoring buchen.",
       bgColor: "bg-transparent",
       borderColor: "border-[#D3E4FD]",
       link: "https://www.vr-bayernmitte.de/privatkunden/sparen-geldanlage/bitcoin/3--bitcoinforum/messepartner-werden.html",
@@ -60,7 +60,7 @@ const About = () => {
     {
       icon: <img src="/images/workshop/robots.svg" alt="BitcoinForum Workshops" className="h-12 w-12 mb-4" loading="lazy" />,
       title: "Workshops",
-      description: "Wir bereiten derzeit eine Vielzahl von Workshops für Sie vor. Anfänger und technikinteressierte Besucher finden hier ab Juli eine spannende Auswahl. WICHTIG: Jetzt schon Tickets bestellen zum rabattierten Preis, denn Workshops können nur auf Basis bestehender Tickets bestellt werden!",
+      description: "Wir bereiten derzeit eine Vielzahl von Workshops für Sie vor. Anfänger und technikinteressierte Besucher finden hier ab Juli eine spannende Auswahl. WICHTIG: Jetzt schon Tickets zum rabattierten Preis bestellen, denn Workshops sind nur mit gültigem Ticket buchbar!",
       bgColor: "bg-transparent",
       borderColor: "border-[#FEF7CD]",
       buttonText: "im Aufbau",
