@@ -98,7 +98,7 @@ const FAQ = () => {
             {[
               {
                 id: "item-1",
-                question: "Wo findet das 3. BitcoinForum statt1?",
+                question: "Wo findet das 3. BitcoinForum statt?",
                 answer: <>
                   <p className="text-gray-700 mb-4">
                     Die Hauptveranstaltungsstätte ist die Saturn Arena Ingolstadt (Südliche Ringstraße 64). Als weitere Locations stehen das benachbarte Exerzierhaus, der DonauTower (Unternehmenszentrale der Volksbank Raiffeisenbank Bayern Mitte) und das Brigk (Digitales Gründerzentrum) zur Verfügung.
