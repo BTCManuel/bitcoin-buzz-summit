@@ -498,7 +498,7 @@ const Workshop = () => {
 
   React.useEffect(() => {
      // HIER Workshop 5 ausblenden:
-  setWorkshopsVisibility({ 6: false });
+  setWorkshopsVisibility({ 1: false });
     (window as any).toggleWorkshopVisibility = (workshopId: number, isVisible: boolean) => {
       setWorkshopsVisibility(prev => ({
         ...prev,
