@@ -87,16 +87,16 @@ const Workshop = () => {
   seats: 25,
   fullDescription: `
     <p>Dieser Workshop richtet sich speziell an Banker, die sich mit Bitcoin-Angeboten für ihre Kunden beschäftigen wollen oder müssen.</p>
-    <p>Behandelt werden regulatorische Anforderungen, praktische Umsetzungsmöglichkeiten sowie strategische Aspekte der Integration von Bitcoin in bestehende Produkt- und Portfoliostrukturen einer Bank.</p>
-    <h3>Schwerpunkte:</h3>
-    <ul>
-      <li>- Bitcoin als Anlageprodukt für Bankkunden</li>
-      <li>- Regulatorische Anforderungen (u.a. MiCAR)</li>
-      <li>- Strategische Überlegungen zu Asset Allocation</li>
-      <li>- Verantwortung und Risiko in der Kundenberatung</li>
-      <li>- Technische und steuerliche Umsetzung</li>
-    </ul>
-    <p>Die Inhalte richten sich ausdrücklich an Fach- und Führungskräfte im Bankensektor.</p>
+  <p>Behandelt werden regulatorische Anforderungen, praktische Umsetzungsmöglichkeiten sowie strategische Aspekte der Integration von Bitcoin in bestehende Produkt- und Portfoliostrukturen einer Bank.</p>
+  <h3><strong>Schwerpunkte:</strong></h3>
+  <ul>
+    <li><em>Bitcoin als Anlageprodukt für Bankkunden</em></li>
+    <li><em>Regulatorische Anforderungen (u.a. MiCAR)</em></li>
+    <li><em>Strategische Überlegungen zu Asset Allocation</em></li>
+    <li><em>Verantwortung und Risiko in der Kundenberatung</em></li>
+    <li><em>Technische und steuerliche Umsetzung</em></li>
+  </ul>
+  <p>Die Inhalte richten sich ausdrücklich an Fach- und Führungskräfte im Bankensektor.</p>
   `,
   requirements: "Interesse an Bitcoin, Grundverständnis bankinterner Prozesse und Kundenberatung.",
   imageUrl: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3",
