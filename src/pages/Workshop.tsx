@@ -857,7 +857,7 @@ const Workshop = () => {
                                 {isEveningEvent(item, index, array) && (
                                   <div className="flex items-center gap-2 mb-3 bg-bitcoin text-white px-3 py-1.5 rounded-md shadow-inner animate-pulse max-w-max">
                                     <Sparkles className="h-4 w-4" />
-                                    <span className="font-semibold text-sm uppercase tracking-wider">Besonderes Highlight - Abendveranstaltung</span>
+                                    <span className="font-semibold text-sm uppercase tracking-wider">Besonderes Highlight - Abendveranstaltung inklusive</span>
                                   </div>
                                 )}
                                 <div className="font-medium text-gray-800 mb-1">
