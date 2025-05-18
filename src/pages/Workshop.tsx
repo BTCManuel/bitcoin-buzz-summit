@@ -531,6 +531,7 @@ const Workshop = () => {
     }));
   };
 
+  // Filter visible workshops
   const visibleWorkshops = workshops.filter(workshop => 
     workshopsVisibility[workshop.id] !== false
   );
@@ -586,12 +587,11 @@ const Workshop = () => {
               </TabsList>
               <TabsContent value="all" className="mt-0">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                  {workshops.map((workshop) => (
+                  {visibleWorkshops.map((workshop) => (
                     <Card 
                       key={workshop.id} 
                       className={`border ${workshop.borderColor} shadow-md hover:shadow-xl transition-all duration-300 
-                      hover:translate-y-[-5px] ${workshop.bgColor}/30 text-gray-800 rounded-xl overflow-hidden h-full
-                      ${workshopsVisibility[workshop.id] === false ? 'opacity-50' : ''}`}
+                      hover:translate-y-[-5px] ${workshop.bgColor}/30 text-gray-800 rounded-xl overflow-hidden h-full`}
                     >
                       <CardContent className="p-4 flex flex-col h-full">
                         <div className="flex justify-between items-start mb-3">
@@ -655,16 +655,18 @@ const Workshop = () => {
               </TabsContent>
               <TabsContent value="beginner" className="mt-0">
                 <div className="space-y-8">
-                  {['9. Oktober', '10. Oktober', '11. Oktober'].map((date) => (
-                    <div key={date} className="mb-8">
-                      <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
-                        <CalendarDays className="h-5 w-5 text-bitcoin" />
-                        {date}
-                      </h3>
-                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {visibleWorkshops
-                          .filter(workshop => workshop.date === date)
-                          .map(workshop => (
+                  {['9. Oktober', '10. Oktober', '11. Oktober'].map((date) => {
+                    const workshopsForDate = visibleWorkshops.filter(workshop => workshop.date === date);
+                    if (workshopsForDate.length === 0) return null;
+                    
+                    return (
+                      <div key={date} className="mb-8">
+                        <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+                          <CalendarDays className="h-5 w-5 text-bitcoin" />
+                          {date}
+                        </h3>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                          {workshopsForDate.map(workshop => (
                             <Card 
                               key={workshop.id} 
                               className={`border ${workshop.borderColor} shadow-md hover:shadow-lg transition-all duration-300 
@@ -695,9 +697,10 @@ const Workshop = () => {
                               </CardContent>
                             </Card>
                           ))}
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
                 
                 <div className="flex justify-center mt-12">
@@ -710,15 +713,17 @@ const Workshop = () => {
               </TabsContent>
               <TabsContent value="advanced" className="mt-0">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                  {['Mittel', 'Fortgeschritten', 'Experte'].map((level) => (
-                    <div key={level} className="space-y-4">
-                      <h3 className="text-lg font-bold mb-3 text-center p-2 bg-white/80 border border-gray-200 rounded-lg shadow-sm">
-                        {level}
-                      </h3>
-                      <div className="space-y-4">
-                        {visibleWorkshops
-                          .filter(workshop => workshop.difficulty === level)
-                          .map(workshop => (
+                  {['Mittel', 'Fortgeschritten', 'Experte'].map((level) => {
+                    const workshopsForLevel = visibleWorkshops.filter(workshop => workshop.difficulty === level);
+                    if (workshopsForLevel.length === 0) return null;
+                    
+                    return (
+                      <div key={level} className="space-y-4">
+                        <h3 className="text-lg font-bold mb-3 text-center p-2 bg-white/80 border border-gray-200 rounded-lg shadow-sm">
+                          {level}
+                        </h3>
+                        <div className="space-y-4">
+                          {workshopsForLevel.map(workshop => (
                             <Card 
                               key={workshop.id} 
                               className={`border ${workshop.borderColor} shadow-sm hover:shadow-md transition-all duration-300 
@@ -745,9 +750,10 @@ const Workshop = () => {
                               </CardContent>
                             </Card>
                           ))}
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
                 
                 <div className="flex justify-center mt-12">
@@ -998,7 +1004,6 @@ const Workshop = () => {
                               {instructor.title && (
                                 <div className="text-xs text-gray-500">{instructor.title}</div>
                               )}
-                              {/* Removed time slot bubbles here */}
                             </div>
                           ))}
                         </div>
