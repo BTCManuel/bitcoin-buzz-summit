@@ -1,3 +1,4 @@
+
 import React from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -355,61 +356,6 @@ const FAQ = () => {
               </a>
             </div>
           </div>
-
-          {/* Additional FAQ categories with images */}
-          <div className="mt-16 grid md:grid-cols-2 gap-8">
-            <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-all">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 flex-shrink-0 bg-pastel-yellow rounded-full flex items-center justify-center">
-                  <img src="/images/workshop/bitcoin-card-credit-card (1).svg" alt="Payment" className="w-8 h-8" />
-                </div>
-                {/*
-                <h3 className="text-lg font-medium">Zahlungsfragen</h3>
-              </div>
-              <ul className="space-y-3 ml-4">
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-bitcoin"></span>
-                  <span>Bitcoin und Satoshi werden akzeptiert</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-bitcoin"></span>
-                  <span>Barzahlung ist ebenfalls möglich</span>
-                </li>
-              </ul>
-              <a href="#item-9" className="text-bitcoin hover:underline text-sm flex items-center gap-1 mt-3">
-                <span>Mehr erfahren</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M9 6L15 12L9 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </a>
-            </div>
-
-            <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-all">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 flex-shrink-0 bg-pastel-green rounded-full flex items-center justify-center">
-                  <img src="/images/workshop/bitcoin-folder.svg" alt="Documents" className="w-8 h-8" />
-                </div>
-                <h3 className="text-lg font-medium">Veranstaltungsinformationen</h3>
-              </div>
-              <ul className="space-y-3 ml-4">
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-bitcoin"></span>
-                  <span>Reine Bitcoin-Veranstaltung</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-bitcoin"></span>
-                  <span>Familien- und kinderfreundlich</span>
-                </li>
-              </ul>
-              <a href="#item-11" className="text-bitcoin hover:underline text-sm flex items-center gap-1 mt-3">
-                <span>Mehr erfahren</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M9 6L15 12L9 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </a>
-            </div>
-          </div>
-          */}
 
           {/* Featured FAQ with illustration */}
           <div className="mt-12 bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-all">
