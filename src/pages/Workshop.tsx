@@ -11,7 +11,6 @@ import { Separator } from '@/components/ui/separator';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogClose } from "@/components/ui/dialog";
 import { usePopup } from "@/pages/PopupContext";
 import { BITCOIN_COLOR } from '@/lib/utils';
-import { Switch } from '@/components/ui/switch';
 
 interface Speaker {
   name: string;
@@ -37,7 +36,6 @@ interface WorkshopType {
   fullDescription: string;
   requirements: string;
   imageUrl: string;
-  visible?: boolean; // New property for visibility control
   agenda?: {
     timeSlot: string;
     speaker: string;
@@ -48,7 +46,6 @@ interface WorkshopType {
 const Workshop = () => {
   const { openPopup } = usePopup();
   const [selectedWorkshop, setSelectedWorkshop] = useState<number | null>(null);
-  const [workshopsVisibility, setWorkshopsVisibility] = useState<Record<number, boolean>>({});
 
   const workshopIcons = [
     <img src="/images/workshop/bitcoin-card-credit-card.svg" alt="Bitcoin Charts" className="h-10 w-10" />,
@@ -108,7 +105,7 @@ const Workshop = () => {
         { timeSlot: "14:30 - 15:15", speaker: "Dr. Steffen Hahn", topic: "Welche genauen Anforderungen stellt diese neue Regulierung?" },
         { timeSlot: "15:30 - 15:45", speaker: "VRBM Banker", topic: "Warum eine Beimischung von Bitcoin das Portfolio stärkt." },
         { timeSlot: "15:45 - 16:15", speaker: "VRBM Banker", topic: "Das Bitcoin Informations Gespräch der VR Bayern Mitte." },
-        { timeSlot: "16:15 - 16:30", speaker: "Q&A", topic: "Diskussion und Fragen" },
+        { timeSlot: "16:15 - 16:30", speaker: "Q&Ar", topic: "Diskussion und Fragen" },
         { timeSlot: "17:00 - 17:30", speaker: "Florian Bruce-Boye", topic: "Warum Bitcoin der optimale Wertspeicher ist" },
         { timeSlot: "17:30 - 18:00", speaker: "Daniel 'Loddi'", topic: "Wie funktioniert unser Geldsystem?" },
         { timeSlot: "18:00 - 18:30", speaker: "Karl Steuerberater", topic: "Wie ist Bitcoin steuerlich einzuordnen?" },
@@ -510,33 +507,6 @@ const Workshop = () => {
     }
   ];
 
-  // Initialize visibility state if not already set
-  React.useEffect(() => {
-    const initialVisibility: Record<number, boolean> = {};
-    workshops.forEach(workshop => {
-      if (workshopsVisibility[workshop.id] === undefined) {
-       // initialVisibility[workshop.id] = true; // Default all workshops to visible
-        initialVisibility[workshop.id] = workshop.id !== 5; // only workshop 5 is visible
-      }
-    });
-    
-    if (Object.keys(initialVisibility).length > 0) {
-      setWorkshopsVisibility(prev => ({ ...prev, ...initialVisibility }));
-    }
-  }, [workshops]);
-
-  const handleToggleVisibility = (id: number) => {
-    setWorkshopsVisibility(prev => ({
-      ...prev,
-      [id]: !prev[id]
-    }));
-  };
-
-  // Filter visible workshops
-  const visibleWorkshops = workshops.filter(workshop => 
-    workshopsVisibility[workshop.id] !== false
-  );
-
   const handleDetailsClick = (workshopId: number) => {
     setSelectedWorkshop(workshopId);
   };
@@ -588,7 +558,7 @@ const Workshop = () => {
               </TabsList>
               <TabsContent value="all" className="mt-0">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                  {visibleWorkshops.map((workshop) => (
+                  {workshops.map((workshop) => (
                     <Card 
                       key={workshop.id} 
                       className={`border ${workshop.borderColor} shadow-md hover:shadow-xl transition-all duration-300 
@@ -599,16 +569,9 @@ const Workshop = () => {
                           <div className="flex justify-center bg-white/60 w-14 h-14 rounded-full items-center shadow-inner border border-white/80">
                             {workshop.icon}
                           </div>
-                          <div className="flex items-center gap-2">
-                            <Badge variant="outline" className="text-xs bg-white/50 border-bitcoin/20 text-bitcoin font-normal">
-                              Workshop {workshop.id}
-                            </Badge>
-                            <Switch 
-                              checked={workshopsVisibility[workshop.id] !== false}
-                              onCheckedChange={() => handleToggleVisibility(workshop.id)}
-                              className="data-[state=checked]:bg-bitcoin"
-                            />
-                          </div>
+                          <Badge variant="outline" className="text-xs bg-white/50 border-bitcoin/20 text-bitcoin font-normal">
+                            Workshop {workshop.id}
+                          </Badge>
                         </div>
                         <h3 className="text-lg font-bold mb-1 text-gray-800">{workshop.title}</h3>
                         <p className="text-sm text-bitcoin mb-2">{workshop.subtitle}</p>
@@ -656,32 +619,23 @@ const Workshop = () => {
               </TabsContent>
               <TabsContent value="beginner" className="mt-0">
                 <div className="space-y-8">
-                  {['9. Oktober', '10. Oktober', '11. Oktober'].map((date) => {
-                    const workshopsForDate = visibleWorkshops.filter(workshop => workshop.date === date);
-                    if (workshopsForDate.length === 0) return null;
-                    
-                    return (
-                      <div key={date} className="mb-8">
-                        <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
-                          <CalendarDays className="h-5 w-5 text-bitcoin" />
-                          {date}
-                        </h3>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                          {workshopsForDate.map(workshop => (
+                  {['9. Oktober', '10. Oktober', '11. Oktober'].map((date) => (
+                    <div key={date} className="mb-8">
+                      <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+                        <CalendarDays className="h-5 w-5 text-bitcoin" />
+                        {date}
+                      </h3>
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {workshops
+                          .filter(workshop => workshop.date === date)
+                          .map(workshop => (
                             <Card 
                               key={workshop.id} 
                               className={`border ${workshop.borderColor} shadow-md hover:shadow-lg transition-all duration-300 
                               ${workshop.bgColor}/30 text-gray-800 rounded-xl overflow-hidden h-full`}
                             >
                               <CardContent className="p-4 flex flex-col h-full">
-                                <div className="flex justify-between items-start mb-2">
-                                  <h3 className="text-lg font-bold mb-1 text-gray-800">{workshop.title}</h3>
-                                  <Switch 
-                                    checked={workshopsVisibility[workshop.id] !== false}
-                                    onCheckedChange={() => handleToggleVisibility(workshop.id)}
-                                    className="data-[state=checked]:bg-bitcoin"
-                                  />
-                                </div>
+                                <h3 className="text-lg font-bold mb-1 text-gray-800">{workshop.title}</h3>
                                 <p className="text-sm text-bitcoin mb-3">{workshop.subtitle}</p>
                                 <div className="flex items-center gap-1.5 text-xs mb-2">
                                   <Clock className="h-3.5 w-3.5 text-bitcoin" />
@@ -698,10 +652,9 @@ const Workshop = () => {
                               </CardContent>
                             </Card>
                           ))}
-                        </div>
                       </div>
-                    );
-                  })}
+                    </div>
+                  ))}
                 </div>
                 
                 <div className="flex justify-center mt-12">
@@ -714,31 +667,22 @@ const Workshop = () => {
               </TabsContent>
               <TabsContent value="advanced" className="mt-0">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                  {['Mittel', 'Fortgeschritten', 'Experte'].map((level) => {
-                    const workshopsForLevel = visibleWorkshops.filter(workshop => workshop.difficulty === level);
-                    if (workshopsForLevel.length === 0) return null;
-                    
-                    return (
-                      <div key={level} className="space-y-4">
-                        <h3 className="text-lg font-bold mb-3 text-center p-2 bg-white/80 border border-gray-200 rounded-lg shadow-sm">
-                          {level}
-                        </h3>
-                        <div className="space-y-4">
-                          {workshopsForLevel.map(workshop => (
+                  {['Mittel', 'Fortgeschritten', 'Experte'].map((level) => (
+                    <div key={level} className="space-y-4">
+                      <h3 className="text-lg font-bold mb-3 text-center p-2 bg-white/80 border border-gray-200 rounded-lg shadow-sm">
+                        {level}
+                      </h3>
+                      <div className="space-y-4">
+                        {workshops
+                          .filter(workshop => workshop.difficulty === level)
+                          .map(workshop => (
                             <Card 
                               key={workshop.id} 
                               className={`border ${workshop.borderColor} shadow-sm hover:shadow-md transition-all duration-300 
                               ${workshop.bgColor}/30 text-gray-800 rounded-xl overflow-hidden`}
                             >
                               <CardContent className="p-3 flex flex-col">
-                                <div className="flex justify-between items-start mb-2">
-                                  <h4 className="text-base font-bold">{workshop.title}</h4>
-                                  <Switch 
-                                    checked={workshopsVisibility[workshop.id] !== false}
-                                    onCheckedChange={() => handleToggleVisibility(workshop.id)}
-                                    className="data-[state=checked]:bg-bitcoin"
-                                  />
-                                </div>
+                                <h4 className="text-base font-bold mb-1">{workshop.title}</h4>
                                 <p className="text-xs text-gray-600 mb-2">{workshop.date}, {workshop.time}</p>
                                 <Button 
                                   variant="outline" 
@@ -751,10 +695,9 @@ const Workshop = () => {
                               </CardContent>
                             </Card>
                           ))}
-                        </div>
                       </div>
-                    );
-                  })}
+                    </div>
+                  ))}
                 </div>
                 
                 <div className="flex justify-center mt-12">
@@ -827,7 +770,7 @@ const Workshop = () => {
       </main>
       <Footer />
 
-      {/* Workshop Details Dialog */}
+      {/* Enhanced Workshop Details Dialog - Redesigned for a high-end look */}
       <Dialog open={selectedWorkshop !== null} onOpenChange={handleCloseDialog}>
         <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto p-0 rounded-xl">
           {getSelectedWorkshop() && (
@@ -1005,6 +948,7 @@ const Workshop = () => {
                               {instructor.title && (
                                 <div className="text-xs text-gray-500">{instructor.title}</div>
                               )}
+                              {/* Removed time slot bubbles here */}
                             </div>
                           ))}
                         </div>
