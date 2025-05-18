@@ -243,7 +243,7 @@ const FAQ = () => {
               },
               {
                 id: "item-11",
-                question: "Werden beim 3. BitcoinForum auch andere &quot;Kryptowährungen&quot; behandelt?",
+                question: "Werden beim 3. BitcoinForum auch andere Kryptowährungen behandelt?",
                 answer: <>
                   <p className="text-gray-700">
                     Nein, das 3. BitcoinForum ist eine reine Bitcoin-Veranstaltung ("Bitcoin only"). Weitere bzw. andere Kryptowährungen werden nicht thematisiert.
@@ -294,7 +294,7 @@ const FAQ = () => {
               },
               {
                 id: "item-15",
-                question: "WICHTIGER HINWEIS: Keine Aufkleber (&quot;Sticker&quot;) im öffentlichen Raum!",
+                question: "WICHTIGER HINWEIS: Keine Aufkleber/Sticker im öffentlichen Raum!",
                 answer: <>
                   <p className="text-gray-700 mb-4">
                     Wir bitten alle, keine Aufkleber ("Sticker") anzubringen. Es ist unser Ziel, Bitcoin auf seriöse Art und Weise zu kommunizieren. Eine wilde "Stickerei" gehört nicht zu unserer Strategie.
@@ -363,6 +363,7 @@ const FAQ = () => {
                 <div className="w-12 h-12 flex-shrink-0 bg-pastel-yellow rounded-full flex items-center justify-center">
                   <img src="/images/workshop/bitcoin-card-credit-card (1).svg" alt="Payment" className="w-8 h-8" />
                 </div>
+                {/*
                 <h3 className="text-lg font-medium">Zahlungsfragen</h3>
               </div>
               <ul className="space-y-3 ml-4">
@@ -408,6 +409,7 @@ const FAQ = () => {
               </a>
             </div>
           </div>
+          */}
 
           {/* Featured FAQ with illustration */}
           <div className="mt-12 bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-all">
