@@ -515,7 +515,8 @@ const Workshop = () => {
     const initialVisibility: Record<number, boolean> = {};
     workshops.forEach(workshop => {
       if (workshopsVisibility[workshop.id] === undefined) {
-        initialVisibility[workshop.id] = true; // Default all workshops to visible
+       // initialVisibility[workshop.id] = true; // Default all workshops to visible
+        initialVisibility[workshop.id] = workshop.id !== 5; // only workshop 5 is visible
       }
     });
     
