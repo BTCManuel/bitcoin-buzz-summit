@@ -92,7 +92,7 @@ const Schedule = () => {
                 {/* Text-Box */}
                 <div className="w-full md:w-1/2 text-gray-600 text-lg">
                   <p>
-                    Wir arbeiten an dem besten Programm aller Zeiten. Duzende von Experten werden Vorträge und Workshops, Seminare und Expertengespräche anbieten. 
+                    Wir arbeiten an dem besten Programm aller Zeiten. Dutzende von Experten werden Vorträge und Workshops, Seminare und Expertengespräche anbieten. 
                     Es werden wertvolle Informationen für jedermann, ganz nach dem persönlichen Kenntnisstand und Interesse dabei sein. Das Programm werden wir im Sommer veröffentlichen.
                   </p>
                 </div>
