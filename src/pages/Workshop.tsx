@@ -723,7 +723,7 @@ const Workshop = () => {
                       </li>
                       <li className="flex items-start">
                         <div className="mr-3 h-5 w-5 rounded-full bg-bitcoin/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <Check className="h-3 w-3 text-bitcoin" />
+                          <Check className="h-3 w-5 text-bitcoin" />
                         </div>
                         <span className="text-sm">Alle Getränke und Speisen</span>
                       </li>
@@ -803,6 +803,111 @@ const Workshop = () => {
                       className="prose prose-sm max-w-none prose-headings:font-semibold prose-headings:text-gray-900 prose-p:text-gray-600"
                       dangerouslySetInnerHTML={{ __html: getSelectedWorkshop()?.fullDescription || "" }}
                     />
+                  </div>
+                  
+                  {/* New Collapsible Section 1 - Teilnahmegebühr und Details */}
+                  <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+                    <Collapsible>
+                      <CollapsibleTrigger className="flex w-full items-center justify-between">
+                        <h3 className="text-xl font-semibold text-gray-800 flex items-center gap-2">
+                          <span className="h-8 w-8 rounded-full bg-[#FEF7CD] flex items-center justify-center">
+                            <Ticket className="h-4 w-4 text-bitcoin" />
+                          </span>
+                          Teilnahmegebühr und Details
+                        </h3>
+                        <ChevronDown className="h-5 w-5 text-bitcoin transition-transform duration-200 ui-open:rotate-180" />
+                      </CollapsibleTrigger>
+                      <CollapsibleContent className="mt-4 space-y-4">
+                        <div className="prose prose-sm max-w-none">
+                          <p>Die Teilnahmegebühr für diesen Workshop beträgt <strong className="text-bitcoin">121€</strong> und beinhaltet:</p>
+                          <ul className="space-y-2">
+                            <li className="flex items-start gap-2">
+                              <Check className="h-5 w-5 text-bitcoin flex-shrink-0 mt-0.5" />
+                              <span>Vollständige Workshopmaterialien</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <Check className="h-5 w-5 text-bitcoin flex-shrink-0 mt-0.5" />
+                              <span>Getränke und Verpflegung während des Workshops</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <Check className="h-5 w-5 text-bitcoin flex-shrink-0 mt-0.5" />
+                              <span>Teilnahmezertifikat</span>
+                            </li>
+                          </ul>
+                        </div>
+                        <Button 
+                          className="w-full bg-bitcoin hover:bg-bitcoin/90 text-white py-2 rounded-lg shadow-md flex items-center justify-center gap-2"
+                          onClick={() => {
+                            handleCloseDialog();
+                            setTimeout(() => {
+                              openPopup({
+                                redirectUrl: "https://vr-bayernmitte.genolive.de/index.php?page=event-code&code=bitcoin25"
+                              });
+                            }, 250);
+                          }}
+                        >
+                          <Ticket className="h-5 w-5" /> Platz reservieren
+                        </Button>
+                      </CollapsibleContent>
+                    </Collapsible>
+                  </div>
+                  
+                  {/* New Collapsible Section 2 - Zielgruppe und Nutzen */}
+                  <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+                    <Collapsible>
+                      <CollapsibleTrigger className="flex w-full items-center justify-between">
+                        <h3 className="text-xl font-semibold text-gray-800 flex items-center gap-2">
+                          <span className="h-8 w-8 rounded-full bg-[#E2F4FF] flex items-center justify-center">
+                            <Target className="h-4 w-4 text-bitcoin" />
+                          </span>
+                          Zielgruppe und Nutzen
+                        </h3>
+                        <ChevronDown className="h-5 w-5 text-bitcoin transition-transform duration-200 ui-open:rotate-180" />
+                      </CollapsibleTrigger>
+                      <CollapsibleContent className="mt-4 space-y-4">
+                        <div className="prose prose-sm max-w-none">
+                          <p>Dieser Workshop richtet sich an:</p>
+                          <ul className="space-y-2">
+                            <li className="flex items-start gap-2">
+                              <Check className="h-5 w-5 text-bitcoin flex-shrink-0 mt-0.5" />
+                              <span>Finanzprofis und Bankberater</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <Check className="h-5 w-5 text-bitcoin flex-shrink-0 mt-0.5" />
+                              <span>Interessierte Privatanleger</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <Check className="h-5 w-5 text-bitcoin flex-shrink-0 mt-0.5" />
+                              <span>Unternehmer und Führungskräfte</span>
+                            </li>
+                          </ul>
+                          <p className="mt-4">Nach dem Workshop sind Sie in der Lage:</p>
+                          <ul className="space-y-2">
+                            <li className="flex items-start gap-2">
+                              <Check className="h-5 w-5 text-bitcoin flex-shrink-0 mt-0.5" />
+                              <span>Die Grundlagen von Bitcoin fundiert zu verstehen</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <Check className="h-5 w-5 text-bitcoin flex-shrink-0 mt-0.5" />
+                              <span>Informierte Anlageentscheidungen zu treffen</span>
+                            </li>
+                          </ul>
+                        </div>
+                        <Button 
+                          className="w-full bg-bitcoin hover:bg-bitcoin/90 text-white py-2 rounded-lg shadow-md flex items-center justify-center gap-2"
+                          onClick={() => {
+                            handleCloseDialog();
+                            setTimeout(() => {
+                              openPopup({
+                                redirectUrl: "https://vr-bayernmitte.genolive.de/index.php?page=event-code&code=bitcoin25"
+                              });
+                            }, 250);
+                          }}
+                        >
+                          <Ticket className="h-5 w-5" /> Jetzt anmelden
+                        </Button>
+                      </CollapsibleContent>
+                    </Collapsible>
                   </div>
                   
                   <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
