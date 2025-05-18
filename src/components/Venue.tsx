@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { MapPin, Clock, Info, Navigation, Car, Train, Building, ParkingSquare, ChevronDown, ChevronUp } from 'lucide-react';
@@ -8,11 +9,15 @@ import { BITCOIN_COLOR } from '@/lib/utils';
 import { usePopup } from "@/pages/PopupContext";
 import {Ticket } from 'lucide-react';
 
-
+// Toggle flags for optional boxes
+const SHOW_INFO_BOX = true; // Set to false to hide
+const SHOW_REQUIREMENTS_BOX = true; // Set to false to hide
 
 const Venue = () => {
   const { openPopup } = usePopup();
   const [isOpen, setIsOpen] = useState(false); 
+  const [isInfoOpen, setIsInfoOpen] = useState(false);
+  const [isRequirementsOpen, setIsRequirementsOpen] = useState(false);
 
   return (
     <section id="venue" className="py-4 bg-gradient-to-b from-white to-[#D3E4FD]/30">
@@ -118,6 +123,32 @@ const Venue = () => {
                     <p className="text-gray-600">
                       Bei gutem Wetter werden wir auch die Außenanlagen der Saturn Arena nutzen, um Ihnen ein großartiges Event-Erlebnis bieten zu können.
                     </p>
+                    
+                    <div className="mt-6">
+                      <h4 className="text-xl font-semibold mb-3">Schwerpunkte:</h4>
+                      <ul className="space-y-2">
+                        <li className="flex items-start">
+                          <span className="h-2 w-2 rounded-full bg-[#f97316] mt-2 mr-2 flex-shrink-0"></span>
+                          <span className="text-[#f97316] font-medium">Bitcoin als Anlageprodukt für Bankkunden</span>
+                        </li>
+                        <li className="flex items-start">
+                          <span className="h-2 w-2 rounded-full bg-[#f97316] mt-2 mr-2 flex-shrink-0"></span>
+                          <span className="text-[#f97316] font-medium">Regulatorische Anforderungen (u.a. MiCAR)</span>
+                        </li>
+                        <li className="flex items-start">
+                          <span className="h-2 w-2 rounded-full bg-[#f97316] mt-2 mr-2 flex-shrink-0"></span>
+                          <span className="text-[#f97316] font-medium">Strategische Überlegungen zu Asset Allocation</span>
+                        </li>
+                        <li className="flex items-start">
+                          <span className="h-2 w-2 rounded-full bg-[#f97316] mt-2 mr-2 flex-shrink-0"></span>
+                          <span className="text-[#f97316] font-medium">Verantwortung und Risiko in der Kundenberatung</span>
+                        </li>
+                        <li className="flex items-start">
+                          <span className="h-2 w-2 rounded-full bg-[#f97316] mt-2 mr-2 flex-shrink-0"></span>
+                          <span className="text-[#f97316] font-medium">Technische und steuerliche Umsetzung</span>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -271,6 +302,57 @@ const Venue = () => {
             </div>
           </CollapsibleContent>
         </Collapsible>
+
+        {/* Optional information boxes (above referenten) */}
+        {SHOW_INFO_BOX && (
+          <div className="mb-6">
+            <Card className="border border-[#F2FCE2] shadow-sm rounded-xl overflow-hidden bg-white">
+              <Collapsible open={isInfoOpen} onOpenChange={setIsInfoOpen}>
+                <div className="p-4 flex justify-between items-center border-b border-gray-100">
+                  <h4 className="text-lg font-medium text-gray-800">Weitere Informationen</h4>
+                  <CollapsibleTrigger asChild>
+                    <Button variant="ghost" size="sm" className="rounded-full h-8 w-8 p-0">
+                      {isInfoOpen ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
+                    </Button>
+                  </CollapsibleTrigger>
+                </div>
+                <CollapsibleContent>
+                  <div className="p-6">
+                    <p className="text-gray-600">
+                      Hier können Sie beliebige zusätzliche Informationen einfügen. 
+                      Dieser Bereich kann über die Variable SHOW_INFO_BOX ein- oder ausgeblendet werden.
+                    </p>
+                  </div>
+                </CollapsibleContent>
+              </Collapsible>
+            </Card>
+          </div>
+        )}
+
+        {SHOW_REQUIREMENTS_BOX && (
+          <div className="mb-6">
+            <Card className="border border-[#FDE1D3] shadow-sm rounded-xl overflow-hidden bg-white">
+              <Collapsible open={isRequirementsOpen} onOpenChange={setIsRequirementsOpen}>
+                <div className="p-4 flex justify-between items-center border-b border-gray-100">
+                  <h4 className="text-lg font-medium text-gray-800">Voraussetzungen</h4>
+                  <CollapsibleTrigger asChild>
+                    <Button variant="ghost" size="sm" className="rounded-full h-8 w-8 p-0">
+                      {isRequirementsOpen ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
+                    </Button>
+                  </CollapsibleTrigger>
+                </div>
+                <CollapsibleContent>
+                  <div className="p-6">
+                    <p className="text-gray-600">
+                      Hier können Sie Voraussetzungen für den Workshop oder andere wichtige Hinweise einfügen.
+                      Dieser Bereich kann über die Variable SHOW_REQUIREMENTS_BOX ein- oder ausgeblendet werden.
+                    </p>
+                  </div>
+                </CollapsibleContent>
+              </Collapsible>
+            </Card>
+          </div>
+        )}
 
         {/* Ticket Button */}
         <div className="flex justify-center mt-16">
