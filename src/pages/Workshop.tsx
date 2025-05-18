@@ -1,8 +1,7 @@
-
 import React, { useState, useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { Check, ArrowRight, Bitcoin, BookOpen, Target, Users, Shield, Code, Tv, Clock, CalendarDays, MapPin, User, Ticket, Sparkles } from 'lucide-react';
+import { Check, ArrowRight, Bitcoin, BookOpen, Target, Users, Shield, Code, Tv, Clock, CalendarDays, MapPin, User, Ticket, Sparkles, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
@@ -10,6 +9,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogClose } from "@/components/ui/dialog";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { usePopup } from "@/pages/PopupContext";
 import { BITCOIN_COLOR } from '@/lib/utils';
 
@@ -471,8 +471,6 @@ const Workshop = () => {
       initialVisibility[workshop.id] = true;
     });
     
-    // SPECIFY WHICH WORKSHOPS TO HIDE HERE:
-    // For example, to hide workshops 6, 7, 8, and 9:
     initialVisibility[6] = false;
     initialVisibility[7] = false;
     initialVisibility[8] = false;
@@ -505,7 +503,6 @@ const Workshop = () => {
   };
 
   React.useEffect(() => {
-    // Console utility function for toggling workshop visibility
     (window as any).toggleWorkshopVisibility = (workshopId: number, isVisible: boolean) => {
       setWorkshopsVisibility(prev => ({
         ...prev,
