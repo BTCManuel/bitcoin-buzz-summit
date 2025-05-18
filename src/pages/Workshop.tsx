@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -11,6 +10,7 @@ import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogClose } from "@/components/ui/dialog";
 import { usePopup } from "@/pages/PopupContext";
+import { BITCOIN_COLOR } from '@/lib/utils';
 
 interface Speaker {
   name: string;
@@ -61,58 +61,58 @@ const Workshop = () => {
 
   const workshops: WorkshopType[] = [
     {
-  id: 1,
-  title: "Bitcoin in der Bank",
-  subtitle: "für alle Banker",
-  description: "Ein spezieller Workshop über die Strategien, Gefahren und Regulierung in Zusammenhang mit Kryptoangeboten an die Kunden einer Bank.",
-  icon: workshopIcons[0],
-  bgColor: "bg-[#FEF7CD]",
-  borderColor: "border-[#FDE1D3]",
-  date: "9. Oktober",
-  time: "14:00 - 19:00",
-  location: "Donau Tower VR Bank Bayern Mitte",
-  instructors: [
-    { name: "Andreas Streb", title: "CEO VR Bank Bayern Mitte", timeSlot: "14:00 - 14:20", topic: "Wie wir unseren Kunden Bitcoin anbieten und warum." },
-    { name: "Dr. Steffen Hahn", title: "MICAR", timeSlot: "14:30 - 15:15", topic: "Welche genauen Anforderungen stellt diese neue Regulierung?" },
-    { name: "VRBM Banker", title: "Asset Allocation", timeSlot: "15:30 - 15:45", topic: "Warum eine Beimischung von Bitcoin das Portfolio stärkt." },
-    { name: "VRBM Banker", title: "BIG", timeSlot: "15:45 - 16:15", topic: "Das Bitcoin Informations Gespräch der VR Bayern Mitte." },
-    { name: "Q&A", title: "Q&A", timeSlot: "16:15 - 16:30", topic: "Diskussion und Fragen" },
-    { name: "Florian Bruce-Boye", title: "Bitcoin Experte", timeSlot: "17:00 - 17:30", topic: "Warum Bitcoin der optimale Wertspeicher ist" },
-    { name: "Daniel 'Loddi'", title: "Bitcoin Podcaster", timeSlot: "17:30 - 18:00", topic: "Wie funktioniert unser Geldsystem?" },
-    { name: "Karl Steuerberater", title: "Steuerberater", timeSlot: "18:00 - 18:30", topic: "Wie ist Bitcoin steuerlich einzuordnen?" },
-    { name: "Andreas Streb", title: "CEO VR Bank Bayern Mitte", timeSlot: "18:30 - 19:00", topic: "Abschluss Panel und Q&A" },
-    { name: "Markus Gürne", title: "Moderator der Sendung Wirtschaft vor acht", timeSlot: "20:00 - 22:00", topic: "Anekdoten aus der Welt der Finanzen." }
-  ],
-  difficulty: "Alle Banker",
-  seats: 25,
-  fullDescription: `
-    <p>Dieser Workshop richtet sich speziell an Banker, die sich mit Bitcoin-Angeboten für ihre Kunden beschäftigen wollen oder müssen.</p>
-  <p>Behandelt werden regulatorische Anforderungen, praktische Umsetzungsmöglichkeiten sowie strategische Aspekte der Integration von Bitcoin in bestehende Produkt- und Portfoliostrukturen einer Bank.</p>
-  <h3><strong>Schwerpunkte:</strong></h3>
-  <ul>
-    <li><em>Bitcoin als Anlageprodukt für Bankkunden</em></li>
-    <li><em>Regulatorische Anforderungen (u.a. MiCAR)</em></li>
-    <li><em>Strategische Überlegungen zu Asset Allocation</em></li>
-    <li><em>Verantwortung und Risiko in der Kundenberatung</em></li>
-    <li><em>Technische und steuerliche Umsetzung</em></li>
-  </ul>
-  <p>Die Inhalte richten sich ausdrücklich an Fach- und Führungskräfte im Bankensektor.</p>
-  `,
-  requirements: "Interesse an Bitcoin, Grundverständnis bankinterner Prozesse und Kundenberatung.",
-  imageUrl: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3",
-  agenda: [
-    { timeSlot: "14:00 - 14:20", speaker: "Andreas Streb", topic: "Wie wir unseren Kunden Bitcoin anbieten und warum." },
-    { timeSlot: "14:30 - 15:15", speaker: "Dr. Steffen Hahn", topic: "Welche genauen Anforderungen stellt diese neue Regulierung?" },
-    { timeSlot: "15:30 - 15:45", speaker: "VRBM Banker", topic: "Warum eine Beimischung von Bitcoin das Portfolio stärkt." },
-    { timeSlot: "15:45 - 16:15", speaker: "VRBM Banker", topic: "Das Bitcoin Informations Gespräch der VR Bayern Mitte." },
-    { timeSlot: "16:15 - 16:30", speaker: "Q&Ar", topic: "Diskussion und Fragen" },
-    { timeSlot: "17:00 - 17:30", speaker: "Florian Bruce-Boye", topic: "Warum Bitcoin der optimale Wertspeicher ist" },
-    { timeSlot: "17:30 - 18:00", speaker: "Daniel 'Loddi'", topic: "Wie funktioniert unser Geldsystem?" },
-    { timeSlot: "18:00 - 18:30", speaker: "Karl Steuerberater", topic: "Wie ist Bitcoin steuerlich einzuordnen?" },
-    { timeSlot: "18:30 - 19:00", speaker: "Andreas Streb", topic: "Abschluss Panel und Q&A" },
-    { timeSlot: "20:00 - 22:00", speaker: "Markus Gürne", topic: "Anekdoten aus der Welt der Finanzen." }
-  ]
-},
+      id: 1,
+      title: "Bitcoin in der Bank",
+      subtitle: "für alle Banker",
+      description: "Ein spezieller Workshop über die Strategien, Gefahren und Regulierung in Zusammenhang mit Kryptoangeboten an die Kunden einer Bank.",
+      icon: workshopIcons[0],
+      bgColor: "bg-[#FEF7CD]",
+      borderColor: "border-[#FDE1D3]",
+      date: "9. Oktober",
+      time: "14:00 - 19:00",
+      location: "Donau Tower VR Bank Bayern Mitte",
+      instructors: [
+        { name: "Andreas Streb", title: "CEO VR Bank Bayern Mitte", timeSlot: "14:00 - 14:20", topic: "Wie wir unseren Kunden Bitcoin anbieten und warum." },
+        { name: "Dr. Steffen Hahn", title: "MICAR", timeSlot: "14:30 - 15:15", topic: "Welche genauen Anforderungen stellt diese neue Regulierung?" },
+        { name: "VRBM Banker", title: "Asset Allocation", timeSlot: "15:30 - 15:45", topic: "Warum eine Beimischung von Bitcoin das Portfolio stärkt." },
+        { name: "VRBM Banker", title: "BIG", timeSlot: "15:45 - 16:15", topic: "Das Bitcoin Informations Gespräch der VR Bayern Mitte." },
+        { name: "Q&A", title: "Q&A", timeSlot: "16:15 - 16:30", topic: "Diskussion und Fragen" },
+        { name: "Florian Bruce-Boye", title: "Bitcoin Experte", timeSlot: "17:00 - 17:30", topic: "Warum Bitcoin der optimale Wertspeicher ist" },
+        { name: "Daniel 'Loddi'", title: "Bitcoin Podcaster", timeSlot: "17:30 - 18:00", topic: "Wie funktioniert unser Geldsystem?" },
+        { name: "Karl Steuerberater", title: "Steuerberater", timeSlot: "18:00 - 18:30", topic: "Wie ist Bitcoin steuerlich einzuordnen?" },
+        { name: "Andreas Streb", title: "CEO VR Bank Bayern Mitte", timeSlot: "18:30 - 19:00", topic: "Abschluss Panel und Q&A" },
+        { name: "Markus Gürne", title: "Moderator der Sendung Wirtschaft vor acht", timeSlot: "20:00 - 22:00", topic: "Anekdoten aus der Welt der Finanzen." }
+      ],
+      difficulty: "Alle Banker",
+      seats: 25,
+      fullDescription: `
+        <p>Dieser Workshop richtet sich speziell an Banker, die sich mit Bitcoin-Angeboten für ihre Kunden beschäftigen wollen oder müssen.</p>
+        <p>Behandelt werden regulatorische Anforderungen, praktische Umsetzungsmöglichkeiten sowie strategische Aspekte der Integration von Bitcoin in bestehende Produkt- und Portfoliostrukturen einer Bank.</p>
+        <h3 style="color: ${BITCOIN_COLOR}; font-weight: bold; margin-top: 1rem;"><strong>Schwerpunkte:</strong></h3>
+        <ul>
+          <li><span style="color: ${BITCOIN_COLOR};">•</span> <em>Bitcoin als Anlageprodukt für Bankkunden</em></li>
+          <li><span style="color: ${BITCOIN_COLOR};">•</span> <em>Regulatorische Anforderungen (u.a. MiCAR)</em></li>
+          <li><span style="color: ${BITCOIN_COLOR};">•</span> <em>Strategische Überlegungen zu Asset Allocation</em></li>
+          <li><span style="color: ${BITCOIN_COLOR};">•</span> <em>Verantwortung und Risiko in der Kundenberatung</em></li>
+          <li><span style="color: ${BITCOIN_COLOR};">•</span> <em>Technische und steuerliche Umsetzung</em></li>
+        </ul>
+        <p>Die Inhalte richten sich ausdrücklich an Fach- und Führungskräfte im Bankensektor.</p>
+      `,
+      requirements: "Interesse an Bitcoin, Grundverständnis bankinterner Prozesse und Kundenberatung.",
+      imageUrl: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3",
+      agenda: [
+        { timeSlot: "14:00 - 14:20", speaker: "Andreas Streb", topic: "Wie wir unseren Kunden Bitcoin anbieten und warum." },
+        { timeSlot: "14:30 - 15:15", speaker: "Dr. Steffen Hahn", topic: "Welche genauen Anforderungen stellt diese neue Regulierung?" },
+        { timeSlot: "15:30 - 15:45", speaker: "VRBM Banker", topic: "Warum eine Beimischung von Bitcoin das Portfolio stärkt." },
+        { timeSlot: "15:45 - 16:15", speaker: "VRBM Banker", topic: "Das Bitcoin Informations Gespräch der VR Bayern Mitte." },
+        { timeSlot: "16:15 - 16:30", speaker: "Q&Ar", topic: "Diskussion und Fragen" },
+        { timeSlot: "17:00 - 17:30", speaker: "Florian Bruce-Boye", topic: "Warum Bitcoin der optimale Wertspeicher ist" },
+        { timeSlot: "17:30 - 18:00", speaker: "Daniel 'Loddi'", topic: "Wie funktioniert unser Geldsystem?" },
+        { timeSlot: "18:00 - 18:30", speaker: "Karl Steuerberater", topic: "Wie ist Bitcoin steuerlich einzuordnen?" },
+        { timeSlot: "18:30 - 19:00", speaker: "Andreas Streb", topic: "Abschluss Panel und Q&A" },
+        { timeSlot: "20:00 - 22:00", speaker: "Markus Gürne", topic: "Anekdoten aus der Welt der Finanzen." }
+      ]
+    },
     {
       id: 1,
       title: "Bitcoin als Wertanlage",
@@ -329,7 +329,7 @@ const Workshop = () => {
         { timeSlot: "16:15 - 17:00", speaker: "Beide", topic: "Praxisbeispiele und Q&A" }
       ]
     },
-        {
+    {
       id: 6,
       title: "Bitcoin für Unternehmen",
       subtitle: "Integration & Buchhaltung",
@@ -417,7 +417,7 @@ const Workshop = () => {
         { timeSlot: "16:15 - 17:00", speaker: "Beide", topic: "Praxisbeispiele und Q&A" }
       ]
     },
-        {
+    {
       id: 8,
       title: "Bitcoin für Unternehmen",
       subtitle: "Integration & Buchhaltung",
@@ -461,7 +461,7 @@ const Workshop = () => {
         { timeSlot: "16:15 - 17:00", speaker: "Beide", topic: "Praxisbeispiele und Q&A" }
       ]
     },
-        {
+    {
       id: 9,
       title: "Bitcoin für Unternehmen",
       subtitle: "Integration & Buchhaltung",
