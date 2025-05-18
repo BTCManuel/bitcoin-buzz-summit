@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -470,6 +471,13 @@ const Workshop = () => {
       initialVisibility[workshop.id] = true;
     });
     
+    // SPECIFY WHICH WORKSHOPS TO HIDE HERE:
+    // For example, to hide workshops 6, 7, 8, and 9:
+    initialVisibility[6] = false;
+    initialVisibility[7] = false;
+    initialVisibility[8] = false;
+    initialVisibility[9] = false;
+    
     setWorkshopsVisibility(initialVisibility);
   }, []);
 
@@ -497,8 +505,7 @@ const Workshop = () => {
   };
 
   React.useEffect(() => {
-     // HIER Workshops ausblenden:
-  // setWorkshopsVisibility({ 1: false });
+    // Console utility function for toggling workshop visibility
     (window as any).toggleWorkshopVisibility = (workshopId: number, isVisible: boolean) => {
       setWorkshopsVisibility(prev => ({
         ...prev,
