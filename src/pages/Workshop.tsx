@@ -115,7 +115,7 @@ const Workshop = () => {
         { timeSlot: "20:00 - 22:00", speaker: "Markus Gürne", topic: "Anekdoten aus der Welt der Finanzen." }
       ]
     },
-    {
+{
   id: 2,
   title: "Bitcoin für Family Offices",
   subtitle: "Strategische Integration für Family Offices",
@@ -143,13 +143,13 @@ const Workshop = () => {
   fullDescription: `
     <p>Workshop für Entscheidungsträger in Family Offices zur Integration von Bitcoin in die Vermögensverwaltung.</p>
     <p>Fokus auf regulatorische Vorgaben, Risikomanagement und strategische Allokationsmodelle.</p>
-    <h3 style="color: \${FAMILY_OFFICE_COLOR}; font-weight: bold; margin-top: 1rem;"><strong>Schwerpunkte:</strong></h3>
+    <h3 style="color: #FFA500; font-weight: bold; margin-top: 1rem;"><strong>Schwerpunkte:</strong></h3>
     <ul>
-      <li><span style="color: \${FAMILY_OFFICE_COLOR};">•</span> <em>Strategische Allokation und Risikomanagement</em></li>
-      <li><span style="color: \${FAMILY_OFFICE_COLOR};">•</span> <em>Rechtliche Anforderungen und Compliance</em></li>
-      <li><span style="color: \${FAMILY_OFFICE_COLOR};">•</span> <em>Custody, Reporting und Operations</em></li>
-      <li><span style="color: \${FAMILY_OFFICE_COLOR};">•</span> <em>Vermögensschutz durch digitale Wertspeicher</em></li>
-      <li><span style="color: \${FAMILY_OFFICE_COLOR};">•</span> <em>Steuerliche Rahmenbedingungen</em></li>
+      <li><span style="color: #FFA500;">•</span> <em>Strategische Allokation und Risikomanagement</em></li>
+      <li><span style="color: #FFA500;">•</span> <em>Rechtliche Anforderungen und Compliance</em></li>
+      <li><span style="color: #FFA500;">•</span> <em>Custody, Reporting und Operations</em></li>
+      <li><span style="color: #FFA500;">•</span> <em>Vermögensschutz durch digitale Wertspeicher</em></li>
+      <li><span style="color: #FFA500;">•</span> <em>Steuerliche Rahmenbedingungen</em></li>
     </ul>
     <p>Anwendungsorientierter Workshop für Fach- und Führungskräfte in Family Offices.</p>
   `,
