@@ -10,6 +10,7 @@ import { Check, ArrowRight, Calendar, Clock, MapPin, Users, Target, ChevronDown 
 import { usePopup } from '@/pages/PopupContext';
 import { Link } from 'react-router-dom';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 
 const WorkshopBitcoinInDerBank = () => {
   const { openPopup } = usePopup();
@@ -82,8 +83,96 @@ const WorkshopBitcoinInDerBank = () => {
           </div>
         </section>
         
-        {/* Description Section */}
+        {/* Featured Speakers Section - NEW */}
         <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800 text-center">
+                Unsere Top-Experten
+              </h2>
+              <p className="text-xl text-gray-600 mb-12 text-center max-w-3xl mx-auto">
+                Lernen Sie von den führenden Köpfen der Branche, die Ihnen exklusive Einblicke in die Welt des Bitcoin-Banking geben werden
+              </p>
+              
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                {/* Featured Speaker 1 */}
+                <div className="bg-gradient-to-br from-white to-[#FEF7CD]/30 rounded-2xl shadow-xl overflow-hidden border border-bitcoin/10 flex flex-col md:flex-row">
+                  <div className="md:w-2/5 overflow-hidden">
+                    <img 
+                      src="/images/speakers/Andreas_Streb.jpg" 
+                      alt="Andreas Streb" 
+                      className="w-full h-64 md:h-full object-cover transform hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                  <div className="md:w-3/5 p-6 md:p-8 flex flex-col justify-center">
+                    <Badge variant="outline" className="bg-bitcoin/10 text-bitcoin border-bitcoin mb-3 self-start">
+                      Keynote Speaker
+                    </Badge>
+                    <h3 className="text-2xl md:text-3xl font-bold mb-2 text-gray-800">Andreas Streb</h3>
+                    <p className="text-bitcoin font-semibold mb-4">CEO VR Bank Bayern Mitte</p>
+                    <p className="text-gray-600 mb-6">
+                      Andreas Streb wird Ihnen exklusive Einblicke geben, wie die VR Bank Bayern Mitte als eine der ersten Banken in Deutschland Bitcoin-Angebote erfolgreich in ihr Portfolio integriert hat und welche Vorteile dies für Ihre Bank haben kann.
+                    </p>
+                    <div className="mt-auto">
+                      <Button 
+                        variant="outline"
+                        className="border-bitcoin text-bitcoin hover:bg-bitcoin hover:text-white"
+                        onClick={() => {
+                          openPopup({
+                            redirectUrl: "https://vr-bayernmitte.genolive.de/index.php?page=event-code&code=bitcoin25"
+                          });
+                        }}
+                      >
+                        Workshop buchen
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Featured Speaker 2 */}
+                <div className="bg-gradient-to-br from-white to-[#FEF7CD]/30 rounded-2xl shadow-xl overflow-hidden border border-bitcoin/10 flex flex-col md:flex-row">
+                  <div className="md:w-2/5 overflow-hidden">
+                    <img 
+                      src="/images/speakers/Markus_Gürne.jpg" 
+                      alt="Markus Gürne" 
+                      className="w-full h-64 md:h-full object-cover transform hover:scale-105 transition-transform duration-500"
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.src = "/images/workshop/bitcoin-global-world (1).svg";
+                      }}
+                    />
+                  </div>
+                  <div className="md:w-3/5 p-6 md:p-8 flex flex-col justify-center">
+                    <Badge variant="outline" className="bg-bitcoin/10 text-bitcoin border-bitcoin mb-3 self-start">
+                      Abendveranstaltung
+                    </Badge>
+                    <h3 className="text-2xl md:text-3xl font-bold mb-2 text-gray-800">Markus Gürne</h3>
+                    <p className="text-bitcoin font-semibold mb-4">Moderator der Sendung Wirtschaft vor acht</p>
+                    <p className="text-gray-600 mb-6">
+                      Im Rahmen der exklusiven Abendveranstaltung wird Markus Gürne, bekannt aus der ARD-Sendung "Wirtschaft vor acht", spannende Anekdoten aus der Finanzwelt teilen und Einblicke in die Zukunft des Bankenwesens in Zeiten der Digitalisierung geben.
+                    </p>
+                    <div className="mt-auto">
+                      <Button 
+                        variant="outline"
+                        className="border-bitcoin text-bitcoin hover:bg-bitcoin hover:text-white"
+                        onClick={() => {
+                          openPopup({
+                            redirectUrl: "https://vr-bayernmitte.genolive.de/index.php?page=event-code&code=bitcoin25"
+                          });
+                        }}
+                      >
+                        Workshop buchen
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        {/* Description Section */}
+        <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold mb-8 text-gray-800 text-center">
@@ -175,7 +264,7 @@ const WorkshopBitcoinInDerBank = () => {
         </section>
         
         {/* Speakers Section */}
-        <section className="py-16 bg-gradient-to-b from-gray-50 to-gray-100">
+        <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold mb-2 text-gray-800 text-center">
@@ -211,7 +300,7 @@ const WorkshopBitcoinInDerBank = () => {
         </section>
         
         {/* Full Agenda Section */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800 text-center">
@@ -299,7 +388,7 @@ const WorkshopBitcoinInDerBank = () => {
         </section>
         
         {/* FAQ Section */}
-        <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
+        <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800 text-center">
