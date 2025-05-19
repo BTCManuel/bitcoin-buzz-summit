@@ -116,6 +116,60 @@ const Workshop = () => {
       ]
     },
     {
+  id: 2,
+  title: "Bitcoin für Family Offices",
+  subtitle: "Strategische Integration für Family Offices",
+  description: "Workshop zu Strategien, Regulierung und Risikomanagement bei Bitcoin-Investments in Family Offices.",
+  icon: workshopIcons[1],
+  bgColor: "bg-[#E0F7FA]",
+  borderColor: "border-[#B2EBF2]",
+  date: "12. November",
+  time: "14:00 - 19:00",
+  location: "Donau Tower VR Bank Bayern Mitte",
+  instructors: [
+    { name: "Andreas Streb", title: "CEO VR Bank Bayern Mitte", timeSlot: "14:00 - 14:20", topic: "Marktentwicklung und Bedeutung von Bitcoin für Family Offices" },
+    { name: "Dr. Steffen Hahn", title: "MiCAR-Experte", timeSlot: "14:30 - 15:15", topic: "Rechtliche Anforderungen und Compliance für Family Offices" },
+    { name: "VRBM Analyst", title: "Asset Management", timeSlot: "15:30 - 15:45", topic: "Risikoadjustierte Allokationsmodelle mit Bitcoin" },
+    { name: "VRBM Operations", title: "Operations", timeSlot: "15:45 - 16:15", topic: "Infrastruktur, Reporting und Custody" },
+    { name: "Q&A", title: "Q&A", timeSlot: "16:15 - 16:30", topic: "Offene Diskussion und Fragen" },
+    { name: "Florian Bruce-Boye", title: "Bitcoin-Experte", timeSlot: "17:00 - 17:30", topic: "Warum Bitcoin der optimale Wertspeicher ist" },
+    { name: "Daniel 'Loddi'", title: "Bitcoin-Podcaster", timeSlot: "17:30 - 18:00", topic: "Funktionsweise unseres Geldsystems" },
+    { name: "Karl Steuerberater", title: "Steuerberater", timeSlot: "18:00 - 18:30", topic: "Steuerliche Einordnung von Bitcoin-Investments" },
+    { name: "Andreas Streb", title: "CEO VR Bank Bayern Mitte", timeSlot: "18:30 - 19:00", topic: "Abschlussdiskussion und Q&A" },
+    { name: "Markus Gürne", title: "Moderator Wirtschaft vor acht", timeSlot: "20:00 - 22:00", topic: "Anekdoten und Insights aus der Finanzwelt" }
+  ],
+  difficulty: "Entscheidungsträger in Family Offices",
+  seats: 25,
+  fullDescription: `
+    <p>Workshop für Entscheidungsträger in Family Offices zur Integration von Bitcoin in die Vermögensverwaltung.</p>
+    <p>Fokus auf regulatorische Vorgaben, Risikomanagement und strategische Allokationsmodelle.</p>
+    <h3 style="color: \${FAMILY_OFFICE_COLOR}; font-weight: bold; margin-top: 1rem;"><strong>Schwerpunkte:</strong></h3>
+    <ul>
+      <li><span style="color: \${FAMILY_OFFICE_COLOR};">•</span> <em>Strategische Allokation und Risikomanagement</em></li>
+      <li><span style="color: \${FAMILY_OFFICE_COLOR};">•</span> <em>Rechtliche Anforderungen und Compliance</em></li>
+      <li><span style="color: \${FAMILY_OFFICE_COLOR};">•</span> <em>Custody, Reporting und Operations</em></li>
+      <li><span style="color: \${FAMILY_OFFICE_COLOR};">•</span> <em>Vermögensschutz durch digitale Wertspeicher</em></li>
+      <li><span style="color: \${FAMILY_OFFICE_COLOR};">•</span> <em>Steuerliche Rahmenbedingungen</em></li>
+    </ul>
+    <p>Anwendungsorientierter Workshop für Fach- und Führungskräfte in Family Offices.</p>
+  `,
+  requirements: "Erfahrung im Asset Management und Interesse an digitalen Vermögensspeichern.",
+  imageUrl: "https://images.unsplash.com/photo-1573164574390-5c2d5a9f8aad?ixlib=rb-4.0.3",
+  agenda: [
+    { timeSlot: "14:00 - 14:20", speaker: "Andreas Streb", topic: "Marktentwicklung und Bedeutung von Bitcoin für Family Offices" },
+    { timeSlot: "14:30 - 15:15", speaker: "Dr. Steffen Hahn", topic: "Rechtliche Anforderungen und Compliance für Family Offices" },
+    { timeSlot: "15:30 - 15:45", speaker: "VRBM Analyst", topic: "Risikoadjustierte Allokationsmodelle mit Bitcoin" },
+    { timeSlot: "15:45 - 16:15", speaker: "VRBM Operations", topic: "Infrastruktur, Reporting und Custody" },
+    { timeSlot: "16:15 - 16:30", speaker: "Q&A", topic: "Offene Diskussion und Fragen" },
+    { timeSlot: "17:00 - 17:30", speaker: "Florian Bruce-Boye", topic: "Warum Bitcoin der optimale Wertspeicher ist" },
+    { timeSlot: "17:30 - 18:00", speaker: "Daniel 'Loddi'", topic: "Funktionsweise unseres Geldsystems" },
+    { timeSlot: "18:00 - 18:30", speaker: "Karl Steuerberater", topic: "Steuerliche Einordnung von Bitcoin-Investments" },
+    { timeSlot: "18:30 - 19:00", speaker: "Andreas Streb", topic: "Abschlussdiskussion und Q&A" },
+    { timeSlot: "20:00 - 22:00", speaker: "Markus Gürne", topic: "Anekdoten und Insights aus der Finanzwelt" }
+  ]
+},
+
+    {
       id: 2,
       title: "Bitcoin als Wertanlage",
       subtitle: "für Family Offices",
