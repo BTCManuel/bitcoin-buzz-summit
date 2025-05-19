@@ -170,92 +170,55 @@ const Workshop = () => {
 },
 
     {
-      id: 2,
-      title: "Bitcoin als Wertanlage",
-      subtitle: "für Family Offices",
-      description: "Ein kompakter Workshop über die langfristigen Investmentstrategien mit Bitcoin für Family Offices und professionelle Vermögensverwalter.",
-      icon: workshopIcons[0],
-      bgColor: "bg-[#FEF7CD]",
-      borderColor: "border-[#FDE1D3]",
-      date: "9. Oktober",
-      time: "09:00 - 12:30",
-      location: "Raum A1",
-      instructors: [
-        { name: "Dr. Sebastian Meier", title: "Head of Digital Assets", timeSlot: "09:00 - 09:30", topic: "Fundamentale Wertversprechen von Bitcoin im Vergleich zu traditionellen Anlageklassen" },
-        { name: "Dr. Klaus Müller", title: "Portfolio Manager", timeSlot: "09:30 - 10:00", topic: "Portfolioallokation und Risikostrategien" },
-        { name: "Joe Martin", title: "Regulatory Expert", timeSlot: "10:15 - 10:45", topic: "Regulatorische Rahmenbedingungen für institutionelle Investoren" }
-      ],
-      difficulty: "Fortgeschritten",
-      seats: 25,
-      fullDescription: `
-        <p>Dieser umfassende Workshop richtet sich speziell an Family Offices, Vermögensverwalter und professionelle Anleger, die Bitcoin als langfristige Wertanlage in Betracht ziehen.</p>
-        <p>In einer Zeit, in der digitale Assets zunehmend an Bedeutung gewinnen, bietet dieser Workshop tiefe Einblicke in die Funktionsweise von Bitcoin als Anlageform und praktische Strategien für die Integration in diversifizierte Portfolios.</p>
-        <h3>Themen:</h3>
-        <ul>
-          <li>Fundamentale Wertversprechen von Bitcoin im Vergleich zu traditionellen Anlageklassen</li>
-          <li>Portfolioallokation und Risikostrategien</li>
-          <li>Regulatorische Rahmenbedingungen für institutionelle Investoren</li>
-          <li>Sichere Verwahrungslösungen für Family Offices</li>
-          <li>Steuerliche Implikationen und Reporting-Anforderungen</li>
-          <li>Langfristige Anlagestrategien vs. kurzfristige Volatilität</li>
-        </ul>
-        <p>Die Teilnehmer erhalten praktische Tools zur Risikobewertung und Portfolioanalyse sowie umfassende Informationen zu institutionellen Custody-Lösungen.</p>
-      `,
-      requirements: "Grundlegendes Verständnis von Anlageklassen und Portfoliomanagement.",
-      imageUrl: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3",
-      agenda: [
-        { timeSlot: "09:00 - 09:30", speaker: "Dr. Sebastian Meier", topic: "Fundamentale Wertversprechen von Bitcoin" },
-        { timeSlot: "09:30 - 10:00", speaker: "Dr. Klaus Müller", topic: "Portfolioallokation und Risikostrategien" },
-        { timeSlot: "10:00 - 10:15", speaker: "", topic: "Kaffeepause" },
-        { timeSlot: "10:15 - 10:45", speaker: "Joe Martin", topic: "Regulatorische Rahmenbedingungen" },
-        { timeSlot: "10:45 - 11:15", speaker: "Dr. Sebastian Meier", topic: "Sichere Verwahrungslösungen" },
-        { timeSlot: "11:15 - 11:45", speaker: "Dr. Klaus Müller", topic: "Steuerliche Implikationen" },
-        { timeSlot: "11:45 - 12:30", speaker: "Panel Diskussion", topic: "Anlagestrategien und Zukunftsausblick" }
-      ]
-    },
-    {
-      id: 3,
-      title: "Bitcoin Full Node",
-      subtitle: "aufsetzen und betreiben",
-      description: "Praktischer Workshop zum Aufsetzen und Betreiben einer eigenen Bitcoin Full Node.",
-      icon: workshopIcons[1],
-      bgColor: "bg-[#E2F4FF]",
-      borderColor: "border-[#CCE8FF]",
-      date: "9. Oktober",
-      time: "13:30 - 17:00",
-      location: "Computerlabor B",
-      instructors: [
-        { name: "Thomas Schmidt", title: "Bitcoin Core Developer", timeSlot: "13:30 - 14:00", topic: "Grundlagen einer Full Node" },
-        { name: "Lisa Wagner", title: "IT Security Specialist", timeSlot: "14:00 - 14:30", topic: "Sicherheitsmaßnahmen für Ihre Node" }
-      ],
-      difficulty: "Fortgeschritten",
-      seats: 20,
-      fullDescription: `
-        <p>In diesem praktisch orientierten Workshop lernen Sie, wie Sie Ihre eigene Bitcoin Full Node aufsetzen und betreiben können. Eine Full Node ist ein Computer, der die vollständige Bitcoin-Blockchain enthält und Teil des Bitcoin-Netzwerks ist.</p>
-        <p>Das Betreiben einer eigenen Node erhöht nicht nur Ihre Privatsphäre und Sicherheit, sondern stärkt auch das gesamte Bitcoin-Netzwerk. Dieser Workshop bietet Ihnen eine Schritt-für-Schritt-Anleitung mit praktischen Übungen.</p>
-        <h3>Themen:</h3>
-        <ul>
-          <li>Hardware-Anforderungen und optimale Konfigurationen</li>
-          <li>Installation und Konfiguration von Bitcoin Core</li>
-          <li>Blockchain-Synchronisation und Dateimanagement</li>
-          <li>Sicherheitsmaßnahmen und Best Practices</li>
-          <li>Integration mit eigenen Wallets</li>
-          <li>Fehlerbehebung und Wartung</li>
-          <li>Erweiterungen wie Lightning-Nodes</li>
-        </ul>
-        <p>Teilnehmer haben die Möglichkeit, während des Workshops unter Anleitung ihre eigene Node auf mitgebrachter Hardware zu installieren oder können auf bereitgestellten Systemen üben.</p>
-      `,
-      requirements: "Grundlegende Linux-Kenntnisse sind von Vorteil. Teilnehmer können eigene Hardware (min. 1TB Festplatte) mitbringen oder vorhandene Systeme nutzen.",
-      imageUrl: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3",
-      agenda: [
-        { timeSlot: "13:30 - 14:00", speaker: "Thomas Schmidt", topic: "Einführung und Hardware-Anforderungen" },
-        { timeSlot: "14:00 - 14:30", speaker: "Lisa Wagner", topic: "Sicherheitskonzepte für Nodes" },
-        { timeSlot: "14:30 - 15:30", speaker: "Thomas Schmidt", topic: "Installation und Konfiguration (Hands-on)" },
-        { timeSlot: "15:30 - 15:45", speaker: "", topic: "Pause" },
-        { timeSlot: "15:45 - 16:30", speaker: "Lisa Wagner", topic: "Integration mit Wallets und Lightning" },
-        { timeSlot: "16:30 - 17:00", speaker: "Beide", topic: "Q&A und Troubleshooting" }
-      ]
-    },
+  id: 3,
+  title: "Bitcoin für Unternehmer",
+  subtitle: "Nachhaltige Strategien für Unternehmen",
+  description: "Workshop zu Bitcoin auf der Bilanz,nachhaltiges Bitcoin-Mining mit Solarstrom und Energiewende-Integration.",
+  icon: workshopIcons[2],
+  bgColor: "bg-[#FFF3E0]",
+  borderColor: "border-[#FFE0B2]",
+  date: "09. Oktober",
+  time: "14:00 - 19:00",
+  location: "Donau Tower VR Bank Bayern Mitte",
+  instructors: [
+    { name: "Kristian Kläger", title: "Founder terahash", timeSlot: "14:00 - 14:20", topic: "Eröffnung: Bitcoin auf der Bilanz" },
+    { name: "Veronika Sepp", title: "terahash Team", timeSlot: "14:30 - 15:30", topic: "Bitcoin-Mining als Puzzlestück für die Energiewende" },
+    { name: "Dr. Mathias Linkerhand", title: "terahash Representative", timeSlot: "15:30 - 16:30", topic: "Von Hash zu Heat: Nutzung der Abwärme" },
+    { name: "Nicole E. Nowak", title: "terahash Representative", timeSlot: "16:30 - 17:00", topic: "Demand Response und Überschussenergie" },
+    { name: "Florian Bruce-Boye", title: "Bitcoin-Experte", timeSlot: "17:00 - 17:30", topic: "Warum Bitcoin der optimale Wertspeicher ist" },
+    { name: "Daniel 'Loddi'", title: "Bitcoin-Podcaster", timeSlot: "17:30 - 18:00", topic: "Funktionsweise unseres Geldsystems" },
+    { name: "Karl Steuerberater", title: "Steuerberater", timeSlot: "18:00 - 18:30", topic: "Steuerliche Einordnung von Bitcoin-Investments" },
+    { name: "Andreas Streb", title: "CEO VR Bank Bayern Mitte", timeSlot: "18:30 - 19:00", topic: "Abschlussdiskussion und Q&A" },
+    { name: "Markus Gürne", title: "Moderator Wirtschaft vor acht", timeSlot: "20:00 - 22:00", topic: "Anekdoten und Insights aus der Finanzwelt" }
+  ],
+  difficulty: "Unternehmer und Geschäftsführer",
+  seats: 25,
+  fullDescription: `
+    <p>Praxisorientierter Workshop für Unternehmer über Bitcoin auf der Bilanz und zu nachhaltigen Bitcoin und Solarstrom und erneuerbaren Energien.</p>
+    <h3 style="color: #FFA500; font-weight: bold; margin-top: 1rem;"><strong>Schwerpunkte:</strong></h3>
+    <ul>
+      <li><span style="color: #FFA500;">•</span> <em>Bitcoin auf der Unternehmensbilanz</em></li>
+      <li><span style="color: #FFA500;">•</span> <em>Bitcoin-Mining als Puzzlestück für die Energiewende</em></li>
+      <li><span style="color: #FFA500;">•</span> <em>Nutzung von Abwärme aus Mining-Anlagen</em></li>
+      <li><span style="color: #FFA500;">•</span> <em>Demand Response und Überschussenergie</em></li>
+    </ul>
+    <p>Erforderlich: Unternehmerische Erfahrung, Interesse an erneuerbaren Energien und digitalen Vermögensspeichern.</p>
+  `,
+  requirements: "Unternehmerische Erfahrung, Interesse an erneuerbaren Energien und digitalen Vermögensspeichern.",
+  imageUrl: "https://images.unsplash.com/photo-1509395176047-4a66953fd231?ixlib=rb-4.0.3",
+  agenda: [
+    { timeSlot: "14:00 - 14:20", speaker: "Kristian Kläger", topic: "Eröffnung: Bitcoin auf der Bilanz" },
+    { timeSlot: "14:30 - 15:30", speaker: "Veronika Sepp", topic: "Bitcoin-Mining als Puzzlestück für die Energiewende" },
+    { timeSlot: "15:30 - 16:30", speaker: "Dr. Mathias Linkerhand", topic: "Von Hash zu Heat: Nutzung der Abwärme" },
+    { timeSlot: "16:30 - 17:00", speaker: "Nicole E. Nowak", topic: "Demand Response und Überschussenergie" },
+    { timeSlot: "17:00 - 17:30", speaker: "Florian Bruce-Boye", topic: "Warum Bitcoin der optimale Wertspeicher ist" },
+    { timeSlot: "17:30 - 18:00", speaker: "Daniel 'Loddi'", topic: "Funktionsweise unseres Geldsystems" },
+    { timeSlot: "18:00 - 18:30", speaker: "Karl Steuerberater", topic: "Steuerliche Einordnung von Bitcoin-Investments" },
+    { timeSlot: "18:30 - 19:00", speaker: "Andreas Streb", topic: "Abschlussdiskussion und Q&A" },
+    { timeSlot: "20:00 - 22:00", speaker: "Markus Gürne", topic: "Anekdoten und Insights aus der Finanzwelt" }
+  ]
+},
+
     {
       id: 4,
       title: "Hardware-Wallet",
