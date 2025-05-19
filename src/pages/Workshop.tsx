@@ -262,7 +262,7 @@ const Workshop = () => {
       ]
     },
 {
-  id: 4,
+  id: 5,
   title: "Specter DIY Workshop",
   subtitle: "Hardware-Wallet Selbst-Bastelkurs",
   description: "Bau dein eigenes Specter DIY Hardware Wallet – inkl. aller Materialien und Anleitung.",
