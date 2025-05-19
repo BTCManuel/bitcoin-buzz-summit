@@ -497,10 +497,10 @@ const Workshop = () => {
       initialVisibility[workshop.id] = true;
     });
     
-    initialVisibility[6] = false;
-    initialVisibility[7] = false;
+    initialVisibility[6] = true;
+    initialVisibility[7] = true;
     initialVisibility[8] = false;
-    initialVisibility[9] = false;
+    initialVisibility[9] = true;
     
     setWorkshopsVisibility(initialVisibility);
   }, []);
