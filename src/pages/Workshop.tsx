@@ -262,10 +262,10 @@ const Workshop = () => {
       ]
     },
 {
-  id: 5,
+  id: 4,
   title: "Specter DIY Workshop",
   subtitle: "Hardware-Wallet Selbst-Bastelkurs",
-  description: "Bau dein eigenes Specter DIY Hardware Wallet – inkl. aller Materialien und Anleitung.",
+  description: "Baue dein eigenes Specter DIY Hardware Wallet – von Grund auf inkl. vollständigem Material-Set.",
   icon: workshopIcons[3],
   bgColor: "bg-[#E8F5E9]",
   borderColor: "border-[#C8E6C9]",
@@ -273,44 +273,37 @@ const Workshop = () => {
   time: "13:00 - 16:00",
   location: "BitcoinForum Bayern, Ingolstadt",
   instructors: [
-    {
-      name: "Specter DIY Coach",
-      title: "Hardware-Wallet-Experte",
-      timeSlot: "13:00 - 16:00",
-      topic: "Specter DIY Bastelkurs inkl. Materialien"
-    }
+    { name: "Specter DIY Coach", title: "Hardware-Wallet-Experte", timeSlot: "13:00 - 13:15", topic: "Einführung und Überblick" },
+    { name: "Specter DIY Coach", title: "Hardware-Wallet-Experte", timeSlot: "13:15 - 14:00", topic: "Zusammenbau: Discovery Board & QR-Code Scanner" },
+    { name: "Specter DIY Coach", title: "Hardware-Wallet-Experte", timeSlot: "14:00 - 14:45", topic: "Gehäuse-Montage mit SnapCase & Extras" },
+    { name: "Specter DIY Coach", title: "Hardware-Wallet-Experte", timeSlot: "14:45 - 15:30", topic: "Inbetriebnahme und Softwareinstallation" },
+    { name: "Specter DIY Coach", title: "Hardware-Wallet-Experte", timeSlot: "15:30 - 15:50", topic: "Sicherheit, Backup & Best Practices" },
+    { name: "Specter DIY Coach", title: "Hardware-Wallet-Experte", timeSlot: "15:50 - 16:00", topic: "Abschluss-Fragerunde" }
   ],
-  difficulty: "Krypto-Enthusiasten und Technik-Interessierte",
+  difficulty: "Krypto-Enthusiasten und Technik-Begeisterte",
   seats: 25,
   fullDescription: `
-    <p>In diesem Workshop baust du dein eigenes Specter DIY Hardware Wallet.</p>
-    <p>Im Workshop-Bundle enthalten:</p>
-    <ul>
-      <li>Discovery Board</li>
-      <li>QR-Code Scanner</li>
-      <li>Micro-USB-Kabel</li>
-      <li>SnapCase</li>
-      <li>2× Sicherheitstüten</li>
-      <li>2× Terraslate Paper</li>
-      <li>2× Sicherheitsumschläge</li>
-    </ul>
+    <p>In diesem praxisorientierten DIY-Workshop baust du dein eigenes Specter DIY Hardware Wallet von Grund auf.</p>
+    <p><strong>Teilnahmegebühr:</strong> €149 inkl. aller Materialien (Discovery Board, QR-Code Scanner, Micro-USB-Kabel, SnapCase, 2× Sicherheitstüten, 2× Terraslate Paper, 2× Sicherheitsumschläge). Die Farbe kann variieren.</p>
+    <p><strong>Details & Mitbringen:</strong> Du benötigst nur dich selbst; empfohlen: Powerbank oder Laptop zur Softwareinstallation.</p>
     <h3 style="color: #FFA500; font-weight: bold; margin-top: 1rem;"><strong>Schwerpunkte:</strong></h3>
     <ul>
-      <li><span style="color: #FFA500;">•</span> <em>Entstehung und Konzept von Specter DIY</em></li>
-      <li><span style="color: #FFA500;">•</span> <em>Zusammenbau deines eigenen Hardware Wallets</em></li>
-      <li><span style="color: #FFA500;">•</span> <em>Inbetriebnahme und erste Schritte</em></li>
-      <li><span style="color: #FFA500;">•</span> <em>Abschluss-Fragerunde</em></li>
+      <li><span style="color: #FFA500;">•</span> <em>Einführung in Specter DIY und Projektüberblick</em></li>
+      <li><span style="color: #FFA500;">•</span> <em>Hardware-Zusammenbau und Gehäuse-Montage</em></li>
+      <li><span style="color: #FFA500;">•</span> <em>Softwareinstallation und Inbetriebnahme</em></li>
+      <li><span style="color: #FFA500;">•</span> <em>Sicherheitsmaßnahmen und Backup-Strategien</em></li>
     </ul>
-    <p>Praxisorientierter Workshop, in dem du am Ende ein selbst gebautes, einsatzbereites Hardware Wallet besitzt.</p>
+    <p><strong>Stornierung:</strong> Bis 48 Stunden vor Workshopbeginn kostenfrei, danach 95 % Rückerstattung.</p>
   `,
-  requirements: "Keine Vorkenntnisse erforderlich; empfohlen: Powerbank (optional Laptop). Nutzen: Du lernst Aufbau, Sicherheit und Anwendung deines eigenen Specter DIY Hardware Wallets.",
+  requirements: "Keine Vorkenntnisse erforderlich; Interesse an Hardware und Bitcoin.",
   imageUrl: "https://images.unsplash.com/photo-1589385216190-9b33e34f06c8?ixlib=rb-4.0.3",
   agenda: [
-    {
-      timeSlot: "13:00 - 16:00",
-      speaker: "Specter DIY Coach",
-      topic: "Specter DIY Bastelkurs inkl. Materialien"
-    }
+    { timeSlot: "13:00 - 13:15", speaker: "Specter DIY Coach", topic: "Einführung und Überblick" },
+    { timeSlot: "13:15 - 14:00", speaker: "Specter DIY Coach", topic: "Zusammenbau: Discovery Board & QR-Code Scanner" },
+    { timeSlot: "14:00 - 14:45", speaker: "Specter DIY Coach", topic: "Gehäuse-Montage mit SnapCase & Extras" },
+    { timeSlot: "14:45 - 15:30", speaker: "Specter DIY Coach", topic: "Inbetriebnahme und Softwareinstallation" },
+    { timeSlot: "15:30 - 15:50", speaker: "Specter DIY Coach", topic: "Sicherheit, Backup & Best Practices" },
+    { timeSlot: "15:50 - 16:00", speaker: "Specter DIY Coach", topic: "Abschluss-Fragerunde" }
   ]
 },
 
