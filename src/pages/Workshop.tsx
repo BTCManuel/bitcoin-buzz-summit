@@ -262,48 +262,57 @@ const Workshop = () => {
       ]
     },
     {
-      id: 5,
-      title: "Lightning Network",
-      subtitle: "im Detail verstehen",
-      description: "Tauchen Sie tief in das Lightning Network ein und verstehen Sie die technischen Details.",
-      icon: workshopIcons[3],
-      bgColor: "bg-[#F2FCE2]",
-      borderColor: "border-[#D3E4FD]",
-      date: "10. Oktober",
-      time: "09:00 - 12:30",
-      location: "Raum A2",
-      instructors: [
-        { name: "Felix Schneider", title: "Lightning Developer", timeSlot: "09:00 - 09:30", topic: "Lightning Architektur" },
-        { name: "Sarah Wagner", title: "Bitcoin Core Contributor", timeSlot: "09:30 - 10:00", topic: "Payment Channels" }
-      ],
-      difficulty: "Experte",
-      seats: 25,
-      fullDescription: `
-        <p>Dieser technisch orientierte Workshop bietet einen tiefen Einblick in das Lightning Network – die Skalierungslösung für Bitcoin, die schnelle und kostengünstige Transaktionen ermöglicht.</p>
-        <p>Sie werden die technischen Grundlagen verstehen und praktische Erfahrungen mit Lightning-Implementierungen sammeln. Der Workshop kombiniert theoretisches Wissen mit praktischen Übungen.</p>
-        <h3>Themen:</h3>
-        <ul>
-          <li>Technische Architektur des Lightning Networks</li>
-          <li>Payment Channels: Erstellung, Verwaltung und Schließung</li>
-          <li>Routing und Pfadfindungsalgorithmen</li>
-          <li>Lightning Network Implementations (LND, c-lightning, Eclair)</li>
-          <li>Sicherheitsaspekte und potenzielle Angriffsvektoren</li>
-          <li>Entwicklung von Lightning-Apps (LApps)</li>
-          <li>Aktuelle Entwicklungen und zukünftige Erweiterungen</li>
-        </ul>
-        <p>Teilnehmer haben die Möglichkeit, Lightning-Transaktionen durchzuführen und mit verschiedenen Lightning-Wallets zu experimentieren.</p>
-      `,
-      requirements: "Gutes Verständnis der Bitcoin-Grundlagen und Blockchain-Technologie. Grundkenntnisse in Programmierung sind von Vorteil.",
-      imageUrl: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3",
-      agenda: [
-        { timeSlot: "09:00 - 09:30", speaker: "Felix Schneider", topic: "Einführung in Lightning" },
-        { timeSlot: "09:30 - 10:00", speaker: "Sarah Wagner", topic: "Payment Channels im Detail" },
-        { timeSlot: "10:00 - 10:15", speaker: "", topic: "Pause" },
-        { timeSlot: "10:15 - 11:00", speaker: "Felix Schneider", topic: "Routing und Network Topologie" },
-        { timeSlot: "11:00 - 11:45", speaker: "Sarah Wagner", topic: "LApps Development" },
-        { timeSlot: "11:45 - 12:30", speaker: "Beide", topic: "Live Demonstrationen" }
-      ]
-    },
+  id: 4,
+  title: "Specter DIY Workshop",
+  subtitle: "Hardware-Wallet Selbst-Bastelkurs",
+  description: "Bau dein eigenes Specter DIY Hardware Wallet – inkl. aller Materialien.",
+  icon: workshopIcons[3],
+  bgColor: "bg-[#E8F5E9]",
+  borderColor: "border-[#C8E6C9]",
+  date: "10. Oktober",
+  time: "13:00 - 16:00",
+  location: "BitcoinForum Bayern, Ingolstadt",
+  instructors: [
+    {
+      name: "Specter DIY Coach",
+      title: "Hardware-Wallet Experte",
+      timeSlot: "13:00 - 16:00",
+      topic: "Specter DIY Bastelkurs inkl. Materialien"
+    }
+  ],
+  difficulty: "Einsteiger und Fortgeschrittene",
+  seats: 25,
+  fullDescription: `
+    <p>In diesem Workshop baust du dein eigenes Specter DIY Hardware Wallet.</p>
+    <p>Das Workshop-Bundle enthält:</p>
+    <ul>
+      <li>Discovery Board</li>
+      <li>QR-Code Scanner</li>
+      <li>Micro-USB-Kabel</li>
+      <li>SnapCase</li>
+      <li>2× Sicherheitstüten</li>
+      <li>2× Terraslate Paper</li>
+      <li>2× Sicherheitsumschläge</li>
+    </ul>
+    <h3 style="color: #FFA500; font-weight: bold; margin-top: 1rem;"><strong>Schwerpunkte:</strong></h3>
+    <ul>
+      <li><span style="color: #FFA500;">•</span> <em>Was ist Specter DIY und wie entstand das Projekt?</em></li>
+      <li><span style="color: #FFA500;">•</span> <em>Zusammenbau deines Specter DIY</em></li>
+      <li><span style="color: #FFA500;">•</span> <em>Inbetriebnahme und Nutzung</em></li>
+      <li><span style="color: #FFA500;">•</span> <em>Abschluss-Fragerunde</em></li>
+    </ul>
+    <p>Empfohlen: Laptop und Powerbank zum Ausprobieren. Solltest du vor Ende der 3 Stunden fertig sein, kannst du gerne früher gehen.</p>
+  `,
+  requirements: "Keine Vorkenntnisse erforderlich; empfohlen: Laptop und Powerbank.",
+  imageUrl: "https://images.unsplash.com/photo-1589385216190-9b33e34f06c8?ixlib=rb-4.0.3",
+  agenda: [
+    {
+      timeSlot: "13:00 - 16:00",
+      speaker: "Specter DIY Coach",
+      topic: "Specter DIY Bastelkurs inkl. Materialien"
+    }
+  ]
+},
     {
       id: 6,
       title: "Bitcoin für Unternehmen",
