@@ -261,11 +261,11 @@ const Workshop = () => {
         { timeSlot: "17:00 - 17:30", speaker: "Beide", topic: "Tests und Sicherheitsüberprüfungen" }
       ]
     },
-    {
+{
   id: 4,
   title: "Specter DIY Workshop",
   subtitle: "Hardware-Wallet Selbst-Bastelkurs",
-  description: "Bau dein eigenes Specter DIY Hardware Wallet – inkl. aller Materialien.",
+  description: "Bau dein eigenes Specter DIY Hardware Wallet – inkl. aller Materialien und Anleitung.",
   icon: workshopIcons[3],
   bgColor: "bg-[#E8F5E9]",
   borderColor: "border-[#C8E6C9]",
@@ -275,16 +275,16 @@ const Workshop = () => {
   instructors: [
     {
       name: "Specter DIY Coach",
-      title: "Hardware-Wallet Experte",
+      title: "Hardware-Wallet-Experte",
       timeSlot: "13:00 - 16:00",
       topic: "Specter DIY Bastelkurs inkl. Materialien"
     }
   ],
-  difficulty: "Einsteiger und Fortgeschrittene",
+  difficulty: "Krypto-Enthusiasten und Technik-Interessierte",
   seats: 25,
   fullDescription: `
     <p>In diesem Workshop baust du dein eigenes Specter DIY Hardware Wallet.</p>
-    <p>Das Workshop-Bundle enthält:</p>
+    <p>Im Workshop-Bundle enthalten:</p>
     <ul>
       <li>Discovery Board</li>
       <li>QR-Code Scanner</li>
@@ -296,14 +296,14 @@ const Workshop = () => {
     </ul>
     <h3 style="color: #FFA500; font-weight: bold; margin-top: 1rem;"><strong>Schwerpunkte:</strong></h3>
     <ul>
-      <li><span style="color: #FFA500;">•</span> <em>Was ist Specter DIY und wie entstand das Projekt?</em></li>
-      <li><span style="color: #FFA500;">•</span> <em>Zusammenbau deines Specter DIY</em></li>
-      <li><span style="color: #FFA500;">•</span> <em>Inbetriebnahme und Nutzung</em></li>
+      <li><span style="color: #FFA500;">•</span> <em>Entstehung und Konzept von Specter DIY</em></li>
+      <li><span style="color: #FFA500;">•</span> <em>Zusammenbau deines eigenen Hardware Wallets</em></li>
+      <li><span style="color: #FFA500;">•</span> <em>Inbetriebnahme und erste Schritte</em></li>
       <li><span style="color: #FFA500;">•</span> <em>Abschluss-Fragerunde</em></li>
     </ul>
-    <p>Empfohlen: Laptop und Powerbank zum Ausprobieren. Solltest du vor Ende der 3 Stunden fertig sein, kannst du gerne früher gehen.</p>
+    <p>Praxisorientierter Workshop, in dem du am Ende ein selbst gebautes, einsatzbereites Hardware Wallet besitzt.</p>
   `,
-  requirements: "Keine Vorkenntnisse erforderlich; empfohlen: Laptop und Powerbank.",
+  requirements: "Keine Vorkenntnisse erforderlich; empfohlen: Powerbank (optional Laptop). Nutzen: Du lernst Aufbau, Sicherheit und Anwendung deines eigenen Specter DIY Hardware Wallets.",
   imageUrl: "https://images.unsplash.com/photo-1589385216190-9b33e34f06c8?ixlib=rb-4.0.3",
   agenda: [
     {
@@ -313,6 +313,7 @@ const Workshop = () => {
     }
   ]
 },
+
     {
       id: 6,
       title: "Bitcoin für Unternehmen",
