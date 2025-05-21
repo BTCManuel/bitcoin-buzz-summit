@@ -13,10 +13,30 @@ jobs:
       - name: 📥 Checkout Code
         uses: actions/checkout@v3
 
-      - name: 📦 Install dependencies and build (Vite)
+      - name: ❓ Check autobuild flag
+        run: |
+          if [[ $(cat autobuild.txt) != "on" ]]; then
+            echo "🚫 Autobuild deaktiviert – Abbruch."
+            exit 0
+          fi
+
+      - name: ⚙️ Install dependencies and build (nur falls nicht Maintenance)
+        if: ${{ hashFiles('mode.txt') && contains(fromJSON('["live"]'), fromJSON(format('"{}"', github.workspace + '/mode.txt' | file)) ) }}
         run: |
           npm ci
           npm run build
+
+      - name: 📁 Set local-dir variable
+        id: modecheck
+        run: |
+          MODE=$(cat mode.txt)
+          if [[ "$MODE" == "maintenance" ]]; then
+            echo "Deploying maintenance page..."
+            echo "localdir=maintenance-html" >> $GITHUB_OUTPUT
+          else
+            echo "Deploying built website..."
+            echo "localdir=dist" >> $GITHUB_OUTPUT
+          fi
 
       - name: 🚀 Upload to DomainFactory via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
@@ -24,5 +44,5 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: dist/
+          local-dir: ${{ steps.modecheck.outputs.localdir }}
           server-dir: ./
