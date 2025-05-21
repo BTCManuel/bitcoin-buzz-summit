@@ -24,7 +24,7 @@ const Speakers = () => {
 
 const speakersData = [
   {
-    name: "Andreas Streb",
+    name: "Andreas Streb7",
     role: "CEO",
     company: "VR Bayernmitte e.G.",
     image: "/images/speakers/Andreas_Streb.jpg",
