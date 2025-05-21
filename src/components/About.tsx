@@ -9,8 +9,7 @@ import { usePopup } from "@/pages/PopupContext";
 const About = () => {
   const { openPopup } = usePopup();
   const features = [
- {/*
-  {
+    {
       icon: <img src="/images/speakers/Bitcoin_Block.png" alt="Bitcoin Block" className="h-12 w-12 mb-4" loading="lazy" />,
       title: "Bitcoin Block",
       description: "Schon ab dem 4. Oktober beginnt die Bitcoin Woche in Ingolstadt. Im Westpark Shoppingcenter öffnet der Bitcoin Block seine Tore. Informationen über Bitcoin für interessierte Laien und Bitcoiner.",
@@ -20,8 +19,6 @@ const About = () => {
       buttonText: "Mehr erfahren",
       external: false
     },
-    
-  */}
     {
       icon: <img src="/images/workshop/light-bulb-idea.svg" alt="BitcoinForum Bitcoin Mining" className="h-12 w-12 mb-4" loading="lazy" />,
       title: "Energiewirtschaft & Mining",
@@ -60,8 +57,7 @@ const About = () => {
       buttonText: "Jetzt Partner werden",
       external: true
     },
-  {/*   
-  {
+    {
       icon: <img src="/images/workshop/robots.svg" alt="BitcoinForum Workshops" className="h-12 w-12 mb-4" loading="lazy" />,
       title: "Workshops",
       description: "Wir bereiten derzeit eine Vielzahl von Workshops für Sie vor. Anfänger und technikinteressierte Besucher finden hier ab Juli eine spannende Auswahl. WICHTIG: Jetzt schon Tickets zum rabattierten Preis bestellen, denn Workshops sind nur mit gültigem Ticket buchbar!",
@@ -70,7 +66,7 @@ const About = () => {
       buttonText: "im Aufbau",
     }
   ];
-*/}
+
   return (
     <section id="about" className="py-32 bg-gradient-to-b from-white to-[#F2FCE2]/50">
       <div className="container mx-auto px-4">
