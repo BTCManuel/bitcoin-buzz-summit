@@ -1,4 +1,4 @@
-name: 🌐 Deploy to GitHub Pages
+name: 🌐 Manual GitHub Pages Deploy
 
 on:
   push:
@@ -6,47 +6,23 @@ on:
       - preview
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: 'pages'
-  cancel-in-progress: true
+  contents: write
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: ⚠️ Fix GitHub cache bug – preload upload-artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: dummy
-          path: ./nonexistent
-          if-no-files-found: ignore
-
-      - name: 📥 Checkout code
+      - name: 📥 Checkout
         uses: actions/checkout@v3
 
-      - name: 📦 Install & Build
+      - name: 🧱 Install & Build
         run: |
           npm ci
           npm run build
 
-      - name: 📤 Upload Pages artifact
-        uses: actions/upload-pages-artifact@v1.0.8
+      - name: 🚀 Deploy to GitHub Pages branch
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          path: ./dist
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
-    steps:
-      - name: 🚀 Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v1
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
