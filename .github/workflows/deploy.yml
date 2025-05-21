@@ -40,7 +40,7 @@ jobs:
             echo "⚠️ Wartungsmodus erkannt – kein Build"
           fi
 
-          
+
       - name: 🧪 Diagnose: Zeige dist-Ordner und Build-Log
         run: |
           echo "📂 Inhalt von dist/:"
@@ -71,5 +71,5 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ${{ steps.modecheck.outputs.localdir }}
+          local-dir: ${{ steps.modecheck.outputs.localdir }}/
           server-dir: ./
