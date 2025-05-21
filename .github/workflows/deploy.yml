@@ -16,7 +16,7 @@ jobs:
       - name: 🔍 Check autobuild.txt
         id: autobuild
         run: |
-          content=$(grep -v '^#' autobuild.txt | grep -i 'on' || true)
+          content=$(grep -v '^#' autobuild.txt | tr -d '\r' | xargs | tr '[:upper:]' '[:lower:]')
           if [[ "$content" == "on" ]]; then
             echo "deploy=true" >> "$GITHUB_OUTPUT"
           else
