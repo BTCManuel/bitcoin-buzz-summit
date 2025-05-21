@@ -33,22 +33,45 @@ jobs:
             echo "deploy=false" >> "$GITHUB_OUTPUT"
           fi
 
+      - name: 🔍 Check mode.txt
+        id: modecheck
+        run: |
+          if [ ! -f mode.txt ]; then
+            echo "⚠️ Datei mode.txt nicht gefunden – Standard: live"
+            echo "mode=live" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          mode=$(grep -v '^#' mode.txt | head -n 1 | tr -d '\r' | xargs | tr '[:upper:]' '[:lower:]')
+          echo "📄 Gelesener Wert aus mode.txt: '$mode'"
+          echo "mode=$mode" >> "$GITHUB_OUTPUT"
+
       - name: 🚫 Skip deployment if autobuild.txt is not 'on'
         if: steps.autobuild.outputs.deploy == 'false'
         run: echo "Skipping deployment because autobuild.txt is not set to 'on'"
 
       - name: 📦 Install dependencies and build (Vite)
-        if: steps.autobuild.outputs.deploy == 'true'
+        if: steps.autobuild.outputs.deploy == 'true' && steps.modecheck.outputs.mode == 'live'
         run: |
           npm ci
           npm run build
 
-      - name: 🚀 Upload to DomainFactory via FTP
-        if: steps.autobuild.outputs.deploy == 'true'
+      - name: 🚀 Upload LIVE to DomainFactory via FTP
+        if: steps.autobuild.outputs.deploy == 'true' && steps.modecheck.outputs.mode == 'live'
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: dist/
+          server-dir: ./
+
+      - name: 🚧 Upload MAINTENANCE page to DomainFactory via FTP
+        if: steps.autobuild.outputs.deploy == 'true' && steps.modecheck.outputs.mode == 'maintenance'
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: maintenance-html/
           server-dir: ./
