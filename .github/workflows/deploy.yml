@@ -40,6 +40,15 @@ jobs:
             echo "⚠️ Wartungsmodus erkannt – kein Build"
           fi
 
+          
+      - name: 🧪 Diagnose: Zeige dist-Ordner und Build-Log
+        run: |
+          echo "📂 Inhalt von dist/:"
+          ls -lah dist || echo "⚠️ dist/ nicht vorhanden"
+
+          echo "📄 Suche nach npm-debug.log:"
+          [ -f npm-debug.log ] && cat npm-debug.log || echo "✅ Keine npm-debug.log gefunden (normal)"
+
       - name: 📁 Setze Upload-Ordner (dist/ oder maintenance-html/)
         id: modecheck
         run: |
