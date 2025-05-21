@@ -45,6 +45,7 @@ const speakersData = [
     bgColor: "bg-[#FEF7CD]/50",
     bgSolidColor: "bg-[#FEF7CD]"
   },
+{/*
   {
     name: "Marc Friedrich",
     role: "FOTO NEEDED",
@@ -67,6 +68,7 @@ const speakersData = [
     bgColor: "bg-[#D3E4FD]/50",
     bgSolidColor: "bg-[#D3E4FD]"
   },
+*/}
   {
     name: "Roman Reher",
     role: "FOTO NEEDED",
