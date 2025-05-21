@@ -28,12 +28,13 @@ jobs:
           echo "Deploy-Modus: $MODE"
           if [[ "$MODE" == "live" ]]; then
             echo "📦 Installiere Abhängigkeiten..."
-            npm ci
+            npm ci || { echo "❌ npm ci fehlgeschlagen"; exit 1; }
             echo "🔨 Baue Projekt mit Vite..."
-            npm run build
+            npm run build || { echo "❌ Build fehlgeschlagen"; exit 1; }
           else
             echo "⚠️ Wartungsmodus – kein Build nötig"
           fi
+
 
       - name: 📁 Setze lokalen Upload-Ordner (dist/ oder maintenance-html/)
         id: modecheck
