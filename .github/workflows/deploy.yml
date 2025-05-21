@@ -15,17 +15,27 @@ jobs:
 
       - name: ❓ Check autobuild.txt
         run: |
-          AUTOBUILD=$(grep -v '^#' autobuild.txt | head -n 1)
+          AUTOBUILD=$(grep -v '^#' autobuild.txt | head -n 1 | xargs)
           echo "Autobuild-Modus: '$AUTOBUILD'"
           if [[ "$AUTOBUILD" != "on" ]]; then
             echo "🚫 Autobuild deaktiviert – Abbruch."
             exit 0
           fi
 
+      - name: 📁 Set upload folder based on mode.txt
+        id: set-folder
+        run: |
+          MODE=$(grep -v '^#' mode.txt | head -n 1 | xargs)
+          echo "Deploy-Modus: '$MODE'"
+          if [[ "$MODE" == "maintenance" ]]; then
+            echo "localdir=maintenance-html/" >> $GITHUB_OUTPUT
+          else
+            echo "localdir=dist/" >> $GITHUB_OUTPUT
+          fi
+
       - name: 📦 Install dependencies and build (nur wenn live)
         run: |
-          MODE=$(grep -v '^#' mode.txt | head -n 1)
-          echo "Deploy-Modus: '$MODE'"
+          MODE=$(grep -v '^#' mode.txt | head -n 1 | xargs)
           if [[ "$MODE" == "live" ]]; then
             echo "📦 Installiere Abhängigkeiten und baue Website..."
             npm ci
@@ -42,13 +52,3 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ${{ steps.set-folder.outputs.localdir }}
           server-dir: ./
-
-      - name: 📁 Set upload folder based on mode.txt
-        id: set-folder
-        run: |
-          MODE=$(grep -v '^#' mode.txt | head -n 1)
-          if [[ "$MODE" == "maintenance" ]]; then
-            echo "localdir=maintenance-html/" >> $GITHUB_OUTPUT
-          else
-            echo "localdir=dist/" >> $GITHUB_OUTPUT
-          fi
