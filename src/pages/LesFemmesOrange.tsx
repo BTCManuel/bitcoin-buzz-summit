@@ -168,7 +168,7 @@ const LesFemmesOrange = () => {
             <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
               <div className="h-56 overflow-hidden">
                 <img 
-                  src="/images/workshop/bitcoin-global-world (1).svg" 
+                  src="/images/workshop/LFO_6.jpg" 
                   alt="Bitcoin Meetup" 
                   className="w-full h-full object-contain object-center p-4 bg-[#FDE1D3]/30"
                 />
