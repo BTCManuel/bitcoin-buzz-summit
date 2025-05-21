@@ -42,9 +42,18 @@ jobs:
             exit 0
           fi
 
-          mode=$(grep -v '^#' mode.txt | head -n 1 | tr -d '\r' | xargs | tr '[:upper:]' '[:lower:]')
+          # Lese erste sinnvolle Zeile (nicht leer, kein Kommentar)
+          mode=$(grep -v '^#' mode.txt | grep -E '\S' | head -n 1 | tr -d '\r' | xargs | tr '[:upper:]' '[:lower:]')
           echo "📄 Gelesener Wert aus mode.txt: '$mode'"
+
+          # Nur 'live' und 'maintenance' sind gültig
+          if [[ "$mode" != "live" && "$mode" != "maintenance" ]]; then
+            echo "❌ Ungültiger Modus: '$mode' – bitte 'live' oder 'maintenance' verwenden"
+            exit 1
+          fi
+
           echo "mode=$mode" >> "$GITHUB_OUTPUT"
+
 
       - name: 🚫 Skip deployment if autobuild.txt is not 'on'
         if: steps.autobuild.outputs.deploy == 'false'
