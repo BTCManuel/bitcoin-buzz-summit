@@ -13,10 +13,26 @@ jobs:
       - name: 📥 Checkout Code
         uses: actions/checkout@v3
 
-      - name: 📦 Install dependencies and build (Vite)
+      - name: ❓ Check autobuild.txt
         run: |
-          npm ci
-          npm run build
+          AUTOBUILD=$(grep -v '^#' autobuild.txt | head -n 1)
+          echo "Autobuild-Modus: '$AUTOBUILD'"
+          if [[ "$AUTOBUILD" != "on" ]]; then
+            echo "🚫 Autobuild deaktiviert – Abbruch."
+            exit 0
+          fi
+
+      - name: 📦 Install dependencies and build (nur wenn live)
+        run: |
+          MODE=$(grep -v '^#' mode.txt | head -n 1)
+          echo "Deploy-Modus: '$MODE'"
+          if [[ "$MODE" == "live" ]]; then
+            echo "📦 Installiere Abhängigkeiten und baue Website..."
+            npm ci
+            npm run build
+          else
+            echo "⚠️ Wartungsmodus – Build wird übersprungen"
+          fi
 
       - name: 🚀 Upload to DomainFactory via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
@@ -24,5 +40,15 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: dist/
+          local-dir: ${{ steps.set-folder.outputs.localdir }}
           server-dir: ./
+
+      - name: 📁 Set upload folder based on mode.txt
+        id: set-folder
+        run: |
+          MODE=$(grep -v '^#' mode.txt | head -n 1)
+          if [[ "$MODE" == "maintenance" ]]; then
+            echo "localdir=maintenance-html/" >> $GITHUB_OUTPUT
+          else
+            echo "localdir=dist/" >> $GITHUB_OUTPUT
+          fi
