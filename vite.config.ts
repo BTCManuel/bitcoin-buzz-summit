@@ -5,7 +5,10 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: "/bitcoin-buzz-summit/", // 🔥 Wichtig für SPA-Fallback auf Lovable
+  base: process.env.BUILD_TARGET === "preview"
+    ? "/bitcoin-buzz-summit/"
+    : "/",
+}))
 
   server: {
     host: "::",
