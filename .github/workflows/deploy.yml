@@ -16,18 +16,26 @@ jobs:
       - name: 🔍 Check autobuild.txt
         id: autobuild
         run: |
+          if [ ! -f autobuild.txt ]; then
+            echo "🚫 Datei autobuild.txt wurde nicht gefunden!"
+            echo "deploy=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
           content=$(grep -v '^#' autobuild.txt | head -n 1 | tr -d '\r' | xargs | tr '[:upper:]' '[:lower:]')
-          echo "parsed content: '$content'"
+          echo "📄 Gelesener Wert aus autobuild.txt: '$content'"
+
           if [[ "$content" == "on" ]]; then
+            echo "✅ Deploy ist aktiviert."
             echo "deploy=true" >> "$GITHUB_OUTPUT"
           else
+            echo "🚫 Deploy ist deaktiviert."
             echo "deploy=false" >> "$GITHUB_OUTPUT"
           fi
 
-
       - name: 🚫 Skip deployment if autobuild.txt is not 'on'
         if: steps.autobuild.outputs.deploy == 'false'
-        run: echo "Deployment is turned off via autobuild.txt"
+        run: echo "Skipping deployment because autobuild.txt is not set to 'on'"
 
       - name: 📦 Install dependencies and build (Vite)
         if: steps.autobuild.outputs.deploy == 'true'
