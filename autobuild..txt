@@ -1,4 +1,40 @@
-# Diese Datei steuert, ob automatisch auf den Server hochgeladen wird.
-# Trage "on" ein, wenn bei jedem GitHub-Push deployt werden soll.
-# Trage "off" ein, wenn kein automatischer Upload erfolgen soll.
-on
+name: 🚀 Deploy to DomainFactory via FTP
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  ftp-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Checkout Code
+        uses: actions/checkout@v3
+
+      - name: 🔍 Check autobuild.txt
+        id: autobuild
+        run: |
+          value=$(grep -v '^#' autobuild.txt | grep -i 'on' || true)
+          echo "autobuild=$value" >> $GITHUB_OUTPUT
+
+      - name: 🚫 Skip deployment if autobuild.txt is not 'on'
+        if: steps.autobuild.outputs.autobuild == ''
+        run: echo "Deployment is turned off via autobuild.txt"
+
+      - name: 📦 Install dependencies and build (Vite)
+        if: steps.autobuild.outputs.autobuild != ''
+        run: |
+          npm ci
+          npm run build
+
+      - name: 🚀 Upload to DomainFactory via FTP
+        if: steps.autobuild.outputs.autobuild != ''
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: dist/
+          server-dir: ./
