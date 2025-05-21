@@ -5,7 +5,7 @@ import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { usePopup } from '@/pages/PopupContext';
-import { Calendar, Users, MessageSquare, Heart, Clock, Award, Sparkles } from 'lucide-react';
+import { Calendar, Users, MessageSquare, Heart, Clock, Award, Sparkles, MapPin, Globe, ChevronRight, CheckCircle } from 'lucide-react';
 
 const LesFemmesOrange = () => {
   const { openPopup } = usePopup();
@@ -14,7 +14,7 @@ const LesFemmesOrange = () => {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       
-      {/* Hero Section with Improved Styling */}
+      {/* Hero Section with Enhanced Style */}
       <div className="bg-gradient-to-br from-[#FDE1D3] via-[#FEF7CD] to-white py-24 md:py-32 relative overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-10">
           <div className="absolute inset-0 bg-[url('/images/workshop/le_femmes.png')] bg-center bg-cover"></div>
@@ -37,7 +37,7 @@ const LesFemmesOrange = () => {
                   onClick={() => openPopup({
                     redirectUrl: "https://vr-bayernmitte.genolive.de/index.php?page=event-code&code=bitcoin25"
                   })}
-                  className="bg-[#F97316] hover:bg-[#EA580C] text-white rounded-full py-6 shadow-lg"
+                  className="bg-[#F97316] hover:bg-[#EA580C] text-white rounded-full py-6 px-8 shadow-lg"
                 >
                   Jetzt Teilnehmen
                 </Button>
@@ -47,24 +47,31 @@ const LesFemmesOrange = () => {
               </div>
             </div>
             <div className="lg:w-1/2 flex justify-center">
-              <img 
-                src="/images/workshop/le_femmes.png" 
-                alt="Les Femmes Orange" 
-                className="max-w-full h-auto rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300"
-              />
+              <div className="relative">
+                <div className="absolute -top-6 -left-6 w-32 h-32 bg-[#FEF7CD] rounded-full -z-10 animate-pulse"></div>
+                <img 
+                  src="/images/workshop/le_femmes.png" 
+                  alt="Les Femmes Orange" 
+                  className="max-w-full h-auto rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300 relative z-10"
+                />
+                <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-[#FDE1D3] rounded-full -z-10 animate-pulse"></div>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Mission Statement Section */}
+      {/* Mission Statement Section with Enhanced Design */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-2xl md:text-3xl font-bold mb-6 text-[#F97316]">Unsere Mission</h2>
-            <p className="text-xl text-gray-700 leading-relaxed">
+            <p className="text-xl text-gray-700 leading-relaxed italic">
               "Wir stärken Frauen durch Bitcoin-Bildung, bauen eine unterstützende Gemeinschaft auf und fördern finanzielle Unabhängigkeit und Selbstbestimmung."
             </p>
+            <div className="flex justify-center mt-8">
+              <div className="w-20 h-1 bg-gradient-to-r from-[#FDE1D3] to-[#F97316]"></div>
+            </div>
           </div>
         </div>
       </section>
@@ -125,39 +132,159 @@ const LesFemmesOrange = () => {
         </div>
       </section>
 
-      {/* Image Gallery Section */}
+      {/* Events Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-gray-800">Eindrücke unserer Events</h2>
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800">Unsere Events</h2>
+            <p className="text-lg text-gray-600">
+              Reguläre Meetups und Workshops bieten eine Plattform für Frauen, sich mit Bitcoin vertraut zu machen und zu vernetzen
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto mb-16">
+            <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+              <div className="h-56 overflow-hidden">
+                <img 
+                  src="/images/workshop/bitcoin-card-credit-card (1).svg" 
+                  alt="Bitcoin Workshop" 
+                  className="w-full h-full object-contain object-center p-4 bg-[#FEF7CD]/30"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-gray-800 mb-3">Praktische Workshops</h3>
+                <p className="text-gray-600 mb-4">
+                  Lerne in einem unterstützenden Umfeld, wie du Bitcoin-Wallets einrichtest, Transaktionen durchführst und deine Coins sicher aufbewahrst.
+                </p>
+                <div className="flex items-center text-sm text-gray-500 mt-4">
+                  <Calendar className="w-4 h-4 mr-2" />
+                  <span>Regelmäßig</span>
+                  <MapPin className="w-4 h-4 ml-6 mr-2" />
+                  <span>Verschiedene Standorte</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+              <div className="h-56 overflow-hidden">
+                <img 
+                  src="/images/workshop/bitcoin-global-world (1).svg" 
+                  alt="Bitcoin Meetup" 
+                  className="w-full h-full object-contain object-center p-4 bg-[#FDE1D3]/30"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-gray-800 mb-3">Globale Meetups</h3>
+                <p className="text-gray-600 mb-4">
+                  Vernetze dich mit Frauen aus der ganzen Welt, die sich für Bitcoin interessieren, und teile Erfahrungen und Wissen.
+                </p>
+                <div className="flex items-center text-sm text-gray-500 mt-4">
+                  <Globe className="w-4 h-4 mr-2" />
+                  <span>International</span>
+                  <Clock className="w-4 h-4 ml-6 mr-2" />
+                  <span>Monatlich</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-[#FEF7CD]/20 rounded-2xl p-8 max-w-4xl mx-auto">
+            <div className="flex flex-col md:flex-row items-center gap-6">
+              <div className="md:w-1/3">
+                <img 
+                  src="/images/workshop/wrench-fix-computer-computer-screen-laptop (1).svg" 
+                  alt="Online Learning" 
+                  className="w-full h-auto"
+                />
+              </div>
+              <div className="md:w-2/3">
+                <h3 className="text-xl font-bold text-gray-800 mb-3">Online-Learning-Community</h3>
+                <p className="text-gray-600 mb-4">
+                  Unsere Online-Community bietet kontinuierlichen Support, Lernmaterialien und Diskussionsforen auch zwischen den Veranstaltungen.
+                </p>
+                <ul className="space-y-2 mb-6">
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-[#F97316] mr-2 mt-0.5" />
+                    <span>Zugang zu exklusiven Lernressourcen</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-[#F97316] mr-2 mt-0.5" />
+                    <span>Mentoring von erfahrenen Bitcoin-Anwenderinnen</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-[#F97316] mr-2 mt-0.5" />
+                    <span>Networking-Möglichkeiten</span>
+                  </li>
+                </ul>
+                <a 
+                  href="https://lesfemmesorange.work/events-meetups/" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="inline-flex items-center text-[#F97316] font-medium hover:underline"
+                >
+                  Mehr erfahren 
+                  <ChevronRight className="h-4 w-4 ml-1" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Image Gallery Section with Enhanced Design */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-gray-800">Eindrücke unserer Community</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="overflow-hidden rounded-lg shadow-md bg-white">
-              <img 
-                src="/images/workshop/le_femmes.png" 
-                alt="Workshop Impression" 
-                className="w-full h-64 object-cover object-center transition-transform duration-300 hover:scale-105"
-              />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <div className="overflow-hidden rounded-lg shadow-md bg-white group">
+              <div className="relative h-64">
+                <img 
+                  src="/images/workshop/le_femmes.png" 
+                  alt="Workshop Impression" 
+                  className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                  <div className="p-4 text-white">
+                    <p className="font-medium">Bitcoin Workshop 2024</p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="overflow-hidden rounded-lg shadow-md bg-white">
-              <img 
-                src="/images/workshop/le_feemes_old.png" 
-                alt="Workshop Impression" 
-                className="w-full h-64 object-cover object-center transition-transform duration-300 hover:scale-105"
-              />
+            <div className="overflow-hidden rounded-lg shadow-md bg-white group">
+              <div className="relative h-64">
+                <img 
+                  src="/images/workshop/le_feemes_old.png" 
+                  alt="Workshop Impression" 
+                  className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                  <div className="p-4 text-white">
+                    <p className="font-medium">Gemeinschaftsevent</p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="overflow-hidden rounded-lg shadow-md bg-white">
-              <img 
-                src="/images/workshop/bitcoin-global-world (1).svg" 
-                alt="Global Bitcoin Community" 
-                className="w-full h-64 object-contain p-4 transition-transform duration-300 hover:scale-105"
-              />
+            <div className="overflow-hidden rounded-lg shadow-md bg-white group">
+              <div className="relative h-64">
+                <img 
+                  src="/images/workshop/bitcoin-global-world (1).svg" 
+                  alt="Global Bitcoin Community" 
+                  className="w-full h-full object-contain p-4 bg-white transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                  <div className="p-4 text-white">
+                    <p className="font-medium">Global Bitcoin Network</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Bitcoin Forum Section with Enhanced Visuals */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-gray-50 to-white">
+      <section className="py-16 md:py-24 bg-gradient-to-br from-white to-gray-50">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="md:w-1/2">
@@ -172,8 +299,8 @@ const LesFemmesOrange = () => {
               </div>
             </div>
             <div className="md:w-1/2 space-y-6">
-              <div className="inline-block px-4 py-1 bg-[#FEF7CD] rounded-full text-bitcoin font-medium text-sm">
-                3. Bitcoin Forum 2025
+              <div className="inline-block px-4 py-1 bg-[#FEF7CD] rounded-full text-[#F97316] font-medium text-sm">
+                Sonderveranstaltung
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-800">Les Femmes Orange beim Bitcoin Forum</h2>
               <p className="text-lg text-gray-600">
@@ -202,7 +329,7 @@ const LesFemmesOrange = () => {
                   onClick={() => openPopup({
                     redirectUrl: "https://vr-bayernmitte.genolive.de/index.php?page=event-code&code=bitcoin25"
                   })}
-                  className="bg-bitcoin hover:bg-bitcoin-dark text-white rounded-full py-6 shadow-lg shadow-bitcoin/20"
+                  className="bg-[#F97316] hover:bg-[#EA580C] text-white rounded-full py-6 shadow-lg shadow-[#F97316]/20"
                 >
                   Jetzt Anmelden
                 </Button>
@@ -212,7 +339,7 @@ const LesFemmesOrange = () => {
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {/* Benefits Section with Enhanced Design */}
       <section className="py-16 md:py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
@@ -223,36 +350,36 @@ const LesFemmesOrange = () => {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-gray-50 p-6 rounded-xl hover:bg-[#FDE1D3]/20 transition-colors duration-300">
-              <div className="w-12 h-12 bg-[#FDE1D3] rounded-full flex items-center justify-center mb-4">
-                <Award className="h-6 w-6 text-[#F97316]" />
+            <div className="bg-gray-50 p-6 rounded-xl hover:bg-[#FDE1D3]/20 transition-colors duration-300 hover:shadow-lg">
+              <div className="w-14 h-14 bg-[#FDE1D3] rounded-full flex items-center justify-center mb-4">
+                <Award className="h-7 w-7 text-[#F97316]" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Expertenwissen</h3>
-              <p className="text-gray-600">Lerne von erfahrenen Bitcoin-Expertinnen</p>
+              <p className="text-gray-600">Lerne von erfahrenen Bitcoin-Expertinnen in einem unterstützenden Umfeld</p>
             </div>
             
-            <div className="bg-gray-50 p-6 rounded-xl hover:bg-[#FDE1D3]/20 transition-colors duration-300">
-              <div className="w-12 h-12 bg-[#FDE1D3] rounded-full flex items-center justify-center mb-4">
-                <Users className="h-6 w-6 text-[#F97316]" />
+            <div className="bg-gray-50 p-6 rounded-xl hover:bg-[#FDE1D3]/20 transition-colors duration-300 hover:shadow-lg">
+              <div className="w-14 h-14 bg-[#FDE1D3] rounded-full flex items-center justify-center mb-4">
+                <Users className="h-7 w-7 text-[#F97316]" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Netzwerk</h3>
-              <p className="text-gray-600">Baue wertvolle Kontakte zu Gleichgesinnten auf</p>
+              <p className="text-gray-600">Baue wertvolle Kontakte zu Gleichgesinnten auf und erweitere dein Netzwerk</p>
             </div>
             
-            <div className="bg-gray-50 p-6 rounded-xl hover:bg-[#FDE1D3]/20 transition-colors duration-300">
-              <div className="w-12 h-12 bg-[#FDE1D3] rounded-full flex items-center justify-center mb-4">
-                <Sparkles className="h-6 w-6 text-[#F97316]" />
+            <div className="bg-gray-50 p-6 rounded-xl hover:bg-[#FDE1D3]/20 transition-colors duration-300 hover:shadow-lg">
+              <div className="w-14 h-14 bg-[#FDE1D3] rounded-full flex items-center justify-center mb-4">
+                <Sparkles className="h-7 w-7 text-[#F97316]" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Inspiration</h3>
-              <p className="text-gray-600">Entdecke neue Perspektiven und Möglichkeiten</p>
+              <p className="text-gray-600">Entdecke neue Perspektiven und Möglichkeiten für deine finanzielle Unabhängigkeit</p>
             </div>
             
-            <div className="bg-gray-50 p-6 rounded-xl hover:bg-[#FDE1D3]/20 transition-colors duration-300">
-              <div className="w-12 h-12 bg-[#FDE1D3] rounded-full flex items-center justify-center mb-4">
-                <Heart className="h-6 w-6 text-[#F97316]" />
+            <div className="bg-gray-50 p-6 rounded-xl hover:bg-[#FDE1D3]/20 transition-colors duration-300 hover:shadow-lg">
+              <div className="w-14 h-14 bg-[#FDE1D3] rounded-full flex items-center justify-center mb-4">
+                <Heart className="h-7 w-7 text-[#F97316]" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Gemeinschaft</h3>
-              <p className="text-gray-600">Sei Teil einer supportiven und inklusiven Community</p>
+              <p className="text-gray-600">Sei Teil einer supportiven und inklusiven Community von Bitcoin-begeisterten Frauen</p>
             </div>
           </div>
         </div>
@@ -270,7 +397,7 @@ const LesFemmesOrange = () => {
           </div>
 
           <div className="bg-white border border-gray-200 rounded-xl p-8 max-w-2xl mx-auto shadow-md">
-            <div className="flex items-start gap-4 mb-6">
+            <div className="flex items-start gap-4 mb-8">
               <div className="bg-[#FDE1D3] rounded-full p-3 mt-1">
                 <Calendar className="h-6 w-6 text-[#F97316]" />
               </div>
@@ -279,6 +406,11 @@ const LesFemmesOrange = () => {
                 <p className="text-gray-600 mt-2">
                   Spezielle Les Femmes Orange Veranstaltung mit Networking und Einführung in die Bitcoin-Welt.
                 </p>
+                <div className="mt-4 flex gap-2 flex-wrap">
+                  <span className="bg-[#FEF7CD]/60 text-[#F97316] px-3 py-1 rounded-full text-sm">Networking</span>
+                  <span className="bg-[#FEF7CD]/60 text-[#F97316] px-3 py-1 rounded-full text-sm">Vorträge</span>
+                  <span className="bg-[#FEF7CD]/60 text-[#F97316] px-3 py-1 rounded-full text-sm">Diskussionsrunden</span>
+                </div>
               </div>
             </div>
             
@@ -291,7 +423,66 @@ const LesFemmesOrange = () => {
                 <p className="text-gray-600 mt-2">
                   Verschiedene Workshops für Anfängerinnen und Fortgeschrittene zu Bitcoin-Themen.
                 </p>
+                <div className="mt-4 flex gap-2 flex-wrap">
+                  <span className="bg-[#FEF7CD]/60 text-[#F97316] px-3 py-1 rounded-full text-sm">Wallet-Tutorial</span>
+                  <span className="bg-[#FEF7CD]/60 text-[#F97316] px-3 py-1 rounded-full text-sm">Sicherheit</span>
+                  <span className="bg-[#FEF7CD]/60 text-[#F97316] px-3 py-1 rounded-full text-sm">Hands-on Übungen</span>
+                </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-gray-800">Was unsere Community sagt</h2>
+          
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+              <div className="flex items-center mb-4">
+                <div className="h-12 w-12 rounded-full bg-[#FDE1D3] flex items-center justify-center mr-4">
+                  <span className="font-bold text-lg text-[#F97316]">L</span>
+                </div>
+                <div>
+                  <h4 className="font-medium">Laura M.</h4>
+                  <p className="text-sm text-gray-500">Bitcoin-Neuling</p>
+                </div>
+              </div>
+              <p className="text-gray-600 italic">
+                "Dank Les Femmes Orange konnte ich in einer entspannten Atmosphäre die Grundlagen von Bitcoin lernen. Besonders wertvoll war für mich, dass alle Fragen willkommen waren und ich von erfahrenen Frauen lernen konnte."
+              </p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+              <div className="flex items-center mb-4">
+                <div className="h-12 w-12 rounded-full bg-[#FDE1D3] flex items-center justify-center mr-4">
+                  <span className="font-bold text-lg text-[#F97316]">S</span>
+                </div>
+                <div>
+                  <h4 className="font-medium">Sarah K.</h4>
+                  <p className="text-sm text-gray-500">Fintech-Expertin</p>
+                </div>
+              </div>
+              <p className="text-gray-600 italic">
+                "Als Mentorin bei Les Femmes Orange schätze ich die Möglichkeit, mein Wissen weiterzugeben und gleichzeitig von den Perspektiven anderer Frauen zu lernen. Diese Community ist unglaublich wertvoll."
+              </p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+              <div className="flex items-center mb-4">
+                <div className="h-12 w-12 rounded-full bg-[#FDE1D3] flex items-center justify-center mr-4">
+                  <span className="font-bold text-lg text-[#F97316]">M</span>
+                </div>
+                <div>
+                  <h4 className="font-medium">Maria T.</h4>
+                  <p className="text-sm text-gray-500">Unternehmerin</p>
+                </div>
+              </div>
+              <p className="text-gray-600 italic">
+                "Die Events von Les Femmes Orange haben mir nicht nur das nötige Wissen vermittelt, sondern auch das Selbstvertrauen gegeben, Bitcoin in meinem Unternehmen zu implementieren. Ein absoluter Game-Changer!"
+              </p>
             </div>
           </div>
         </div>
@@ -311,12 +502,12 @@ const LesFemmesOrange = () => {
             <p className="text-lg text-gray-700">
               Entdecke Bitcoin in einer unterstützenden Gemeinschaft von Frauen. Unabhängig von deinen Vorkenntnissen – du bist herzlich willkommen!
             </p>
-            <div className="pt-4 flex flex-wrap gap-4 justify-center">
+            <div className="pt-6 flex flex-wrap gap-4 justify-center">
               <a 
                 href="https://lesfemmesorange.work/" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="inline-flex items-center justify-center gap-2 bg-white px-8 py-3 rounded-full text-[#F97316] border border-[#F97316]/20 hover:bg-[#F97316] hover:text-white transition-colors"
+                className="inline-flex items-center justify-center gap-2 bg-white px-8 py-3 rounded-full text-[#F97316] border border-[#F97316]/20 hover:bg-[#F97316] hover:text-white transition-colors shadow-md"
               >
                 Website besuchen
               </a>
