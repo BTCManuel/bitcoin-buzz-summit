@@ -19,6 +19,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: ⚠️ Fix GitHub cache bug – preload upload-artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: dummy
+          path: ./nonexistent
+          if-no-files-found: ignore
+
       - name: 📥 Checkout code
         uses: actions/checkout@v3
 
