@@ -63,7 +63,8 @@ const Navbar = () => {
                   <Link to="/#speakers" onClick={toggleMenu} className="text-xl font-medium px-4 py-3 text-gray-800 hover:text-bitcoin transition-colors">Speakers</Link>
                   <Link to="/#schedule" onClick={toggleMenu} className="text-xl font-medium px-4 py-3 text-gray-800 hover:text-bitcoin transition-colors">Schedule</Link>
                   <Link to="/#venue" onClick={toggleMenu} className="text-xl font-medium px-4 py-3 text-gray-800 hover:text-bitcoin transition-colors">Venue</Link>
-                 {/* <Link to="/workshop" onClick={toggleMenu} className="text-xl font-medium px-4 py-3 text-gray-800 hover:text-bitcoin transition-colors">Workshops</Link> */}
+                  <Link to="/workshop" onClick={toggleMenu} className="text-xl font-medium px-4 py-3 text-gray-800 hover:text-bitcoin transition-colors">Workshops</Link>
+                  <Link to="/les-femmes-orange" onClick={toggleMenu} className="text-xl font-medium px-4 py-3 text-gray-800 hover:text-[#F97316] transition-colors">Les Femmes Orange</Link>
                   <Link to="/FAQ" onClick={toggleMenu} className="text-xl font-medium px-4 py-3 text-gray-800 hover:text-bitcoin transition-colors">FAQ</Link>
                   <Button
                     onClick={() =>
@@ -75,8 +76,6 @@ const Navbar = () => {
                   >
                     Jetzt Ticket buchen
                   </Button>
-
-
                 </div>
               </div>
             )}
@@ -100,10 +99,14 @@ const Navbar = () => {
                 Veranstaltungsort
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-bitcoin group-hover:w-full transition-all duration-300"></span>
               </a>
-              {/*  <Link to="/workshop" className="text-sm font-medium text-gray-800 hover:text-bitcoin transition-colors relative group">
+              <Link to="/workshop" className="text-sm font-medium text-gray-800 hover:text-bitcoin transition-colors relative group">
                 Workshops
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-bitcoin group-hover:w-full transition-all duration-300"></span>
-              </Link>*/}
+              </Link>
+              <Link to="/les-femmes-orange" className="text-sm font-medium text-gray-800 hover:text-[#F97316] transition-colors relative group">
+                Les Femmes Orange
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#F97316] group-hover:w-full transition-all duration-300"></span>
+              </Link>
               <Link to="/FAQ" className="text-sm font-medium text-gray-800 hover:text-bitcoin transition-colors relative group">
                 FAQ
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-bitcoin group-hover:w-full transition-all duration-300"></span>
@@ -112,7 +115,6 @@ const Navbar = () => {
             <Button
               onClick={() =>
                 openPopup({
-
                   redirectUrl: "https://vr-bayernmitte.genolive.de/index.php?page=event-code&code=bitcoin25"
                 })
               }
@@ -120,8 +122,6 @@ const Navbar = () => {
             >
               Jetzt Ticket buchen
             </Button>
-
-
           </div>
         )}
       </div>

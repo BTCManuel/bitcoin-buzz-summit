@@ -15,6 +15,7 @@ import Datenschutz from "./pages/Datenschutz";
 import BIP25Members from "./pages/BIP25Members";
 import FAQ from "./pages/FAQ";
 import WorkshopBitcoinInDerBank from "./pages/WorkshopBitcoinInDerBank";
+import LesFemmesOrange from "./pages/LesFemmesOrange";
 
 const queryClient = new QueryClient();
 
@@ -34,6 +35,7 @@ const App = () => (
             <Route path="/bip25-members" element={<BIP25Members />} />
             <Route path="/FAQ" element={<FAQ />} />
             <Route path="/workshop/bitcoin-in-der-bank" element={<WorkshopBitcoinInDerBank />} />
+            <Route path="/les-femmes-orange" element={<LesFemmesOrange />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           <CookieBanner />
