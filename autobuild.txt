@@ -1,4 +1,4 @@
 # Diese Datei steuert, ob automatisch auf den Server hochgeladen wird.
 # Trage "on" ein, wenn bei jedem GitHub-Push deployt werden soll.
 # Trage "off" ein, wenn kein automatischer Upload erfolgen soll.
-on
+off
