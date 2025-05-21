@@ -291,7 +291,7 @@ const LesFemmesOrange = () => {
               <div className="relative">
                 <div className="absolute -top-4 -left-4 w-20 h-20 bg-[#FDE1D3] rounded-full -z-10"></div>
                 <img 
-                  src="/images/workshop/bitcoin-global-world (1).svg" 
+                  src="/images/workshop/LFO_5.jpg" 
                   alt="Bitcoin Forum Event" 
                   className="max-w-full h-auto relative z-10"
                 />
