@@ -3,7 +3,7 @@ name: 🌐 Deploy to GitHub Pages
 on:
   push:
     branches:
-      - preview  # oder z. B. main
+      - preview
 
 permissions:
   contents: read
@@ -15,22 +15,31 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 📥 Checkout repository
+      - name: 📥 Checkout code
         uses: actions/checkout@v3
 
-      - name: 📦 Install & build
+      - name: 📦 Install & Build
         run: |
           npm ci
           npm run build
 
-      - name: 📦 Upload build to GitHub Pages
+      - name: 📤 Upload Pages artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: dist
+          path: ./dist
 
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
       - name: 🚀 Deploy to GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v1
