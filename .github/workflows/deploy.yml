@@ -13,9 +13,8 @@ jobs:
       - name: 📥 Checkout Code
         uses: actions/checkout@v3
 
-      - name: ❓ Check autobuild flag (Kommentare erlaubt)
+      - name: ❓ Check autobuild flag (mit Kommentar-Support)
         run: |
-          # Lese erste nicht-kommentierte Zeile aus autobuild.txt
           AUTOBUILD=$(grep -v '^#' autobuild.txt | head -n 1)
           echo "Autobuild-Modus: $AUTOBUILD"
           if [[ "$AUTOBUILD" != "on" ]]; then
@@ -23,31 +22,40 @@ jobs:
             exit 0
           fi
 
-      - name: ⚙️ Install dependencies and build (nur falls live)
+      - name: ⚙️ Install dependencies and build (nur wenn live)
         run: |
           MODE=$(grep -v '^#' mode.txt | head -n 1)
           echo "Deploy-Modus: $MODE"
           if [[ "$MODE" == "live" ]]; then
+            echo "📦 Installiere Abhängigkeiten..."
             npm ci
+            echo "🔨 Baue Projekt mit Vite..."
             npm run build
+          else
+            echo "⚠️ Wartungsmodus – kein Build nötig"
           fi
 
-      - name: 📁 Set local-dir variable je nach Modus
+      - name: 📁 Setze lokalen Upload-Ordner (dist/ oder maintenance-html/)
         id: modecheck
         run: |
           MODE=$(grep -v '^#' mode.txt | head -n 1)
-          echo "Ermittelter Modus: $MODE"
           if [[ "$MODE" == "maintenance" ]]; then
-            echo "localdir=maintenance-html" >> $GITHUB_OUTPUT
+            echo "➡️ Verwende maintenance-html/"
+            echo "localdir=maintenance-html/" >> $GITHUB_OUTPUT
           else
-            echo "localdir=dist" >> $GITHUB_OUTPUT
+            if [[ ! -d "dist" ]]; then
+              echo "❌ Fehler: dist/ fehlt! Wahrscheinlich Build fehlgeschlagen."
+              exit 1
+            fi
+            echo "➡️ Verwende dist/"
+            echo "localdir=dist/" >> $GITHUB_OUTPUT
           fi
 
-      - name: 🚀 Upload to DomainFactory via FTP
+      - name: 🚀 FTP-Upload zu DomainFactory
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ${{ steps.modecheck.outputs.localdir }}/
+          local-dir: ${{ steps.modecheck.outputs.localdir }}
           server-dir: ./
