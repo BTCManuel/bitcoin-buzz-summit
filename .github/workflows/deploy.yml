@@ -22,26 +22,30 @@ jobs:
             exit 0
           fi
 
-      - name: 📁 Set upload folder based on mode.txt
-        id: set-folder
-        run: |
-          MODE=$(grep -v '^#' mode.txt | head -n 1 | xargs)
-          echo "Deploy-Modus: '$MODE'"
-          if [[ "$MODE" == "maintenance" ]]; then
-            echo "localdir=maintenance-html/" >> $GITHUB_OUTPUT
-          else
-            echo "localdir=dist/" >> $GITHUB_OUTPUT
-          fi
-
       - name: 📦 Install dependencies and build (nur wenn live)
         run: |
           MODE=$(grep -v '^#' mode.txt | head -n 1 | xargs)
+          echo "Deploy-Modus: '$MODE'"
           if [[ "$MODE" == "live" ]]; then
             echo "📦 Installiere Abhängigkeiten und baue Website..."
             npm ci
             npm run build
           else
             echo "⚠️ Wartungsmodus – Build wird übersprungen"
+          fi
+
+      - name: 📁 Set upload folder based on mode.txt
+        id: set-folder
+        run: |
+          MODE=$(grep -v '^#' mode.txt | head -n 1 | xargs)
+          if [[ "$MODE" == "maintenance" ]]; then
+            echo "localdir=maintenance-html/" >> $GITHUB_OUTPUT
+          else
+            if [[ ! -d "dist" ]]; then
+              echo "❌ dist/ fehlt – Build war fehlerhaft oder wurde übersprungen."
+              exit 1
+            fi
+            echo "localdir=dist/" >> $GITHUB_OUTPUT
           fi
 
       - name: 🚀 Upload to DomainFactory via FTP
