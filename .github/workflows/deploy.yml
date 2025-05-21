@@ -13,62 +13,28 @@ jobs:
       - name: 📥 Checkout Code
         uses: actions/checkout@v3
 
-      - name: ❓ Check autobuild.txt
+      - name: 🔍 Check autobuild.txt
+        id: autobuild
         run: |
-          AUTOBUILD=$(grep -v '^#' autobuild.txt | head -n 1 | xargs)
-          echo "Autobuild-Modus: '$AUTOBUILD'"
-          if [[ "$AUTOBUILD" != "on" ]]; then
-            echo "🚫 Autobuild deaktiviert – Abbruch."
-            exit 0
-          fi
+          value=$(grep -v '^#' autobuild.txt | grep -i 'on' || true)
+          echo "autobuild=$value" >> $GITHUB_OUTPUT
 
-      - name: 📦 Install dependencies and build (nur wenn live)
+      - name: 🚫 Skip deployment if autobuild.txt is not 'on'
+        if: steps.autobuild.outputs.autobuild == ''
+        run: echo "Deployment is turned off via autobuild.txt"
+
+      - name: 📦 Install dependencies and build (Vite)
+        if: steps.autobuild.outputs.autobuild != ''
         run: |
-          MODE=$(grep -v '^#' mode.txt | head -n 1 | xargs)
-          echo "Deploy-Modus: '$MODE'"
-          if [[ "$MODE" == "live" ]]; then
-            echo "📦 Installiere Abhängigkeiten..."
-            npm ci || { echo "❌ npm ci fehlgeschlagen"; exit 1; }
-
-            echo "🔨 Starte Build..."
-            npm run build || { echo "❌ Build fehlgeschlagen"; exit 1; }
-          else
-            echo "⚠️ Wartungsmodus – Build wird übersprungen"
-          fi
-
-      - name: 🧪 Diagnose: Zeige dist-Ordner nach Build
-        run: |
-          echo "📂 Inhalt von dist/:"
-          ls -lah dist || echo "⚠️ dist/ nicht vorhanden"
-
-          echo "📄 Inhalt von npm-debug.log (falls vorhanden):"
-          if [ -f npm-debug.log ]; then
-            cat npm-debug.log
-          else
-            echo "✅ Keine npm-debug.log vorhanden"
-          fi
-
-      - name: 📁 Set upload folder based on mode.txt
-        id: set-folder
-        run: |
-          MODE=$(grep -v '^#' mode.txt | head -n 1 | xargs)
-          if [[ "$MODE" == "maintenance" ]]; then
-            echo "➡️ Wartungsmodus – lade maintenance-html/ hoch"
-            echo "localdir=maintenance-html/" >> $GITHUB_OUTPUT
-          else
-            if [[ ! -d "dist" ]]; then
-              echo "❌ dist/ fehlt – Build war fehlerhaft oder wurde übersprungen."
-              exit 1
-            fi
-            echo "➡️ Live-Modus – lade dist/ hoch"
-            echo "localdir=dist/" >> $GITHUB_OUTPUT
-          fi
+          npm ci
+          npm run build
 
       - name: 🚀 Upload to DomainFactory via FTP
+        if: steps.autobuild.outputs.autobuild != ''
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ${{ steps.set-folder.outputs.localdir }}
+          local-dir: dist/
           server-dir: ./
