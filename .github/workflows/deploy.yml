@@ -16,12 +16,14 @@ jobs:
       - name: 🔍 Check autobuild.txt
         id: autobuild
         run: |
-          content=$(grep -v '^#' autobuild.txt | tr -d '\r' | xargs | tr '[:upper:]' '[:lower:]')
+          content=$(grep -v '^#' autobuild.txt | head -n 1 | tr -d '\r' | xargs | tr '[:upper:]' '[:lower:]')
+          echo "parsed content: '$content'"
           if [[ "$content" == "on" ]]; then
             echo "deploy=true" >> "$GITHUB_OUTPUT"
           else
             echo "deploy=false" >> "$GITHUB_OUTPUT"
           fi
+
 
       - name: 🚫 Skip deployment if autobuild.txt is not 'on'
         if: steps.autobuild.outputs.deploy == 'false'
