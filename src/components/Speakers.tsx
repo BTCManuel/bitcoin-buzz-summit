@@ -68,7 +68,6 @@ const speakersData = [
     bgColor: "bg-[#D3E4FD]/50",
     bgSolidColor: "bg-[#D3E4FD]"
   },
-*/
   {
     name: "Roman Reher",
     role: "FOTO NEEDED",
@@ -91,6 +90,7 @@ const speakersData = [
     bgColor: "bg-[#FDE1D3]/50",
     bgSolidColor: "bg-[#FDE1D3]"
   },
+*/
   {
     name: "Joe Martin",
     role: "Co-Founder",
@@ -725,21 +725,6 @@ const speakersData = [
     ),
     bgColor: "bg-[#FEF7CD]/50",
     bgSolidColor: "bg-[#FEF7CD]"
-  },
-  {
-    name: "BANKER",
-    role: "FOTO NEEDED",
-    company: "FOTO NEEDED",
-    image: "/images/speakers/Bitcoin_Block.png",
-    bio: (
-      <>
-        begann seine Karriere als Materialwissenschaftler und Fertigungsberater in Deutschland und China, bevor er seine größte Leidenschaft entdeckte: Bitcoin. Als Mitgründer und Geschäftsführer von seedor.io, bitsurance.io und satskeeper.com ist er eine zentrale Figur in der deutschen Bitcoin-Szene. Weitere Informationen unter:
-        <br />
-        <a href="https://bitcoinforum.bayern" target="_blank" rel="noopener noreferrer" className="text-bitcoin underline">https://bitcoinforum.bayern</a>
-      </>
-    ),
-    bgColor: "bg-[#D3E4FD]/50",
-    bgSolidColor: "bg-[#D3E4FD]"
   }
 ];
   // Generate placeholder speakers to reach a total of 35
