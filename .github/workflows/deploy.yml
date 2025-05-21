@@ -27,12 +27,22 @@ jobs:
           MODE=$(grep -v '^#' mode.txt | head -n 1 | xargs)
           echo "Deploy-Modus: '$MODE'"
           if [[ "$MODE" == "live" ]]; then
-            echo "📦 Installiere Abhängigkeiten und baue Website..."
-            npm ci
-            npm run build
+            echo "📦 npm ci..."
+            npm ci || { echo "❌ npm ci fehlgeschlagen"; exit 1; }
+
+            echo "🔨 npm run build..."
+            npm run build || { echo "❌ Build fehlgeschlagen"; exit 1; }
           else
-            echo "⚠️ Wartungsmodus – Build wird übersprungen"
+            echo "⚠️ Wartungsmodus – Build übersprungen"
           fi
+
+      - name: 🧪 Diagnose: Zeige dist-Ordner nach Build
+        run: |
+          echo "📂 Inhalt von dist/:"
+          ls -lah dist || echo "⚠️ dist/ nicht vorhanden"
+
+          echo "📄 Inhalt von npm-debug.log (falls vorhanden):"
+          [ -f npm-debug.log ] && cat npm-debug.log || echo "✅ Keine npm-debug.log vorhanden"
 
       - name: 📁 Set upload folder based on mode.txt
         id: set-folder
