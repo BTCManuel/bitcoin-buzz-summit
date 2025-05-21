@@ -1,4 +1,6 @@
-name: 🌐 Manual GitHub Pages Deploy
+# .github/workflows/gh-pages.yml
+
+name: 🌐 Deploy to GitHub Pages
 
 on:
   push:
@@ -20,10 +22,12 @@ jobs:
         run: |
           npm ci
           npm run build
+          cp dist/index.html dist/404.html
 
-      - name: 🚀 Deploy to GitHub Pages branch
+      - name: 🚀 Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
-          publish_branch: gh-pages  # ← DAS IST DER ENTSCHEIDENDE PUNKT!
+          publish_branch: gh-pages
+          force_orphan: true  # Wichtig! Erzwingt sauberen Zustand
