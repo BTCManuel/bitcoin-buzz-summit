@@ -9,7 +9,7 @@ import { usePopup } from "@/pages/PopupContext";
 const About = () => {
   const { openPopup } = usePopup();
   const features = [
-    {
+    /*{
       icon: <img src="/images/speakers/Bitcoin_Block.png" alt="Bitcoin Block" className="h-12 w-12 mb-4" loading="lazy" />,
       title: "Bitcoin Block",
       description: "Schon ab dem 4. Oktober beginnt die Bitcoin Woche in Ingolstadt. Im Westpark Shoppingcenter öffnet der Bitcoin Block seine Tore. Informationen über Bitcoin für interessierte Laien und Bitcoiner.",
@@ -18,7 +18,7 @@ const About = () => {
      
       buttonText: "Mehr erfahren",
       external: false
-    },
+    },*/
     {
       icon: <img src="/images/workshop/light-bulb-idea.svg" alt="BitcoinForum Bitcoin Mining" className="h-12 w-12 mb-4" loading="lazy" />,
       title: "Energiewirtschaft & Mining",
@@ -56,7 +56,7 @@ const About = () => {
       link: "https://www.vr-bayernmitte.de/privatkunden/sparen-geldanlage/bitcoin/3--bitcoinforum/messepartner-werden.html",
       buttonText: "Jetzt Partner werden",
       external: true
-    },
+    }/*,
     {
       icon: <img src="/images/workshop/robots.svg" alt="BitcoinForum Workshops" className="h-12 w-12 mb-4" loading="lazy" />,
       title: "Workshops",
@@ -64,7 +64,7 @@ const About = () => {
       bgColor: "bg-transparent",
       borderColor: "border-[#FEF7CD]",
       buttonText: "im Aufbau",
-    }
+    }*/
   ];
 
   return (
