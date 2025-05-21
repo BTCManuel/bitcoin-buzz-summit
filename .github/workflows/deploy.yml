@@ -16,21 +16,25 @@ jobs:
       - name: 🔍 Check autobuild.txt
         id: autobuild
         run: |
-          value=$(grep -v '^#' autobuild.txt | grep -i 'on' || true)
-          echo "autobuild=$value" >> $GITHUB_OUTPUT
+          content=$(grep -v '^#' autobuild.txt | grep -i 'on' || true)
+          if [[ "$content" == "on" ]]; then
+            echo "deploy=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "deploy=false" >> "$GITHUB_OUTPUT"
+          fi
 
       - name: 🚫 Skip deployment if autobuild.txt is not 'on'
-        if: steps.autobuild.outputs.autobuild == ''
+        if: steps.autobuild.outputs.deploy == 'false'
         run: echo "Deployment is turned off via autobuild.txt"
 
       - name: 📦 Install dependencies and build (Vite)
-        if: steps.autobuild.outputs.autobuild != ''
+        if: steps.autobuild.outputs.deploy == 'true'
         run: |
           npm ci
           npm run build
 
       - name: 🚀 Upload to DomainFactory via FTP
-        if: steps.autobuild.outputs.autobuild != ''
+        if: steps.autobuild.outputs.deploy == 'true'
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.FTP_SERVER }}
