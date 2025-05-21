@@ -33,12 +33,12 @@ const speakersData = [
         ist Vorstandsvorsitzender der Volksbank Raiffeisenbank Bayern Mitte eG und maßgeblich für das Angebot von Dienstleistungen in Zusammenhang mit Bitcoin und Bitcoin-Lösungen in der Bank verantwortlich. Weitere Informationen unter:
         <br />
         <a
-          href="http://beispiel.de"
+          href="https://bitcoinforum.bayern"
           target="_blank"
           rel="noopener noreferrer"
           className="text-bitcoin underline"
         >
-          http://beispiel.de
+          https://bitcoinforum.bayern
         </a>
       </>
     ),
@@ -55,12 +55,12 @@ const speakersData = [
         begann seine Karriere als Materialwissenschaftler und Fertigungsberater in Deutschland und China, bevor er seine größte Leidenschaft entdeckte: Bitcoin. Als Mitgründer und Geschäftsführer von seedor.io, bitsurance.io und satskeeper.com ist er eine zentrale Figur in der deutschen Bitcoin-Szene, insbesondere in den Bereichen Verwahrung, Versicherung und Vererbung von Bitcoin. Weitere Informationen unter:
         <br />
         <a
-          href="http://beispiel.de"
+          href="https://bitcoinforum.bayern"
           target="_blank"
           rel="noopener noreferrer"
           className="text-bitcoin underline"
         >
-          http://beispiel.de
+          https://bitcoinforum.bayern
         </a>
       </>
     ),
@@ -77,12 +77,12 @@ const speakersData = [
         ist bekannt durch seine Infografiken und Erklärvideos, in denen er mit leicht verständlicher Sprache die Genialität von Bitcoin erklärt. Durch seine lockere Art und einfache Sprache gilt er für viele als erste Anlaufstelle, wenn es darum geht, einen Blick in den Bitcoin Kaninchenbau zu werfen. Weitere Informationen unter:
         <br />
         <a
-          href="http://beispiel.de"
+          href="https://bitcoinforum.bayern"
           target="_blank"
           rel="noopener noreferrer"
           className="text-bitcoin underline"
         >
-          http://beispiel.de
+          https://bitcoinforum.bayern
         </a>
       </>
     ),
@@ -121,12 +121,12 @@ const speakersData = [
         berät mit seinem Unternehmen Schwarzberg BSC GmbH Family Offices und HNWIs bei der sicheren Eigenverwahrung von Bitcoin. Als Unternehmer, Bestseller-Autor und Host des Podcasts „Der Bitcoin Podcast“ zählt er zu den gefragtesten Experten im Bereich Bitcoin. Weitere Informationen unter:
         <br />
         <a
-          href="http://beispiel.de"
+          href="https://bitcoinforum.bayern"
           target="_blank"
           rel="noopener noreferrer"
           className="text-bitcoin underline"
         >
-          http://beispiel.de
+          https://bitcoinforum.bayern
         </a>
       </>
     ),
@@ -143,12 +143,12 @@ const speakersData = [
         ist ein echter Bitcoin-Enthusiast, der bereits während seiner Schulzeit mit der Kryptowährung in Berührung kam. Als CEO von 21bitcoin bringt er seine visionäre Führungsstärke und seine langjährige Erfahrung in der Finanz- und IT-Beratung ein. Mit Leidenschaft und Expertise treibt er die Mission voran, Bitcoin einer breiteren Zielgruppe zugänglich zu machen. Weitere Informationen unter:
         <br />
         <a
-          href="http://beispiel.de"
+          href="https://bitcoinforum.bayern"
           target="_blank"
           rel="noopener noreferrer"
           className="text-bitcoin underline"
         >
-          http://beispiel.de
+          https://bitcoinforum.bayern
         </a>
       </>
     ),
@@ -165,12 +165,12 @@ const speakersData = [
         leitete von 2005 bis 2025 den High-Tech Gründerfonds (HTGF), Europas aktivsten Frühphaseninvestor mit fast 800 Seed Investments und 2 Mrd. Euro in fünf Fonds. Zuvor war er u.a. bei Siemens, einem IT-Startup und in der Beratung tätig. Seit 2016 beschäftigt er sich intensiv mit Bitcoin als möglichem Wertspeicherstandard. Weitere Informationen unter:
         <br />
         <a
-          href="http://beispiel.de"
+          href="https://bitcoinforum.bayern"
           target="_blank"
           rel="noopener noreferrer"
           className="text-bitcoin underline"
         >
-          http://beispiel.de
+          https://bitcoinforum.bayern
         </a>
       </>
     ),
@@ -187,12 +187,12 @@ const speakersData = [
         ist bekannt durch seine Infografiken und Erklärvideos, in denen er mit leicht verständlicher Sprache die Genialität von Bitcoin erklärt. Durch seine lockere Art und einfache Sprache gilt er für viele als erste Anlaufstelle, wenn es darum geht, einen Blick in den Bitcoin Kaninchenbau zu werfen. Weitere Informationen unter:
         <br />
         <a
-          href="http://beispiel.de"
+          href="https://bitcoinforum.bayern"
           target="_blank"
           rel="noopener noreferrer"
           className="text-bitcoin underline"
         >
-          http://beispiel.de
+          https://bitcoinforum.bayern
         </a>
       </>
     ),
@@ -209,12 +209,12 @@ const speakersData = [
         begann seine Karriere als Materialwissenschaftler und Fertigungsberater in Deutschland und China, bevor er seine größte Leidenschaft entdeckte: Bitcoin. Als Mitgründer und Geschäftsführer von seedor.io, bitsurance.io und satskeeper.com ist er eine zentrale Figur in der deutschen Bitcoin-Szene, insbesondere in den Bereichen Verwahrung, Versicherung und Vererbung von Bitcoin. Weitere Informationen unter:
         <br />
         <a
-          href="http://beispiel.de"
+          href="https://bitcoinforum.bayern"
           target="_blank"
           rel="noopener noreferrer"
           className="text-bitcoin underline"
         >
-          http://beispiel.de
+          https://bitcoinforum.bayern
         </a>
       </>
     ),
@@ -231,12 +231,12 @@ const speakersData = [
         wurde nach 10-jähriger Tätigkeit im Bankwesen vom Bitcoin-Fieber infiziert. Heute treibt er die Bitcoin-Adaption in der Banken- und Finanzwelt voran und erklärt in seinem Sound Money Bitcoin Podcast der Bitcoin-Community das Geld- und Finanzsystem bzw. schubst Banker ins Bitcoin Rabitthole. Weitere Informationen unter:
         <br />
         <a
-          href="http://beispiel.de"
+          href="https://bitcoinforum.bayern"
           target="_blank"
           rel="noopener noreferrer"
           className="text-bitcoin underline"
         >
-          http://beispiel.de
+          https://bitcoinforum.bayern
         </a>
       </>
     ),
@@ -253,12 +253,12 @@ const speakersData = [
         ist der letzte österreichische Vertreter der Österreichischen Schule in direkter Tradition und leitet von Zug aus die internationale Hochschule scholarium, wo diese Tradition in ihrer ursprünglichen Form weiterlebt. Er hat mehr als ein Dutzend Bücher geschrieben, darunter einige Bestseller, und war der erste Ökonom, der Bitcoin als monetäres Phänomen verstand und dazu an Universitäten lehrte. Heute baut er unter anderem Bitcoin-Zitadellen und ist Gründer von deedsats.com. Weitere Informationen unter:
         <br />
         <a
-          href="http://beispiel.de"
+          href="https://bitcoinforum.bayern"
           target="_blank"
           rel="noopener noreferrer"
           className="text-bitcoin underline"
         >
-          http://beispiel.de
+          https://bitcoinforum.bayern
         </a>
       </>
     ),
@@ -275,12 +275,12 @@ const speakersData = [
         Als Familienunternehmer, der die vor über 70 Jahren gegründete Firmengruppe Kläger in der dritten Generation leiten darf, sieht er es als seine Hauptaufgabe an, Tradition sowie aufgebaute Werte kontinuierlich mit neuen innovativen Themen und Megatrends, wie der Bitcoin-Technologie, in Einklang zu bringen. Als Gründer und Initiator der terahash.energy GmbH geht für ihn ein großer Traum in Erfüllung. Seine tiefe Überzeugung ist es, mit diesem Unterfangen vielen Menschen in Deutschland und Europa Bitcoin näherzubringen. Weitere Informationen unter:
         <br />
         <a
-          href="http://beispiel.de"
+          href="https://bitcoinforum.bayern"
           target="_blank"
           rel="noopener noreferrer"
           className="text-bitcoin underline"
         >
-          http://beispiel.de
+          https://bitcoinforum.bayern
         </a>
       </>
     ),
@@ -297,12 +297,12 @@ const speakersData = [
         war einer der ersten VWL-Studenten (M.Sc.), der 2015 eine Abschlussarbeit über Bitcoin verfasst hat. Heute ist er im Bereich Immobilien und Venture Capital tätig. Er ist auf die Entwicklung von Bitcoin-Strategien für Immobilienentwickler spezialisiert. Weitere Informationen unter:
         <br />
         <a
-          href="http://beispiel.de"
+          href="https://bitcoinforum.bayern"
           target="_blank"
           rel="noopener noreferrer"
           className="text-bitcoin underline"
         >
-          http://beispiel.de
+          https://bitcoinforum.bayern
         </a>
       </>
     ),
@@ -319,12 +319,12 @@ const speakersData = [
         ist Vizepräsidentin und Unternehmenssprecherin der terahash.energy GmbH und Vorstandsvorsitzende der European Bitcoin Energy Association. Sie ist Mitbegründerin von Les Femmes orange – Bitcoin-Bildung für und von Frauen. Rachel ist Mutter 4 Kindern – Ihr wichtigster Beitrag zur Gesellschaft. Weitere Informationen unter:
         <br />
         <a
-          href="http://beispiel.de"
+          href="https://bitcoinforum.bayern"
           target="_blank"
           rel="noopener noreferrer"
           className="text-bitcoin underline"
         >
-          http://beispiel.de
+          https://bitcoinforum.bayern
         </a>
       </>
     ),
@@ -341,12 +341,12 @@ const speakersData = [
         ist Naturwissenschaftler und leitet Forschungs- und Entwicklungsarbeiten an der FU Berlin. Bereits seit der Studienzeit engagiert er sich zudem in der Entwicklungszusammenarbeit. Unter dem Synonym Weezel verfasst er Beiträge zu den ökologischen & sozialen Aspekten von Bitcoin. Seine interdisziplinäre Expertise macht ihn zu einer gefragten Stimme in der Debatte um technologische Innovationen und ökologische Verantwortung. Weitere Informationen unter:
         <br />
         <a
-          href="http://beispiel.de"
+          href="https://bitcoinforum.bayern"
           target="_blank"
           rel="noopener noreferrer"
           className="text-bitcoin underline"
         >
-          http://beispiel.de
+          https://bitcoinforum.bayern
         </a>
       </>
     ),
@@ -363,12 +363,12 @@ const speakersData = [
         ist Finanzjournalist mit Fokus auf die Digitalisierung von Geld und Wirtschaft. Mit "Was Bitcoin bringt" betreibt er einen der populärsten Podcasts und YouTube-Kanäle zum Thema Bitcoin und Finanzwelt. Niko ist ein gefragter Speaker und Berater rund und ums Thema Bitcoin, Geldpolitik und Geldgeschichte. Weitere Informationen unter:
         <br />
         <a
-          href="http://beispiel.de"
+          href="https://bitcoinforum.bayern"
           target="_blank"
           rel="noopener noreferrer"
           className="text-bitcoin underline"
         >
-          http://beispiel.de
+          https://bitcoinforum.bayern
         </a>
       </>
     ),
@@ -385,12 +385,12 @@ const speakersData = [
         studierte BWL in Tübingen, promovierte im Rechnungswesen und erwarb 2001 in den USA einen Master of Music als Opernsänger. Seit 2011 lehrt er an der RIT Croatia in Zagreb. 2022 gründete er das einzigartige Seminar „Bitcoin and Money“, das inzwischen sechsmal mit wachsendem Interesse angeboten wurde. Weitere Informationen unter:
         <br />
         <a
-          href="http://beispiel.de"
+          href="https://bitcoinforum.bayern"
           target="_blank"
           rel="noopener noreferrer"
           className="text-bitcoin underline"
         >
-          http://beispiel.de
+          https://bitcoinforum.bayern
         </a>
       </>
     ),
@@ -407,12 +407,12 @@ const speakersData = [
         ist diplomierte Wirtschaftsmathematikerin und Aktuarin mit langjähriger Erfahrung in der Versicherungsbranche. Sie beschäftigte sich beruflich intensiv mit dem Thema Altersversorgung. Seit 2012 ist sie Mitglied der Deutschen Aktuarvereinigung sowie der Deutschen Gesellschaft für Versicherungs- und Finanzmathematik. 2019 entdeckte sie durch eigene Investitionen Bitcoin und erkannte schnell dessen Potenzial. Weitere Informationen unter:
         <br />
         <a
-          href="http://beispiel.de"
+          href="https://bitcoinforum.bayern"
           target="_blank"
           rel="noopener noreferrer"
           className="text-bitcoin underline"
         >
-          http://beispiel.de
+          https://bitcoinforum.bayern
         </a>
       </>
     ),
@@ -429,12 +429,12 @@ const speakersData = [
         ist Diplom-Ingenieur der Physikalischen Technik und junger Familienvater. 2021 entdeckte er Bitcoin – ausgelöst durch seinen Nestbautrieb. Früher engagierte er sich bei Engineers Without Borders Karlsruhe e.V.; heute setzt er sich als Aktivist bei Bitcoiners for Future insbesondere für Aufklärung von Klimaschutz und Menschenrechten durch Bitcoin ein. Weitere Informationen unter:
         <br />
         <a
-          href="http://beispiel.de"
+          href="https://bitcoinforum.bayern"
           target="_blank"
           rel="noopener noreferrer"
           className="text-bitcoin underline"
         >
-          http://beispiel.de
+          https://bitcoinforum.bayern
         </a>
       </>
     ),
@@ -451,12 +451,12 @@ const speakersData = [
         aus München studiert Lehramt Gymnasium (Sport/Latein). In seiner Freizeit beschäftigt er sich mit Bitcoin/Österreichische Schule der Nationalökonomie/Libertarismus. 2024 erhielt er die Julius-Faucher-Medaille im libertären Jungautorenwettbewerb. Weitere Informationen unter:
         <br />
         <a
-          href="http://beispiel.de"
+          href="https://bitcoinforum.bayern"
           target="_blank"
           rel="noopener noreferrer"
           className="text-bitcoin underline"
         >
-          http://beispiel.de
+          https://bitcoinforum.bayern
         </a>
       </>
     ),
@@ -473,12 +473,12 @@ const speakersData = [
         ist Kunststofftechnologe und Techniker HF Maschinenbau mit Interesse für neue Technologien und einem Wunsch, sein Vermögen langfristig zu schützen. Er ist Certified Bitcoin Professional und Präsident des Vereins Bitcoin Block. Weitere Informationen unter:
         <br />
         <a
-          href="http://beispiel.de"
+          href="https://bitcoinforum.bayern"
           target="_blank"
           rel="noopener noreferrer"
           className="text-bitcoin underline"
         >
-          http://beispiel.de
+          https://bitcoinforum.bayern
         </a>
       </>
     ),
@@ -495,12 +495,12 @@ const speakersData = [
         ist Mitgründer und CEO von 21energy, dem Weltmarktführer für Bitcoin-Heizungen. Mit seinem Konzept der Heiztechnologie via Mining ist er medial stark präsent. Weitere Informationen unter:
         <br />
         <a
-          href="http://beispiel.de"
+          href="https://bitcoinforum.bayern"
           target="_blank"
           rel="noopener noreferrer"
           className="text-bitcoin underline"
         >
-          http://beispiel.de
+          https://bitcoinforum.bayern
         </a>
       </>
     ),
@@ -517,12 +517,12 @@ const speakersData = [
         ist Wirtschaftsmathematikerin (M.Sc.) und arbeitete fast zehn Jahre lang als Data Analystin und Trainerin. Heute macht sie Bitcoin-Bildung zum Fokus ihrer Tätigkeit. In ihrem Podcast „Bitcoin kurz erklärt“ vermittelt sie neue Perspektiven auf Bitcoin. Weitere Informationen unter:
         <br />
         <a
-          href="http://beispiel.de"
+          href="https://bitcoinforum.bayern"
           target="_blank"
           rel="noopener noreferrer"
           className="text-bitcoin underline"
         >
-          http://beispiel.de
+          https://bitcoinforum.bayern
         </a>
       </>
     ),
@@ -538,7 +538,7 @@ const speakersData = [
       <>
         arbeitet als Hebamme und engagiert sich leidenschaftlich für Frauengesundheit, Selbstbestimmung und soziale Gerechtigkeit. Energie ist dabei der Grundbaustein – ohne sie gibt es weder Neuanfänge noch körperliche oder geistige Fruchtbarkeit. Bitcoin wird durch Energie gestützt und kann als Werkzeug genutzt werden, um den Weg zu mehr Selbstbestimmung und nachhaltiger Gesundheit zu begleiten. Lea ist Mitgründerin der Non-Profit-Initiative Bitcoin Block. Weitere Informationen unter:
         <br />
-        <a href="http://beispiel.de" target="_blank" rel="noopener noreferrer" className="text-bitcoin underline">http://beispiel.de</a>
+        <a href="https://bitcoinforum.bayern" target="_blank" rel="noopener noreferrer" className="text-bitcoin underline">https://bitcoinforum.bayern</a>
       </>
     ),
     bgColor: "bg-[#FEF7CD]/50",
@@ -553,7 +553,7 @@ const speakersData = [
       <>
         ist Energie-Effizienz-Experte, Elektrotechnikmeister und Gründer von LESolution – dem ersten eingetragenen Handwerksunternehmen für die Fachplanung und Umsetzung von Bitcoin-Mininganlagen in Deutschland. Mit seiner langjährigen Erfahrung in der Energieberatung unterstützt er Privatpersonen und Unternehmen bei der energieeffizienten Integration von Bitcoin-Mining-Technologien. Weitere Informationen unter:
         <br />
-        <a href="http://beispiel.de" target="_blank" rel="noopener noreferrer" className="text-bitcoin underline">http://beispiel.de</a>
+        <a href="https://bitcoinforum.bayern" target="_blank" rel="noopener noreferrer" className="text-bitcoin underline">https://bitcoinforum.bayern</a>
       </>
     ),
     bgColor: "bg-[#F2FCE2]/50",
@@ -568,7 +568,7 @@ const speakersData = [
       <>
         ist Unternehmer aus Karlsruhe und Gründer von solomining.de, wo er Bitaxe Home- und Solominer in Deutschland produziert und vertreibt. Als Teil der Bitcoin-Open-Source-Community überführt er die Open-Source-Entwicklungen in eine hochqualitative Serienfertigung „Made in Germany“, um so die Dezentralisierung der Mining-Infrastruktur voranzutreiben. Weitere Informationen unter:
         <br />
-        <a href="http://beispiel.de" target="_blank" rel="noopener noreferrer" className="text-bitcoin underline">http://beispiel.de</a>
+        <a href="https://bitcoinforum.bayern" target="_blank" rel="noopener noreferrer" className="text-bitcoin underline">https://bitcoinforum.bayern</a>
       </>
     ),
     bgColor: "bg-[#D3E4FD]/50",
@@ -583,7 +583,7 @@ const speakersData = [
       <>
         ist Head of Operations bei der terahash.energy GmbH. In dieser Rolle verantwortet er die Entwicklung und Umsetzung technischer Konzepte rund um effizientes Bitcoin-Mining. Ein besonderer Schwerpunkt liegt auf der Nutzung von Rechenzentrumsabwärme für industrielle Prozesse oder kommunale Wärmeplanung. Weitere Informationen unter:
         <br />
-        <a href="http://beispiel.de" target="_blank" rel="noopener noreferrer" className="text-bitcoin underline">http://beispiel.de</a>
+        <a href="https://bitcoinforum.bayern" target="_blank" rel="noopener noreferrer" className="text-bitcoin underline">https://bitcoinforum.bayern</a>
       </>
     ),
     bgColor: "bg-[#FDE1D3]/50",
@@ -598,7 +598,7 @@ const speakersData = [
       <>
         trägt als Head of Hashrate bei der terahash.energy GmbH die Verantwortung für das internationale Geschäft im Bereich Bitcoin Mining. Sein Fokus liegt auf dem Management und der Weiterentwicklung der globalen Mining-Operations, der Betreuung von Investoren sowie der engen Zusammenarbeit mit den Herstellern der Mining-Hardware. Weitere Informationen unter:
         <br />
-        <a href="http://beispiel.de" target="_blank" rel="noopener noreferrer" className="text-bitcoin underline">http://beispiel.de</a>
+        <a href="https://bitcoinforum.bayern" target="_blank" rel="noopener noreferrer" className="text-bitcoin underline">https://bitcoinforum.bayern</a>
       </>
     ),
     bgColor: "bg-[#FEF7CD]/50",
@@ -613,7 +613,7 @@ const speakersData = [
       <>
         ist seit 2013 im Bitcoin-Bereich aktiv. Nach ersten Erfahrungen im Bitcoin Home Mining war er Mitgründer der HODLMAYR GmbH im Jahr 2019, die heute unter der Marke Copiaro u.a. einen Online-Fachhandel für Bitcoin-Produkte betreibt. Weitere Informationen unter:
         <br />
-        <a href="http://beispiel.de" target="_blank" rel="noopener noreferrer" className="text-bitcoin underline">http://beispiel.de</a>
+        <a href="https://bitcoinforum.bayern" target="_blank" rel="noopener noreferrer" className="text-bitcoin underline">https://bitcoinforum.bayern</a>
       </>
     ),
     bgColor: "bg-[#F2FCE2]/50",
@@ -628,7 +628,7 @@ const speakersData = [
       <>
         automatisiert bei HASHLYNK Mining-Prozesse und bringt Effizienz auf ein neues Level. Weitere Informationen unter:
         <br />
-        <a href="http://beispiel.de" target="_blank" rel="noopener noreferrer" className="text-bitcoin underline">http://beispiel.de</a>
+        <a href="https://bitcoinforum.bayern" target="_blank" rel="noopener noreferrer" className="text-bitcoin underline">https://bitcoinforum.bayern</a>
       </>
     ),
     bgColor: "bg-[#D3E4FD]/50",
@@ -643,7 +643,7 @@ const speakersData = [
       <>
         ist Mitgründer von HASHLYNK und Home Miner. Seit Jahren beschäftigt er sich mit den Themen Mining, Wärmerückgewinnung und Erneuerbare Energien – und genau diese Erfahrungen fließen heute in seine Arbeit bei HASHLYNK ein. Weitere Informationen unter:
         <br />
-        <a href="http://beispiel.de" target="_blank" rel="noopener noreferrer" className="text-bitcoin underline">http://beispiel.de</a>
+        <a href="https://bitcoinforum.bayern" target="_blank" rel="noopener noreferrer" className="text-bitcoin underline">https://bitcoinforum.bayern</a>
       </>
     ),
     bgColor: "bg-[#FDE1D3]/50",
@@ -658,7 +658,7 @@ const speakersData = [
       <>
         ist mit ihrer fast 30-jährigen Erfahrung als Startup Coach und Dozentin in der Lage, komplizierte Zusammenhänge einfach zu erklären. Sie hat 2019 begonnen, sich tiefer mit Bitcoin zu beschäftigen. Es ist ihr ein Anliegen, Frauen beim Einstieg in dieses komplexe Thema zu unterstützen. Daher gründete sie 2024 die Weiterbildungsplattform www.madame-bitcoin.de. Weitere Informationen unter:
         <br />
-        <a href="http://beispiel.de" target="_blank" rel="noopener noreferrer" className="text-bitcoin underline">http://beispiel.de</a>
+        <a href="https://bitcoinforum.bayern" target="_blank" rel="noopener noreferrer" className="text-bitcoin underline">https://bitcoinforum.bayern</a>
       </>
     ),
     bgColor: "bg-[#FEF7CD]/50",
@@ -673,7 +673,7 @@ const speakersData = [
       <>
         geboren 1984, ist Journalistin und TV-Moderatorin bei SRF Sport. Seit 2018 steht sie für SRF vor der Kamera. Neben ihrer Tätigkeit beim Fernsehen arbeitet sie freiberuflich als Eventmoderatorin und DJ – zuletzt unter anderem an der Swiss Bitcoin Conference 2025 in Kreuzlingen. Weitere Informationen unter:
         <br />
-        <a href="http://beispiel.de" target="_blank" rel="noopener noreferrer" className="text-bitcoin underline">http://beispiel.de</a>
+        <a href="https://bitcoinforum.bayern" target="_blank" rel="noopener noreferrer" className="text-bitcoin underline">https://bitcoinforum.bayern</a>
       </>
     ),
     bgColor: "bg-[#F2FCE2]/50",
@@ -688,7 +688,7 @@ const speakersData = [
       <>
         Nathaly ist eine leidenschaftliche Unternehmerin, Vollblut-Bitcoinerin, und ehemalige Bänkerin. Als Gründerin der FinanceRevolution und Co-Moderatorin des NoMad Podcasts inspiriert sie Menschen weltweit. Weitere Informationen unter:
         <br />
-        <a href="http://beispiel.de" target="_blank" rel="noopener noreferrer" className="text-bitcoin underline">http://beispiel.de</a>
+        <a href="https://bitcoinforum.bayern" target="_blank" rel="noopener noreferrer" className="text-bitcoin underline">https://bitcoinforum.bayern</a>
       </>
     ),
     bgColor: "bg-[#D3E4FD]/50",
@@ -703,7 +703,7 @@ const speakersData = [
       <>
         ist Lehrer, Lehrplanautor und Berater im Bildungsbereich, Podcaster und Familienvater. Seit 2017 setzt er sich leidenschaftlich dafür ein, die Souveränität der kommenden Generation im digitalen Zeitalter zu stärken. Weitere Informationen unter:
         <br />
-        <a href="http://beispiel.de" target="_blank" rel="noopener noreferrer" className="text-bitcoin underline">http://beispiel.de</a>
+        <a href="https://bitcoinforum.bayern" target="_blank" rel="noopener noreferrer" className="text-bitcoin underline">https://bitcoinforum.bayern</a>
       </>
     ),
     bgColor: "bg-[#F2FCE2]/50",
@@ -718,7 +718,7 @@ const speakersData = [
       <>
         ist ein anerkannter Vordenker an der Schnittstelle von Bitcoin und Energiesystemen. Als Chief Growth Officer der 21energy GmbH und Vorstandsmitglied der European Bitcoin Energy Association (EBEA) gestaltet er aktiv die Diskussion über Bitcoin-Mining und Energiemärkte. Weitere Informationen unter:
         <br />
-        <a href="http://beispiel.de" target="_blank" rel="noopener noreferrer" className="text-bitcoin underline">http://beispiel.de</a>
+        <a href="https://bitcoinforum.bayern" target="_blank" rel="noopener noreferrer" className="text-bitcoin underline">https://bitcoinforum.bayern</a>
       </>
     ),
     bgColor: "bg-[#FEF7CD]/50",
@@ -733,7 +733,7 @@ const speakersData = [
       <>
         begann seine Karriere als Materialwissenschaftler und Fertigungsberater in Deutschland und China, bevor er seine größte Leidenschaft entdeckte: Bitcoin. Als Mitgründer und Geschäftsführer von seedor.io, bitsurance.io und satskeeper.com ist er eine zentrale Figur in der deutschen Bitcoin-Szene. Weitere Informationen unter:
         <br />
-        <a href="http://beispiel.de" target="_blank" rel="noopener noreferrer" className="text-bitcoin underline">http://beispiel.de</a>
+        <a href="https://bitcoinforum.bayern" target="_blank" rel="noopener noreferrer" className="text-bitcoin underline">https://bitcoinforum.bayern</a>
       </>
     ),
     bgColor: "bg-[#D3E4FD]/50",
