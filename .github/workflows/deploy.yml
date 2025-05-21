@@ -13,28 +13,33 @@ jobs:
       - name: 📥 Checkout Code
         uses: actions/checkout@v3
 
-      - name: ❓ Check autobuild flag
+      - name: ❓ Check autobuild flag (Kommentare erlaubt)
         run: |
-          if [[ $(cat autobuild.txt) != "on" ]]; then
+          # Lese erste nicht-kommentierte Zeile aus autobuild.txt
+          AUTOBUILD=$(grep -v '^#' autobuild.txt | head -n 1)
+          echo "Autobuild-Modus: $AUTOBUILD"
+          if [[ "$AUTOBUILD" != "on" ]]; then
             echo "🚫 Autobuild deaktiviert – Abbruch."
             exit 0
           fi
 
-      - name: ⚙️ Install dependencies and build (nur falls nicht Maintenance)
-        if: ${{ hashFiles('mode.txt') && contains(fromJSON('["live"]'), fromJSON(format('"{}"', github.workspace + '/mode.txt' | file)) ) }}
+      - name: ⚙️ Install dependencies and build (nur falls live)
         run: |
-          npm ci
-          npm run build
+          MODE=$(grep -v '^#' mode.txt | head -n 1)
+          echo "Deploy-Modus: $MODE"
+          if [[ "$MODE" == "live" ]]; then
+            npm ci
+            npm run build
+          fi
 
-      - name: 📁 Set local-dir variable
+      - name: 📁 Set local-dir variable je nach Modus
         id: modecheck
         run: |
-          MODE=$(cat mode.txt)
+          MODE=$(grep -v '^#' mode.txt | head -n 1)
+          echo "Ermittelter Modus: $MODE"
           if [[ "$MODE" == "maintenance" ]]; then
-            echo "Deploying maintenance page..."
             echo "localdir=maintenance-html" >> $GITHUB_OUTPUT
           else
-            echo "Deploying built website..."
             echo "localdir=dist" >> $GITHUB_OUTPUT
           fi
 
