@@ -27,13 +27,13 @@ jobs:
           MODE=$(grep -v '^#' mode.txt | head -n 1 | xargs)
           echo "Deploy-Modus: '$MODE'"
           if [[ "$MODE" == "live" ]]; then
-            echo "📦 npm ci..."
+            echo "📦 Installiere Abhängigkeiten..."
             npm ci || { echo "❌ npm ci fehlgeschlagen"; exit 1; }
 
-            echo "🔨 npm run build..."
+            echo "🔨 Starte Build..."
             npm run build || { echo "❌ Build fehlgeschlagen"; exit 1; }
           else
-            echo "⚠️ Wartungsmodus – Build übersprungen"
+            echo "⚠️ Wartungsmodus – Build wird übersprungen"
           fi
 
       - name: 🧪 Diagnose: Zeige dist-Ordner nach Build
@@ -49,12 +49,14 @@ jobs:
         run: |
           MODE=$(grep -v '^#' mode.txt | head -n 1 | xargs)
           if [[ "$MODE" == "maintenance" ]]; then
+            echo "➡️ Wartungsmodus – lade maintenance-html/ hoch"
             echo "localdir=maintenance-html/" >> $GITHUB_OUTPUT
           else
             if [[ ! -d "dist" ]]; then
               echo "❌ dist/ fehlt – Build war fehlerhaft oder wurde übersprungen."
               exit 1
             fi
+            echo "➡️ Live-Modus – lade dist/ hoch"
             echo "localdir=dist/" >> $GITHUB_OUTPUT
           fi
 
