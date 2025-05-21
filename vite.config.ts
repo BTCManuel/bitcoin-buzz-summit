@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: "/", // 🔥 Wichtig für SPA-Fallback auf Lovable
+  base: "/bitcoin-buzz-summit/", // 🔥 Wichtig für SPA-Fallback auf Lovable
 
   server: {
     host: "::",
