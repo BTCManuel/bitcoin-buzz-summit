@@ -10,33 +10,37 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 📥 Checkout Code
+      - name: 📥 Code auschecken
         uses: actions/checkout@v3
 
-      - name: ❓ Check autobuild flag (mit Kommentar-Support)
+      - name: 🛑 Prüfe autobuild.txt
         run: |
           AUTOBUILD=$(grep -v '^#' autobuild.txt | head -n 1)
-          echo "Autobuild-Modus: $AUTOBUILD"
+          echo "Autobuild-Modus: '$AUTOBUILD'"
           if [[ "$AUTOBUILD" != "on" ]]; then
-            echo "🚫 Autobuild deaktiviert – Abbruch."
+            echo "❌ Autobuild deaktiviert – Abbruch."
             exit 0
           fi
 
-      - name: ⚙️ Install dependencies and build (nur wenn live)
+      - name: ⚙️ Installiere Abhängigkeiten und baue Projekt (wenn live)
         run: |
           MODE=$(grep -v '^#' mode.txt | head -n 1)
-          echo "Deploy-Modus: $MODE"
+          echo "Deploy-Modus: '$MODE'"
+
           if [[ "$MODE" == "live" ]]; then
-            echo "📦 Installiere Abhängigkeiten..."
+            echo "📦 npm ci wird ausgeführt..."
             npm ci || { echo "❌ npm ci fehlgeschlagen"; exit 1; }
-            echo "🔨 Baue Projekt mit Vite..."
+
+            echo "🔨 npm run build wird ausgeführt..."
             npm run build || { echo "❌ Build fehlgeschlagen"; exit 1; }
+
+            echo "📂 Inhalt von dist/ nach Build:"
+            ls -lah dist || echo "⚠️ dist/ nicht gefunden!"
           else
-            echo "⚠️ Wartungsmodus – kein Build nötig"
+            echo "⚠️ Wartungsmodus erkannt – kein Build"
           fi
 
-
-      - name: 📁 Setze lokalen Upload-Ordner (dist/ oder maintenance-html/)
+      - name: 📁 Setze Upload-Ordner (dist/ oder maintenance-html/)
         id: modecheck
         run: |
           MODE=$(grep -v '^#' mode.txt | head -n 1)
@@ -45,18 +49,18 @@ jobs:
             echo "localdir=maintenance-html/" >> $GITHUB_OUTPUT
           else
             if [[ ! -d "dist" ]]; then
-              echo "❌ Fehler: dist/ fehlt! Wahrscheinlich Build fehlgeschlagen."
+              echo "❌ dist/ fehlt – Build war fehlerhaft oder wurde übersprungen."
               exit 1
             fi
             echo "➡️ Verwende dist/"
             echo "localdir=dist/" >> $GITHUB_OUTPUT
           fi
 
-      - name: 🚀 FTP-Upload zu DomainFactory
+      - name: 🚀 FTP-Upload zur DomainFactory
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ${{ steps.modecheck.outputs.localdir }}/
+          local-dir: ${{ steps.modecheck.outputs.localdir }}
           server-dir: ./
