@@ -42,7 +42,11 @@ jobs:
           ls -lah dist || echo "⚠️ dist/ nicht vorhanden"
 
           echo "📄 Inhalt von npm-debug.log (falls vorhanden):"
-          [ -f npm-debug.log ] && cat npm-debug.log || echo "✅ Keine npm-debug.log vorhanden"
+          if [ -f npm-debug.log ]; then
+            cat npm-debug.log
+          else
+            echo "✅ Keine npm-debug.log vorhanden"
+          fi
 
       - name: 📁 Set upload folder based on mode.txt
         id: set-folder
