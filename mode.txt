@@ -1,4 +1,7 @@
 # Diese Datei steuert, ob die Website im Live- oder Wartungsmodus ist.
 # "live" → Normale Website wird hochgeladen
 # "maintenance" → Es wird eine einfache Wartungsseite hochgeladen
-maintenance
+
+
+
+live
