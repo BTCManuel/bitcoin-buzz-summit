@@ -299,7 +299,10 @@ const LesFemmesOrange = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="bg-gray-50 p-6 rounded-xl hover:bg-[#FDE1D3]/20 transition-colors duration-300 hover:shadow-lg">
               <div className="w-14 h-14 bg-[#FDE1D3] rounded-full flex items-center justify-center mb-4">
-                <Award className="h-7 w-7 text-[#F97316]" />
+                <img src="/images/workshop/LFO_6.jpg" 
+                  alt="Bitcoin Expertenwissen" 
+                  className="h-7 w-7 rounded object-cover"
+                  />
               </div>
               <h3 className="text-xl font-semibold mb-2">Expertenwissen</h3>
               <p className="text-gray-600">Lerne von erfahrenen Bitcoin-Expertinnen in einem unterstützenden Umfeld</p>
