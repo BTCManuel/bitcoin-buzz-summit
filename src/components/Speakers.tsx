@@ -314,7 +314,7 @@ const speakersData = [
   {
   name: "Rachel Geyer",
   role: "",
-  company: "",
+  company: "terahash.energy GmbH",
   image: "/images/speakers/Rachel_Geyer.jpg",
   bio: (
     <>
