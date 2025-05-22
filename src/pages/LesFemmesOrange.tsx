@@ -301,7 +301,7 @@ const LesFemmesOrange = () => {
               <div className="w-14 h-14 bg-[#FDE1D3] rounded-full flex items-center justify-center mb-4">
                 <img src="/images/workshop/LFO_6.jpg" 
                   alt="Bitcoin Expertenwissen" 
-                  className="h-7 w-7 rounded object-cover"
+                  className="h-7 w-7 rounded-full object-cover"
                   />
               </div>
               <h3 className="text-xl font-semibold mb-2">Expertenwissen</h3>
