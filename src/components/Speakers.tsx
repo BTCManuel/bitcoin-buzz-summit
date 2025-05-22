@@ -318,7 +318,7 @@ const speakersData = [
   image: "/images/speakers/Rachel_Geyer.jpg",
   bio: (
     <>
-      ist Vizepräsidentin und Unternehmenssprecherin der terahash.energy GmbH und Vorstandsvorsitzende der European Bitcoin Energy Association. Sie ist Mitbegründerin von Les Femmes orange – Bitcoin-Bildung für und von Frauen. Rachel ist Mutter 4 Kindern – Ihr wichtigster Beitrag zur Gesellschaft. Weitere Informationen unter:
+      Sie ist Vizepräsidentin und Unternehmenssprecherin der terahash.energy GmbH und Vorstandsvorsitzende der European Bitcoin Energy Association. Sie ist Mitbegründerin von Les Femmes orange – Bitcoin-Bildung für und von Frauen. Rachel ist Mutter 4 Kindern – Ihr wichtigster Beitrag zur Gesellschaft. Weitere Informationen unter:
       <br />
       
         href="mailto:rachel@terahash.space"
