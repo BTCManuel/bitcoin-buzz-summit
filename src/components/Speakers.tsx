@@ -321,7 +321,7 @@ const speakersData = [
         ist Vizepräsidentin und Unternehmenssprecherin der terahash.energy GmbH und Vorstandsvorsitzende der European Bitcoin Energy Association. Sie ist Mitbegründerin von Les Femmes orange – Bitcoin-Bildung für und von Frauen. Rachel ist Mutter 4 Kindern – Ihr wichtigster Beitrag zur Gesellschaft. Weitere Informationen unter:
         <br />
         <a
-          href="https://bitcoinforum.bayern"
+          href="mailto:rachel@terahash.space">rachel@terahash.space
           target="_blank"
           rel="noopener noreferrer"
           className="text-bitcoin underline"
