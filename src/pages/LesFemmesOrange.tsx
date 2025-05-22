@@ -230,7 +230,7 @@ const LesFemmesOrange = () => {
           </div>
         </div>
       </section>
-{/*
+/*
       {/* Image Gallery Section with Enhanced Design */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -282,7 +282,7 @@ const LesFemmesOrange = () => {
           </div>
         </div>
       </section>
-*/}
+*/
       {/* Bitcoin Forum Section with Enhanced Visuals */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-white to-gray-50">
         <div className="container mx-auto px-4">
