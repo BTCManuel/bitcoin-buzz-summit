@@ -83,4 +83,5 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: maintenance-html/
-          server-dir: ./
+          #server-dir: ./
+          server-dir: /preview.bitcoinforum.bayern
