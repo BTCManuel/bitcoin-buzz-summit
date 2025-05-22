@@ -41,9 +41,11 @@ const LesFemmesOrange = () => {
                 >
                   Jetzt Teilnehmen
                 </Button>
+               {/*
                 <a href="#about" className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-[#F97316]/30 rounded-full bg-white/80 text-gray-700 hover:bg-[#FDE1D3]/30 backdrop-blur-sm transition-all">
                   Mehr erfahren
                 </a>
+              */}
               </div>
             </div>
             <div className="lg:w-1/2 flex justify-center">
