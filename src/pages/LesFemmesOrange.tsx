@@ -230,7 +230,7 @@ const LesFemmesOrange = () => {
           </div>
         </div>
       </section>
-    */}
+ */}
 
       {/* Image Gallery Section with Enhanced Design 
       
