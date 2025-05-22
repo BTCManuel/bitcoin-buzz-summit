@@ -74,7 +74,7 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: dist/
           #server-dir: ./
-          server-dir: /preview.bitcoinforum.bayern
+          server-dir: /preview.bitcoinforum.bayern/
 
       - name: 🚧 Upload MAINTENANCE page to DomainFactory via FTP
         if: steps.autobuild.outputs.deploy == 'true' && steps.modecheck.outputs.mode == 'maintenance'
@@ -85,4 +85,4 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: maintenance-html/
           #server-dir: ./
-          server-dir: /preview.bitcoinforum.bayern
+          server-dir: /preview.bitcoinforum.bayern/
