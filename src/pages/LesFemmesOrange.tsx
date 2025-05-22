@@ -76,62 +76,7 @@ const LesFemmesOrange = () => {
         </div>
       </section>
 
-      {/* About Section with Enhanced Design */}
-      <section id="about" className="py-16 md:py-24 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800">Über Les Femmes Orange</h2>
-            <p className="text-lg text-gray-600 leading-relaxed">
-              Les Femmes Orange ist eine internationale Initiative mit dem Ziel, Frauen dazu zu ermutigen, sich mit Bitcoin auseinanderzusetzen. Durch Veranstaltungen und regelmäßige Treffen bietet sie eine Plattform, auf der Frauen – unabhängig von Vorkenntnissen – die praktischen Aspekte von Bitcoin kennenlernen, sich austauschen und gemeinsam wachsen können. Das Ziel ist es, Bitcoin für alle Frauen zugänglich zu machen und eine unterstützende Gemeinschaft zu schaffen, die finanzielle Unabhängigkeit und Selbstbestimmung fördert.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="bg-white border border-gray-200 shadow-sm hover:shadow-md transition-shadow hover:border-[#F97316]/30">
-              <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-[#FDE1D3] rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="h-8 w-8 text-[#F97316]" />
-                </div>
-                <CardTitle className="text-xl font-semibold">Gemeinschaft</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600 text-center">
-                  Werde Teil einer unterstützenden Gemeinschaft von Frauen, die sich gegenseitig auf ihrer Bitcoin-Reise unterstützen.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white border border-gray-200 shadow-sm hover:shadow-md transition-shadow hover:border-[#F97316]/30">
-              <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-[#FDE1D3] rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Calendar className="h-8 w-8 text-[#F97316]" />
-                </div>
-                <CardTitle className="text-xl font-semibold">Veranstaltungen</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600 text-center">
-                  Nimm an regelmäßigen Treffen und Events teil, die auf die Bedürfnisse von Frauen im Bitcoin-Bereich zugeschnitten sind.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white border border-gray-200 shadow-sm hover:shadow-md transition-shadow hover:border-[#F97316]/30">
-              <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-[#FDE1D3] rounded-full flex items-center justify-center mx-auto mb-4">
-                  <MessageSquare className="h-8 w-8 text-[#F97316]" />
-                </div>
-                <CardTitle className="text-xl font-semibold">Austausch</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600 text-center">
-                  Tausche dich mit Gleichgesinnten aus und lerne von erfahrenen Bitcoin-Anwenderinnen.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
+    
       {/* Events Section 
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -490,6 +435,61 @@ const LesFemmesOrange = () => {
         </div>
       </section>
   */}
+  {/* About Section with Enhanced Design */}
+      <section id="about" className="py-16 md:py-24 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800">Über Les Femmes Orange</h2>
+            <p className="text-lg text-gray-600 leading-relaxed">
+              Les Femmes Orange ist eine internationale Initiative mit dem Ziel, Frauen dazu zu ermutigen, sich mit Bitcoin auseinanderzusetzen. Durch Veranstaltungen und regelmäßige Treffen bietet sie eine Plattform, auf der Frauen – unabhängig von Vorkenntnissen – die praktischen Aspekte von Bitcoin kennenlernen, sich austauschen und gemeinsam wachsen können. Das Ziel ist es, Bitcoin für alle Frauen zugänglich zu machen und eine unterstützende Gemeinschaft zu schaffen, die finanzielle Unabhängigkeit und Selbstbestimmung fördert.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="bg-white border border-gray-200 shadow-sm hover:shadow-md transition-shadow hover:border-[#F97316]/30">
+              <CardHeader className="text-center">
+                <div className="w-16 h-16 bg-[#FDE1D3] rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Users className="h-8 w-8 text-[#F97316]" />
+                </div>
+                <CardTitle className="text-xl font-semibold">Gemeinschaft</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600 text-center">
+                  Werde Teil einer unterstützenden Gemeinschaft von Frauen, die sich gegenseitig auf ihrer Bitcoin-Reise unterstützen.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white border border-gray-200 shadow-sm hover:shadow-md transition-shadow hover:border-[#F97316]/30">
+              <CardHeader className="text-center">
+                <div className="w-16 h-16 bg-[#FDE1D3] rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Calendar className="h-8 w-8 text-[#F97316]" />
+                </div>
+                <CardTitle className="text-xl font-semibold">Veranstaltungen</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600 text-center">
+                  Nimm an regelmäßigen Treffen und Events teil, die auf die Bedürfnisse von Frauen im Bitcoin-Bereich zugeschnitten sind.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white border border-gray-200 shadow-sm hover:shadow-md transition-shadow hover:border-[#F97316]/30">
+              <CardHeader className="text-center">
+                <div className="w-16 h-16 bg-[#FDE1D3] rounded-full flex items-center justify-center mx-auto mb-4">
+                  <MessageSquare className="h-8 w-8 text-[#F97316]" />
+                </div>
+                <CardTitle className="text-xl font-semibold">Austausch</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600 text-center">
+                  Tausche dich mit Gleichgesinnten aus und lerne von erfahrenen Bitcoin-Anwenderinnen.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
 
       {/* CTA Section with Enhanced Visual Appeal */}
       <section className="py-16 bg-gradient-to-br from-[#FDE1D3] to-[#FEF7CD]">
