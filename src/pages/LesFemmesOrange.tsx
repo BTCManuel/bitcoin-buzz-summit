@@ -17,7 +17,7 @@ const LesFemmesOrange = () => {
       {/* Hero Section with Enhanced Style */}
       <div className="bg-gradient-to-br from-[#FDE1D3] via-[#FEF7CD] to-white py-24 md:py-32 relative overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-10">
-          <div className="absolute inset-0 bg-[url('/images/workshop/LFO_2.jpg')] bg-center bg-cover"></div>
+          <div className="absolute inset-0 bg-[url('/images/workshop/LFO_14.jpg')] bg-center bg-cover"></div>
         </div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="flex flex-col lg:flex-row items-center gap-8 md:gap-16">
