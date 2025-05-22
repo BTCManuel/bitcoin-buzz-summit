@@ -114,6 +114,26 @@ const speakersData = [
     bgSolidColor: "bg-[#FEF7CD]"
   },
   {
+  name: "Rachel Geyer",
+  role: "",
+  company: "terahash.energy GmbH",
+  image: "/images/speakers/Rachel_Geyer.jpg",
+  bio: (
+    <>
+      Sie ist Vizepräsidentin und Unternehmenssprecherin der terahash.energy GmbH und Vorstandsvorsitzende der European Bitcoin Energy Association. Sie ist Mitbegründerin von Les Femmes orange – Bitcoin-Bildung für und von Frauen. Rachel ist Mutter 4 Kindern – Ihr wichtigster Beitrag zur Gesellschaft. Weitere Informationen unter:
+      <br />
+      <a
+        href="mailto:rachel@terahash.space"
+        className="text-bitcoin underline"
+      >
+        rachel@terahash.space
+      </a>
+    </>
+    ),
+    bgColor: "bg-[#D3E4FD]/50",
+    bgSolidColor: "bg-[#D3E4FD]"
+  },
+  {
     name: "Florian Bruce",
     role: "",
     company: "",
@@ -307,26 +327,6 @@ const speakersData = [
           https://bitcoinforum.bayern
         </a>
       </>
-    ),
-    bgColor: "bg-[#D3E4FD]/50",
-    bgSolidColor: "bg-[#D3E4FD]"
-  },
-  {
-  name: "Rachel Geyer",
-  role: "",
-  company: "terahash.energy GmbH",
-  image: "/images/speakers/Rachel_Geyer.jpg",
-  bio: (
-    <>
-      Sie ist Vizepräsidentin und Unternehmenssprecherin der terahash.energy GmbH und Vorstandsvorsitzende der European Bitcoin Energy Association. Sie ist Mitbegründerin von Les Femmes orange – Bitcoin-Bildung für und von Frauen. Rachel ist Mutter 4 Kindern – Ihr wichtigster Beitrag zur Gesellschaft. Weitere Informationen unter:
-      <br />
-      <a
-        href="mailto:rachel@terahash.space"
-        className="text-bitcoin underline"
-      >
-        rachel@terahash.space
-      </a>
-    </>
     ),
     bgColor: "bg-[#D3E4FD]/50",
     bgSolidColor: "bg-[#D3E4FD]"
