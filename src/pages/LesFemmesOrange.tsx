@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
@@ -9,6 +9,65 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@
 
 const LesFemmesOrange = () => {
   const { openPopup } = usePopup();
+  const [activeTab, setActiveTab] = useState<'all' | 'beginner' | 'advanced'>('all');
+
+  // Filter workshops based on active tab
+  const filterWorkshops = () => {
+    const workshops = [
+      {
+        id: 1,
+        title: "Deine Bitcoin Reise",
+        leader: "Yvonne Strathmann und Katharina Jantzen",
+        level: "Alle",
+        subtitle: "Gestalte deine Bitcoin Reise für dich stimmig!",
+        capacity: 50,
+        duration: "55 Min.",
+        description: "Wo stehst du gerade auf deiner Bitcoin Reise? Welches Ziel hast du? Was könnte dein nächster Schritt sein und was brauchst du dafür? Gemeinsam und mit der open space Methode schauen wir deine Fragen an. Wir freuen uns auf Dich!",
+        image: "/images/workshop/LFO_8.jpg",
+        category: "all"
+      },
+      {
+        id: 2,
+        title: "How to Bitcoin I",
+        leader: "Korina Karl",
+        level: "Einst.",
+        subtitle: "Erlebe deine erste erste Bitcoin Transaktion!",
+        capacity: 50,
+        duration: "55 Min.",
+        description: "Erstelle mit deinem Smartphone eine Lightning Wallet. Tausche die ersten 10€ in Satoshis um und nutze deine Wallet direkt auf dem Forum, im Alltag oder nächsten Urlaub.",
+        image: "/images/workshop/LFO_11.jpg",
+        category: "beginner"
+      },
+      {
+        id: 3,
+        title: "How to Bitcoin II",
+        leader: "Nicole Nowak",
+        level: "Fortge.",
+        subtitle: "Firefish. Ein Blick auf neue Marktplätze für Bitcoin-besicherte Kredite",
+        capacity: 50,
+        duration: "55 Min.",
+        description: "Lerne wie Bitcoiner die Peer-to-Peer Plattform Firefish nutzen, Kredite aufnehmen oder vergeben können und Bitcoin dabei als Sicherheit dient.",
+        image: "/images/workshop/LFO_3.jpg",
+        category: "advanced"
+      },
+      {
+        id: 4,
+        title: "Nostr",
+        leader: "Tanja Bächle",
+        level: "Fortge.",
+        subtitle: "Nostr. Mehr als nur ein Twitter Klon.",
+        capacity: 50,
+        duration: "55 Min.",
+        description: "Lerne Nostr kennen - ein soziales Netzwerk, das deine Privatsphäre schützt und Zensur widersteht. Wir erklären die Grundlagen und unterstützen dich bei der Einrichtung deines eigenen Accounts, damit du sicher und selbstbestimmt in die Nostr-Community starten kannst.",
+        image: "/images/workshop/LFO_7.jpg",
+        category: "advanced"
+      }
+    ];
+
+    if (activeTab === 'all') return workshops;
+    if (activeTab === 'beginner') return workshops.filter(w => w.category === 'beginner');
+    return workshops.filter(w => w.category === 'advanced');
+  };
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -79,159 +138,6 @@ const LesFemmesOrange = () => {
       </section>
 
     
-      {/* Events Section 
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800">Unsere Events</h2>
-            <p className="text-lg text-gray-600">
-              Reguläre Meetups und Workshops bieten eine Plattform für Frauen, sich mit Bitcoin vertraut zu machen und zu vernetzen
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto mb-16">
-            <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-              <div className="h-56 overflow-hidden">
-                <img 
-                  src="/images/workshop/bitcoin-card-credit-card (1).svg" 
-                  alt="Bitcoin Workshop" 
-                  className="w-full h-full object-contain object-center p-4 bg-[#FEF7CD]/30"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-800 mb-3">Praktische Workshops</h3>
-                <p className="text-gray-600 mb-4">
-                  Lerne in einem unterstützenden Umfeld, wie du Bitcoin-Wallets einrichtest, Transaktionen durchführst und deine Coins sicher aufbewahrst.
-                </p>
-                <div className="flex items-center text-sm text-gray-500 mt-4">
-                  <Calendar className="w-4 h-4 mr-2" />
-                  <span>Regelmäßig</span>
-                  <MapPin className="w-4 h-4 ml-6 mr-2" />
-                  <span>Verschiedene Standorte</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-              <div className="h-56 overflow-hidden">
-                <img 
-                  src="/images/workshop/LFO_6.jpg" 
-                  alt="Bitcoin Meetup" 
-                  className="w-full h-full object-contain object-center p-4 bg-[#FDE1D3]/30"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-800 mb-3">Globale Meetups</h3>
-                <p className="text-gray-600 mb-4">
-                  Vernetze dich mit Frauen aus der ganzen Welt, die sich für Bitcoin interessieren, und teile Erfahrungen und Wissen.
-                </p>
-                <div className="flex items-center text-sm text-gray-500 mt-4">
-                  <Globe className="w-4 h-4 mr-2" />
-                  <span>International</span>
-                  <Clock className="w-4 h-4 ml-6 mr-2" />
-                  <span>Monatlich</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-[#FEF7CD]/20 rounded-2xl p-8 max-w-4xl mx-auto">
-            <div className="flex flex-col md:flex-row items-center gap-6">
-              <div className="md:w-1/3">
-                <img 
-                  src="/images/workshop/wrench-fix-computer-computer-screen-laptop (1).svg" 
-                  alt="Online Learning" 
-                  className="w-full h-auto"
-                />
-              </div>
-              <div className="md:w-2/3">
-                <h3 className="text-xl font-bold text-gray-800 mb-3">Online-Learning-Community</h3>
-                <p className="text-gray-600 mb-4">
-                  Unsere Online-Community bietet kontinuierlichen Support, Lernmaterialien und Diskussionsforen auch zwischen den Veranstaltungen.
-                </p>
-                <ul className="space-y-2 mb-6">
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-[#F97316] mr-2 mt-0.5" />
-                    <span>Zugang zu exklusiven Lernressourcen</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-[#F97316] mr-2 mt-0.5" />
-                    <span>Mentoring von erfahrenen Bitcoin-Anwenderinnen</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-[#F97316] mr-2 mt-0.5" />
-                    <span>Networking-Möglichkeiten</span>
-                  </li>
-                </ul>
-                <a 
-                  href="https://lesfemmesorange.work/events-meetups/" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="inline-flex items-center text-[#F97316] font-medium hover:underline"
-                >
-                  Mehr erfahren 
-                  <ChevronRight className="h-4 w-4 ml-1" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
- */}
-
-      {/* Image Gallery Section with Enhanced Design 
-      
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-gray-800">Eindrücke unserer Community</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            <div className="overflow-hidden rounded-lg shadow-md bg-white group">
-              <div className="relative h-64">
-                <img 
-                  src="/images/workshop/le_femmes.png" 
-                  alt="Workshop Impression" 
-                  className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                  <div className="p-4 text-white">
-                    <p className="font-medium">Bitcoin Workshop 2024</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="overflow-hidden rounded-lg shadow-md bg-white group">
-              <div className="relative h-64">
-                <img 
-                  src="/images/workshop/le_feemes_old.png" 
-                  alt="Workshop Impression" 
-                  className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                  <div className="p-4 text-white">
-                    <p className="font-medium">Gemeinschaftsevent</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="overflow-hidden rounded-lg shadow-md bg-white group">
-              <div className="relative h-64">
-                <img 
-                  src="/images/workshop/bitcoin-global-world (1).svg" 
-                  alt="Global Bitcoin Community" 
-                  className="w-full h-full object-contain p-4 bg-white transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                  <div className="p-4 text-white">
-                    <p className="font-medium">Global Bitcoin Network</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-*/}
       {/* Bitcoin Forum Section with Enhanced Visuals */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-white to-gray-50">
         <div className="container mx-auto px-4">
@@ -335,101 +241,149 @@ const LesFemmesOrange = () => {
         </div>
       </section>
 
-      {/* Updated Agenda Section with Workshop Details */}
-      <section className="py-16 md:py-24 bg-gray-50">
-        <div className="container mx-auto px-4">
+      {/* Updated Agenda Section with World-Class Design */}
+      <section className="py-20 relative bg-gradient-to-b from-gray-50 to-white overflow-hidden">
+        {/* Background decoration elements */}
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
+          <div className="absolute -top-10 -left-10 w-64 h-64 bg-[#FEF7CD]/20 rounded-full blur-xl"></div>
+          <div className="absolute top-1/4 right-0 w-96 h-96 bg-[#FDE1D3]/20 rounded-full blur-xl transform translate-x-1/2"></div>
+          <div className="absolute bottom-10 left-1/3 w-72 h-72 bg-[#FEF7CD]/30 rounded-full blur-xl"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center mb-8">
-            <span className="inline-block px-4 py-1 bg-[#FEF7CD] rounded-full text-[#F97316] font-medium text-sm mb-4">Workshops 11.10.2025</span>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800">Agenda</h2>
-            <p className="text-lg text-gray-600 mb-8">
+            <span className="inline-block px-6 py-2 bg-[#FEF7CD] rounded-full text-[#F97316] font-semibold text-sm mb-6 shadow-sm">
+              Workshops am 11.10.2025
+            </span>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800 leading-tight">
+              Unsere <span className="text-[#F97316]">Agenda</span>
+            </h2>
+            <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
               Am Samstagnachmittag bieten wir vier verschiedene Workshops an, die auf unterschiedliche Kenntnisstufen zugeschnitten sind.
-              Jeder Workshop dauert 55 Minuten und beginnt ab 12:30 Uhr.
+              Jeder Workshop beginnt ab 12:30 Uhr.
             </p>
+            
+            {/* Filter tabs */}
+            <div className="inline-flex bg-white p-1 rounded-full shadow-md mb-12">
+              <button 
+                onClick={() => setActiveTab('all')}
+                className={`px-6 py-2 rounded-full font-medium transition-all duration-200 ${
+                  activeTab === 'all' 
+                    ? 'bg-[#F97316] text-white shadow-sm' 
+                    : 'text-gray-600 hover:bg-gray-100'
+                }`}
+              >
+                Alle Workshops
+              </button>
+              <button 
+                onClick={() => setActiveTab('beginner')}
+                className={`px-6 py-2 rounded-full font-medium transition-all duration-200 ${
+                  activeTab === 'beginner' 
+                    ? 'bg-[#F97316] text-white shadow-sm' 
+                    : 'text-gray-600 hover:bg-gray-100'
+                }`}
+              >
+                Einsteiger
+              </button>
+              <button 
+                onClick={() => setActiveTab('advanced')}
+                className={`px-6 py-2 rounded-full font-medium transition-all duration-200 ${
+                  activeTab === 'advanced' 
+                    ? 'bg-[#F97316] text-white shadow-sm' 
+                    : 'text-gray-600 hover:bg-gray-100'
+                }`}
+              >
+                Fortgeschrittene
+              </button>
+            </div>
           </div>
 
-          <div className="max-w-6xl mx-auto">
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-              <div className="overflow-x-auto">
-                <Table>
-                  <TableHeader>
-                    <TableRow className="bg-[#FDE1D3]/30">
-                      <TableHead className="font-semibold">Workshop</TableHead>
-                      <TableHead className="font-semibold">WS Leader</TableHead>
-                      <TableHead className="font-semibold">Für Frauen*</TableHead>
-                      <TableHead className="font-semibold">Workshop Subtitel</TableHead>
-                      <TableHead className="font-semibold">TN Anzahl</TableHead>
-                      <TableHead className="font-semibold">Dauer</TableHead>
-                      <TableHead className="font-semibold">Beschreibung</TableHead>
-                    </TableRow>
-                  </TableHeader>
-                  <TableBody>
-                    <TableRow className="hover:bg-[#FEF7CD]/20">
-                      <TableCell className="font-medium">1. Deine Bitcoin Reise</TableCell>
-                      <TableCell>Yvonne Strathmann und Katharina Jantzen</TableCell>
-                      <TableCell>Alle</TableCell>
-                      <TableCell>Gestalte deine Bitcoin Reise für dich stimmig!</TableCell>
-                      <TableCell className="text-center">50</TableCell>
-                      <TableCell>55 Min.</TableCell>
-                      <TableCell>
-                        Wo stehst du gerade auf deiner Bitcoin Reise? Welches Ziel hast du? Was könnte dein nächster Schritt sein und was brauchst du dafür? Gemeinsam und mit der open space Methode schauen wir deine Fragen an. Wir freuen uns auf Dich!
-                      </TableCell>
-                    </TableRow>
-                    
-                    <TableRow className="hover:bg-[#FEF7CD]/20">
-                      <TableCell className="font-medium">2. How to Bitcoin I</TableCell>
-                      <TableCell>Korina Karl</TableCell>
-                      <TableCell>Einst.</TableCell>
-                      <TableCell>Erlebe deine erste eingene Bitcoin Transaktion!</TableCell>
-                      <TableCell className="text-center">50</TableCell>
-                      <TableCell>55 Min.</TableCell>
-                      <TableCell>
-                        Erstelle mit deinem Smartphone eine Lightning Wallet. Tausche die ersten 10€ in Satoshis um und nutze deine Wallet direkt auf dem Forum, im Alltag oder nächsten Urlaub.
-                      </TableCell>
-                    </TableRow>
-                    
-                    <TableRow className="hover:bg-[#FEF7CD]/20">
-                      <TableCell className="font-medium">3. How to Bitcoin II</TableCell>
-                      <TableCell>Nicole Nowak</TableCell>
-                      <TableCell>Fortge.</TableCell>
-                      <TableCell>Firefish. Ein Blick auf neue Marktplätze für Bitcoin-besicherte Kredite</TableCell>
-                      <TableCell className="text-center">50</TableCell>
-                      <TableCell>55 Min.</TableCell>
-                      <TableCell>
-                        Lerne wie Bitcoiner die Peer-to-Peer Plattform Firefish nutzen, Kredite aufnehmen oder vergeben können und Bitcoin dabei als Sicherheit dient.
-                      </TableCell>
-                    </TableRow>
-                    
-                    <TableRow className="hover:bg-[#FEF7CD]/20">
-                      <TableCell className="font-medium">4. Nostr</TableCell>
-                      <TableCell>Tanja Bächle</TableCell>
-                      <TableCell>Fortge.</TableCell>
-                      <TableCell>Nostr. Mehr als nur ein Twitter Klon.</TableCell>
-                      <TableCell className="text-center">50</TableCell>
-                      <TableCell>55 Min.</TableCell>
-                      <TableCell>
-                        Lerne Nostr kennen - ein soziales Netzwerk, das deine Privatsphäre schützt und Zensur widersteht. Wir erklären die Grundlagen und unterstützen dich bei der Einrichtung deines eigenen Accounts, damit du sicher und selbstbestimmt in die Nostr-Community starten kannst.
-                      </TableCell>
-                    </TableRow>
-                  </TableBody>
-                </Table>
-              </div>
-            </div>
-
-            <div className="mt-8 text-center">
-              <Button 
-                onClick={() => openPopup({
-                  redirectUrl: "https://vr-bayernmitte.genolive.de/index.php?page=event-code&code=bitcoin25"
-                })}
-                className="bg-[#F97316] hover:bg-[#EA580C] text-white rounded-full py-3 px-8 shadow-lg"
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {filterWorkshops().map((workshop) => (
+              <div 
+                key={workshop.id} 
+                className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col h-full border border-gray-100 transform hover:-translate-y-1"
               >
-                Jetzt anmelden und Workshop sichern
-              </Button>
-            </div>
+                <div className="relative h-52 overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10"></div>
+                  <img 
+                    src={workshop.image} 
+                    alt={workshop.title} 
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute bottom-0 left-0 p-4 z-20">
+                    <span className="inline-block px-3 py-1 bg-white/90 backdrop-blur-sm text-[#F97316] font-medium text-sm rounded-full shadow-sm">
+                      {workshop.level === "Alle" ? "Für alle Levels" : 
+                       workshop.level === "Einst." ? "Für Einsteiger" : "Für Fortgeschrittene"}
+                    </span>
+                    <h3 className="text-2xl font-bold text-white mt-2">{workshop.title}</h3>
+                  </div>
+                </div>
+                
+                <div className="p-6 flex-grow">
+                  <div className="flex items-center mb-4">
+                    <img 
+                      src="/images/workshop/le_femmes.png" 
+                      alt="Les Femmes Orange" 
+                      className="h-8 w-8 rounded-full border-2 border-[#F97316] mr-3 object-cover"
+                    />
+                    <span className="font-medium">{workshop.leader}</span>
+                  </div>
+                  
+                  <h4 className="text-xl font-semibold mb-3 text-gray-800">{workshop.subtitle}</h4>
+                  <p className="text-gray-600 mb-6">{workshop.description}</p>
+                  
+                  <div className="flex flex-wrap gap-4 mb-4">
+                    <div className="flex items-center text-sm text-gray-500">
+                      <Clock className="h-4 w-4 mr-1 text-[#F97316]" />
+                      <span>{workshop.duration}</span>
+                    </div>
+                    <div className="flex items-center text-sm text-gray-500">
+                      <Users className="h-4 w-4 mr-1 text-[#F97316]" />
+                      <span>Max. {workshop.capacity} Teilnehmer</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="p-6 pt-0 mt-auto">
+                  <Button 
+                    onClick={() => openPopup({
+                      redirectUrl: "https://vr-bayernmitte.genolive.de/index.php?page=event-code&code=bitcoin25"
+                    })}
+                    className="w-full bg-gradient-to-r from-[#F97316] to-[#EA580C] hover:from-[#EA580C] hover:to-[#F97316] text-white rounded-xl py-6 shadow-lg transition-all duration-300"
+                  >
+                    Workshop buchen
+                  </Button>
+                </div>
+              </div>
+            ))}
+          </div>
 
-            <div className="bg-[#FEF7CD]/30 rounded-lg p-4 mt-8 text-center">
-              <p className="text-gray-700">
-                <span className="font-semibold">Hinweis:</span> Die Teilnehmerzahl ist auf je 50 Personen pro Workshop begrenzt. Melden Sie sich frühzeitig an, um Ihren Platz zu sichern.
-              </p>
+          <div className="mt-12 max-w-2xl mx-auto">
+            <div className="bg-gradient-to-r from-[#FEF7CD]/50 to-[#FDE1D3]/50 rounded-xl p-6 shadow-md">
+              <div className="flex flex-col md:flex-row items-center gap-6">
+                <div className="md:w-1/4 flex justify-center">
+                  <div className="w-20 h-20 bg-[#F97316]/10 rounded-full flex items-center justify-center">
+                    <Calendar className="h-10 w-10 text-[#F97316]" />
+                  </div>
+                </div>
+                <div className="md:w-3/4">
+                  <h4 className="text-lg font-semibold text-gray-800 mb-3">
+                    Wichtiger Hinweis zur Teilnahme
+                  </h4>
+                  <p className="text-gray-700">
+                    Die Teilnehmerzahl ist auf je 50 Personen pro Workshop begrenzt. Melde dich frühzeitig an, um deinen Platz zu sichern. Die Workshops finden parallel statt, wähle deshalb den Workshop, der am besten zu deinem Kenntnisstand passt.
+                  </p>
+                  <Button 
+                    onClick={() => openPopup({
+                      redirectUrl: "https://vr-bayernmitte.genolive.de/index.php?page=event-code&code=bitcoin25"
+                    })}
+                    className="mt-4 bg-[#F97316] hover:bg-[#EA580C] text-white rounded-full py-5 px-8 shadow-lg"
+                  >
+                    Jetzt anmelden und Workshop sichern
+                  </Button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
