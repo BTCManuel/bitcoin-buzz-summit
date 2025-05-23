@@ -18,13 +18,14 @@ const LesFemmesOrange = () => {
         id: 1,
         title: "Deine Bitcoin Reise",
         leader: "Yvonne Strathmann und Katharina Jantzen",
-        level: "Alle",
+        level: "Einst.",
         subtitle: "Gestalte deine Bitcoin Reise für dich stimmig!",
         capacity: 50,
         duration: "55 Min.",
+        startTime: "12:30 Uhr",
         description: "Wo stehst du gerade auf deiner Bitcoin Reise? Welches Ziel hast du? Was könnte dein nächster Schritt sein und was brauchst du dafür? Gemeinsam und mit der open space Methode schauen wir deine Fragen an. Wir freuen uns auf Dich!",
-        image: "/images/workshop/LFO_8.jpg",
-        category: "all"
+        image: "/images/workshop/LFO_15.jpg",
+        category: "beginner"
       },
       {
         id: 2,
@@ -34,8 +35,9 @@ const LesFemmesOrange = () => {
         subtitle: "Erlebe deine erste erste Bitcoin Transaktion!",
         capacity: 50,
         duration: "55 Min.",
+        startTime: "13:30 Uhr",
         description: "Erstelle mit deinem Smartphone eine Lightning Wallet. Tausche die ersten 10€ in Satoshis um und nutze deine Wallet direkt auf dem Forum, im Alltag oder nächsten Urlaub.",
-        image: "/images/workshop/LFO_11.jpg",
+        image: "/images/workshop/LFO_15.jpg",
         category: "beginner"
       },
       {
@@ -46,8 +48,9 @@ const LesFemmesOrange = () => {
         subtitle: "Firefish. Ein Blick auf neue Marktplätze für Bitcoin-besicherte Kredite",
         capacity: 50,
         duration: "55 Min.",
+        startTime: "14:30 Uhr",
         description: "Lerne wie Bitcoiner die Peer-to-Peer Plattform Firefish nutzen, Kredite aufnehmen oder vergeben können und Bitcoin dabei als Sicherheit dient.",
-        image: "/images/workshop/LFO_3.jpg",
+        image: "/images/workshop/LFO_15.jpg",
         category: "advanced"
       },
       {
@@ -58,8 +61,9 @@ const LesFemmesOrange = () => {
         subtitle: "Nostr. Mehr als nur ein Twitter Klon.",
         capacity: 50,
         duration: "55 Min.",
+        startTime: "15:30 Uhr",
         description: "Lerne Nostr kennen - ein soziales Netzwerk, das deine Privatsphäre schützt und Zensur widersteht. Wir erklären die Grundlagen und unterstützen dich bei der Einrichtung deines eigenen Accounts, damit du sicher und selbstbestimmt in die Nostr-Community starten kannst.",
-        image: "/images/workshop/LFO_7.jpg",
+        image: "/images/workshop/LFO_15.jpg",
         category: "advanced"
       }
     ];
@@ -260,7 +264,7 @@ const LesFemmesOrange = () => {
             </h2>
             <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
               Am Samstagnachmittag bieten wir vier verschiedene Workshops an, die auf unterschiedliche Kenntnisstufen zugeschnitten sind.
-              Jeder Workshop beginnt ab 12:30 Uhr.
+              Der erste Workshop beginnt um 12:30 Uhr, die weiteren folgen stündlich.
             </p>
             
             {/* Filter tabs */}
@@ -313,8 +317,7 @@ const LesFemmesOrange = () => {
                   />
                   <div className="absolute bottom-0 left-0 p-4 z-20">
                     <span className="inline-block px-3 py-1 bg-white/90 backdrop-blur-sm text-[#F97316] font-medium text-sm rounded-full shadow-sm">
-                      {workshop.level === "Alle" ? "Für alle Levels" : 
-                       workshop.level === "Einst." ? "Für Einsteiger" : "Für Fortgeschrittene"}
+                      {workshop.level === "Einst." ? "Für Einsteiger" : "Für Fortgeschrittene"}
                     </span>
                     <h3 className="text-2xl font-bold text-white mt-2">{workshop.title}</h3>
                   </div>
@@ -336,7 +339,7 @@ const LesFemmesOrange = () => {
                   <div className="flex flex-wrap gap-4 mb-4">
                     <div className="flex items-center text-sm text-gray-500">
                       <Clock className="h-4 w-4 mr-1 text-[#F97316]" />
-                      <span>{workshop.duration}</span>
+                      <span>{workshop.startTime} • {workshop.duration}</span>
                     </div>
                     <div className="flex items-center text-sm text-gray-500">
                       <Users className="h-4 w-4 mr-1 text-[#F97316]" />
@@ -372,7 +375,7 @@ const LesFemmesOrange = () => {
                     Wichtiger Hinweis zur Teilnahme
                   </h4>
                   <p className="text-gray-700">
-                    Die Teilnehmerzahl ist auf je 50 Personen pro Workshop begrenzt. Melde dich frühzeitig an, um deinen Platz zu sichern. Die Workshops finden parallel statt, wähle deshalb den Workshop, der am besten zu deinem Kenntnisstand passt.
+                    Die Teilnehmerzahl ist auf je 50 Personen pro Workshop begrenzt. Melde dich frühzeitig an, um deinen Platz zu sichern. Die Workshops finden nacheinander statt, wähle deshalb den Workshop, der am besten zu deinem Kenntnisstand passt.
                   </p>
                   <Button 
                     onClick={() => openPopup({
