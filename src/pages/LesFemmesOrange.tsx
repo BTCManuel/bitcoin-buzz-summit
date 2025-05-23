@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -6,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { usePopup } from '@/pages/PopupContext';
 import { Calendar, Users, MessageSquare, Heart, Clock, Award, Sparkles, MapPin, Globe, ChevronRight, CheckCircle } from 'lucide-react';
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 
 const LesFemmesOrange = () => {
   const { openPopup } = usePopup();
@@ -335,110 +335,107 @@ const LesFemmesOrange = () => {
         </div>
       </section>
 
-      {/* Agenda Section with Improved Design */}
+      {/* Updated Agenda Section with Workshop Details */}
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <span className="inline-block px-4 py-1 bg-[#FEF7CD] rounded-full text-[#F97316] font-medium text-sm mb-4">Bald verfügbar</span>
+          <div className="max-w-3xl mx-auto text-center mb-8">
+            <span className="inline-block px-4 py-1 bg-[#FEF7CD] rounded-full text-[#F97316] font-medium text-sm mb-4">Workshops 11.10.2025</span>
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800">Agenda</h2>
-            <p className="text-lg text-gray-600">
-              Die detaillierte Agenda für die Les Femmes Orange Veranstaltungen wird in Kürze veröffentlicht. Melden Sie sich jetzt an, um als Erste informiert zu werden!
+            <p className="text-lg text-gray-600 mb-8">
+              Am Samstagnachmittag bieten wir vier verschiedene Workshops an, die auf unterschiedliche Kenntnisstufen zugeschnitten sind.
+              Jeder Workshop dauert 55 Minuten und beginnt ab 12:30 Uhr.
             </p>
           </div>
 
-          <div className="bg-white border border-gray-200 rounded-xl p-8 max-w-2xl mx-auto shadow-md">
-            <div className="flex items-start gap-4 mb-8">
-              <div className="bg-[#FDE1D3] rounded-full p-3 mt-1">
-                <Calendar className="h-6 w-6 text-[#F97316]" />
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-gray-800">Freitagnachmittag</h3>
-                <p className="text-gray-600 mt-2">
-                  Spezielle Les Femmes Orange Veranstaltung mit Networking und Einführung in die Bitcoin-Welt.
-                </p>
-                <div className="mt-4 flex gap-2 flex-wrap">
-                  <span className="bg-[#FEF7CD]/60 text-[#F97316] px-3 py-1 rounded-full text-sm">Networking</span>
-                  <span className="bg-[#FEF7CD]/60 text-[#F97316] px-3 py-1 rounded-full text-sm">Vorträge</span>
-                  <span className="bg-[#FEF7CD]/60 text-[#F97316] px-3 py-1 rounded-full text-sm">Diskussionsrunden</span>
-                </div>
+          <div className="max-w-6xl mx-auto">
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <div className="overflow-x-auto">
+                <Table>
+                  <TableHeader>
+                    <TableRow className="bg-[#FDE1D3]/30">
+                      <TableHead className="font-semibold">Workshop</TableHead>
+                      <TableHead className="font-semibold">WS Leader</TableHead>
+                      <TableHead className="font-semibold">Für Frauen*</TableHead>
+                      <TableHead className="font-semibold">Workshop Subtitel</TableHead>
+                      <TableHead className="font-semibold">TN Anzahl</TableHead>
+                      <TableHead className="font-semibold">Dauer</TableHead>
+                      <TableHead className="font-semibold">Beschreibung</TableHead>
+                    </TableRow>
+                  </TableHeader>
+                  <TableBody>
+                    <TableRow className="hover:bg-[#FEF7CD]/20">
+                      <TableCell className="font-medium">1. Deine Bitcoin Reise</TableCell>
+                      <TableCell>Yvonne Strathmann und Katharina Jantzen</TableCell>
+                      <TableCell>Alle</TableCell>
+                      <TableCell>Gestalte deine Bitcoin Reise für dich stimmig!</TableCell>
+                      <TableCell className="text-center">50</TableCell>
+                      <TableCell>55 Min.</TableCell>
+                      <TableCell>
+                        Wo stehst du gerade auf deiner Bitcoin Reise? Welches Ziel hast du? Was könnte dein nächster Schritt sein und was brauchst du dafür? Gemeinsam und mit der open space Methode schauen wir deine Fragen an. Wir freuen uns auf Dich!
+                      </TableCell>
+                    </TableRow>
+                    
+                    <TableRow className="hover:bg-[#FEF7CD]/20">
+                      <TableCell className="font-medium">2. How to Bitcoin I</TableCell>
+                      <TableCell>Korina Karl</TableCell>
+                      <TableCell>Einst.</TableCell>
+                      <TableCell>Erlebe deine erste eingene Bitcoin Transaktion!</TableCell>
+                      <TableCell className="text-center">50</TableCell>
+                      <TableCell>55 Min.</TableCell>
+                      <TableCell>
+                        Erstelle mit deinem Smartphone eine Lightning Wallet. Tausche die ersten 10€ in Satoshis um und nutze deine Wallet direkt auf dem Forum, im Alltag oder nächsten Urlaub.
+                      </TableCell>
+                    </TableRow>
+                    
+                    <TableRow className="hover:bg-[#FEF7CD]/20">
+                      <TableCell className="font-medium">3. How to Bitcoin II</TableCell>
+                      <TableCell>Nicole Nowak</TableCell>
+                      <TableCell>Fortge.</TableCell>
+                      <TableCell>Firefish. Ein Blick auf neue Marktplätze für Bitcoin-besicherte Kredite</TableCell>
+                      <TableCell className="text-center">50</TableCell>
+                      <TableCell>55 Min.</TableCell>
+                      <TableCell>
+                        Lerne wie Bitcoiner die Peer-to-Peer Plattform Firefish nutzen, Kredite aufnehmen oder vergeben können und Bitcoin dabei als Sicherheit dient.
+                      </TableCell>
+                    </TableRow>
+                    
+                    <TableRow className="hover:bg-[#FEF7CD]/20">
+                      <TableCell className="font-medium">4. Nostr</TableCell>
+                      <TableCell>Tanja Bächle</TableCell>
+                      <TableCell>Fortge.</TableCell>
+                      <TableCell>Nostr. Mehr als nur ein Twitter Klon.</TableCell>
+                      <TableCell className="text-center">50</TableCell>
+                      <TableCell>55 Min.</TableCell>
+                      <TableCell>
+                        Lerne Nostr kennen - ein soziales Netzwerk, das deine Privatsphäre schützt und Zensur widersteht. Wir erklären die Grundlagen und unterstützen dich bei der Einrichtung deines eigenen Accounts, damit du sicher und selbstbestimmt in die Nostr-Community starten kannst.
+                      </TableCell>
+                    </TableRow>
+                  </TableBody>
+                </Table>
               </div>
             </div>
-            
-            <div className="flex items-start gap-4">
-              <div className="bg-[#FDE1D3] rounded-full p-3 mt-1">
-                <Calendar className="h-6 w-6 text-[#F97316]" />
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-gray-800">Samstagnachmittag</h3>
-                <p className="text-gray-600 mt-2">
-                  Verschiedene Workshops für Anfängerinnen und Fortgeschrittene zu Bitcoin-Themen.
-                </p>
-                <div className="mt-4 flex gap-2 flex-wrap">
-                  <span className="bg-[#FEF7CD]/60 text-[#F97316] px-3 py-1 rounded-full text-sm">Wallet-Tutorial</span>
-                  <span className="bg-[#FEF7CD]/60 text-[#F97316] px-3 py-1 rounded-full text-sm">Sicherheit</span>
-                  <span className="bg-[#FEF7CD]/60 text-[#F97316] px-3 py-1 rounded-full text-sm">Hands-on Übungen</span>
-                </div>
-              </div>
+
+            <div className="mt-8 text-center">
+              <Button 
+                onClick={() => openPopup({
+                  redirectUrl: "https://vr-bayernmitte.genolive.de/index.php?page=event-code&code=bitcoin25"
+                })}
+                className="bg-[#F97316] hover:bg-[#EA580C] text-white rounded-full py-3 px-8 shadow-lg"
+              >
+                Jetzt anmelden und Workshop sichern
+              </Button>
+            </div>
+
+            <div className="bg-[#FEF7CD]/30 rounded-lg p-4 mt-8 text-center">
+              <p className="text-gray-700">
+                <span className="font-semibold">Hinweis:</span> Die Teilnehmerzahl ist auf je 50 Personen pro Workshop begrenzt. Melden Sie sich frühzeitig an, um Ihren Platz zu sichern.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Testimonials Section 
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-gray-800">Was unsere Community sagt</h2>
-          
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100">
-              <div className="flex items-center mb-4">
-                <div className="h-12 w-12 rounded-full bg-[#FDE1D3] flex items-center justify-center mr-4">
-                  <span className="font-bold text-lg text-[#F97316]">L</span>
-                </div>
-                <div>
-                  <h4 className="font-medium">Laura M.</h4>
-                  <p className="text-sm text-gray-500">Bitcoin-Neuling</p>
-                </div>
-              </div>
-              <p className="text-gray-600 italic">
-                "Dank Les Femmes Orange konnte ich in einer entspannten Atmosphäre die Grundlagen von Bitcoin lernen. Besonders wertvoll war für mich, dass alle Fragen willkommen waren und ich von erfahrenen Frauen lernen konnte."
-              </p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100">
-              <div className="flex items-center mb-4">
-                <div className="h-12 w-12 rounded-full bg-[#FDE1D3] flex items-center justify-center mr-4">
-                  <span className="font-bold text-lg text-[#F97316]">S</span>
-                </div>
-                <div>
-                  <h4 className="font-medium">Sarah K.</h4>
-                  <p className="text-sm text-gray-500">Fintech-Expertin</p>
-                </div>
-              </div>
-              <p className="text-gray-600 italic">
-                "Als Mentorin bei Les Femmes Orange schätze ich die Möglichkeit, mein Wissen weiterzugeben und gleichzeitig von den Perspektiven anderer Frauen zu lernen. Diese Community ist unglaublich wertvoll."
-              </p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100">
-              <div className="flex items-center mb-4">
-                <div className="h-12 w-12 rounded-full bg-[#FDE1D3] flex items-center justify-center mr-4">
-                  <span className="font-bold text-lg text-[#F97316]">M</span>
-                </div>
-                <div>
-                  <h4 className="font-medium">Maria T.</h4>
-                  <p className="text-sm text-gray-500">Unternehmerin</p>
-                </div>
-              </div>
-              <p className="text-gray-600 italic">
-                "Die Events von Les Femmes Orange haben mir nicht nur das nötige Wissen vermittelt, sondern auch das Selbstvertrauen gegeben, Bitcoin in meinem Unternehmen zu implementieren. Ein absoluter Game-Changer!"
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-  */}
-  {/* About Section with Enhanced Design */}
+      {/* About Section with Enhanced Design */}
       <section id="about" className="py-16 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
