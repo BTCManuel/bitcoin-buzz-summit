@@ -328,6 +328,25 @@ const speakersData = [
         </a>
       </>
     ),
+      {
+    name: "Korina Karl",
+    role: "Wirtschaftsingenieurin",
+    company: "",
+    image: "/images/speakers/Korina_Karl.png",
+    bio: (
+      <>
+        setzt ihre Technologieoffenheit und Kreativität für die Bitcoin-Bildung von Frauen ein. 2025 initiierte sie die YouTube-Formate LFO live „Story Time“ und „How to Bitcoin“ in denen Frauen ihren persönlichen Weg in die Bitcoin-Welt teilen. Weitere Informationen unter:
+        <br />
+        <a
+          href="https://bitcoinforum.bayern"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-bitcoin underline"
+        >
+          https://bitcoinforum.bayern
+        </a>
+      </>
+    ),
     bgColor: "bg-[#D3E4FD]/50",
     bgSolidColor: "bg-[#D3E4FD]"
   },
@@ -582,6 +601,21 @@ const speakersData = [
     bio: (
       <>
         ist Head of Operations bei der terahash.energy GmbH. In dieser Rolle verantwortet er die Entwicklung und Umsetzung technischer Konzepte rund um effizientes Bitcoin-Mining. Ein besonderer Schwerpunkt liegt auf der Nutzung von Rechenzentrumsabwärme für industrielle Prozesse oder kommunale Wärmeplanung. Weitere Informationen unter:
+        <br />
+        <a href="https://bitcoinforum.bayern" target="_blank" rel="noopener noreferrer" className="text-bitcoin underline">https://bitcoinforum.bayern</a>
+      </>
+    ),
+    bgColor: "bg-[#FDE1D3]/50",
+    bgSolidColor: "bg-[#FDE1D3]"
+  },
+  {
+    name: "Yvonne Strathmann",
+    role: "Diplom-Sozialpädagogin",
+    company: "",
+    image: "/images/speakers/Yvonne_Strathmann.png",
+    bio: (
+      <>
+        leitet Trainings sowie Seminare in Gewaltfreier Kommunikation für Führungskräfte. Ihr zentrales Anliegen ist es, Menschen zur Freiheit im Denken und Handeln zu befähigen und ihnen neue Perspektiven für ihre persönliche und berufliche Entwicklung zu eröffnen. Weitere Informationen unter:
         <br />
         <a href="https://bitcoinforum.bayern" target="_blank" rel="noopener noreferrer" className="text-bitcoin underline">https://bitcoinforum.bayern</a>
       </>
