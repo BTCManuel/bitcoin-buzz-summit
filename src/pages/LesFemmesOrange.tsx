@@ -37,7 +37,7 @@ const LesFemmesOrange = () => {
         duration: "55 Min.",
         startTime: "13:30 Uhr",
         description: "Erstelle mit deinem Smartphone eine Lightning Wallet. Tausche die ersten 10€ in Satoshis um und nutze deine Wallet direkt auf dem Forum, im Alltag oder nächsten Urlaub.",
-        image: "/images/workshop/LFO_18.jpg",
+        image: "/images/workshop/LFO_18.jpeg",
         category: "beginner"
       },
       {
@@ -50,7 +50,7 @@ const LesFemmesOrange = () => {
         duration: "55 Min.",
         startTime: "14:30 Uhr",
         description: "Lerne wie Bitcoiner die Peer-to-Peer Plattform Firefish nutzen, Kredite aufnehmen oder vergeben können und Bitcoin dabei als Sicherheit dient.",
-        image: "/images/workshop/LFO_19.jpg",
+        image: "/images/workshop/LFO_19.jpeg",
         category: "advanced"
       },
       {
@@ -63,7 +63,7 @@ const LesFemmesOrange = () => {
         duration: "55 Min.",
         startTime: "15:30 Uhr",
         description: "Lerne Nostr kennen - ein soziales Netzwerk, das deine Privatsphäre schützt und Zensur widersteht. Wir erklären die Grundlagen und unterstützen dich bei der Einrichtung deines eigenen Accounts, damit du sicher und selbstbestimmt in die Nostr-Community starten kannst.",
-        image: "/images/workshop/LFO_20.jpg",
+        image: "/images/workshop/LFO_20.jpeg",
         category: "advanced"
       }
     ];
