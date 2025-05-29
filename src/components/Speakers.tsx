@@ -328,6 +328,9 @@ const speakersData = [
         </a>
       </>
     ),
+     bgColor: "bg-[#D3E4FD]/50",
+    bgSolidColor: "bg-[#D3E4FD]"
+  },
       {
     name: "Korina Karl",
     role: "Wirtschaftsingenieurin",
