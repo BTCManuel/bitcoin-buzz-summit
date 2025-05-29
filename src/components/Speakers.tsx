@@ -713,7 +713,7 @@ const speakersData = [
     name: "Katharina Jantzen",
     role: "Geschäftsführerin",
     company: "continua GmbH",
-    image: "/images/speakers/Katharina Jantzen.png",
+    image: "/images/speakers/Katharina_Jantzen.png",
     bio: (
       <>
         ist eine engagierte Mentorin und überzeugte Bitcoinerin. Ihre Leidenschaft gilt der Zukunftsfähigkeit von Unternehmen sowie einem robusten Geldsystem für die nächste Generation. Weitere Informationen unter:
