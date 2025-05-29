@@ -709,6 +709,21 @@ const speakersData = [
     bgColor: "bg-[#F2FCE2]/50",
     bgSolidColor: "bg-[#F2FCE2]"
   },
+   {
+    name: "Katharina Jantzen",
+    role: "Geschäftsführerin",
+    company: "continua GmbH",
+    image: "/images/speakers/Katharina Jantzen.png",
+    bio: (
+      <>
+        ist eine engagierte Mentorin und überzeugte Bitcoinerin. Ihre Leidenschaft gilt der Zukunftsfähigkeit von Unternehmen sowie einem robusten Geldsystem für die nächste Generation. Weitere Informationen unter:
+        <br />
+        <a href="https://bitcoinforum.bayern" target="_blank" rel="noopener noreferrer" className="text-bitcoin underline">https://bitcoinforum.bayern</a>
+      </>
+    ),
+    bgColor: "bg-[#F2FCE2]/50",
+    bgSolidColor: "bg-[#F2FCE2]"
+  },
   {
     name: "Harald Rauter",
     role: "",
