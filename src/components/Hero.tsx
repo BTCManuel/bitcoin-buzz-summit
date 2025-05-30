@@ -18,7 +18,7 @@ const Hero = () => {
             <span className="text-sm md:text-base font-medium text-bitcoin"> 09.-11. Oktober 2025 • Ingolstadt</span>
           </div>
           <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight text-gray-800">
-            <span className="block mb-2">3. Bitcoin Forum</span> 
+            <span className="block mb-2">3. BitcoinForum</span> 
             <span className="bg-gradient-to-r from-bitcoin to-bitcoin-light bg-clip-text text-transparent">VR-Bank Bayern Mitte</span>
           </h1>
           <p className="text-xl md:text-2xl mb-12 text-gray-600 max-w-2xl mx-auto">

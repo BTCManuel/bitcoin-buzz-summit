@@ -74,9 +74,9 @@ const About = () => {
           <div className="inline-block mb-4 px-4 py-1 bg-[#FEF7CD] backdrop-blur-sm rounded-full border border-bitcoin/20">
             <span className="text-sm uppercase tracking-wider font-medium text-bitcoin">Über das Forum</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-gray-800">Das 3. Bitcoin Forum</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-gray-800">Das 3. BitcoinForum</h2>
           <p className="text-xl text-gray-600">
-            Zum dritten Mal lädt die VR-Bank Bayern Mitte in diesem Jahr zum Bitcoin Forum ein. Erfahren Sie mehr über die 
+            Zum dritten Mal lädt die VR-Bank Bayern Mitte in diesem Jahr zum BitcoinForum ein. Erfahren Sie mehr über die 
             Chancen und Risiken von Bitcoin direkt aus erster Hand von vielen Bitcoin- und Finanzexperten. Neben reinen Vorträgen werden auch dieses Jahr viele Workshops und spezielle Seminare angeboten. 
             Es ist für jeden etwas dabei - egal ob Neuling oder technikbegeisterter Bitcoin-Enthusiast. Jeder ist willkommen.
           </p>

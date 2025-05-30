@@ -21,7 +21,7 @@ const Schedule = () => {
       time: "18:30",
       title: "Begrüßung & Einführung",
       speaker: "Andreas Streb",
-      description: "Willkommen zum 3. Bitcoin Forum der VR-Bank Bayern Mitte"
+      description: "Willkommen zum 3. BitcoinForum der VR-Bank Bayern Mitte"
     },
     {
       time: "18:45",
@@ -81,7 +81,7 @@ const Schedule = () => {
                   <div className="aspect-video rounded-xl overflow-hidden shadow-lg">
                     <iframe
                       src="https://www.youtube.com/embed/OJlUYckw2Ko?autoplay=1&mute=1&loop=1&playlist=OJlUYckw2Ko"
-                      title="Bitcoin Forum Preview"
+                      title="BitcoinForum Preview"
                       allow="autoplay; loop"
                       allowFullScreen
                       className="w-full h-full"

@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="md:col-span-2">
             <Link to="/" className="flex items-center space-x-2 mb-4">
               <Bitcoin className="h-8 w-8 text-bitcoin" />
-              <span className="font-bold text-xl">3.Bitcoin Forum 9.-11 Oktober 2025</span>
+              <span className="font-bold text-xl">3.BitcoinForum 9.-11 Oktober 2025</span>
             </Link>
             <p className="text-gray-600 mb-6 max-w-md">
               Das führende Forum für Anfänger und Bitcoin-Interessierte. Besuchen Sie uns im Oktober 2025 in Ingolstadt.
@@ -49,14 +49,14 @@ const Footer = () => {
               <li className="text-gray-600">Nena Celeste UG (haftungsbeschränkt)</li>
               <li className="text-gray-600">für das 3. BitcoinForum bereitgestellt.</li>
            
-              <li className="text-gray-600"> <a href="mailto:website_anfrage@nena-celeste.de?Subject=Anfrage von Bitcoin Forum Website">Kontakt per e-mail </a> </li>
+              <li className="text-gray-600"> <a href="mailto:website_anfrage@nena-celeste.de?Subject=Anfrage von BitcoinForum Website">Kontakt per e-mail </a> </li>
             </ul>
           </div>
         </div>
         
         <div className="border-t border-gray-200 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-500 text-sm mb-4 md:mb-0">
-            &copy; 2025 3.Bitcoin Forum. All rights reserved.
+            &copy; 2025 3.BitcoinForum. All rights reserved.
           </p>
           <div className="flex space-x-6 text-sm text-gray-500">
             <a href="https://nena-celeste.com/cookie-richtlinie/" className="hover:text-bitcoin transition-colors">Cookie Richtlinie</a>

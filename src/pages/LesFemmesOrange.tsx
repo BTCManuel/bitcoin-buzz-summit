@@ -86,7 +86,7 @@ const LesFemmesOrange = () => {
           <div className="flex flex-col lg:flex-row items-center gap-8 md:gap-16">
             <div className="lg:w-1/2 space-y-6 text-center lg:text-left">
               <div className="inline-block px-4 py-1 bg-white/70 backdrop-blur-sm rounded-full border border-[#F97316]/20 mb-4">
-                <span className="text-sm font-medium text-[#F97316]">Teil des 3. Bitcoin Forums 2025</span>
+                <span className="text-sm font-medium text-[#F97316]">Teil des 3. BitcoinForums 2025</span>
               </div>
               <h1 className="text-4xl md:text-6xl font-bold text-gray-800 leading-tight">
                 <span className="block">Les Femmes</span>
@@ -142,7 +142,7 @@ const LesFemmesOrange = () => {
       </section>
 
     
-      {/* Bitcoin Forum Section with Enhanced Visuals */}
+      {/* BitcoinForum Section with Enhanced Visuals */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-white to-gray-50">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center gap-12">
@@ -151,7 +151,7 @@ const LesFemmesOrange = () => {
                 <div className="absolute -top-4 -left-4 w-20 h-20 bg-[#FDE1D3] rounded-full -z-10"></div>
                 <img 
                   src="/images/workshop/LFO_5.jpg" 
-                  alt="Bitcoin Forum Event" 
+                  alt="BitcoinForum Event" 
                   className="max-w-full h-auto relative z-10"
                 />
                 <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-[#FEF7CD] rounded-full -z-10"></div>
@@ -161,9 +161,9 @@ const LesFemmesOrange = () => {
               <div className="inline-block px-4 py-1 bg-[#FEF7CD] rounded-full text-[#F97316] font-medium text-sm">
                 Sonderveranstaltung
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-800">Les Femmes Orange beim Bitcoin Forum</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-800">Les Femmes Orange beim BitcoinForum</h2>
               <p className="text-lg text-gray-600">
-                Im Rahmen des 3. Bitcoin Forums wird Les Femmes Orange am Freitagnachmittag eine eigene Veranstaltung ausrichten sowie am Samstagnachmittag mehrere Workshops anbieten. Wir heißen alle Frauen herzlich willkommen – ganz gleich, ob Bitcoin-Newbie oder alte Häsin!
+                Im Rahmen des 3. BitcoinForums wird Les Femmes Orange am Freitagnachmittag eine eigene Veranstaltung ausrichten sowie am Samstagnachmittag mehrere Workshops anbieten. Wir heißen alle Frauen herzlich willkommen – ganz gleich, ob Bitcoin-Newbie oder alte Häsin!
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4">

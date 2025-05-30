@@ -20,7 +20,7 @@ const Datenschutz = () => {
         <div className="prose max-w-none">
           <p>
             Diese Datenschutzerklärung klärt Sie über die Art, den Umfang und Zweck der Verarbeitung von personenbezogenen Daten 
-            im Rahmen der Nutzung der 3.Bitcoin Forum Website auf.
+            im Rahmen der Nutzung der 3.BitcoinForum Website auf.
           </p>
 
           <h2 className="text-xl font-bold mt-6 mb-4">Verantwortlicher</h2>

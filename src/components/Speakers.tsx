@@ -94,7 +94,7 @@ const speakersData = [
   {
     name: "Joe Martin",
     role: "Co-Founder",
-    company: "Bitcoin Forum",
+    company: "BitcoinForum",
     image: "/images/speakers/Joe_Martin.jpg",
     bio: (
       <>

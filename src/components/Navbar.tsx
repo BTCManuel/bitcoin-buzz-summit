@@ -41,7 +41,7 @@ const Navbar = () => {
             <Bitcoin className={`h-6 w-6 ${isScrolled ? 'text-white' : 'text-bitcoin'}`} />
           </div>
           <div>
-            <span className={`font-bold text-lg block leading-tight ${isScrolled ? 'text-gray-800' : 'text-gray-800'}`}>3.Bitcoin Forum</span>
+            <span className={`font-bold text-lg block leading-tight ${isScrolled ? 'text-gray-800' : 'text-gray-800'}`}>3.BitcoinForum</span>
             <span className="text-xs text-bitcoin">Oktober 2025</span>
           </div>
         </Link>

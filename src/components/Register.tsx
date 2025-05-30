@@ -96,7 +96,7 @@ const Register = () => {
               
               <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-8">
                 <p className="text-xl text-gray-300">
-                  Sichern Sie sich Ihren Platz beim Bitcoin Forum 2025 und entscheiden Sie selbst wie Bitcoin Ihnen in Zukunft helfen kann.
+                  Sichern Sie sich Ihren Platz beim BitcoinForum 2025 und entscheiden Sie selbst wie Bitcoin Ihnen in Zukunft helfen kann.
                 </p>
                 
                 <a href="https://vr-bayernmitte.genolive.de/index.php?page=event-code&code=bitcoin25" 

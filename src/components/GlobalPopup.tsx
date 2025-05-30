@@ -15,7 +15,7 @@ const GlobalPopup = () => {
        Beim Ticketkauf lässt sich dafür bequem ein Alarm aktivieren.
       </p>
       <p><br></br>
-        Der Ticketkauf erfolgt über die <strong>Volksbank Raiffeisenbank Bayern Mitte eG</strong>, die zugleich Veranstalter des <strong>3. Bitcoin Forums</strong> ist – 100 % DSGVO-konform und in wenigen Schritten erledigt.
+        Der Ticketkauf erfolgt über die <strong>Volksbank Raiffeisenbank Bayern Mitte eG</strong>, die zugleich Veranstalter des <strong>3. BitcoinForums</strong> ist – 100 % DSGVO-konform und in wenigen Schritten erledigt.
       </p>
       <p> <br></br>
         Je nach Ticketkategorie genießen Sie Zugang zur Ausstellung, spannenden Vorträgen oder exklusiv zum VIP-Bereich
