@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Bitcoin, Twitter, Linkedin, Mail } from 'lucide-react';
@@ -58,10 +57,11 @@ const Footer = () => {
           <p className="text-gray-500 text-sm mb-4 md:mb-0">
             &copy; 2025 3.BitcoinForum. All rights reserved.
           </p>
+          
           <div className="flex space-x-6 text-sm text-gray-500">
             <a href="https://nena-celeste.com/cookie-richtlinie/" className="hover:text-bitcoin transition-colors">Cookie Richtlinie</a>
             <a href="https://nena-celeste.com/datenschutz/" className="hover:text-bitcoin transition-colors">Datenschutz</a>
-            <a href="https://nena-celeste.com/impressum/" className="hover:text-bitcoin transition-colors">Impressum</a>
+            <Link to="/impressum" className="hover:text-bitcoin transition-colors">Impressum</Link>
           </div>
         </div>
       </div>
