@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Index from './pages/Index';
@@ -18,6 +17,7 @@ import {
 } from '@tanstack/react-query'
 import { PopupProvider } from "@/pages/PopupContext";
 import Impressum from '@/pages/Impressum';
+import CookieRichtlinie from './pages/CookieRichtlinie';
 
 const queryClient = new QueryClient()
 
@@ -38,6 +38,7 @@ function App() {
               <Route path="/bip25-members" element={<BIP25Members />} />
               <Route path="/datenschutz" element={<Datenschutz />} />
               <Route path="/impressum" element={<Impressum />} />
+              <Route path="/cookie-richtlinie" element={<CookieRichtlinie />} />
               <Route path="/workshop/bitcoin-in-der-bank" element={<WorkshopBitcoinInDerBank />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
