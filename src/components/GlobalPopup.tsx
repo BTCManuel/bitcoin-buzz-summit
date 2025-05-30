@@ -1,5 +1,5 @@
 
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter, DialogDescription } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { usePopup } from "@/pages/PopupContext";
 import { ArrowRight, Calendar, Clock, MapPin, Users, Star, Sparkles } from "lucide-react";
@@ -9,25 +9,25 @@ const GlobalPopup = () => {
 
   const defaultTitle = <strong>Zuerst ein Ticket, dann die volle Auswahl</strong>;
   const defaultMessage = (
-    <>
-      <p>
+    <div className="space-y-4">
+      <div>
        Für den Eintritt zur Saturn Arena ist stets ein Ticket erforderlich – auch bei kostenlosen Messetickets. Anschließend können Sie Ihre Wunsch-Workshops buchen, sobald diese verfügbar sind. 
        Beim Ticketkauf lässt sich dafür bequem ein Alarm aktivieren.
-      </p>
-      <p><br></br>
+      </div>
+      <div>
         Der Ticketkauf erfolgt über die <strong>Volksbank Raiffeisenbank Bayern Mitte eG</strong>, die zugleich Veranstalter des <strong>3. BitcoinForums</strong> ist – 100 % DSGVO-konform und in wenigen Schritten erledigt.
-      </p>
-      <p> <br></br>
+      </div>
+      <div>
         Je nach Ticketkategorie genießen Sie Zugang zur Ausstellung, spannenden Vorträgen oder exklusiv zum VIP-Bereich
         mit zusätzlichen Vorträgen, Kamingesprächen, voller Verpflegung und weiteren Extras.
-      </p>
-      <p><br></br>
+      </div>
+      <div>
         <strong>Und das Beste:</strong> Nach dem Ticketkauf können Sie Ihr Erlebnis mit Workshops erweitern Nach dem Ticketkauf können Sie Ihr Erlebnis individuell erweitern - von Einsteiger-Sessions bis hin zu technischen Masterclasses.
-      </p>
-      <p><br></br>
+      </div>
+      <div>
         <strong>Sichern Sie sich jetzt Ihr Ticket</strong> und gestalten Sie Ihr ganz persönliches Programm!
-      </p>
-    </>
+      </div>
+    </div>
   );
   
   if (!open || !data) return null;
@@ -54,7 +54,7 @@ const GlobalPopup = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col justify-end">
               <div className="p-6 text-white">
                 <h2 className="text-2xl md:text-3xl font-bold">{data.title || defaultTitle}</h2>
-                {data.subtitle && <p className="text-white/90 text-lg">{data.subtitle}</p>}
+                {data.subtitle && <div className="text-white/90 text-lg">{data.subtitle}</div>}
               </div>
             </div>
           </div>
@@ -65,13 +65,13 @@ const GlobalPopup = () => {
           {!data.imageUrl && (
             <DialogHeader>
               <DialogTitle className="text-xl md:text-2xl">{data.title || defaultTitle}</DialogTitle>
-              {data.subtitle && <p className="text-gray-600 text-sm mt-1">{data.subtitle}</p>}
+              {data.subtitle && <div className="text-gray-600 text-sm mt-1">{data.subtitle}</div>}
             </DialogHeader>
           )}
 
-          <DialogDescription className="py-4">
+          <div className="py-4 text-gray-700">
             {data.message || defaultMessage}
-          </DialogDescription>
+          </div>
 
           {/* Workshop Details Section */}
           {data.agenda && data.agenda.length > 0 && (
@@ -137,8 +137,8 @@ const GlobalPopup = () => {
                     <Calendar className="h-5 w-5" />
                   </div>
                   <div>
-                    <p className="text-xs uppercase tracking-wider text-gray-500">Datum</p>
-                    <p className="font-medium text-gray-800">{data.date}</p>
+                    <div className="text-xs uppercase tracking-wider text-gray-500">Datum</div>
+                    <div className="font-medium text-gray-800">{data.date}</div>
                   </div>
                 </div>
               )}
@@ -148,8 +148,8 @@ const GlobalPopup = () => {
                     <Clock className="h-5 w-5" />
                   </div>
                   <div>
-                    <p className="text-xs uppercase tracking-wider text-gray-500">Zeit</p>
-                    <p className="font-medium text-gray-800">{data.time}</p>
+                    <div className="text-xs uppercase tracking-wider text-gray-500">Zeit</div>
+                    <div className="font-medium text-gray-800">{data.time}</div>
                   </div>
                 </div>
               )}
@@ -159,8 +159,8 @@ const GlobalPopup = () => {
                     <MapPin className="h-5 w-5" />
                   </div>
                   <div>
-                    <p className="text-xs uppercase tracking-wider text-gray-500">Ort</p>
-                    <p className="font-medium text-gray-800">{data.location}</p>
+                    <div className="text-xs uppercase tracking-wider text-gray-500">Ort</div>
+                    <div className="font-medium text-gray-800">{data.location}</div>
                   </div>
                 </div>
               )}
@@ -170,8 +170,8 @@ const GlobalPopup = () => {
                     <Users className="h-5 w-5" />
                   </div>
                   <div>
-                    <p className="text-xs uppercase tracking-wider text-gray-500">Verfügbare Plätze</p>
-                    <p className="font-medium text-gray-800">{data.seats}</p>
+                    <div className="text-xs uppercase tracking-wider text-gray-500">Verfügbare Plätze</div>
+                    <div className="font-medium text-gray-800">{data.seats}</div>
                   </div>
                 </div>
               )}
@@ -181,8 +181,8 @@ const GlobalPopup = () => {
                     <Star className="h-5 w-5" />
                   </div>
                   <div>
-                    <p className="text-xs uppercase tracking-wider text-gray-500">Schwierigkeit</p>
-                    <p className="font-medium text-gray-800">{data.difficulty}</p>
+                    <div className="text-xs uppercase tracking-wider text-gray-500">Schwierigkeit</div>
+                    <div className="font-medium text-gray-800">{data.difficulty}</div>
                   </div>
                 </div>
               )}
