@@ -40,7 +40,11 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({
 
   const handleCopyLink = async () => {
     try {
-      const shareText = `${title}\n\n${description}\n\n🔗 ${url}`;
+      const shareText = `${title}
+
+${description}
+
+🔗 ${url}`;
       await navigator.clipboard.writeText(shareText);
       console.log('Link copied to clipboard');
     } catch (error) {
@@ -49,18 +53,30 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({
   };
 
   const handleTwitterShare = () => {
-    const text = `${title}\n\n${description}`;
-    const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}&hashtags=${encodeURIComponent(hashtags.join(','))}`;
+    const text = `${title}
+
+${description}
+
+${hashtags.map(tag => `#${tag}`).join(' ')}`;
+    const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`;
     window.open(twitterUrl, '_blank', 'width=600,height=400');
   };
 
   const handleFacebookShare = () => {
-    const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&quote=${encodeURIComponent(`${title}\n\n${description}`)}`;
+    const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&quote=${encodeURIComponent(`${title}
+
+${description}`)}`;
     window.open(facebookUrl, '_blank', 'width=600,height=400');
   };
 
   const handleWhatsAppShare = () => {
-    const text = `*${title}*\n\n${description}\n\n🔗 ${url}`;
+    const text = `*${title}*
+
+${description}
+
+🔗 ${url}
+
+${hashtags.map(tag => `#${tag}`).join(' ')}`;
     const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(text)}`;
     window.open(whatsappUrl, '_blank');
   };
@@ -72,7 +88,13 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({
 
   const handleInstagramShare = () => {
     // Copy formatted text for Instagram
-    const instagramText = `${title}\n\n${description}\n\n🔗 ${url}\n\n${hashtags.map(tag => `#${tag}`).join(' ')}`;
+    const instagramText = `${title}
+
+${description}
+
+🔗 ${url}
+
+${hashtags.map(tag => `#${tag}`).join(' ')}`;
     navigator.clipboard.writeText(instagramText).then(() => {
       console.log('Instagram text copied to clipboard');
     });
@@ -81,7 +103,13 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({
 
   const handleTikTokShare = () => {
     // Copy formatted text for TikTok
-    const tiktokText = `${title}\n\n${description}\n\n🔗 ${url}\n\n${hashtags.map(tag => `#${tag}`).join(' ')}`;
+    const tiktokText = `${title}
+
+${description}
+
+🔗 ${url}
+
+${hashtags.map(tag => `#${tag}`).join(' ')}`;
     navigator.clipboard.writeText(tiktokText).then(() => {
       console.log('TikTok text copied to clipboard');
     });
