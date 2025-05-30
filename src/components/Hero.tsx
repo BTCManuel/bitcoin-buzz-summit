@@ -1,3 +1,4 @@
+
 import { usePopup } from "@/pages/PopupContext";
 
 import React from 'react';
@@ -25,7 +26,7 @@ const Hero = () => {
             Die spannende Welt von Bitcoin und der Blockchain-Technologie
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-<a
+<button
   onClick={() =>
     openPopup({
       redirectUrl: "https://vr-bayernmitte.genolive.de/index.php?page=event-code&code=bitcoin25"
@@ -34,7 +35,7 @@ const Hero = () => {
   className="cursor-pointer bg-bitcoin hover:bg-bitcoin-dark text-white text-lg py-7 px-10 rounded-full shadow-lg shadow-bitcoin/20 transition-all duration-300 hover:scale-105 text-center font-medium"
 >
   Jetzt Anmelden
-</a>
+</button>
 
             <a
               href="#schedule"

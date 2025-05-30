@@ -8,8 +8,6 @@ import { BITCOIN_COLOR } from '@/lib/utils';
 import { usePopup } from "@/pages/PopupContext";
 import {Ticket } from 'lucide-react';
 
-
-
 const Venue = () => {
   const { openPopup } = usePopup();
   const [isOpen, setIsOpen] = useState(false); 
@@ -284,8 +282,6 @@ const Venue = () => {
   >
     <Ticket className="h-5 w-5" /> Sichere dein Ticket
   </Button>
-
-
         </div>
       </div>
     </section>
