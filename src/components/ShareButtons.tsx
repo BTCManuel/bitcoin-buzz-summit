@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Share2, Twitter, Facebook, MessageCircle, Linkedin, Instagram } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -44,7 +43,7 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({
 
 ${description}
 
-🔗 ${url}`;
+🔗 https://bitcoinforum.bayern`;
       await navigator.clipboard.writeText(shareText);
       console.log('Link copied to clipboard');
     } catch (error) {
@@ -58,12 +57,12 @@ ${description}
 ${description}
 
 ${hashtags.map(tag => `#${tag}`).join(' ')}`;
-    const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`;
+    const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent('https://bitcoinforum.bayern')}`;
     window.open(twitterUrl, '_blank', 'width=600,height=400');
   };
 
   const handleFacebookShare = () => {
-    const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&quote=${encodeURIComponent(`${title}
+    const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent('https://bitcoinforum.bayern')}&quote=${encodeURIComponent(`${title}
 
 ${description}`)}`;
     window.open(facebookUrl, '_blank', 'width=600,height=400');
@@ -74,7 +73,7 @@ ${description}`)}`;
 
 ${description}
 
-🔗 ${url}
+🔗 https://bitcoinforum.bayern
 
 ${hashtags.map(tag => `#${tag}`).join(' ')}`;
     const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(text)}`;
@@ -82,7 +81,7 @@ ${hashtags.map(tag => `#${tag}`).join(' ')}`;
   };
 
   const handleLinkedInShare = () => {
-    const linkedinUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}&summary=${encodeURIComponent(description)}`;
+    const linkedinUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent('https://bitcoinforum.bayern')}&title=${encodeURIComponent(title)}&summary=${encodeURIComponent(description)}`;
     window.open(linkedinUrl, '_blank', 'width=600,height=400');
   };
 
@@ -92,7 +91,7 @@ ${hashtags.map(tag => `#${tag}`).join(' ')}`;
 
 ${description}
 
-🔗 ${url}
+🔗 https://bitcoinforum.bayern
 
 ${hashtags.map(tag => `#${tag}`).join(' ')}`;
     navigator.clipboard.writeText(instagramText).then(() => {
@@ -107,7 +106,7 @@ ${hashtags.map(tag => `#${tag}`).join(' ')}`;
 
 ${description}
 
-🔗 ${url}
+🔗 https://bitcoinforum.bayern
 
 ${hashtags.map(tag => `#${tag}`).join(' ')}`;
     navigator.clipboard.writeText(tiktokText).then(() => {
