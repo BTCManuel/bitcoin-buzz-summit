@@ -693,6 +693,21 @@ const speakersData = [
     bgColor: "bg-[#D3E4FD]/50",
     bgSolidColor: "bg-[#D3E4FD]"
   },
+   {
+    name: "Sibylle Eberle",
+    role: "",
+    company: "",
+    image: "/images/speakers/Sibylle_Eberle.png",
+    bio: (
+      <>
+        geboren 1984, ist Journalistin und TV-Moderatorin bei SRF Sport. Seit 2018 steht sie für SRF vor der Kamera. Neben ihrer Tätigkeit beim Fernsehen arbeitet sie freiberuflich als Eventmoderatorin und DJ – zuletzt unter anderem an der Swiss Bitcoin Conference 2025 in Kreuzlingen. Weitere Informationen unter:
+        <br />
+        <a href="https://bitcoinforum.bayern" target="_blank" rel="noopener noreferrer" className="text-bitcoin underline">https://bitcoinforum.bayern</a>
+      </>
+    ),
+    bgColor: "bg-[#F2FCE2]/50",
+    bgSolidColor: "bg-[#F2FCE2]"
+  },
   {
     name: "Thomas Ebner",
     role: "",
@@ -722,21 +737,6 @@ const speakersData = [
     ),
     bgColor: "bg-[#FEF7CD]/50",
     bgSolidColor: "bg-[#FEF7CD]"
-  },
-  {
-    name: "Sibylle Eberle",
-    role: "",
-    company: "",
-    image: "/images/speakers/Sibylle_Eberle.png",
-    bio: (
-      <>
-        geboren 1984, ist Journalistin und TV-Moderatorin bei SRF Sport. Seit 2018 steht sie für SRF vor der Kamera. Neben ihrer Tätigkeit beim Fernsehen arbeitet sie freiberuflich als Eventmoderatorin und DJ – zuletzt unter anderem an der Swiss Bitcoin Conference 2025 in Kreuzlingen. Weitere Informationen unter:
-        <br />
-        <a href="https://bitcoinforum.bayern" target="_blank" rel="noopener noreferrer" className="text-bitcoin underline">https://bitcoinforum.bayern</a>
-      </>
-    ),
-    bgColor: "bg-[#F2FCE2]/50",
-    bgSolidColor: "bg-[#F2FCE2]"
   },
   {
     name: "Nathaly Lenz",
