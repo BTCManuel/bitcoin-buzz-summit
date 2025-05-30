@@ -24,7 +24,7 @@ const LesFemmesOrange = () => {
         duration: "55 Min.",
         startTime: "12:30 Uhr",
         description: "Wo stehst du gerade auf deiner Bitcoin Reise? Welches Ziel hast du? Was könnte dein nächster Schritt sein und was brauchst du dafür? Gemeinsam und mit der open space Methode schauen wir deine Fragen an. Wir freuen uns auf Dich!",
-        image: "/images/workshop/LFO_17.jpg",
+        image: "/images/workshop/LFO_Workshop1.jpg",
         category: "beginner"
       },
       {
