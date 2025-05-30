@@ -7,7 +7,6 @@ import Speakers from '@/components/Speakers';
 import Schedule from '@/components/Schedule';
 import Venue from '@/components/Venue';
 import Register from '@/components/Register';
-import Footer from '@/components/Footer';
 
 const Index = () => {
   // Smooth scrolling for anchor links
@@ -35,7 +34,6 @@ const Index = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Navbar />
       <main>
         <Hero />
         <About />
@@ -44,7 +42,6 @@ const Index = () => {
         <Venue />
         <Register />
       </main>
-      <Footer />
     </div>
   );
 };
