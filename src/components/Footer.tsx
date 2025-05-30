@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Bitcoin, Twitter, Linkedin, Mail } from 'lucide-react';
@@ -59,8 +60,8 @@ const Footer = () => {
           </p>
           
           <div className="flex space-x-6 text-sm text-gray-500">
-            <a href="https://nena-celeste.com/cookie-richtlinie/" className="hover:text-bitcoin transition-colors">Cookie Richtlinie</a>
-            <a href="https://nena-celeste.com/datenschutz/" className="hover:text-bitcoin transition-colors">Datenschutz</a>
+            <Link to="/cookie-richtlinie" className="hover:text-bitcoin transition-colors">Cookie Richtlinie</Link>
+            <Link to="/datenschutz" className="hover:text-bitcoin transition-colors">Datenschutz</Link>
             <Link to="/impressum" className="hover:text-bitcoin transition-colors">Impressum</Link>
           </div>
         </div>
