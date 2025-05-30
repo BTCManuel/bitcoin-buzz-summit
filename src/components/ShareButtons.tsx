@@ -14,7 +14,7 @@ interface ShareButtonsProps {
 const ShareButtons: React.FC<ShareButtonsProps> = ({
   title = "3. BitcoinForum - VR-Bank Bayern Mitte",
   description = "Die spannende Welt von Bitcoin und der Blockchain-Technologie. 09.-11. Oktober 2025, Saturn Arena Ingolstadt",
-  url = "https://f2bb57ef-0f45-41db-b638-f6ff583341fb.lovableproject.com",
+  url = "https://bitcoinforum.bayern",
   hashtags = ["BitcoinForum", "Bitcoin", "Ingolstadt", "VRBankBayernMitte"],
   className = ""
 }) => {
@@ -40,8 +40,8 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({
 
   const handleCopyLink = async () => {
     try {
-      await navigator.clipboard.writeText(`${title}\n${description}\n${url}`);
-      // You could add a toast notification here if available
+      const shareText = `${title}\n\n${description}\n\n🔗 ${url}`;
+      await navigator.clipboard.writeText(shareText);
       console.log('Link copied to clipboard');
     } catch (error) {
       console.log('Failed to copy link:', error);
@@ -49,18 +49,18 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({
   };
 
   const handleTwitterShare = () => {
-    const text = `${title} - ${description}`;
+    const text = `${title}\n\n${description}`;
     const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}&hashtags=${encodeURIComponent(hashtags.join(','))}`;
     window.open(twitterUrl, '_blank', 'width=600,height=400');
   };
 
   const handleFacebookShare = () => {
-    const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&quote=${encodeURIComponent(title + ' - ' + description)}`;
+    const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&quote=${encodeURIComponent(`${title}\n\n${description}`)}`;
     window.open(facebookUrl, '_blank', 'width=600,height=400');
   };
 
   const handleWhatsAppShare = () => {
-    const text = `${title}\n${description}\n${url}`;
+    const text = `*${title}*\n\n${description}\n\n🔗 ${url}`;
     const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(text)}`;
     window.open(whatsappUrl, '_blank');
   };
@@ -71,16 +71,20 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({
   };
 
   const handleInstagramShare = () => {
-    // Instagram doesn't have a direct share URL, so we copy the text and open Instagram
-    handleCopyLink();
-    // Open Instagram in a new tab
+    // Copy formatted text for Instagram
+    const instagramText = `${title}\n\n${description}\n\n🔗 ${url}\n\n${hashtags.map(tag => `#${tag}`).join(' ')}`;
+    navigator.clipboard.writeText(instagramText).then(() => {
+      console.log('Instagram text copied to clipboard');
+    });
     window.open('https://www.instagram.com/', '_blank');
   };
 
   const handleTikTokShare = () => {
-    // TikTok doesn't have a direct share URL for external content, so we copy the text
-    handleCopyLink();
-    // Open TikTok in a new tab
+    // Copy formatted text for TikTok
+    const tiktokText = `${title}\n\n${description}\n\n🔗 ${url}\n\n${hashtags.map(tag => `#${tag}`).join(' ')}`;
+    navigator.clipboard.writeText(tiktokText).then(() => {
+      console.log('TikTok text copied to clipboard');
+    });
     window.open('https://www.tiktok.com/', '_blank');
   };
 
