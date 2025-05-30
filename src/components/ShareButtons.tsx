@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Share2, Twitter, Facebook, MessageCircle, Linkedin, Instagram } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -39,12 +40,7 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({
 
   const handleCopyLink = async () => {
     try {
-      const shareText = `${title}
-
-${description}
-
-🔗 https://bitcoinforum.bayern`;
-      await navigator.clipboard.writeText(shareText);
+      await navigator.clipboard.writeText('https://bitcoinforum.bayern');
       console.log('Link copied to clipboard');
     } catch (error) {
       console.log('Failed to copy link:', error);
