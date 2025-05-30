@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Index from './pages/Index';
@@ -11,6 +12,7 @@ import LesFemmesOrange from './pages/LesFemmesOrange';
 import BIP25Members from './pages/BIP25Members';
 import Datenschutz from './pages/Datenschutz';
 import WorkshopBitcoinInDerBank from './pages/WorkshopBitcoinInDerBank';
+import GlobalPopup from './components/GlobalPopup';
 import {
   QueryClient,
   QueryClientProvider,
@@ -44,6 +46,7 @@ function App() {
             </Routes>
             
             <Footer />
+            <GlobalPopup />
           </div>
         </Router>
       </PopupProvider>
