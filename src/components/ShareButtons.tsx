@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Share2, Twitter, Facebook, MessageCircle, Linkedin } from 'lucide-react';
+import { Share2, Twitter, Facebook, MessageCircle, Linkedin, Instagram } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 interface ShareButtonsProps {
@@ -25,25 +25,38 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({
   };
 
   const handleNativeShare = async () => {
-    if (navigator.share) {
+    if (navigator.share && navigator.canShare && navigator.canShare(shareData)) {
       try {
         await navigator.share(shareData);
       } catch (error) {
         console.log('Error sharing:', error);
+        // Fallback to copying to clipboard
+        handleCopyLink();
       }
+    } else {
+      handleCopyLink();
+    }
+  };
+
+  const handleCopyLink = async () => {
+    try {
+      await navigator.clipboard.writeText(`${title}\n${description}\n${url}`);
+      // You could add a toast notification here if available
+      console.log('Link copied to clipboard');
+    } catch (error) {
+      console.log('Failed to copy link:', error);
     }
   };
 
   const handleTwitterShare = () => {
     const text = `${title} - ${description}`;
-    const hashtagsStr = hashtags.map(tag => `#${tag}`).join(' ');
     const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}&hashtags=${encodeURIComponent(hashtags.join(','))}`;
-    window.open(twitterUrl, '_blank');
+    window.open(twitterUrl, '_blank', 'width=600,height=400');
   };
 
   const handleFacebookShare = () => {
     const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&quote=${encodeURIComponent(title + ' - ' + description)}`;
-    window.open(facebookUrl, '_blank');
+    window.open(facebookUrl, '_blank', 'width=600,height=400');
   };
 
   const handleWhatsAppShare = () => {
@@ -54,22 +67,34 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({
 
   const handleLinkedInShare = () => {
     const linkedinUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}&summary=${encodeURIComponent(description)}`;
-    window.open(linkedinUrl, '_blank');
+    window.open(linkedinUrl, '_blank', 'width=600,height=400');
+  };
+
+  const handleInstagramShare = () => {
+    // Instagram doesn't have a direct share URL, so we copy the text and open Instagram
+    handleCopyLink();
+    // Open Instagram in a new tab
+    window.open('https://www.instagram.com/', '_blank');
+  };
+
+  const handleTikTokShare = () => {
+    // TikTok doesn't have a direct share URL for external content, so we copy the text
+    handleCopyLink();
+    // Open TikTok in a new tab
+    window.open('https://www.tiktok.com/', '_blank');
   };
 
   return (
     <div className={`flex flex-wrap gap-3 ${className}`}>
-      {navigator.share && (
-        <Button
-          onClick={handleNativeShare}
-          variant="outline"
-          size="sm"
-          className="flex items-center gap-2 border-[#F97316]/30 text-[#F97316] hover:bg-[#F97316]/10"
-        >
-          <Share2 className="h-4 w-4" />
-          Teilen
-        </Button>
-      )}
+      <Button
+        onClick={handleNativeShare}
+        variant="outline"
+        size="sm"
+        className="flex items-center gap-2 border-[#F97316]/30 text-[#F97316] hover:bg-[#F97316]/10"
+      >
+        <Share2 className="h-4 w-4" />
+        Teilen
+      </Button>
       
       <Button
         onClick={handleTwitterShare}
@@ -109,6 +134,28 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({
       >
         <Linkedin className="h-4 w-4" />
         LinkedIn
+      </Button>
+
+      <Button
+        onClick={handleInstagramShare}
+        variant="outline"
+        size="sm"
+        className="flex items-center gap-2 border-pink-500/30 text-pink-600 hover:bg-pink-50"
+      >
+        <Instagram className="h-4 w-4" />
+        Instagram
+      </Button>
+
+      <Button
+        onClick={handleTikTokShare}
+        variant="outline"
+        size="sm"
+        className="flex items-center gap-2 border-gray-800/30 text-gray-800 hover:bg-gray-50"
+      >
+        <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+        </svg>
+        TikTok
       </Button>
     </div>
   );
