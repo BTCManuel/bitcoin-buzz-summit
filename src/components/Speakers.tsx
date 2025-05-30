@@ -398,6 +398,28 @@ const speakersData = [
     bgSolidColor: "bg-[#F2FCE2]"
   },
   {
+    name: "Tanja Bächle",
+    role: "",
+    company: "",
+    image: "/images/speakers/Tanja_Baechle.png",
+    bio: (
+      <>
+        Author & Writer ✍️ Event Manager 🏃‍♀️ Runner 𝐁𝐞𝐫𝐥𝐢𝐧𝐞𝐫 𝐌𝐚̈𝐝𝐜𝐡𝐞𝐧 Now on Nostr. Weitere Informationen unter:
+        <br />
+        <a
+          href="https://linktr.ee/tanjabaechle"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-bitcoin underline"
+        >
+          https://bitcoinforum.bayern
+        </a>
+      </>
+    ),
+    bgColor: "bg-[#F2FCE2]/50",
+    bgSolidColor: "bg-[#F2FCE2]"
+  },
+  {
     name: "Dr. Peter Schmidt",
     role: "",
     company: "",
