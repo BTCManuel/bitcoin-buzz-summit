@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { usePopup } from '@/pages/PopupContext';
 import { Calendar, Users, MessageSquare, Heart, Clock, Award, Sparkles, MapPin, Globe, ChevronRight, CheckCircle } from 'lucide-react';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
+import ShareButtons from '@/components/ShareButtons';
 
 const LesFemmesOrange = () => {
   const { openPopup } = usePopup();
@@ -247,7 +248,6 @@ const LesFemmesOrange = () => {
 
       {/* Updated Agenda Section with World-Class Design */}
       <section className="py-20 relative bg-gradient-to-b from-gray-50 to-white overflow-hidden">
-        {/* Background decoration elements */}
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
           <div className="absolute -top-10 -left-10 w-64 h-64 bg-[#FEF7CD]/20 rounded-full blur-xl"></div>
           <div className="absolute top-1/4 right-0 w-96 h-96 bg-[#FDE1D3]/20 rounded-full blur-xl transform translate-x-1/2"></div>
@@ -448,7 +448,7 @@ const LesFemmesOrange = () => {
         </div>
       </section>
 
-      {/* CTA Section with Enhanced Visual Appeal */}
+      {/* CTA Section with Enhanced Visual Appeal and Share Buttons */}
       <section className="py-16 bg-gradient-to-br from-[#FDE1D3] to-[#FEF7CD]">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-2xl mx-auto space-y-6 relative">
@@ -462,6 +462,20 @@ const LesFemmesOrange = () => {
             <p className="text-lg text-gray-700">
               Entdecke Bitcoin in einer unterstützenden Gemeinschaft von Frauen. Unabhängig von deinen Vorkenntnissen – du bist herzlich willkommen!
             </p>
+            
+            {/* Share Buttons */}
+            <div className="pt-4">
+              <p className="text-sm text-gray-600 mb-4">Teile Les Femmes Orange mit deinen Freundinnen:</p>
+              <div className="flex justify-center">
+                <ShareButtons
+                  title="Les Femmes Orange beim 3. BitcoinForum"
+                  description="Eine internationale Initiative für Frauen im Bitcoin-Bereich. Workshops und Veranstaltungen am 09.-11. Oktober 2025 in Ingolstadt."
+                  hashtags={["LesFemmesOrange", "BitcoinForum", "Bitcoin", "Frauen", "Ingolstadt"]}
+                  className="justify-center"
+                />
+              </div>
+            </div>
+            
             <div className="pt-6 flex flex-wrap gap-4 justify-center">
               <a 
                 href="https://lesfemmesorange.work/" 

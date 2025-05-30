@@ -1,4 +1,6 @@
+
 import { usePopup } from "@/pages/PopupContext";
+import ShareButtons from '@/components/ShareButtons';
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
@@ -43,6 +45,19 @@ const Hero = () => {
               Programm ansehen
             </a>
 
+          </div>
+          
+          {/* Share Buttons */}
+          <div className="mt-8 pt-4 border-t border-gray-200/50">
+            <p className="text-sm text-gray-600 mb-4">Teile das BitcoinForum mit deinen Freunden:</p>
+            <div className="flex justify-center">
+              <ShareButtons
+                title="3. BitcoinForum - VR-Bank Bayern Mitte"
+                description="Die spannende Welt von Bitcoin und der Blockchain-Technologie. 09.-11. Oktober 2025, Saturn Arena Ingolstadt"
+                hashtags={["BitcoinForum", "Bitcoin", "Ingolstadt", "VRBankBayernMitte", "Blockchain"]}
+                className="justify-center"
+              />
+            </div>
           </div>
         </div>
       </div>
