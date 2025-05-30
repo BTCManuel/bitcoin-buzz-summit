@@ -6,7 +6,7 @@ import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { BITCOIN_COLOR } from '@/lib/utils';
 import { usePopup } from "@/pages/PopupContext";
-import {Ticket } from 'lucide-react';
+import { Ticket } from 'lucide-react';
 
 const Venue = () => {
   const { openPopup } = usePopup();
@@ -35,7 +35,6 @@ const Venue = () => {
                     <img
                       src="/lovable-uploads/90b76e15-7546-440d-9d3b-a7715150eeb7.png"
                       alt="Event Locations Map"
-                      //className="w-full h-full object-contain"
                       className="w-full object-contain"
                     />
                   </AspectRatio>
@@ -68,25 +67,24 @@ const Venue = () => {
                     </a>
                   </Button>
 
-                <div className="ml-auto">
-                  <CollapsibleTrigger asChild>
-                    <Button 
-                      className="bg-bitcoin hover:bg-bitcoin-dark text-white rounded-full shadow-md shadow-bitcoin/20 transition-all duration-300 hover:scale-105"                    >
-                      {isOpen ? (
-                        <>
-                          <span className="mr-2">Weniger anzeigen</span>
-                          <ChevronUp className="h-5 w-5" />
-                        </>
-                      ) : (
-                        <>
-                          <span className="mr-2">Mehr anzeigen</span>
-                          <ChevronDown className="h-5 w-5" />
-                        </>
-                      )}
-                    </Button>
-                  </CollapsibleTrigger>
-                </div>
-
+                  <div className="ml-auto">
+                    <CollapsibleTrigger asChild>
+                      <Button 
+                        className="bg-bitcoin hover:bg-bitcoin-dark text-white rounded-full shadow-md shadow-bitcoin/20 transition-all duration-300 hover:scale-105"                    >
+                        {isOpen ? (
+                          <>
+                            <span className="mr-2">Weniger anzeigen</span>
+                            <ChevronUp className="h-5 w-5" />
+                          </>
+                        ) : (
+                          <>
+                            <span className="mr-2">Mehr anzeigen</span>
+                            <ChevronDown className="h-5 w-5" />
+                          </>
+                        )}
+                      </Button>
+                    </CollapsibleTrigger>
+                  </div>
                 </div>
               </CardContent>
             </Card>
@@ -94,7 +92,6 @@ const Venue = () => {
 
           {/* Ausklappbarer Inhalt */}
           <CollapsibleContent>
- {/* Rest of collapsible content */}
             {/* Venue information */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
               {/* Saturn Arena info */}
@@ -272,16 +269,16 @@ const Venue = () => {
 
         {/* Ticket Button */}
         <div className="flex justify-center mt-16">
-  <Button
-    onClick={() =>
-      openPopup({
-        redirectUrl: "https://vr-bayernmitte.genolive.de/index.php?page=event-code&code=bitcoin25"
-      })
-    }
-    className="bg-bitcoin hover:bg-bitcoin/80 text-white shadow-lg shadow-bitcoin/20 px-10 py-6 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105 flex items-center gap-2"
-  >
-    <Ticket className="h-5 w-5" /> Sichere dein Ticket
-  </Button>
+          <Button
+            onClick={() =>
+              openPopup({
+                redirectUrl: "https://vr-bayernmitte.genolive.de/index.php?page=event-code&code=bitcoin25"
+              })
+            }
+            className="bg-bitcoin hover:bg-bitcoin/80 text-white shadow-lg shadow-bitcoin/20 px-10 py-6 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105 flex items-center gap-2"
+          >
+            <Ticket className="h-5 w-5" /> Sichere dein Ticket
+          </Button>
         </div>
       </div>
     </section>

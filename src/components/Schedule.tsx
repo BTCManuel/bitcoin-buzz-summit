@@ -136,16 +136,16 @@ const Schedule = () => {
         </Card>
         
         <div className="flex justify-center mt-16">
-            <Button
-              onClick={() =>
-                openPopup({
-                  redirectUrl: "https://vr-bayernmitte.genolive.de/index.php?page=event-code&code=bitcoin25"
-                })
-              }
+          <Button
+            onClick={() =>
+              openPopup({
+                redirectUrl: "https://vr-bayernmitte.genolive.de/index.php?page=event-code&code=bitcoin25"
+              })
+            }
             className="bg-bitcoin hover:bg-bitcoin/80 text-white shadow-lg shadow-bitcoin/20 px-10 py-6 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105 flex items-center gap-2"
           >
             <Ticket className="h-5 w-5" /> Sichere dein Ticket
-            </Button>
+          </Button>
         </div>
       </div>
     </section>
