@@ -318,7 +318,7 @@ const WorkshopBitcoinInDerBank = () => {
                     { timeSlot: "14:00 - 14:20", speaker: "Andreas Streb", topic: "Wie wir unseren Kunden Bitcoin anbieten und warum." },
                     { timeSlot: "14:30 - 15:15", speaker: "Dr. Steffen Hahn", topic: "Welche genauen Anforderungen stellt diese neue Regulierung?" },
                     { timeSlot: "15:30 - 15:45", speaker: "VRBM Banker", topic: "Warum eine Beimischung von Bitcoin das Portfolio stärkt." },
-                    { timeSlot: "15:45 - 16:15", speaker: "VRBM Banker", topic: "Das Bitcoin Informations Gespräch der VR Bayern Mitte." },
+                    { timeSlot: "15:45 - 16:15", speaker: "VRBM Banker", topic: "Das Bitcoin Informations Gespräch der Volksbank Raiffeisenbank Bayern Mitte." },
                     { timeSlot: "16:15 - 16:30", speaker: "Q&A", topic: "Diskussion und Fragen" },
                     { timeSlot: "17:00 - 17:30", speaker: "Florian Bruce-Boye", topic: "Warum Bitcoin der optimale Wertspeicher ist" },
                     { timeSlot: "17:30 - 18:00", speaker: "Daniel 'Loddi'", topic: "Wie funktioniert unser Geldsystem?" },

@@ -11,7 +11,7 @@ const GlobalPopup = () => {
   const defaultMessage = (
     <>
       <p>
-       Für den Eintritt zur Saturnarena ist stets ein Ticket erforderlich – auch bei kostenlosen Messetickets. Anschließend können Sie Ihre Wunsch-Workshops buchen, sobald diese verfügbar sind. 
+       Für den Eintritt zur Saturn Arena ist stets ein Ticket erforderlich – auch bei kostenlosen Messetickets. Anschließend können Sie Ihre Wunsch-Workshops buchen, sobald diese verfügbar sind. 
        Beim Ticketkauf lässt sich dafür bequem ein Alarm aktivieren.
       </p>
       <p><br></br>

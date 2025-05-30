@@ -777,6 +777,7 @@ const speakersData = [
     bgSolidColor: "bg-[#FEF7CD]"
   }
 ];
+/*
   // Generate placeholder speakers to reach a total of 35
   const placeholderBackgrounds = [
     "bg-[#F2FCE2]/50",
@@ -791,7 +792,7 @@ const speakersData = [
     "bg-[#FEF7CD]"
   ];
   
-
+*/
 
   return (
     

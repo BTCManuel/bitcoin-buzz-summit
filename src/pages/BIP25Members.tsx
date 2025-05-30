@@ -35,7 +35,7 @@ const members: Member[] = [
     image: "/images/speakers/BitcoinForum_BIP25-Member_Staud.png",
     bio: (
       <>
-        Verantwortet seit 2002 das Marketing der VR Bayern Mitte. Organisator des 3. BitcoinForums. <br />
+        Verantwortet seit 2002 das Marketing der Volksbank Raiffeisenbank Bayern Mitte. Organisator des 3. BitcoinForums. <br />
         Mobil: +49 151 20329231 <br />
         E-Mail: guenter.staud@vr-bayernmitte.de <br />
         X: GuenterStaud <br />
