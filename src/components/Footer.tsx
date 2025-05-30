@@ -1,9 +1,13 @@
 
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Bitcoin, Twitter, Instagram, Mail } from 'lucide-react';
+import { usePopup } from '@/pages/PopupContext';
 
 const Footer = () => {
+  const { openPopup } = usePopup();
+
   return (
     <footer className="bg-gray-100 text-gray-800 border-t border-gray-200">
       <div className="container mx-auto px-4 py-16">
@@ -42,7 +46,16 @@ const Footer = () => {
               <li><a href="#schedule">Zeitplan</a></li>
               <li><a href="#venue">Veranstaltungsort</a></li>
                <li><a href="#venue">Workshops</a></li>
-              <li><a href="https://www.google.com" target="_blank" rel="noopener noreferrer">Anmeldung</a></li>
+              <li>
+                <button 
+                  onClick={() => openPopup({
+                    redirectUrl: "https://vr-bayernmitte.genolive.de/index.php?page=event-code&code=bitcoin25"
+                  })}
+                  className="text-gray-600 hover:text-bitcoin transition-colors cursor-pointer bg-transparent border-none p-0 text-left"
+                >
+                  Anmeldung
+                </button>
+              </li>
             </ul>
           </div>
 
@@ -76,3 +89,4 @@ const Footer = () => {
 };
 
 export default Footer;
+
