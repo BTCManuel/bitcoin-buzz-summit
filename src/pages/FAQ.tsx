@@ -1,7 +1,4 @@
-
 import React from "react";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import { 
   Accordion, 
   AccordionContent, 
@@ -46,8 +43,6 @@ const getCategoryIcon = (index: number) => {
 const FAQ = () => {
   return (
     <div className="min-h-screen flex flex-col">
-      <Navbar />
-      
       <main className="flex-grow">
         {/* Hero section with enhanced visual design */}
         <div className="bg-gradient-to-b from-pastel-yellow via-pastel-yellow/70 to-white py-20 px-6 relative overflow-hidden">
@@ -399,8 +394,6 @@ const FAQ = () => {
           </div>
         </div>
       </main>
-
-      <Footer />
     </div>
   );
 };
